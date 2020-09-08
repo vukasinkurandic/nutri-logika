@@ -23,13 +23,11 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(
-    45deg,
-    var(--zut),
-    var(--zut) 10px,
-    #fff 10px,
-    #fff 20px
-  );
+  --pruge: repeating-linear-gradient(45deg,
+      var(--zut),
+      var(--zut) 10px,
+      #fff 10px,
+      #fff 20px);
 }
 
 img {
@@ -445,13 +443,11 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255, 248, 82, 0.4),
-    rgba(255, 248, 82, 0.4) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 248, 82, 0.4),
+      rgba(255, 248, 82, 0.4) 10px,
+      transparent 10px,
+      transparent 20px);
 }
 
 /* ------------------------------ */
@@ -482,15 +478,6 @@ hamburger animation
 .plan-kartica-overflow img {
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.45));
 }
-
-/* .plan-treninga .plan-kartica-img img {
-  width: 100%;
-  height: 100%;
-} */
-
-/* .plan-treninga .plan-kartica-overflow {
-  top: -167px;
-} */
 
 .dual-plan .plan-kartica-img {
   height: 30%;
@@ -773,13 +760,16 @@ input::-webkit-inner-spin-button {
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
+
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
     max-width: 80%;
   }
 }
+
 @media (min-width: 460px) {
+
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -788,6 +778,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 600px) {
+
   /** naslovna **/
   .naslovna__title {
     justify-content: center;
@@ -805,15 +796,78 @@ input::-webkit-inner-spin-button {
 
   .plan-kartica-img,
   .plan-kartica-overflow {
-    /* width: 100%; */
     max-width: 100%;
   }
 
   .plan-kartica-img {
-    height: 16%;
+    height: 18%;
   }
 
   .dual-plan .plan-kartica-img {
-    height: 15%;
+    height: 17%;
+  }
+
+  .plan-ishrane::before,
+  .plan-treninga::before,
+  .dual-plan::before {
+    margin: 3.8rem 0px 0rem 0px;
+    width: 80%;
+    height: 100%;
+  }
+
+  .dugme__prijavi-se {
+    justify-content: start;
+  }
+
+  .dual-plan .dugme__prijavi-se a {
+    width: 100%;
+    /* max-width: 100%; */
+  }
+
+  .dual-plan__ikonica {
+    margin-right: 2rem;
+  }
+
+  .plan-ishrane__info,
+  .plan-treninga__info,
+  .dual-plan__info {
+    display: relative;
+    margin-top: 9rem;
+  }
+}
+
+@media (min-width: 700px) {
+
+  /** da se poveca **/
+  .plan-kartica-img {
+    height: 25%;
+  }
+
+  .dual-plan .plan-kartica-img {
+    height: 24%;
+  }
+}
+
+@media (min-width: 850px) {
+
+  /** da se poveca **/
+  .plan-kartica-img {
+    height: 35%;
+  }
+
+  .dual-plan .plan-kartica-img {
+    height: 34%;
+  }
+}
+
+@media (min-width: 1100px) {
+
+  /** da se poveca **/
+  .plan-kartica-img {
+    height: 45%;
+  }
+
+  .dual-plan .plan-kartica-img {
+    height: 44%;
   }
 }
