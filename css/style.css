@@ -454,10 +454,6 @@ hamburger animation
   );
 }
 
-/* .dual-plan::before {
-  margin-top: 7.8rem;
-} */
-
 /* ------------------------------ */
 .plan-kartica-img {
   position: absolute;
@@ -496,9 +492,13 @@ hamburger animation
   top: -167px;
 } */
 
-/* .dual-plan .plan-kartica-img {
+.dual-plan .plan-kartica-img {
   height: 30%;
-} */
+}
+
+.dual-plan::before {
+  margin-top: 7.8rem;
+}
 
 /* --------------------------------*/
 
@@ -772,6 +772,21 @@ input::-webkit-inner-spin-button {
 /* ===========================================
                     RESPONSIVE
 ==============================================*/
+@media (min-width: 361px) {
+  .plan-kartica-img,
+  .plan-kartica-overflow {
+    /* width: 100%; */
+    max-width: 80%;
+  }
+}
+@media (min-width: 460px) {
+  .plan-kartica-img,
+  .plan-kartica-overflow {
+    /* width: 100%; */
+    max-width: 65%;
+  }
+}
+
 @media (min-width: 600px) {
   /** naslovna **/
   .naslovna__title {
@@ -785,5 +800,20 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+    align-items: start;
+  }
+
+  .plan-kartica-img,
+  .plan-kartica-overflow {
+    /* width: 100%; */
+    max-width: 100%;
+  }
+
+  .plan-kartica-img {
+    height: 16%;
+  }
+
+  .dual-plan .plan-kartica-img {
+    height: 15%;
   }
 }
