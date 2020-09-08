@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="sr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -9,160 +8,201 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- glider  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
+    />
 
     <!-- selectric  -->
     <link rel="stylesheet" href="js/selectric/selectric.css" />
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
 
     <title>nutri.logika</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- =====================
             HEADER
     ======================= -->
     <header>
-        <div class="navbar__wrapper">
-            <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
-            <nav class="navbar">
-                <ul class="navbar__list">
-                    <li class="navbar__item">
-                        <a href="#naslovna" class="navbar__link">Home</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#ponuda" class="navbar__link">Ponuda</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#testimonials" class="navbar__link">Rezultati</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="" class="navbar__link">O meni</a>
-                    </li>
-                </ul>
-            </nav>
-            <button class="menu-toggle">
+      <div class="navbar__wrapper">
+        <a href="#naslovna" class="navbar__logo"
+          ><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img"
+        /></a>
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="#naslovna" class="navbar__link">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#ponuda" class="navbar__link">Ponuda</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#testimonials" class="navbar__link">Rezultati</a>
+            </li>
+            <li class="navbar__item">
+              <a href="" class="navbar__link">O meni</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu-toggle">
           <span class="hamburger"></span>
         </button>
-            <div class="switchers-wrapper">
-                <button class="language-switcher-sr">
+        <div class="switchers-wrapper">
+          <button class="language-switcher-sr">
             SR <img src="css/img/flat-icons/serbia.png" alt="ser" />
           </button>
-                <button class="language-switcher-en">
+          <button class="language-switcher-en">
             <img src="css/img/flat-icons/united-kingdom.png" alt="eng" />EN
           </button>
-            </div>
         </div>
+      </div>
     </header>
 
     <!-- =====================
             NASLOVNA
     ======================= -->
     <section id="naslovna">
-        <div class="naslovna__wrapper">
-            <div class="hero parallax-window" data-parallax="scroll" data-z-index="-1" data-image-src="css/img/hero-no-background500x750-optimizovana.png">
-                <div class="naslovna__title">
-                    <img class="logo" src="css/img/nutri.logika.png" alt="logo" />
-                </div>
-                <div class="naslovna__strelica"></div>
-            </div>
+      <div class="naslovna__wrapper">
+        <div
+          class="hero parallax-window"
+          data-parallax="scroll"
+          data-z-index="-1"
+          data-image-src="css/img/hero-no-background500x750-optimizovana.png"
+        >
+          <div class="naslovna__title">
+            <img class="logo" src="css/img/nutri.logika.png" alt="logo" />
+          </div>
+          <div class="naslovna__strelica"></div>
         </div>
+      </div>
     </section>
 
     <!-- =====================
                 PONUDA
     ======================= -->
     <section id="ponuda">
-        <div class="ponuda-wrapper">
-            <div class="plan-ishrane">
-                <div class="plan-kartica-overflow">
-                    <img src="css/img/plan-ishrane-tanjir500x333.png" alt="tanjir" />
-                </div>
-                <div class="plan-kartica-img">
-                    <img src="css/img/plan-ishrane3500x333.jpg" alt="hrana" />
-                </div>
-                <div class="plan-ishrane__info">
-                    <div class="plan-ishrane__title-wrapper">
-                        <h2>Plan Ishrane</h2>
-                    </div>
-                    <div class="plan-ishrane__tekst">
-                        <p>
-                            Sastavlja se na osnovu informacija o klijentu, a na osnovu naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše tako što se svake nedelje vrši ocena prethodne nedelje i po potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i pomoć.
-                        </p>
-                    </div>
-
-                    <div class="dugme__prijavi-se">
-                        <a href="#">
-                            <div class="plan-ishrane__ikonica">
-                                <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
-                            </div>
-                            Prijavi se
-                        </a>
-                    </div>
-                </div>
+      <div class="ponuda-wrapper">
+        <div class="plan-ishrane">
+          <div class="plan-kartica-overflow">
+            <img src="css/img/plan-ishrane-tanjir500x333.png" alt="tanjir" />
+          </div>
+          <div class="plan-kartica-img">
+            <img src="css/img/plan-ishrane3500x333.jpg" alt="hrana" />
+          </div>
+          <div class="plan-ishrane__info">
+            <div class="plan-ishrane__title-wrapper">
+              <h2>Plan Ishrane</h2>
+            </div>
+            <div class="plan-ishrane__tekst">
+              <p>
+                Sastavlja se na osnovu informacija o klijentu, a na osnovu
+                naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
+                tako što se svake nedelje vrši ocena prethodne nedelje i po
+                potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
+                pomoć.
+              </p>
             </div>
 
-            <div class="plan-treninga">
-                <div class="plan-kartica-overflow">
-                    <img src="css/img/plan-treninga-teg.png" alt="teg" />
+            <div class="dugme__prijavi-se">
+              <a href="#">
+                <div class="plan-ishrane__ikonica">
+                  <img
+                    src="css/img/meso320x427.png"
+                    alt="nutrition"
+                    class="icon"
+                  />
                 </div>
-                <div class="plan-kartica-img">
-                    <img src="css/img/plan-treninga.jpg" alt="trening" />
-                </div>
-                <div class="plan-treninga__info">
-                    <div class="plan-treninga__title-wrapper">
-                        <h2>Plan Treninga</h2>
-                    </div>
-                    <div class="plan-treninga__tekst">
-                        <p>
-                            Sastavlja se na osnovu informacija o klijentu, a na osnovu naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše tako što se svake nedelje vrši ocena prethodne nedelje i po potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i pomoć.
-                        </p>
-                    </div>
-                    <div class="dugme__prijavi-se">
-                        <a href="#">
-                            <div class="plan-treninga__ikonica">
-                                <img src="css/img/bucke320x333.png" alt="dumbbell" class="icon" />
-                            </div>
-                            Prijavi se
-                        </a>
-                    </div>
-                </div>
+                Prijavi se
+              </a>
             </div>
-
-            <div class="dual-plan">
-                <div class="plan-kartica-overflow">
-                    <img src="css/img/puzla.png" alt="puzla" />
-                </div>
-                <div class="plan-kartica-img">
-                    <img src="css/img/slagalica.jpg" alt="hrana" />
-                </div>
-                <!-- <div class="dual-plan__grid"></div> -->
-                <div class="dual-plan__info">
-                    <div class="dual-plan__title-wrapper">
-                        <h2>Plan Ishrane i Treninga</h2>
-                    </div>
-                    <div class="dual-plan__tekst">
-                        <p>
-                            Sastavlja se na osnovu informacija o klijentu, a na osnovu naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše tako što se svake nedelje vrši ocena prethodne nedelje i po potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i pomoć.
-                        </p>
-                    </div>
-                </div>
-                <div class="dugme__prijavi-se">
-                    <a href="#">
-                        <div class="dual-plan__ikonica"></div>
-                        Prijavi se
-                    </a>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="plan-treninga">
+          <div class="plan-kartica-overflow">
+            <img src="css/img/teg500x333.png" alt="teg" />
+          </div>
+          <div class="plan-kartica-img">
+            <img src="css/img/tegovi500x333.jpg" alt="trening" />
+          </div>
+          <div class="plan-treninga__info">
+            <div class="plan-treninga__title-wrapper">
+              <h2>Plan Treninga</h2>
+            </div>
+            <div class="plan-treninga__tekst">
+              <p>
+                Sastavlja se na osnovu informacija o klijentu, a na osnovu
+                naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
+                tako što se svake nedelje vrši ocena prethodne nedelje i po
+                potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
+                pomoć.
+              </p>
+            </div>
+            <div class="dugme__prijavi-se">
+              <a href="#">
+                <div class="plan-treninga__ikonica">
+                  <img
+                    src="css/img/bucke320x333.png"
+                    alt="dumbbell"
+                    class="icon"
+                  />
+                </div>
+                Prijavi se
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dual-plan">
+          <div class="plan-kartica-overflow">
+            <img src="css/img/puzla.png" alt="puzla" />
+          </div>
+          <div class="plan-kartica-img">
+            <img src="css/img/slagalica.jpg" alt="hrana" />
+          </div>
+          <!-- <div class="dual-plan__grid"></div> -->
+          <div class="dual-plan__info">
+            <div class="dual-plan__title-wrapper">
+              <h2>Plan Ishrane i Treninga</h2>
+            </div>
+            <div class="dual-plan__tekst">
+              <p>
+                Sastavlja se na osnovu informacija o klijentu, a na osnovu
+                naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
+                tako što se svake nedelje vrši ocena prethodne nedelje i po
+                potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
+                pomoć.
+              </p>
+            </div>
+          </div>
+          <div class="dugme__prijavi-se">
+            <a href="#">
+              <div class="dual-plan__ikonica"></div>
+              Prijavi se
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- =====================
@@ -170,43 +210,47 @@
     ======================= -->
 
     <section id="testimonials">
-        <div class="testimonials__wrapper">
-            <div class="carousel">
-                <ul class="carousel__slider glider">
-                    <li class="carousel__slide slide-item">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere error fuga accusamus fugiat eaque dolores.
-                        </p>
-                        <h4>Milojko Pantic</h4>
-                    </li>
-                    <li class="carousel__slide slide-item">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere error fuga accusamus fugiat eaque dolores.
-                        </p>
-                        <h4>Dalibor Vukanovic</h4>
-                    </li>
-                    <li class="carousel__slide slide-item">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere error fuga accusamus fugiat eaque dolores.
-                        </p>
-                        <h4>Rasa Pikic</h4>
-                    </li>
-                    <li class="carousel__slide slide-item">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere error fuga accusamus fugiat eaque dolores.
-                        </p>
-                        <h4>Dragan Dzajic</h4>
-                    </li>
-                </ul>
-                <div class="carousel__navigation"></div>
-                <button class="carousel__button carousel__button--left">
+      <div class="testimonials__wrapper">
+        <div class="carousel">
+          <ul class="carousel__slider glider">
+            <li class="carousel__slide slide-item">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                error fuga accusamus fugiat eaque dolores.
+              </p>
+              <h4>Milojko Pantic</h4>
+            </li>
+            <li class="carousel__slide slide-item">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                error fuga accusamus fugiat eaque dolores.
+              </p>
+              <h4>Dalibor Vukanovic</h4>
+            </li>
+            <li class="carousel__slide slide-item">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                error fuga accusamus fugiat eaque dolores.
+              </p>
+              <h4>Rasa Pikic</h4>
+            </li>
+            <li class="carousel__slide slide-item">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                error fuga accusamus fugiat eaque dolores.
+              </p>
+              <h4>Dragan Dzajic</h4>
+            </li>
+          </ul>
+          <div class="carousel__navigation"></div>
+          <button class="carousel__button carousel__button--left">
             <i class="fas fa-chevron-left"></i>
           </button>
-                <button class="carousel__button carousel__button--right">
+          <button class="carousel__button carousel__button--right">
             <i class="fas fa-chevron-right"></i>
           </button>
-            </div>
         </div>
+      </div>
     </section>
 
     <!-- =====================
@@ -214,62 +258,68 @@
     ======================= -->
 
     <section id="prijava">
-        <div class="prijava__wrapper">
-            <form action="php/form.php" class="form">
-                <div class="polje">
-                    <label for="ime">Ime:</label>
-                    <div id="ime_greska" class="error-message-invisible">
-                        <p>Ime je obavezno</p>
-                    </div>
-                    <input type="text" id="ime" placeholder="Marko.." />
-                </div>
+      <div class="prijava__wrapper">
+        <form action="php/form.php" class="form">
+          <div class="polje">
+            <label for="ime">Ime:</label>
+            <div id="ime_greska" class="error-message-invisible">
+              <p>Ime je obavezno</p>
+            </div>
+            <input type="text" id="ime" placeholder="Marko.." />
+          </div>
 
-                <div class="polje">
-                    <label for="prezime">Prezime:</label>
-                    <div id="prezime_greska" class="error-message-invisible">
-                        <p>Prezime je obavezno</p>
-                    </div>
-                    <input type="text" id="prezime" placeholder="Marković.." />
-                </div>
+          <div class="polje">
+            <label for="prezime">Prezime:</label>
+            <div id="prezime_greska" class="error-message-invisible">
+              <p>Prezime je obavezno</p>
+            </div>
+            <input type="text" id="prezime" placeholder="Marković.." />
+          </div>
 
-                <div class="polje">
-                    <label for="email">E-mail:</label>
-                    <div id="email_greska" class="error-message-invisible">
-                        <p>Email nedostaje ili je neispravan</p>
-                    </div>
-                    <input type="email" id="email" placeholder="mare85@gma.." />
-                </div>
+          <div class="polje">
+            <label for="email">E-mail:</label>
+            <div id="email_greska" class="error-message-invisible">
+              <p>Email nedostaje ili je neispravan</p>
+            </div>
+            <input type="email" id="email" placeholder="mare85@gma.." />
+          </div>
 
-                <div class="polje">
-                    <label for="godine">Godine:(od 16 do 70)</label>
-                    <div id="godine_greska" class="error-message-invisible">
-                        <p>Unesite svoje godine</p>
-                    </div>
-                    <input type="number" id="godine" min="15" max="70" placeholder="34.." />
-                </div>
+          <div class="polje">
+            <label for="godine">Godine:(od 16 do 70)</label>
+            <div id="godine_greska" class="error-message-invisible">
+              <p>Unesite svoje godine</p>
+            </div>
+            <input
+              type="number"
+              id="godine"
+              min="15"
+              max="70"
+              placeholder="34.."
+            />
+          </div>
 
-                <div class="polje">
-                    <label for="telefon">Telefon:</label>
-                    <div id="telefon_greska" class="error-message-invisible">
-                        <p>Broj Vaseg telefona je obavezan</p>
-                    </div>
-                    <input type="tel" id="telefon" placeholder="+38169111.." />
-                </div>
+          <div class="polje">
+            <label for="telefon">Telefon:</label>
+            <div id="telefon_greska" class="error-message-invisible">
+              <p>Broj Vaseg telefona je obavezan</p>
+            </div>
+            <input type="tel" id="telefon" placeholder="+38169111.." />
+          </div>
 
-                <div class="polje">
-                    <label for="pol">Pol:</label>
-                    <div class="error-message-invisible">
-                        <p></p>
-                    </div>
-                    <select type="text" id="pol">
+          <div class="polje">
+            <label for="pol">Pol:</label>
+            <div class="error-message-invisible">
+              <p></p>
+            </div>
+            <select type="text" id="pol">
               <option value="muški" class="opcija">Muški</option>
               <option value="ženski" class="opcija">Ženski</option>
             </select>
-                </div>
+          </div>
 
-                <div class="polje">
-                    <label for="cilj">Koji cilj želiš da postigneš:</label>
-                    <select type="text" id="cilj">
+          <div class="polje">
+            <label for="cilj">Koji cilj želiš da postigneš:</label>
+            <select type="text" id="cilj">
               <option value="skidanje-kilaze" class="opcija">
                 Cilj mi je da skinem kilažu
               </option>
@@ -280,62 +330,65 @@
                 Cilj mi je da živim zdravije i održim svoju trenutnu kilažu
               </option>
             </select>
-                </div>
+          </div>
 
-                <div class="polje">
-                    <label for="plan">Odaberi plan koji želiš:</label>
-                    <select name="plan" id="plan__odabir">
+          <div class="polje">
+            <label for="plan">Odaberi plan koji želiš:</label>
+            <select name="plan" id="plan__odabir">
               <option value="ishrana" class="opcija">Plan ishrane</option>
               <option value="trening" class="opcija">Plan treninga</option>
               <option value="ishrana-i-trening" class="opcija">
                 Plan ishrane i treninga
               </option>
             </select>
-                </div>
-            </form>
-        </div>
-        <div id="php_greska" class="error-message-visible">
-
-        </div>
-        <div class="dugme__prijavi-se">
-            <a href="#">
-                <div class="dual-plan__ikonica"></div>
-                Prijavi se
-            </a>
-        </div>
+          </div>
+        </form>
+      </div>
+      <div class="dugme__prijavi-se">
+        <a href="#">
+          <div class="dual-plan__ikonica"></div>
+          Prijavi se
+        </a>
+      </div>
     </section>
 
     <footer>
-        <section id="footer">
-            <div class="footer-wrapper">
-                <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
-                <div class="kontakt-container">
-                    <p>E-mail: nutri.logika@gmail.com</p>
-                    <p>Telefon: 061/61-45-617</p>
-                    <div class="social-icons"></div>
-                </div>
-                <div class="footer-links__container">
-                    <ul class="footer-links--list">
-                        <li class="footer__item">
-                            <a href="#naslovna" class="footer__link">Home</a>
-                        </li>
-                        <li class="footer__item">
-                            <a href="#ponuda" class="footer__link">Ponuda</a>
-                        </li>
-                        <li class="footer__item">
-                            <a href="#testimonials" class="footer__link">Rezultati</a>
-                        </li>
-                        <li class="footer__item">
-                            <a href="" class="footer__link">O meni</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- zastava -->
-        <div class="mentions">
-            Icons made by
-            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a
+      <section id="footer">
+        <div class="footer-wrapper">
+          <a href="#naslovna" class="navbar__logo"
+            ><img
+              src="css/img/nutri.logika.png"
+              alt=""
+              class="navbar__logo__img"
+          /></a>
+          <div class="kontakt-container">
+            <p>E-mail: nutri.logika@gmail.com</p>
+            <p>Telefon: 061/61-45-617</p>
+            <div class="social-icons"></div>
+          </div>
+          <div class="footer-links__container">
+            <ul class="footer-links--list">
+              <li class="footer__item">
+                <a href="#naslovna" class="footer__link">Home</a>
+              </li>
+              <li class="footer__item">
+                <a href="#ponuda" class="footer__link">Ponuda</a>
+              </li>
+              <li class="footer__item">
+                <a href="#testimonials" class="footer__link">Rezultati</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">O meni</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- zastava -->
+      <div class="mentions">
+        Icons made by
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+          >Freepik</a
         >
         from
         <a href="https://www.flaticon.com/" title="Flaticon"
