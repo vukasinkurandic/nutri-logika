@@ -8,758 +8,782 @@ crna #131200
 
 Fonts:
 ==============================================*/
-
 html,
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* font-family: 'Libre Caslon Text', serif; */
-    font-family: "Roboto Condensed", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Libre Caslon Text', serif; */
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 :root {
-    --ljub: #b513b7;
-    --ljub1: rgba(181, 19, 183, 0.5);
-    --zut: #fff852;
-    --zut1: rgba(255, 248, 82, 0.5);
-    --pruge: repeating-linear-gradient( 45deg, var(--zut), var(--zut) 10px, #fff 10px, #fff 20px);
+  --ljub: #b513b7;
+  --ljub1: rgba(181, 19, 183, 0.5);
+  --zut: #fff852;
+  --zut1: rgba(255, 248, 82, 0.5);
+
+  --pruge: repeating-linear-gradient(
+    45deg,
+    var(--zut),
+    var(--zut) 10px,
+    #fff 10px,
+    #fff 20px
+  );
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .parallax-window {
-    min-height: 400px;
-    background: transparent;
+  min-height: 400px;
+  background: transparent;
 }
 
 .mentions {
-    font-size: 0.4rem;
+  font-size: 0.4rem;
+  background-color: #222107;
 }
-
 
 /* ===========================================
                     NAVBAR
 ==============================================*/
-
 header {
-    width: 100%;
-    position: absolute;
-    z-index: 10;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
 }
 
 .navbar__wrapper {
-    background: rgba(0, 0, 0, 0.6);
-    max-width: 100%;
-    position: relative;
-    padding: 0.4rem;
+  background: rgba(0, 0, 0, 0.6);
+  max-width: 100%;
+  position: relative;
+  padding: 0.4rem;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
 .navbar {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    clip-path: circle(0px at top right);
-    transition: clip-path ease-in-out 0.5s;
-    width: 100vw;
-    height: 100vh;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  clip-path: circle(0px at top right);
+  transition: clip-path ease-in-out 0.5s;
+  width: 100vw;
+  height: 100vh;
 }
 
 .navbar-open {
-    clip-path: circle(250% at top right);
+  clip-path: circle(250% at top right);
 }
 
 .navbar__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .navbar__item {
-    padding: 1.3rem 5rem;
-    border-bottom: 1px solid rgba(255, 248, 82, 0.1);
-    display: block;
-    text-align: center;
+  padding: 1.3rem 5rem;
+  border-bottom: 1px solid rgba(255, 248, 82, 0.1);
+  display: block;
+  text-align: center;
 }
 
 .navbar__item:hover,
 .navbar__item:focus {
-    background-color: var(--zut1);
+  background-color: var(--zut1);
 }
 
 .navbar__item:hover .navbar__link,
 .navbar__item:focus .navbar__link {
-    color: var(--ljub);
+  color: var(--ljub);
 }
 
 .navbar__item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .navbar__link {
-    color: var(--zut);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 400;
+  color: var(--zut);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .navbar-open .navbar__item {
-    animation: fadeIn 0.4s cubic-bezier(0.79, 0.14, 0.15, 0.86) both;
+  animation: fadeIn 0.4s cubic-bezier(0.79, 0.14, 0.15, 0.86) both;
 }
-
 
 /***************
 navbar animacija
 ****************/
-
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(200%);
-    }
-    75% {
-        opacity: 0.1;
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  75% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 .navbar-open .navbar__item:nth-child(1) {
-    animation-delay: 0;
+  animation-delay: 0;
 }
 
 .navbar-open .navbar__item:nth-child(2) {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .navbar-open .navbar__item:nth-child(3) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .navbar-open .navbar__item:nth-child(4) {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
-
 
 /***************
 navbar animacija
 ****************/
 
 .navbar__logo__img {
-    width: 5rem;
-    max-height: 100%;
-    object-fit: cover;
-    margin-left: 1rem;
+  width: 5rem;
+  max-height: 100%;
+  object-fit: cover;
+  margin-left: 1rem;
 }
 
 .menu-toggle {
-    border: none;
-    width: 3rem;
-    height: 3rem;
-    background-color: transparent;
-    position: absolute;
-    top: 15px;
-    right: 0;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  position: absolute;
+  top: 15px;
+  right: 0;
 }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    content: "";
-    position: relative;
-    background: white;
-    width: 1.5rem;
-    height: 1px;
-    display: block;
-    transition: transform ease-in-out 0.4s, opacity ease 0.3s, background-color ease 0.6s;
+  content: "";
+  position: relative;
+  background: white;
+  width: 1.5rem;
+  height: 1px;
+  display: block;
+  transition: transform ease-in-out 0.4s, opacity ease 0.3s,
+    background-color ease 0.6s;
 }
 
 .hamburger::before {
-    transform: translateY(7px);
+  transform: translateY(7px);
 }
 
 .hamburger::after {
-    transform: translateY(-8px);
+  transform: translateY(-8px);
 }
-
 
 /********
 hamburger animation
 *******/
-
 .open .hamburger::after {
-    opacity: 0;
+  opacity: 0;
 }
 
 .open .hamburger {
-    transform: rotate(135deg);
-    background: var(--ljub);
+  transform: rotate(135deg);
+  background: var(--ljub);
 }
 
 .open .hamburger::before {
-    transform: rotate(90deg);
-    background: var(--ljub);
+  transform: rotate(90deg);
+  background: var(--ljub);
 }
-
 
 /********
 hamburger animation
 *******/
-
 .switchers-wrapper {
-    position: absolute;
-    top: 110%;
+  position: absolute;
+  top: 110%;
 }
 
 .language-switcher-sr,
 .language-switcher-en {
-    border-radius: 50px;
-    padding: 0.2rem 0.7rem;
-    box-shadow: inset -1px 4px 1px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 5px;
+  border-radius: 50px;
+  padding: 0.2rem 0.7rem;
+  box-shadow: inset -1px 4px 1px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 .language-switcher-sr:hover,
 .language-switcher-en:hover {
-    cursor: pointer;
-    opacity: 0.9;
+  cursor: pointer;
+  opacity: 0.9;
 }
 
 .language-switcher-sr img,
 .language-switcher-en img {
-    clip-path: circle(8px);
-    height: 16px;
-    margin-left: 5px;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  clip-path: circle(8px);
+  height: 16px;
+  margin-left: 5px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
 .language-switcher-en img {
-    margin-right: 5px;
-    margin-left: 0;
+  margin-right: 5px;
+  margin-left: 0;
 }
-
 
 /* ===========================================
                         NASLOVNA
 ==============================================*/
-
 #naslovna {
-    height: 100vh;
+  height: 100vh;
 }
 
 .naslovna__wrapper {
-    height: 100%;
+  height: 100%;
 }
 
 .hero {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .hero::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    display: inline-block;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: inline-block;
 }
 
 .naslovna__title {
-    /* color: red;
+  /* color: red;
     font-size: 2rem; */
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    height: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100%;
 }
 
 .logo {
-    opacity: 0.6;
-    z-index: 0;
+  opacity: 0.6;
+  z-index: 0;
 }
-
 
 /* ===========================================
                     PONUDA
 ==============================================*/
-
 #ponuda {
-    max-height: 100%;
-    /* margin: 2.5rem 0; */
+  max-height: 100%;
+  /* margin: 2.5rem 0; */
 }
 
 .ponuda-wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
-
 
 /*******************************/
-
 .icon {
-    width: 5rem;
-    height: 5rem;
-    object-fit: cover;
-    max-width: none;
-    filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.3));
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  max-width: none;
+  filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.3));
 }
-
 
 /************************************/
 
 .plan-ishrane,
 .plan-treninga,
 .dual-plan {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: space-between;
-    position: relative;
-    /* margin-bottom: 2.5rem; */
-    margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  position: relative;
+  /* margin-bottom: 2.5rem; */
+  margin-top: 0;
 }
 
 .plan-ishrane__ikonica,
 .plan-treninga__ikonica,
 .dual-plan__ikonica {
-    background-color: var(--ljub);
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5));
-    margin-right: 0.5rem;
+  background-color: var(--ljub);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5));
+  margin-right: 0.5rem;
 }
 
 .dual-plan__ikonica {
-    filter: none;
+  filter: none;
 }
 
 .plan-treninga__ikonica {
-    background-color: var(--zut);
+  background-color: var(--zut);
 }
 
 .dual-plan__ikonica {
-    width: 3.5rem;
-    height: 3.5rem;
-    position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  position: relative;
 }
 
 .dual-plan__ikonica img:last-child {
-    left: 120px;
+  left: 120px;
 }
 
 .dual-plan__ikonica::before {
-    content: "";
-    background-color: var(--zut);
-    position: absolute;
-    left: 40px;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 100px;
-    z-index: -1;
+  content: "";
+  background-color: var(--zut);
+  position: absolute;
+  left: 40px;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100px;
+  z-index: -1;
 }
 
 .dual-plan__ikonica::after {
-    content: "";
-    background-color: var(--zut);
-    opacity: 0.5;
-    position: absolute;
-    left: 40px;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 100px;
-    z-index: 1;
+  content: "";
+  background-color: var(--zut);
+  opacity: 0.5;
+  position: absolute;
+  left: 40px;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100px;
+  z-index: 1;
 }
 
 .plan-ishrane__info,
 .plan-treninga__info,
 .dual-plan__info {
-    display: relative;
-    margin-top: 13rem;
+  display: relative;
+  margin-top: 13rem;
 }
 
-.plan-treninga__info {
-    margin-top: 16rem;
-}
+/* .plan-treninga__info {
+  margin-top: 16rem;
+} */
 
-.dual-plan__info {
-    margin-top: 11rem;
-}
+/* .dual-plan__info {
+  margin-top: 11rem;
+} */
 
 .plan-ishrane__tekst,
 .plan-treninga__tekst,
 .dual-plan__tekst {
-    margin-left: 1rem;
-    width: 70%;
+  margin-left: 1rem;
+  width: 70%;
 }
 
 .plan-ishrane__info p,
 .plan-treninga__info p,
 .dual-plan__info p {
-    font-size: 1.04rem;
-    font-weight: 400;
-    color: #131200;
+  font-size: 1.04rem;
+  font-weight: 400;
+  color: #131200;
 }
 
 .plan-ishrane__title-wrapper,
 .plan-treninga__title-wrapper,
 .dual-plan__title-wrapper {
-    text-align: center;
-    position: relative;
-    margin-left: 1rem;
-    width: 70%;
-    color: var(--ljub);
+  text-align: center;
+  position: relative;
+  margin-left: 1rem;
+  width: 70%;
+  color: var(--ljub);
 }
 
 .plan-ishrane::before,
 .plan-treninga::before,
 .dual-plan::before {
-    margin: 9.8rem 0 1rem -20%;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    background: repeating-linear-gradient( 45deg, rgba(255, 248, 82, 0.4), rgba(255, 248, 82, 0.4) 10px, transparent 10px, transparent 20px);
+  margin: 9.8rem 0 1rem -20%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
-.dual-plan::before {
-    margin-top: 7.8rem;
-}
-
+/* .dual-plan::before {
+  margin-top: 7.8rem;
+} */
 
 /* ------------------------------ */
-
 .plan-kartica-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 37%;
-    z-index: -2;
-    overflow: hidden;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 37%;
+  z-index: -2;
+  overflow: hidden;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 .plan-kartica-img img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .plan-kartica-overflow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .plan-kartica-overflow img {
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.45));
 }
 
-.plan-treninga .plan-kartica-img img {
-    width: 100%;
-    height: 100%;
-}
+/* .plan-treninga .plan-kartica-img img {
+  width: 100%;
+  height: 100%;
+} */
 
-.plan-treninga .plan-kartica-overflow {
-    top: -167px;
-}
+/* .plan-treninga .plan-kartica-overflow {
+  top: -167px;
+} */
 
-.dual-plan .plan-kartica-img {
-    height: 30%;
-}
-
+/* .dual-plan .plan-kartica-img {
+  height: 30%;
+} */
 
 /* --------------------------------*/
 
 .plan-ishrane__title-wrapper h2,
 .plan-treninga__title-wrapper h2,
 .dual-plan__title-wrapper h2 {
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .dugme__prijavi-se {
-    width: 85%;
-    display: flex;
-    justify-content: end;
-    margin-bottom: 1rem;
-    cursor: pointer;
+  width: 85%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .dugme__prijavi-se a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--zut);
-    background: var(--ljub1);
-    border: 1px solid var(--ljub);
-    border-radius: 50px;
-    padding-right: 1.2rem;
-    z-index: -1;
-    filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5));
-    /*****dodao*****/
-    height: 35px;
-    border-left: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--zut);
+  background: var(--ljub1);
+  border: 1px solid var(--ljub);
+  border-radius: 50px;
+  padding-right: 1.2rem;
+  z-index: -1;
+  filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5));
+  /*****dodao*****/
+  height: 35px;
+  border-left: 0;
 }
 
 .dual-plan .dugme__prijavi-se a {
-    width: 55%;
-    justify-content: space-between;
+  width: 55%;
+  justify-content: space-between;
 }
-
 
 /* ===========================================
                     TESTIMONIALS
 ==============================================*/
 
 .testimonials__wrapper {
-    background-image: url("img/transformacije/mozaik2-500x250.jpeg");
-    width: 100%;
-    /***/
-    /* height: 700px; */
-    background-size: contain;
-    background-repeat: repeat;
-    position: relative;
-    z-index: 0;
+  background-image: url("img/transformacije/mozaik2-500x250.jpeg");
+  width: 100%;
+  /***/
+  /* height: 700px; */
+  background-size: contain;
+  background-repeat: repeat;
+  position: relative;
+  z-index: 0;
 }
 
 .testimonials__wrapper::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.8) 50%, transparent);
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 50%, transparent);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .carousel {
-    position: relative;
-    height: 250px;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  height: 250px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel__slider {
-    margin: 0;
-    padding: 0;
-    color: white;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+  list-style: none;
 }
 
 .carousel__slide {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
 }
 
 .carousel__slide::after {
-    content: "";
-    color: white;
-    bottom: 0;
-    right: 0;
+  content: "";
+  color: white;
+  bottom: 0;
+  right: 0;
 }
 
 .carousel__slide::before {
-    content: "";
-    color: white;
-    top: 0;
-    left: 0;
+  content: "";
+  color: white;
+  top: 0;
+  left: 0;
 }
 
 .carousel__button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .carousel__button--left {
-    left: -1rem;
+  left: -1rem;
 }
 
 .carousel__button--right {
-    right: -1rem;
+  right: -1rem;
 }
 
 .carousel__navigation {
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .glider-dot {
-    background: rgba(250, 250, 250, 0.5);
+  background: rgba(250, 250, 250, 0.5);
 }
 
 .glider-dot .active {
-    background: rgba(250, 250, 250, 0.9);
+  background: rgba(250, 250, 250, 0.9);
 }
-
 
 /* ===========================================
                     PRIJAVA
 ==============================================*/
-
 #prijava {
-    margin: 0;
-    padding: 1rem;
+  margin: 0;
+  padding: 1rem;
 }
 
 .prijava__wrapper {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .polje {
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
 }
 
 .polje input,
 .polje textarea,
 .polje select {
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    padding: 4px 7px;
-    margin-top: 3px;
-    background: #f8f8f8;
-    transition: box-shadow ease 0.3s;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 4px 7px;
+  margin-top: 3px;
+  background: #f8f8f8;
+  transition: box-shadow ease 0.3s;
 }
 
 input:focus,
 textarea:focus {
-    /* box-shadow: 0 0 4px var(--ljub1); */
-    outline: none;
-    filter: drop-shadow(0 0 4px var(--ljub1));
+  /* box-shadow: 0 0 4px var(--ljub1); */
+  outline: none;
+  filter: drop-shadow(0 0 4px var(--ljub1));
 }
 
 .cilja {
-    resize: none;
+  resize: none;
 }
 
 input::placeholder,
 textarea::placeholder {
-    opacity: 0.4;
-    letter-spacing: 1px;
-    margin-left: 5px;
-    color: var(--ljub1);
-    background: #f8f8f8;
+  opacity: 0.4;
+  letter-spacing: 1px;
+  margin-left: 5px;
+  color: var(--ljub1);
+  background: #f8f8f8;
 }
 
 input:focus::placeholder,
 textarea:focus::placeholder {
-    opacity: 0.85;
+  opacity: 0.85;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .opcija,
 #plan__odabir {
-    letter-spacing: 1px;
-    color: var(--ljub1);
+  letter-spacing: 1px;
+  color: var(--ljub1);
 }
 
 #prijava .dugme__prijavi-se {
-    margin: 2rem 0 0 1.5rem;
-    width: 90%;
+  margin: 2rem 0 0 1.5rem;
+  width: 90%;
 }
 
 #prijava .dugme__prijavi-se a {
-    width: 55%;
-    justify-content: space-between;
+  width: 55%;
+  justify-content: space-between;
 }
 
 .error-message-visible {
-    color: red;
-    font-size: 0.8rem;
-    margin: 0 0 0 2rem;
+  color: red;
+  font-size: 0.8rem;
+  margin: 0 0 0 2rem;
 }
 
 .error-message-invisible {
-    display: none;
+  display: none;
 }
-
-.succes-message-visible {
-    color: green;
-    font-size: 0.8rem;
-    margin: 0 0 0 2rem;
-}
-
 
 /* ===========================================
                    FOOTER
 ==============================================*/
-
 #footer {
-    background-color: #131200;
+  background-color: #131200;
 }
 
 .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.footer-wrapper .navbar__logo__img {
-    margin: 2rem 0 0 0;
+.footer-wrapper .navbar__logo .navbar__logo__img {
+  margin: 2rem 0 0 0;
 }
 
 .kontakt-container p {
-    color: var(--zut);
-    letter-spacing: 0.8px;
-    font-size: 0.9rem;
-    text-align: center;
+  color: var(--ljub);
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.footer-links--list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.footer__item {
+  margin-bottom: 0.7rem;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--ljub);
+}
+
+/* ===========================================
+                    RESPONSIVE
+==============================================*/
+@media (min-width: 600px) {
+  /** naslovna **/
+  .naslovna__title {
+    justify-content: center;
+  }
+
+  /** ponuda **/
+  .ponuda-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+  }
 }
