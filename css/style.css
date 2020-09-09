@@ -15,6 +15,7 @@ body {
   padding: 0;
   /* font-family: 'Libre Caslon Text', serif; */
   font-family: "Roboto Condensed", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -23,11 +24,13 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(45deg,
-      var(--zut),
-      var(--zut) 10px,
-      #fff 10px,
-      #fff 20px);
+  --pruge: repeating-linear-gradient(
+    45deg,
+    var(--zut),
+    var(--zut) 10px,
+    #fff 10px,
+    #fff 20px
+  );
 }
 
 img {
@@ -396,14 +399,6 @@ hamburger animation
   margin-top: 13rem;
 }
 
-/* .plan-treninga__info {
-  margin-top: 16rem;
-} */
-
-/* .dual-plan__info {
-  margin-top: 11rem;
-} */
-
 .plan-ishrane__tekst,
 .plan-treninga__tekst,
 .dual-plan__tekst {
@@ -443,11 +438,13 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 248, 82, 0.4),
-      rgba(255, 248, 82, 0.4) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 /* ------------------------------ */
@@ -501,8 +498,26 @@ hamburger animation
   width: 85%;
   display: flex;
   justify-content: end;
-  margin-bottom: 1rem;
+  margin: 2rem 0 2rem 0;
   cursor: pointer;
+}
+
+.dugme__prijavi-se img {
+  transition: all ease 0.3s;
+  /* filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5)); */
+}
+
+.dugme__prijavi-se:hover img,
+.dugme__prijavi-se:focus img {
+  transform: rotate(45deg);
+  /* filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.8)); */
+}
+
+.dugme__prijavi-se:hover a,
+.dugme__prijavi-se:focus a {
+  border: 1px solid var(--ljub);
+  border-left: 0;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.8));
 }
 
 .dugme__prijavi-se a {
@@ -511,7 +526,7 @@ hamburger animation
   text-decoration: none;
   color: var(--zut);
   background: var(--ljub1);
-  border: 1px solid var(--ljub);
+  border: 1px solid var(--ljub1);
   border-radius: 50px;
   padding-right: 1.2rem;
   z-index: -1;
@@ -519,11 +534,13 @@ hamburger animation
   /*****dodao*****/
   height: 35px;
   border-left: 0;
+  transition: border ease 0.4s, filter ease 0.1s;
 }
 
 .dual-plan .dugme__prijavi-se a {
   width: 55%;
   justify-content: space-between;
+  max-width: 170px;
 }
 
 /* ===========================================
@@ -669,7 +686,6 @@ textarea::placeholder {
   letter-spacing: 1px;
   margin-left: 5px;
   color: var(--ljub1);
-  background: #f8f8f8;
 }
 
 input:focus::placeholder,
@@ -694,13 +710,14 @@ input::-webkit-inner-spin-button {
 }
 
 #prijava .dugme__prijavi-se {
-  margin: 2rem 0 0 1.5rem;
+  margin: 2rem auto;
   width: 90%;
 }
 
 #prijava .dugme__prijavi-se a {
   width: 55%;
   justify-content: space-between;
+  max-width: 170px;
 }
 
 .error-message-visible {
@@ -718,6 +735,37 @@ input::-webkit-inner-spin-button {
 ==============================================*/
 #footer {
   background-color: #131200;
+  position: relative;
+  z-index: 0;
+}
+
+#footer::before,
+#footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  z-index: -1;
+}
+
+#footer::after {
+  width: 100%;
+  height: 100%;
+  background: #131200;
+  /* top: 50%;
+  transform: translateY(-50%);
+  left: 2.5%; */
+  z-index: 0;
+  clip-path: polygon(0 0, 100% 38%, 100% 100%, 0% 100%);
 }
 
 .footer-wrapper {
@@ -725,6 +773,8 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-wrapper .navbar__logo .navbar__logo__img {
@@ -738,11 +788,15 @@ input::-webkit-inner-spin-button {
   font-weight: 600;
 }
 
+.kontakt-container p span {
+  color: var(--zut);
+}
+
 .footer-links--list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   padding: 0;
   margin: 0 0 2rem 0;
 }
@@ -754,13 +808,22 @@ input::-webkit-inner-spin-button {
 .footer__link {
   text-decoration: none;
   color: var(--ljub);
+  transition: color ease 0.2s;
+}
+
+.footer__link:focus,
+.footer__link:hover {
+  color: var(--zut);
+}
+
+.footer__link i {
+  color: var(--zut);
 }
 
 /* ===========================================
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -769,7 +832,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 460px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -778,7 +840,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 600px) {
-
   /** naslovna **/
   .naslovna__title {
     justify-content: center;
@@ -821,7 +882,7 @@ input::-webkit-inner-spin-button {
 
   .dual-plan .dugme__prijavi-se a {
     width: 100%;
-    /* max-width: 100%; */
+    padding-right: 0.8rem;
   }
 
   .dual-plan__ikonica {
@@ -832,13 +893,58 @@ input::-webkit-inner-spin-button {
   .plan-treninga__info,
   .dual-plan__info {
     display: relative;
-    margin-top: 9rem;
+    margin-top: 60%;
+  }
+
+  /** navbar **/
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar {
+    background: none;
+    clip-path: none;
+    position: relative;
+    height: 100%;
+    width: auto;
+  }
+
+  .navbar__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar__list {
+    display: flex;
+  }
+
+  .navbar__item {
+    padding: 0;
+    margin: 0 1rem 0 0;
+    border-bottom: none;
+  }
+  .navbar__item:hover,
+  .navbar__item:focus {
+    background-color: transparent;
+  }
+
+  .navbar__link {
+    transition: color ease 0.2s;
+  }
+
+  .navbar__link:hover,
+  .navbar__link:focus {
+    color: var(--ljub1);
+  }
+
+  .navbar__link i {
+    display: none;
   }
 }
 
 @media (min-width: 700px) {
-
-  /** da se poveca **/
   .plan-kartica-img {
     height: 25%;
   }
@@ -846,11 +952,17 @@ input::-webkit-inner-spin-button {
   .dual-plan .plan-kartica-img {
     height: 24%;
   }
+
+  .prijava__wrapper {
+    padding: 0 20%;
+  }
+
+  .dugme__prijavi-se {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 850px) {
-
-  /** da se poveca **/
   .plan-kartica-img {
     height: 35%;
   }
@@ -858,10 +970,13 @@ input::-webkit-inner-spin-button {
   .dual-plan .plan-kartica-img {
     height: 34%;
   }
+
+  .footer-wrapper {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 1100px) {
-
   /** da se poveca **/
   .plan-kartica-img {
     height: 45%;
