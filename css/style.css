@@ -500,6 +500,11 @@ hamburger animation
   justify-content: end;
   margin: 2rem 0 2rem 0;
   cursor: pointer;
+  transition: scale ease 0.2s;
+}
+
+.dugme__prijavi-se:active {
+  scale: 1.01;
 }
 
 .dugme__prijavi-se img {
@@ -507,14 +512,14 @@ hamburger animation
   /* filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5)); */
 }
 
-.dugme__prijavi-se:hover img,
-.dugme__prijavi-se:focus img {
+.dugme__prijavi-se a:hover img,
+.dugme__prijavi-se a:focus img {
   transform: rotate(45deg);
   /* filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.8)); */
 }
 
-.dugme__prijavi-se:hover a,
-.dugme__prijavi-se:focus a {
+.dugme__prijavi-se a:hover,
+.dugme__prijavi-se a:focus {
   border: 1px solid var(--ljub);
   border-left: 0;
   filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.8));
@@ -526,10 +531,10 @@ hamburger animation
   text-decoration: none;
   color: var(--zut);
   background: var(--ljub1);
-  border: 1px solid var(--ljub1);
+  border: 1px solid rgba(181, 19, 183, 0.3);
   border-radius: 50px;
   padding-right: 1.2rem;
-  z-index: -1;
+  /* z-index: -1; */
   filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5));
   /*****dodao*****/
   height: 35px;
@@ -667,6 +672,11 @@ hamburger animation
   margin-top: 3px;
   background: #f8f8f8;
   transition: box-shadow ease 0.3s;
+}
+
+input:hover,
+textarea:hover {
+  border: 1px solid rgb(197, 196, 196);
 }
 
 input:focus,
@@ -820,6 +830,32 @@ input::-webkit-inner-spin-button {
   color: var(--zut);
 }
 
+.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-icon {
+  margin-bottom: 1.5rem;
+  position: relative;
+  color: var(--zut);
+  transition: color ease 0.3s;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  color: var(--ljub1);
+}
+
+.social-icon:active {
+  scale: 1.05;
+}
+
 /* ===========================================
                     RESPONSIVE
 ==============================================*/
@@ -871,7 +907,7 @@ input::-webkit-inner-spin-button {
   .plan-ishrane::before,
   .plan-treninga::before,
   .dual-plan::before {
-    margin: 3.8rem 0px 0rem 0px;
+    margin: calc(3.8rem + 15%) 0px 0rem 0px;
     width: 80%;
     height: 100%;
   }
@@ -973,16 +1009,20 @@ input::-webkit-inner-spin-button {
 
   .footer-wrapper {
     flex-direction: row;
+    justify-content: space-evenly;
+    padding: 4rem 0;
+    width: 100%;
+    align-items: center;
   }
 }
 
 @media (min-width: 1100px) {
   /** da se poveca **/
   .plan-kartica-img {
-    height: 45%;
+    height: 40%;
   }
 
   .dual-plan .plan-kartica-img {
-    height: 44%;
+    height: 39%;
   }
 }
