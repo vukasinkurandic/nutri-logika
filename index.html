@@ -13,9 +13,9 @@
       rel="stylesheet"
     />
 
-    <!-- roboto -->
+    <!-- inter -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
 
@@ -35,6 +35,13 @@
       integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
     />
+    <!-- FAVICON  -->
+    <link
+      rel="shortcut icon"
+      href="css/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
     <title>nutri.logika</title>
   </head>
@@ -43,7 +50,7 @@
     <!-- =====================
             HEADER
     ======================= -->
-    <header>
+    <header class="index-header">
       <div class="navbar__wrapper">
         <a href="#naslovna" class="navbar__logo"
           ><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img"
@@ -51,30 +58,38 @@
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a href="#naslovna" class="navbar__link">Home</a>
+              <a href="#naslovna" class="navbar__link"
+                ><i class="fas fa-home"></i>&nbsp; Home</a
+              >
             </li>
             <li class="navbar__item">
-              <a href="#ponuda" class="navbar__link">Ponuda</a>
+              <a href="#ponuda" class="navbar__link"
+                ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+              >
             </li>
             <li class="navbar__item">
-              <a href="#testimonials" class="navbar__link">Rezultati</a>
+              <a href="#testimonials" class="navbar__link"
+                ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+              >
             </li>
             <li class="navbar__item">
-              <a href="" class="navbar__link">O meni</a>
+              <a href="" class="navbar__link"
+                ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+              >
             </li>
           </ul>
         </nav>
         <button class="menu-toggle">
           <span class="hamburger"></span>
         </button>
-        <div class="switchers-wrapper">
-          <button class="language-switcher-sr">
-            SR <img src="css/img/flat-icons/serbia.png" alt="ser" />
-          </button>
-          <button class="language-switcher-en">
-            <img src="css/img/flat-icons/united-kingdom.png" alt="eng" />EN
-          </button>
-        </div>
+      </div>
+      <div class="switchers-wrapper">
+        <button class="language-switcher-sr">
+          SR <img src="css/img/flat-icons/serbia.png" alt="ser" />
+        </button>
+        <button class="language-switcher-en">
+          <img src="css/img/flat-icons/united-kingdom.png" alt="eng" />EN
+        </button>
       </div>
     </header>
 
@@ -180,7 +195,6 @@
           <div class="plan-kartica-img">
             <img src="css/img/slagalica.jpg" alt="hrana" />
           </div>
-          <!-- <div class="dual-plan__grid"></div> -->
           <div class="dual-plan__info">
             <div class="dual-plan__title-wrapper">
               <h2>Plan Ishrane i Treninga</h2>
@@ -355,6 +369,10 @@
       </div>
     </section>
 
+    <!-- =====================
+              FOOTER
+    ======================= -->
+
     <footer>
       <section id="footer">
         <div class="footer-wrapper">
@@ -365,47 +383,69 @@
               class="navbar__logo__img"
           /></a>
           <div class="kontakt-container">
-            <p>E-mail: nutri.logika@gmail.com</p>
-            <p>Telefon: 061/61-45-617</p>
-            <div class="social-icons"></div>
+            <p><span>E-mail:</span> nutri.logika@gmail.com</p>
+            <p><span>Telefon:</span> 061/61-45-617</p>
           </div>
+
           <div class="footer-links__container">
             <ul class="footer-links--list">
               <li class="footer__item">
-                <a href="#naslovna" class="footer__link">Home</a>
+                <a href="#naslovna" class="footer__link"
+                  ><i class="fas fa-home"></i>&nbsp; Home</a
+                >
               </li>
               <li class="footer__item">
-                <a href="#ponuda" class="footer__link">Ponuda</a>
+                <a href="#ponuda" class="footer__link"
+                  ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+                >
               </li>
               <li class="footer__item">
-                <a href="#testimonials" class="footer__link">Rezultati</a>
+                <a href="#testimonials" class="footer__link"
+                  ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+                >
               </li>
               <li class="footer__item">
-                <a href="" class="footer__link">O meni</a>
+                <a href="" class="footer__link"
+                  ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+                >
               </li>
+            </ul>
+          </div>
+          <div class="social">
+            <ul class="social-icons">
+              <li class="social-icon">
+                <i class="fab fa-instagram fa-2x"></i>
+              </li>
+              <li class="social-icon">
+                <i class="fab fa-facebook-f fa-2x"></i>
+              </li>
+              <li class="social-icon"><i class="fab fa-twitter fa-2x"></i></li>
+              <li class="social-icon"><i class="fab fa-tiktok fa-2x"></i></li>
             </ul>
           </div>
         </div>
       </section>
       <!-- zastava -->
-      <div class="mentions">
-        Icons made by
-        <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
-          >Freepik</a
-        >
-        from
-        <a href="https://www.flaticon.com/" title="Flaticon"
-          >www.flaticon.com</a
-        >
-
-        Icons made by
-        <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons"
-          >Roundicons</a
-        >
-        from
-        <a href="https://www.flaticon.com/" title="Flaticon">
-          www.flaticon.com</a
-        >
+      <div class="copyrights">
+        <p class="copyright__text">Copyright &copy; VuleDule 2020 Serbia</p>
+        <div class="mentions">
+          <p>
+            Icons made by
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+              >Freepik</a
+            >
+            &
+            <a
+              href="https://www.flaticon.com/authors/roundicons"
+              title="Roundicons"
+              >Roundicons</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </p>
+        </div>
       </div>
     </footer>
     <!-- ==========================
