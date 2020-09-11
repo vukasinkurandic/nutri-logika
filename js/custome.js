@@ -1,6 +1,6 @@
 /******* NAVBAR ******/
-let menu_toggle = document.querySelector(".menu-toggle");
-let navbar = document.querySelector(".navbar");
+var menu_toggle = document.querySelector(".menu-toggle");
+var navbar = document.querySelector(".navbar");
 
 menu_toggle.addEventListener("click", function () {
   navbar.classList.toggle("navbar-open");
@@ -8,20 +8,13 @@ menu_toggle.addEventListener("click", function () {
 });
 
 /******* open-close-button dashboard ******/
-let entry_list = document.querySelector(".entry-list");
-let person = Array.from(entry_list.children);
-let open_close_button = document.querySelector(".open-close-button__wrapper");
-let ostalo_info = document.querySelector(".ostalo-info");
+var open_close_button = document.querySelector(".open-close-button__wrapper");
+var ostalo_info = document.querySelector(".ostalo-info");
 
-entry_list.addEventListener('click',
-  e => {
-    let targetPerson = e.target.closest('');
-
-  });
-// open_close_button.addEventListener("click", function () {
-//   ostalo_info.classList.toggle("ostalo-info-open");
-//   open_close_button.classList.toggle("arrow-up");
-// });
+open_close_button.addEventListener("click", function () {
+  ostalo_info.classList.toggle("ostalo-info-open");
+  open_close_button.classList.toggle("arrow-up");
+});
 
 /******* GLIDER ******/
 new Glider(document.querySelector(".glider"), {
