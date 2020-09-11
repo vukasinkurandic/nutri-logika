@@ -7,6 +7,15 @@ menu_toggle.addEventListener("click", function () {
   menu_toggle.classList.toggle("open");
 });
 
+/******* open-close-button dashboard ******/
+var open_close_button = document.querySelector(".open-close-button__wrapper");
+var ostalo_info = document.querySelector(".ostalo-info");
+
+open_close_button.addEventListener("click", function () {
+  ostalo_info.classList.toggle("ostalo-info-open");
+  open_close_button.classList.toggle("arrow-up");
+});
+
 /******* GLIDER ******/
 new Glider(document.querySelector(".glider"), {
   // `auto` allows automatic responsive

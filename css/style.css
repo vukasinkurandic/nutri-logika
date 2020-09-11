@@ -13,7 +13,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -23,11 +23,13 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(45deg,
-      var(--zut),
-      var(--zut) 10px,
-      #fff 10px,
-      #fff 20px);
+  --pruge: repeating-linear-gradient(
+    45deg,
+    var(--zut),
+    var(--zut) 10px,
+    #fff 10px,
+    #fff 20px
+  );
 }
 
 img {
@@ -48,7 +50,7 @@ img {
 }
 
 .copyright__text {
-  font-size: .7rem;
+  font-size: 0.7rem;
   color: darkgrey;
 }
 
@@ -59,7 +61,7 @@ img {
 /* ===========================================
                     NAVBAR
 ==============================================*/
-header {
+.index-header {
   width: 100%;
   position: absolute;
   z-index: 10;
@@ -454,11 +456,13 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 248, 82, 0.4),
-      rgba(255, 248, 82, 0.4) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 /* ------------------------------ */
@@ -603,6 +607,7 @@ hamburger animation
   padding: 0;
   color: white;
   list-style: none;
+  scrollbar-width: none;
 }
 
 .carousel__slide {
@@ -771,11 +776,13 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(135deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   z-index: -1;
 }
 
@@ -836,7 +843,6 @@ input::-webkit-inner-spin-button {
   color: var(--ljub);
   transition: color ease 0.2s;
   font-size: 1rem;
-
 }
 
 .footer__link:focus,
@@ -875,10 +881,108 @@ input::-webkit-inner-spin-button {
 }
 
 /* ===========================================
+                    DASHBOARD
+==============================================*/
+.dashboard-header {
+  width: 100%;
+}
+
+.person__name,
+.entry-list,
+.ostalo-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.person__name {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.info-item span {
+  color: var(--ljub);
+}
+
+.ostalo-info {
+  scale: 0;
+  background: #fff;
+  transition: scale ease-in-out 0.3s;
+  transform-origin: top;
+  margin-left: 2rem;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  position: absolute;
+  z-index: 9999;
+}
+
+.ostalo-info-open {
+  scale: 1;
+  box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.3);
+  /* position: absolute; */
+}
+
+.open-close-button__wrapper {
+  /* position: absolute; */
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid var(--ljub);
+  border-radius: 100px;
+}
+
+.open-close-button__wrapper:focus,
+.open-close-button__wrapper:hover,
+.open-close-button__wrapper:active {
+  background-color: var(--zut);
+}
+
+.open-close-button {
+  position: relative;
+  top: 15px;
+  left: 9px;
+}
+
+.open-close-button::before,
+.open-close-button::after {
+  content: "";
+  position: relative;
+  background: var(--ljub);
+  width: 0.5rem;
+  height: 1px;
+  display: block;
+  transition: transform ease-in-out 0.3s;
+}
+
+.open-close-button::after {
+  transform: rotate(135deg);
+  left: 5px;
+}
+
+.open-close-button::before {
+  transform: rotate(45deg);
+  right: 0px;
+  top: 1px;
+}
+
+.arrow-up .open-close-button::after {
+  transform: rotate(45deg);
+  left: 5px;
+}
+
+.arrow-up .open-close-button::before {
+  transform: rotate(135deg);
+  right: 0px;
+  top: 1px;
+}
+
+/* treba napraviti animaciju za strelicu */
+/* ===========================================
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -887,7 +991,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 460px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -896,7 +999,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 600px) {
-
   /** naslovna **/
   .naslovna__title {
     justify-content: center;
@@ -1052,7 +1154,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 1100px) {
-
   /** da se poveca **/
   .plan-kartica-img {
     height: 40%;
@@ -1078,5 +1179,4 @@ input::-webkit-inner-spin-button {
     display: relative;
     margin-top: 50%;
   }
-
 }
