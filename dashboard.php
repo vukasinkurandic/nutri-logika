@@ -90,7 +90,7 @@
       </button>
     </div>
   </header>
-  <main>
+  <main class="dashboard-content">
      <!-- =====================
     PHP konekcija i SELECT ALL
     ======================= -->
@@ -101,8 +101,10 @@
     $query->execute();
     $allPlans=$query->get_result()->fetch_all(MYSQLI_ASSOC);
 ?>
-
-    <h1>Dobrodošli gospodaru!</h1>
+    <div class="dashboard-title__wrapper">
+      <h1>Dobrodošli gospodaru!</h1>
+    </div>
+    
     <div class="table-wrapper">
       <ul class="entry-list">
 
@@ -112,7 +114,7 @@
         <li class="person">
           <div class="person__info">
             <ul class="person__name">
-              <li class="info-item"><span><?php echo ($key + 1);?></span></li>
+              <li class="info-item"><span><?php echo ($key + 1);?>.</span></li>
               <li class="info-item"><span>Ime:</span> <?php echo ($plan['name']);?></li>
               <li class="info-item"><span>Prezime:</span> <?php echo ($plan['last_name']);?></li>
               <div class="open-close-button__wrapper" name="<?php echo ('btn-'.($key + 1));?>">
@@ -137,8 +139,6 @@
       </ul>
     </div>
   </main>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
   <!-- =====================
               FOOTER
