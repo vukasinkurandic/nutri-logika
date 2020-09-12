@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.dugme__prijavi-se').click(function() {
+    $('#prijava').click(function() {
         let ime = $('#ime').val();
         let prezime = $('#prezime').val();
         let email = $('#email').val();

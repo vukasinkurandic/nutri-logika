@@ -16,9 +16,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
     rel="stylesheet" />
 
-  <!-- glider  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
-
   <!-- selectric  -->
   <link rel="stylesheet" href="js/selectric/selectric.css" />
 
@@ -207,11 +204,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- ==========================
-                  GLIDER
-      =========================== -->
-  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
-
-  <!-- ==========================
                   SELECTRIC
       =========================== -->
   <script src="js/selectric/jquery.selectric.min.js"></script>
@@ -220,8 +212,8 @@
               PARALLAX.JS 
       =========================== -->
   <script src="js/parallax.min.js"></script>
-  <script src="js/custome.js"></script>
-  <script src="js/form.js"></script>
+  <script src="js/dashboard.js"></script>
+  
 </body>
 
 </html>
