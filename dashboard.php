@@ -33,26 +33,58 @@
 </head>
 
 <body>
+  <?php session_start(); ?>
+  <!-- =====================================
+           Stop direct request for dashboard
+    ========================================= -->
+  <?php if(!isset($_SERVER['HTTP_REFERER'])){
+  // redirect them to your desired location
+  header('location:index.html?dashboard=false');
+  exit;
+
+} ?>
+<!-- =====================================
+          Stop if SESSION [id] is not set
+    ========================================= -->
+      <?php 
+        if(!isset($_SESSION['start'])){
+          header("Location:login.php?login=error6");
+          exit;
+        }
+      ?>
+<!-- =====================================
+          DESTROY SESSION AFTER 120 min
+    ========================================= -->
+    <?php 
+      if(isset($_SESSION["start"])){
+      if(time()-$_SESSION["start"] >7200)   
+      { 
+    session_unset(); 
+    session_destroy(); 
+    header("Location:login.php?login=error5"); 
+      }  
+    };
+  ?>
   <!-- =====================
             HEADER
     ======================= -->
   <header class="dashboard-header">
     <div class="navbar__wrapper">
-      <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt=""
+      <a href="index.html" class="navbar__logo"><img src="css/img/nutri.logika.png" alt=""
           class="navbar__logo__img" /></a>
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__item">
-            <a href="#naslovna" class="navbar__link"><i class="fas fa-home"></i>&nbsp; Home</a>
+            <a href="index.html#naslovna" class="navbar__link"><i class="fas fa-home"></i>&nbsp; Home</a>
           </li>
           <li class="navbar__item">
-            <a href="#ponuda" class="navbar__link"><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a>
+            <a href="index.html#ponuda" class="navbar__link"><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a>
           </li>
           <li class="navbar__item">
-            <a href="#testimonials" class="navbar__link"><i class="far fa-grin"></i>&nbsp; Rezultati</a>
+            <a href="index.html#testimonials" class="navbar__link"><i class="far fa-grin"></i>&nbsp; Rezultati</a>
           </li>
           <li class="navbar__item">
-            <a href="" class="navbar__link"><i class="far fa-thumbs-up"></i>&nbsp; O meni</a>
+            <a href="index.html#" class="navbar__link"><i class="far fa-thumbs-up"></i>&nbsp; O meni</a>
           </li>
         </ul>
       </nav>
@@ -62,57 +94,49 @@
     </div>
   </header>
   <main>
+     <!-- =====================
+    PHP konekcija i SELECT ALL
+    ======================= -->
+  <?php
+    require_once ('php/connection.php');
+    $sql="SELECT * FROM plans";
+    $query=$conn->prepare($sql);
+    $query->execute();
+    $allPlans=$query->get_result()->fetch_all(MYSQLI_ASSOC);
+?>
+
     <h1>Dobrodošli gospodaru!</h1>
     <div class="table-wrapper">
       <ul class="entry-list">
+
+        <!-- PHP foreach petlja-->
+
+      <?php foreach ($allPlans as $key => $plan): ?>
         <li class="person">
           <div class="person__info">
             <ul class="person__name">
-              <li class="info-item"><span>1.</span></li>
-              <li class="info-item"><span>Ime:</span> Dudan</li>
-              <li class="info-item"><span>Prezime:</span> Pljackovic</li>
-              <div class="open-close-button__wrapper">
-                <div class="open-close-button"></div>
+              <li class="info-item"><span><?php echo ($key + 1);?></span></li>
+              <li class="info-item"><span>Ime:</span> <?php echo ($plan['name']);?></li>
+              <li class="info-item"><span>Prezime:</span> <?php echo ($plan['last_name']);?></li>
+              <div class="open-close-button__wrapper" name="<?php echo ('btn-'.($key + 1));?>">
+                <div class="open-close-button" ></div>
               </div>
             </ul>
-            <ul class="ostalo-info">
-              <li class="info-item"><span>E-mail:</span> dudi@gmail.com</li>
-              <li class="info-item"><span>Godine:</span> 26</li>
-              <li class="info-item"><span>Telefon:</span> +3816918562159</li>
-              <li class="info-item"><span>Pol:</span> Muski</li>
+            <ul class="ostalo-info" id="<?php echo ('btn-'.($key + 1));?>">
+              <li class="info-item"><span>E-mail:</span> <?php echo ($plan['email']);?></li>
+              <li class="info-item"><span>Godine:</span> <?php echo ($plan['age']);?></li>
+              <li class="info-item"><span>Telefon:</span> <?php echo ($plan['phone']);?></li>
+              <li class="info-item"><span>Pol:</span> <?php echo ($plan['sex']);?></li>
               <li class="info-item">
-                <span>Cilj:</span> Cilj mi je da dobijem na misicnoj masi
+                <span>Cilj:</span> <?php echo ($plan['goal']);?>
               </li>
               <li class="info-item">
-                <span>Odabir plana:</span> Plan ishrane i treninga
+                <span>Odabir plana:</span> <?php echo ($plan['plan']);?>
               </li>
             </ul>
           </div>
         </li>
-        <li class="person">
-          <div class="person__info">
-            <ul class="person__name">
-              <li class="info-item"><span>1.</span></li>
-              <li class="info-item"><span>Ime:</span> Mudan</li>
-              <li class="info-item"><span>Prezime:</span> Mljackovic</li>
-              <div class="open-close-button__wrapper">
-                <div class="open-close-button"></div>
-              </div>
-            </ul>
-            <ul class="ostalo-info">
-              <li class="info-item"><span>E-mail:</span> Mudi@gmail.com</li>
-              <li class="info-item"><span>Godine:</span> 26</li>
-              <li class="info-item"><span>Telefon:</span> +381691862159</li>
-              <li class="info-item"><span>Pol:</span> Muski</li>
-              <li class="info-item">
-                <span>Cilj:</span> Cilj mi je da dobijem na misicnoj masi
-              </li>
-              <li class="info-item">
-                <span>Odabir plana:</span> Plan ishrane i treninga
-              </li>
-            </ul>
-          </div>
-        </li>
+        <?php endforeach; ?> 
       </ul>
     </div>
   </main>
