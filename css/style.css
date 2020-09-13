@@ -254,7 +254,6 @@ hamburger animation
 
 .language-switcher-sr:active,
 .language-switcher-en:active {
-  /* scale: 1.01; */
   box-shadow: -1px 4px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -518,7 +517,7 @@ hamburger animation
 }
 
 .dugme__prijavi-se:active {
-  scale: 1.01;
+  transform: scale(1.01);
 }
 
 .dugme__prijavi-se img {
@@ -869,6 +868,7 @@ input::-webkit-inner-spin-button {
   position: relative;
   color: var(--zut);
   transition: color ease 0.3s;
+  cursor: pointer;
 }
 
 .social-icon:hover,
@@ -877,14 +877,33 @@ input::-webkit-inner-spin-button {
 }
 
 .social-icon:active {
-  scale: 1.05;
+  transform: scale(1.05);
 }
 
 /* ===========================================
                     DASHBOARD
 ==============================================*/
+.dashboard-content {
+  margin-bottom: 3rem;
+}
+
 .dashboard-header {
   width: 100%;
+}
+
+.dashboard-title__wrapper {
+  background: var(--pruge);
+  width: 100%;
+  padding: 0.8rem 0;
+  text-align: center;
+}
+
+.dashboard-title__wrapper h1 {
+  margin: 0%;
+}
+
+.table-wrapper {
+  padding: 0 .5rem;
 }
 
 .person__name,
@@ -898,8 +917,14 @@ input::-webkit-inner-spin-button {
 .person__name {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 1rem;
+  justify-content: start;
+  border-bottom: 1px solid var(--zut);
+  padding: .3rem;
+}
+
+
+.info-item {
+  margin-right: .5rem;
 }
 
 .info-item span {
@@ -907,10 +932,10 @@ input::-webkit-inner-spin-button {
 }
 
 .ostalo-info {
-  clip-path: circle(0 at top);
+  clip-path: circle(0 at top right);
   background: #fff;
-  transition: clip-path ease-in-out 0.3s;
-  transform-origin: top;
+  transition: all ease-in-out .4s;
+  width: 100vw;
   margin-left: 2rem;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   position: absolute;
@@ -918,9 +943,23 @@ input::-webkit-inner-spin-button {
 }
 
 .ostalo-info-open {
-  clip-path: circle(80% at 50% 50%);
+  clip-path: circle(150% at top right);
   box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.3);
-  /* position: absolute; */
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  padding: 1rem
+}
+
+.ostalo-info-open .info-item {
+  margin-bottom: .2rem;
+  border-bottom: 1px solid var(--zut1);
+  padding-bottom: .2rem;
+}
+
+.ostalo-info-open .info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .open-close-button__wrapper {
@@ -931,6 +970,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
   border: 1px solid var(--ljub);
   border-radius: 100px;
+  margin-left: auto;
 }
 
 .open-close-button__wrapper:focus,
@@ -1122,6 +1162,18 @@ input::-webkit-inner-spin-button {
 
   .dugme__prijavi-se {
     justify-content: center;
+  }
+
+  /** DASHBOARD **/
+
+  .entry-list {
+    width: 50%;
+    max-width: ;
+    margin: 0 auto;
+  }
+
+  .ostalo-info-open {
+    width: 100%;
   }
 }
 
