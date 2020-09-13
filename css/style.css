@@ -34,11 +34,6 @@ img {
   max-width: 100%;
 }
 
-.parallax-window {
-  min-height: 400px;
-  background: transparent;
-}
-
 .copyrights {
   background-color: #222107;
   display: flex;
@@ -274,7 +269,13 @@ hamburger animation
                         NASLOVNA
 ==============================================*/
 #naslovna {
-  height: 100vh;
+  /* height: 100vh; */
+}
+
+/** paralax.js **/
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
 }
 
 .naslovna__wrapper {
@@ -304,6 +305,9 @@ hamburger animation
   align-items: center;
   /* justify-content: center; */
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .logo {
@@ -328,6 +332,7 @@ hamburger animation
   align-items: center;
   margin: 0 auto;
 }
+
 
 /*******************************/
 .icon {
