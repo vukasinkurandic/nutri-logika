@@ -29,7 +29,7 @@ if ($ime ==="" || !preg_match("/^[a-zšđčćžA-ZŠĐČĆŽ ]*$/",$ime)) {
                    } else {
                         //// INSERT NEW FORM/////
                         
-                     $sql = "INSERT INTO plans VALUES(null,?,?,?,?,?,?,?,?,null)";
+                     $sql = "INSERT INTO plans VALUES(null,?,?,?,?,?,?,?,?,null,1)";
                      $query=$conn->prepare($sql);
                      $query->bind_param("sssissss", $ime, $prezime, $email, $godine, $telefon, $pol, $cilj, $plan);
                      $query->execute();

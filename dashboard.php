@@ -91,16 +91,31 @@
     </div>
   </header>
   <main class="dashboard-content">
-     <!-- =====================
-    PHP konekcija i SELECT ALL
+ <!-- =====================
+    PHP konekcija i DELETE
     ======================= -->
-  <?php
-    require_once ('php/connection.php');
-    $sql="SELECT * FROM plans";
-    $query=$conn->prepare($sql);
-    $query->execute();
-    $allPlans=$query->get_result()->fetch_all(MYSQLI_ASSOC);
-?>
+
+  <?php require_once ('php/connection.php') ?>
+
+      <!-- UPDATE POST-->
+
+  <?php if (isset($_GET['del_id'])) {
+
+      $id=$_GET['del_id'];
+      $sql="UPDATE plans SET status = 0 WHERE id = '$id'";
+      $query=$conn->prepare($sql);
+      $query->execute();
+      header("Location:dashboard.php?delete=true"); 
+   } ?>
+     <!-- =====================
+     SELECT ALL
+    ======================= -->
+      <?php
+        $sql="SELECT * FROM plans WHERE status = 1";
+        $query=$conn->prepare($sql);
+        $query->execute();
+        $allPlans=$query->get_result()->fetch_all(MYSQLI_ASSOC);
+    ?>
     <div class="dashboard-title__wrapper">
       <h1>Dobrodošli gospodaru!</h1>
     </div>
@@ -132,7 +147,7 @@
               <li class="info-item">
                 <span>Odabir plana:</span> <?php echo ($plan['plan']);?>
               </li>
-              <li><button class="delete-button"><a href="">Obrisi prijavu - <i class="fas fa-trash"></i></a></button></li>
+              <li><button class="delete-button"><a href="dashboard.php?del_id=<?php echo $plan['id'];?>">Obrisi prijavu - <i class="fas fa-trash"></i></a></button></li>
             </ul>
           </div>
         </li>
