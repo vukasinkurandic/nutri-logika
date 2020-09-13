@@ -747,7 +747,6 @@ input::-webkit-inner-spin-button {
 .error-message-visible {
   color: red;
   font-size: 0.8rem;
-  margin: 0 0 0 2rem;
 }
 
 .error-message-invisible {
@@ -757,7 +756,6 @@ input::-webkit-inner-spin-button {
 .succes-message-visible {
   color: green;
   font-size: 0.8rem;
-  margin: 0 0 0 2rem;
 }
 
 /* ===========================================
@@ -1018,7 +1016,63 @@ input::-webkit-inner-spin-button {
   top: 1px;
 }
 
-/* treba napraviti animaciju za strelicu */
+.delete-button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.delete-button a {
+  color: red;
+  text-decoration: none;
+}
+
+.delete-button:hover .fas,
+.delete-button:focus .fas {
+  transform: scale(1.2);
+}
+
+/* ===========================================
+                    LOGIN
+==============================================*/
+.admin-prijava {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+
+.admin-prijava__wrapper {
+  margin-top: 8rem;
+}
+
+.dugme-login-admin {
+  margin-top: 1rem;
+  border-radius: 50px;
+  padding: .5rem 3rem;
+  font-size: .9rem;
+  font-weight: 600;
+  background-color: var(--ljub);
+  color: var(--zut);
+  border: 0;
+  box-shadow: 1px 1px 2px rgba(54, 39, 39, 0.4);
+  transition: all ease .2s;
+}
+
+.dugme-login-admin:active {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
+}
+
+.dugme-login-admin:hover,
+.dugme-login-admin:focus {
+  color: var(--ljub);
+  background-color: var(--zut);
+}
+
+.form-login {
+  text-align: center;
+}
+
 /* ===========================================
                     RESPONSIVE
 ==============================================*/
@@ -1157,7 +1211,7 @@ input::-webkit-inner-spin-button {
   }
 
   .prijava__wrapper {
-    padding: 0 20%;
+    width: 500px;
   }
 
   .dugme__prijavi-se {
@@ -1168,7 +1222,7 @@ input::-webkit-inner-spin-button {
 
   .entry-list {
     width: 50%;
-    max-width: ;
+    max-width: 500px;
     margin: 0 auto;
   }
 

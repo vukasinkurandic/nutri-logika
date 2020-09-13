@@ -132,6 +132,7 @@
               <li class="info-item">
                 <span>Odabir plana:</span> <?php echo ($plan['plan']);?>
               </li>
+              <li><button class="delete-button"><a href="">Obrisi prijavu - <i class="fas fa-trash"></i></a></button></li>
             </ul>
           </div>
         </li>

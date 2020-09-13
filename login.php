@@ -86,17 +86,16 @@
         /></a>
       </div>
     </header>
-    <br><br><br><br><br>
-
+    
     <!-- =====================
               PRIJAVA
     ======================= -->
 
-    <section id="prijava">
+    <section class="admin-prijava" >
 
-        <div class="prijava__wrapper">
+        <div class="prijava__wrapper admin-prijava__wrapper">
 
-            <form action="php/login-engine.php" class="form" method="post">
+            <form action="php/login-engine.php" class="form form-login" method="post">
         
 
                 <div class="polje">
@@ -115,7 +114,7 @@
                     <input type="password" name="password" placeholder="password.." />
                 </div>
 
-                <button  class="dugme__prijavi-se" name="login-btn">Prijavi se</button>
+                <button  class="dugme-login-admin" name="login-btn">Login</button>
                 <div class="error-message-visible">
                             <p><?php echo($errors) ?></p>
             </form>
