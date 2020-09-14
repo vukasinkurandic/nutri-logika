@@ -268,25 +268,41 @@ hamburger animation
 /* ===========================================
                         NASLOVNA
 ==============================================*/
-#naslovna {
-  /* height: 100vh; */
-}
+/* #naslovna {
+  height: 100vh;
+} */
 
 /** paralax.js **/
-.parallax-window {
+/* .parallax-window {
   min-height: 400px;
   background: transparent;
-}
+} */
 
 .naslovna__wrapper {
-  height: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
+/*===========================
+najobicniji paralax  
+ali treba uraditi
+@support 
+============================*/
 .hero {
   width: 100%;
   height: 100%;
+  background-image: url("img/hero-no-background500x750-optimizovano.png");
+  background-attachment: fixed;
   position: relative;
+  background-position: center;
+  background-size: cover;
 }
+
+/*===========================
+najobicniji paralax  
+ali treba uraditi
+@support 
+============================*/
 
 .hero::before {
   content: "";

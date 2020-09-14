@@ -1,7 +1,3 @@
-// $('.parallax-window').parallax({
-//   naturalWidth: 500,
-//   naturalHeight: 750
-// });
 /******* NAVBAR ******/
 var menu_toggle = document.querySelector(".menu-toggle");
 var navbar = document.querySelector(".navbar");
