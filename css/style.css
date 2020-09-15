@@ -23,20 +23,17 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(45deg,
-      var(--zut),
-      var(--zut) 10px,
-      #fff 10px,
-      #fff 20px);
+  --pruge: repeating-linear-gradient(
+    45deg,
+    var(--zut),
+    var(--zut) 10px,
+    #fff 10px,
+    #fff 20px
+  );
 }
 
 img {
   max-width: 100%;
-}
-
-.parallax-window {
-  min-height: 400px;
-  background: transparent;
 }
 
 .copyrights {
@@ -273,19 +270,52 @@ hamburger animation
 /* ===========================================
                         NASLOVNA
 ==============================================*/
-#naslovna {
+/* #naslovna {
   height: 100vh;
-}
+} */
+
+/** paralax.js **/
+/* .parallax-window {
+  min-height: 400px;
+  background: transparent;
+} */
 
 .naslovna__wrapper {
-  height: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
+/*===========================
+najobicniji paralax  
+ali treba uraditi
+@support 
+============================*/
+@supports (-webkit-touch-callout: none) {
+  .hero {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/hero-no-background500x750-optimizovano.png");
+    background-attachment: scroll;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+  }
+}
 .hero {
   width: 100%;
   height: 100%;
+  background-image: url("img/hero-no-background500x750-optimizovano.png");
+  background-attachment: fixed;
   position: relative;
+  background-position: center;
+  background-size: cover;
 }
+
+/*===========================
+najobicniji paralax  
+ali treba uraditi
+@support 
+============================*/
 
 .hero::before {
   content: "";
@@ -304,6 +334,10 @@ hamburger animation
   align-items: center;
   /* justify-content: center; */
   height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .logo {
@@ -453,11 +487,13 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 248, 82, 0.4),
-      rgba(255, 248, 82, 0.4) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 /* ------------------------------ */
@@ -775,11 +811,13 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(135deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   z-index: -1;
 }
 
@@ -901,7 +939,7 @@ input::-webkit-inner-spin-button {
 }
 
 .table-wrapper {
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 .person__name,
@@ -917,12 +955,11 @@ input::-webkit-inner-spin-button {
   align-items: center;
   justify-content: start;
   border-bottom: 1px solid var(--zut);
-  padding: .3rem;
+  padding: 0.3rem;
 }
 
-
 .info-item {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .info-item span {
@@ -932,7 +969,7 @@ input::-webkit-inner-spin-button {
 .ostalo-info {
   clip-path: circle(0 at top right);
   background: #fff;
-  transition: all ease-in-out .4s;
+  transition: all ease-in-out 0.4s;
   width: 100vw;
   margin-left: 2rem;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -946,13 +983,13 @@ input::-webkit-inner-spin-button {
   position: relative;
   width: 100vw;
   margin: 0;
-  padding: 1rem
+  padding: 1rem;
 }
 
 .ostalo-info-open .info-item {
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
   border-bottom: 1px solid var(--zut1);
-  padding-bottom: .2rem;
+  padding-bottom: 0.2rem;
 }
 
 .ostalo-info-open .info-item:last-child {
@@ -1041,7 +1078,6 @@ input::-webkit-inner-spin-button {
   padding: 0;
 }
 
-
 .admin-prijava__wrapper {
   margin-top: 8rem;
 }
@@ -1049,18 +1085,18 @@ input::-webkit-inner-spin-button {
 .dugme-login-admin {
   margin-top: 1rem;
   border-radius: 50px;
-  padding: .5rem 3rem;
-  font-size: .9rem;
+  padding: 0.5rem 3rem;
+  font-size: 0.9rem;
   font-weight: 600;
   background-color: var(--ljub);
   color: var(--zut);
   border: 0;
   box-shadow: 1px 1px 2px rgba(54, 39, 39, 0.4);
-  transition: all ease .2s;
+  transition: all ease 0.2s;
 }
 
 .dugme-login-admin:active {
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .dugme-login-admin:hover,
@@ -1077,7 +1113,6 @@ input::-webkit-inner-spin-button {
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -1086,7 +1121,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 460px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -1095,7 +1129,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 600px) {
-
   /** naslovna **/
   .naslovna__title {
     justify-content: center;
@@ -1263,7 +1296,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 1100px) {
-
   /** da se poveca **/
   .plan-kartica-img {
     height: 40%;
