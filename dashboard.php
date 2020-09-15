@@ -90,6 +90,16 @@
       </button>
     </div>
   </header>
+  <div id="php_greska" class="error-message-visible">
+   
+   <?php 
+    ////ISPISIVANJE DELETE SUCCES
+    $fullUrl="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    if (strpos($fullUrl,"delete=true")==true) {
+        $errors="Uspesno izbrisan plan";
+        echo ('<p>'.$errors.'</p>'); }
+    ?>
+  </div>
   <main class="dashboard-content">
  <!-- =====================
     PHP konekcija i DELETE

@@ -51,7 +51,6 @@ $(document).ready(function() {
                                 }, // data to be submit
                                 function(data, textStatus, jqXHR) {
                                     // success callback
-                                    console.log(data);
                                     if (data === "succes") {
                                         $('#php_greska').removeClass('error-message-visible').addClass('succes-message-visible');
                                         $("#php_greska").html("<p>Uspesna prijava, hvala Vam</p>");
