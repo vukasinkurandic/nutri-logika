@@ -289,23 +289,14 @@ hamburger animation
 najobicniji paralax  
 ali treba uraditi
 @support 
+@supports (-webkit-touch-callout: none) {}
 ============================*/
-@supports (-webkit-touch-callout: none) {
-  .hero {
-    width: 100%;
-    height: 100%;
-    background-image: url("img/hero-no-background500x750-optimizovano.png");
-    background-attachment: scroll;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-  }
-}
+
 .hero {
   width: 100%;
   height: 100%;
   background-image: url("img/hero-no-background500x750-optimizovano.png");
-  background-attachment: fixed;
+  background-attachment: scroll;
   position: relative;
   background-position: center;
   background-size: cover;
@@ -1125,6 +1116,16 @@ input::-webkit-inner-spin-button {
   .plan-kartica-overflow {
     /* width: 100%; */
     max-width: 65%;
+  }
+
+  .hero {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/hero-no-background500x750-optimizovano.png");
+    background-attachment: fixed;
+    position: relative;
+    background-position: center;
+    background-size: cover;
   }
 }
 
