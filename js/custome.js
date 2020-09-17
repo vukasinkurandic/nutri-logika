@@ -70,15 +70,15 @@ new Glider(document.querySelector(".glider"), {
   resizeLock: true,
 
   // Glider.js breakpoints are mobile-first
-  responsive: [
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      },
-    },
-  ],
+  // responsive: [
+  //   {
+  //     breakpoint: 1000,
+  //     settings: {
+  //       slidesToShow: 2,
+  //       slidesToScroll: 2,
+  //     },
+  //   },
+  // ],
 });
 
 /******* SELECTRIC ******/
