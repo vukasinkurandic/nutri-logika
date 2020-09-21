@@ -24,11 +24,13 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(45deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  --pruge: repeating-linear-gradient(
+    45deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 img {
@@ -477,11 +479,13 @@ ali treba uraditi
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 248, 82, 0.4),
-      rgba(255, 248, 82, 0.4) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 /* ------------------------------ */
@@ -529,7 +533,7 @@ ali treba uraditi
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .dugme__prijavi-se {
@@ -690,20 +694,15 @@ ali treba uraditi
                    O MENI
 ==============================================*/
 .omeni-wrapper {
-  padding: 1rem;
+  padding: 2rem;
 }
 
-.omeni-info__title h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: var(--ljub);
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
+.omeni-info__title {
+  margin: 1rem 0;
   position: relative;
 }
 
-.omeni-info__title h2::before {
+.omeni-info__title::before {
   content: "";
   position: absolute;
   background: var(--pruge);
@@ -713,6 +712,17 @@ ali treba uraditi
   height: 100%;
   z-index: -1;
   border-radius: 50px;
+}
+
+.omeni-info__title h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--ljub);
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .omeni-img {
@@ -731,13 +741,17 @@ ali treba uraditi
 .omeni-logo {
   position: absolute;
   z-index: -1;
-  opacity: 0.4;
-  width: 100%;
+  opacity: 0.7;
+  width: 45%;
   top: 30px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  left: 168px;
+  object-fit: cover;
 }
 
 .omeni-jovan {
-  width: 55%;
+  object-fit: cover;
+  clip-path: circle();
 }
 
 .omeni-info__content {
@@ -749,11 +763,13 @@ ali treba uraditi
   position: absolute;
   top: -50px;
   left: -50px;
-  background: repeating-linear-gradient(45deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   width: 90%;
   height: 110%;
   z-index: 0;
@@ -769,16 +785,19 @@ ali treba uraditi
 }
 
 .prijava-title h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   color: var(--ljub);
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.prijava-title {
   position: relative;
 }
 
-.prijava-title h2::before {
+.prijava-title::before {
   content: "";
   position: absolute;
   background: var(--pruge);
@@ -899,11 +918,13 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(135deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   z-index: -1;
 }
 
@@ -1199,7 +1220,6 @@ input::-webkit-inner-spin-button {
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -1208,7 +1228,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 460px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -1227,7 +1246,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 600px) {
-
   /** naslovna **/
   .naslovna__title {
     justify-content: center;
@@ -1392,10 +1410,37 @@ input::-webkit-inner-spin-button {
   .social-icons {
     margin: 0;
   }
+
+  /* == O MENI ==*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: minmax(30ch, 50ch) 2fr;
+    /* grid-gap: 8rem; */
+  }
+
+  .omeni-img {
+    grid-column: 2;
+    margin: 0 auto;
+    width: 70%;
+    position: relative;
+  }
+
+  .omeni-jovan {
+    max-height: 70%;
+  }
+
+  .omeni-info__content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .omeni-info__content::before {
+    top: 0;
+    height: 95%;
+  }
 }
 
 @media (min-width: 1100px) {
-
   /** da se poveca **/
   .plan-kartica-img {
     height: 40%;
