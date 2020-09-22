@@ -729,6 +729,8 @@ ali treba uraditi
   display: flex;
   justify-content: center;
   position: relative;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .omeni-info__content p {
@@ -738,7 +740,7 @@ ali treba uraditi
   font-weight: 500;
 }
 
-.omeni-logo {
+/* .omeni-logo {
   position: absolute;
   z-index: -1;
   opacity: 0.7;
@@ -747,7 +749,7 @@ ali treba uraditi
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
   left: 168px;
   object-fit: cover;
-}
+} */
 
 .omeni-jovan {
   object-fit: cover;
@@ -1349,6 +1351,10 @@ input::-webkit-inner-spin-button {
   .navbar__link i {
     display: none;
   }
+
+  .omeni-info__content::before {
+    height: 115%;
+  }
 }
 
 @media (min-width: 700px) {
@@ -1414,30 +1420,61 @@ input::-webkit-inner-spin-button {
   /* == O MENI ==*/
   .grid-container {
     display: grid;
-    grid-template-columns: minmax(30ch, 50ch) 2fr;
+    grid-template-columns: minmax(30ch, 50ch) max-content;
+    justify-content: center;
     /* grid-gap: 8rem; */
   }
 
   .omeni-img {
     grid-column: 2;
     margin: 0 auto;
-    width: 70%;
+    width: 100%;
     position: relative;
+    align-self: center;
   }
 
   .omeni-jovan {
-    max-height: 70%;
+    height: 350px;
+    margin-left: 1rem;
   }
 
   .omeni-info__content {
     grid-column: 1;
     grid-row: 1;
+    padding: 0 0 0 3rem;
   }
 
   .omeni-info__content::before {
     top: 0;
-    height: 95%;
+    height: 100%;
   }
+
+  .omeni-img::before {
+    content: "";
+position: absolute;
+top: 5px;
+left: 20px;
+width: 87%;
+height: 100%;
+z-index: 0;
+right: 0;
+bottom: 0;
+border-right: 2px solid var(--ljub);
+border-top-right-radius: 190px;
+border-bottom-right-radius: 190px;
+  }
+
+  .omeni-img::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 326px;
+  width: 100%;
+  height: 2px;
+  z-index: -1;
+  background: linear-gradient(to right, var(--ljub), var(--zut1));
+  right: 0;
+  bottom: 0;
 }
 
 @media (min-width: 1100px) {
