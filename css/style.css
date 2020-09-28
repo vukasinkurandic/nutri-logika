@@ -8,12 +8,14 @@ crna #131200
 
 Fonts:
 ==============================================*/
+
 html,
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  /* font-family: "Roboto Slab", serif; */
   scroll-behavior: smooth;
 }
 
@@ -25,10 +27,10 @@ body {
 
   --pruge: repeating-linear-gradient(
     45deg,
-    var(--zut),
-    var(--zut) 10px,
-    #fff 10px,
-    #fff 20px
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
   );
 }
 
@@ -63,7 +65,7 @@ img {
 }
 
 .navbar__wrapper {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.1);
   max-width: 100%;
   position: relative;
   padding: 0.4rem;
@@ -72,9 +74,10 @@ img {
 
 .navbar {
   position: absolute;
-  top: 100%;
+  top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
+  background: var(--zut);
   clip-path: circle(0px at top right);
   transition: clip-path ease-in-out 0.5s;
   width: 100vw;
@@ -87,7 +90,7 @@ img {
 
 .navbar__list {
   padding: 0;
-  margin: 0;
+  margin: 5rem 0 0 0;
   list-style: none;
 }
 
@@ -100,12 +103,12 @@ img {
 
 .navbar__item:hover,
 .navbar__item:focus {
-  background-color: var(--zut1);
+  background-color: var(--ljub1);
 }
 
 .navbar__item:hover .navbar__link,
 .navbar__item:focus .navbar__link {
-  color: var(--ljub);
+  color: var(--zut);
 }
 
 .navbar__item:last-child {
@@ -113,10 +116,10 @@ img {
 }
 
 .navbar__link {
-  color: var(--zut);
+  color: var(--ljub);
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 .navbar-open .navbar__item {
@@ -281,43 +284,72 @@ hamburger animation
 } */
 
 .naslovna__wrapper {
-  height: 100vh;
-  width: 100%;
+  /* height: 100vh;
+  width: 100%; */
 }
 
 /*===========================
 najobicniji paralax  
 ali treba uraditi
 @support 
+@supports (-webkit-touch-callout: none) {}
 ============================*/
-@supports (-webkit-touch-callout: none) {
-  .hero {
-    width: 100%;
-    height: 100%;
-    background-image: url("img/hero-no-background500x750-optimizovano.png");
-    background-attachment: scroll;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-  }
-}
+
 .hero {
   width: 100%;
-  height: 100%;
-  background-image: url("img/hero-no-background500x750-optimizovano.png");
-  background-attachment: fixed;
-  position: relative;
-  background-position: center;
+  height: 80vh;
+  background-image: url("img/kosulja-front-transparent80-cropplus-tall-sredjeno-opacity06.png");
+  background-attachment: scroll;
+  /* position: relative; */
+  background-position: 0%;
   background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
 }
 
+.hero-title {
+  grid-column: 1;
+  /* grid-row: 2; */
+  margin-left: 1rem;
+  margin-top: 6rem;
+  text-transform: uppercase;
+}
+
+.hero-title h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.hero-title h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.hero-title h2 span:nth-child(odd) {
+  color: var(--ljub1);
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  line-height: 0.8;
+  letter-spacing: -4px;
+}
+
+.hero-title h2 span:nth-child(even) {
+  color: var(--ljub);
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  line-height: 0.8;
+  letter-spacing: -4px;
+}
 /*===========================
 najobicniji paralax  
 ali treba uraditi
 @support 
 ============================*/
 
-.hero::before {
+/* .hero::before {
   content: "";
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -325,24 +357,58 @@ ali treba uraditi
   height: 100%;
   z-index: 0;
   display: inline-block;
-}
+} */
 
 .naslovna__title {
   /* color: red;
     font-size: 2rem; */
   display: flex;
+  flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-  height: 100%;
+  justify-content: end;
+  height: 80%;
   width: 100%;
-  position: absolute;
+  /* position: absolute; 
   top: 0;
-  left: 0;
+  left: 0;*/
+  grid-row: 3;
+  grid-column: 1 / span 2;
 }
 
 .logo {
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: 0;
+  height: 150px;
+}
+
+.naslovna__strelica {
+  position: relative;
+  width: 50px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.naslovna__strelica::before,
+.naslovna__strelica::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 5px;
+  top: 0;
+  left: 0;
+  background: var(--ljub);
+}
+
+.naslovna__strelica::before {
+  transform: rotate(155deg) translateX(4px);
+  left: 50%;
+  border-radius: 50px;
+}
+
+.naslovna__strelica::after {
+  transform: rotate(25deg) translateX(4px);
+  left: -50%;
+  border-radius: 50px;
 }
 
 /* ===========================================
@@ -541,6 +607,7 @@ ali treba uraditi
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
 }
 
 .dugme__prijavi-se {
@@ -600,6 +667,9 @@ ali treba uraditi
 /* ===========================================
                     TESTIMONIALS
 ==============================================*/
+#testimonials {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
 .testimonials__wrapper {
   background-image: url("img/transformacije/mozaik2-500x250.jpeg");
@@ -626,7 +696,7 @@ ali treba uraditi
 .carousel {
   position: relative;
   height: 250px;
-  width: 80%;
+  max-width: 450px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -695,11 +765,127 @@ ali treba uraditi
 }
 
 /* ===========================================
+                   O MENI
+==============================================*/
+#omeni {
+  overflow: hidden;
+}
+.omeni-wrapper {
+  padding: 2rem;
+}
+
+.omeni-info__title {
+  margin: 1rem 0;
+  position: relative;
+}
+
+.omeni-info__title::before {
+  content: "";
+  position: absolute;
+  background: var(--pruge);
+  top: -20px;
+  left: -50px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+.omeni-info__title h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--ljub);
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.omeni-img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.omeni-info__content p {
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+  /* font-weight: 500; */
+}
+
+/* .omeni-logo {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.7;
+  width: 45%;
+  top: 30px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  left: 168px;
+  object-fit: cover;
+} */
+
+.omeni-jovan {
+  object-fit: cover;
+  clip-path: circle();
+}
+
+.omeni-info__content {
+  position: relative;
+}
+
+.omeni-info__content::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  width: 90%;
+  height: 110%;
+  z-index: 0;
+  border-radius: 50px;
+}
+
+/* ===========================================
                     PRIJAVA
 ==============================================*/
 #prijava {
   margin: 0;
   padding: 1rem;
+}
+
+.prijava-title h2 {
+  font-family: "Oswald", sans-serif;
+  color: var(--ljub);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.prijava-title {
+  position: relative;
+}
+
+.prijava-title::before {
+  content: "";
+  position: absolute;
+  background: var(--pruge);
+  top: -20px;
+  left: -50px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 50px;
 }
 
 .prijava__wrapper {
@@ -917,6 +1103,24 @@ input::-webkit-inner-spin-button {
 }
 
 /* ===========================================
+                   CALCULATOR
+==============================================*/
+#calculator {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.calculator-rezultati__polje {
+  background: var(--zut1);
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.calculator-rezultati__polje h4 {
+  margin-top: 0;
+}
+
+/* ===========================================
                     DASHBOARD
 ==============================================*/
 .dashboard-content {
@@ -1126,6 +1330,41 @@ input::-webkit-inner-spin-button {
     /* width: 100%; */
     max-width: 65%;
   }
+
+  .hero {
+    width: 100%;
+    height: 100vh;
+    background-image: none;
+  }
+
+  .hero-desktop-img {
+    background-image: url("img/kosulja-nobckg-tall-sredjeno-opacity06.png");
+    background-size: cover;
+    background-position: 4rem;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .naslovna__title {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+
+  .hero-desktop-img {
+    background-position: -13rem;
+  }
+
+  .hero-title h2 span:nth-child(2n + 1) {
+    font-size: 4.5rem;
+  }
+
+  .hero-title h2 span:nth-child(2n) {
+    font-size: 4rem;
+  }
+
+  .logo {
+    height: 200px;
+  }
 }
 
 @media (min-width: 600px) {
@@ -1207,6 +1446,7 @@ input::-webkit-inner-spin-button {
 
   .navbar__list {
     display: flex;
+    margin: 0;
   }
 
   .navbar__item {
@@ -1231,6 +1471,10 @@ input::-webkit-inner-spin-button {
 
   .navbar__link i {
     display: none;
+  }
+
+  .omeni-info__content::before {
+    height: 115%;
   }
 }
 
@@ -1293,8 +1537,67 @@ input::-webkit-inner-spin-button {
   .social-icons {
     margin: 0;
   }
-}
 
+  /* == O MENI ==*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: minmax(30ch, 50ch) max-content;
+    justify-content: center;
+    /* grid-gap: 8rem; */
+  }
+
+  .omeni-img {
+    grid-column: 2;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    align-self: center;
+  }
+
+  .omeni-jovan {
+    height: 350px;
+    margin-left: 1rem;
+  }
+
+  .omeni-info__content {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0 0 0 3rem;
+  }
+
+  .omeni-info__content::before {
+    top: 0;
+    height: 100%;
+  }
+
+  .omeni-img::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    width: 87%;
+    height: 100%;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 2px solid var(--ljub);
+    border-top-right-radius: 190px;
+    border-bottom-right-radius: 190px;
+  }
+
+  .omeni-img::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 326px;
+    width: 100%;
+    height: 2px;
+    z-index: -1;
+    background: linear-gradient(to right, var(--ljub), var(--zut1));
+    right: 0;
+    bottom: 0;
+  }
+}
 @media (min-width: 1100px) {
   /** da se poveca **/
   .plan-kartica-img {
@@ -1303,6 +1606,48 @@ input::-webkit-inner-spin-button {
 
   .dual-plan .plan-kartica-img {
     height: 39%;
+  }
+  .hero {
+    width: 100%;
+    height: 100vh;
+    background-image: none;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .hero-title {
+    grid-column: 1 / span 2;
+    padding: 0 8rem 0 4rem;
+  }
+
+  /* .hero-title h2 span:nth-child(2n + 1) {
+    font-size: 4.5rem;
+  }
+
+  .hero-title h2 span:nth-child(2n) {
+    font-size: 4.5rem;
+  } */
+
+  .hero-desktop-img {
+    background-image: url("img/kosulja-nobckg-tall-sredjeno-opacity06.png");
+    background-size: cover;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    background-position: 50%;
+  }
+
+  .naslovna__title {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .naslovna__title .logo {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .hero-desktop-img {
+    background-position: 60%;
   }
 }
 

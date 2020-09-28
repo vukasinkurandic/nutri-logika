@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- selectric  -->
+    <link rel="stylesheet" href="js/selectric/selectric.css" />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <!-- FAVICON  -->
+    <link
+      rel="shortcut icon"
+      href="css/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
+
+    <title>nutri.logika</title>
+  </head>
+  <body>
+    <!-- =====================
+            HEADER
+    ======================= -->
+    <header class="dashboard-header">
+      <div class="navbar__wrapper">
+        <a href="index.html" class="navbar__logo"
+          ><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img"
+        /></a>
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="index.html#naslovna" class="navbar__link"
+                ><i class="fas fa-home"></i>&nbsp; Home</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="index.html#ponuda" class="navbar__link"
+                ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="index.html#testimonials" class="navbar__link"
+                ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="index.html#" class="navbar__link"
+                ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button class="menu-toggle">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- =====================
+            CALCULATOR    
+    ======================= -->
+    <section id="calculator">
+      <div class="calculator-title">
+        <h2>Kalkulator makronutrijenata i kalorija</h2>
+      </div>
+      <div class="calculator__wrapper">
+        <form action="#" class="form">
+          <div class="calculator__polje">
+            <h4>Moj cilj je:</h4>
+            <input
+              type="radio"
+              id="dobijanje-kilaze"
+              name="dobijanje"
+              value="dobijanje"
+            />
+            <label for="dobijanje-kilaze">Dobijanje na kilaži</label><br />
+            <input
+              type="radio"
+              id="gubljenje-kilaze"
+              name="gubljenje"
+              value="gubljenje"
+            />
+            <label for="gubljenje-kilaze">Gubljenje kilaže</label><br />
+          </div>
+          <div class="calculator__polje">
+            <h4>Pol:</h4>
+            <input
+              type="radio"
+              id="pol-muski"
+              name="pol-muski"
+              value="pol-muski"
+            />
+            <label for="pol">Muški</label> <br />
+            <input
+              type="radio"
+              id="pol-Zenski"
+              name="pol-Zenski"
+              value="pol-Zenski"
+            />
+            <label for="pol">Ženski</label>
+
+            <h4>Godine starosti:</h4>
+            <!-- <label for="godine">Godine starosti:</label> -->
+            <input type="number" id="godine" placeholder="34.." />
+
+            <h4>Tezina</h4>
+            <input type="number" id="tezina" placeholder="--kg" />
+
+            <h4>Visina</h4>
+            <input type="number" id="visina" placeholder="--cm" />
+          </div>
+
+          <div class="calculator__polje">
+            <h4>Aktivnost u toku dana:</h4>
+            <p>
+              Kada birate nivo aktivnosti, uzmite u obzir kako treninge tako i
+              aktivnosti u svakodnevnom životu kao što su pešačenje, tip posla
+              kojim se bavite itd.
+            </p>
+            <br />
+            <input type="radio" />
+            <label for="">Veoma neaktivan</label><br />
+            <input type="radio" />
+            <label for="">Lagano aktivan</label><br />
+            <input type="radio" />
+            <label for="">Srednje aktivan</label><br />
+            <input type="radio" />
+            <label for="">Veoma aktivan</label><br />
+            <input type="radio" />
+            <label for="">Ekstremno aktivan</label><br />
+          </div>
+          <button>Pošalji!</button>
+        </form>
+        <div class="calculator-rezultati__polje">
+          <h4>Dnevni unos:</h4>
+          <p>Kalorije:</p>
+          <p>Protein:</p>
+          <p>Ugljeni hidrati:</p>
+          <p>Masti:</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+              FOOTER
+    ======================= -->
+    <footer>
+      <section id="footer">
+        <div class="footer-wrapper">
+          <a href="#naslovna" class="navbar__logo"
+            ><img
+              src="css/img/nutri.logika.png"
+              alt=""
+              class="navbar__logo__img"
+          /></a>
+          <div class="kontakt-container">
+            <p><span>E-mail:</span> nutri.logika@gmail.com</p>
+            <p><span>Telefon:</span> 061/61-45-617</p>
+          </div>
+
+          <div class="footer-links__container">
+            <ul class="footer-links--list">
+              <li class="footer__item">
+                <a href="#naslovna" class="footer__link"
+                  ><i class="fas fa-home"></i>&nbsp; Home</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="#ponuda" class="footer__link"
+                  ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="#testimonials" class="footer__link"
+                  ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link"
+                  ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="social">
+            <ul class="social-icons">
+              <li class="social-icon">
+                <i class="fab fa-instagram fa-2x"></i>
+              </li>
+              <li class="social-icon">
+                <i class="fab fa-facebook-f fa-2x"></i>
+              </li>
+              <li class="social-icon"><i class="fab fa-twitter fa-2x"></i></li>
+              <li class="social-icon"><i class="fab fa-tiktok fa-2x"></i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- zastava -->
+      <div class="copyrights">
+        <p class="copyright__text">Copyright &copy; VuleDule 2020 Serbia</p>
+        <div class="mentions">
+          <p>
+            Icons made by
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+              >Freepik</a
+            >
+            &
+            <a
+              href="https://www.flaticon.com/authors/roundicons"
+              title="Roundicons"
+              >Roundicons</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ==========================
+                  JQUERY
+      =========================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- ==========================
+                  SELECTRIC
+      =========================== -->
+    <script src="js/selectric/jquery.selectric.min.js"></script>
+
+    <!-- ==========================
+              PARALLAX.JS 
+      =========================== -->
+    <script src="js/parallax.min.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

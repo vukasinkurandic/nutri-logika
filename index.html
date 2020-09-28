@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
 
-    <!-- inter -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    /> -->
 
     <!-- glider  -->
     <link
@@ -73,8 +76,18 @@
               >
             </li>
             <li class="navbar__item">
-              <a href="" class="navbar__link"
+              <a href="#omeni" class="navbar__link"
                 ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="#prijava" class="navbar__link"
+                ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link"
+                ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
               >
             </li>
           </ul>
@@ -83,14 +96,14 @@
           <span class="hamburger"></span>
         </button>
       </div>
-      <div class="switchers-wrapper">
+      <!-- <div class="switchers-wrapper">
         <button class="language-switcher-sr">
           SR <img src="css/img/flat-icons/serbia.png" alt="ser" />
         </button>
         <button class="language-switcher-en">
           <img src="css/img/flat-icons/united-kingdom.png" alt="eng" />EN
         </button>
-      </div>
+      </div> -->
     </header>
 
     <!-- =====================
@@ -99,9 +112,18 @@
     <section id="naslovna">
       <div class="naslovna__wrapper">
         <div class="hero">
+          <div class="hero-desktop-img"></div>
+          <div class="hero-title">
+            <h4>Naučno zasnovane i u praksi dokazane informacije o</h4>
+            <h2>
+              <span>ishrani</span>, <span>treningu</span> i
+              <span>zdravom</span> <span>životu</span>.
+            </h2>
+          </div>
           <!-- <img class="hero-img" src="css/img/hero-no-background500x750-optimizovano.png" alt="hero"> -->
           <div class="naslovna__title">
             <img class="logo" src="css/img/nutri.logika.png" alt="logo" />
+            <a href="#ponuda"><div class="naslovna__strelica"></div></a>
           </div>
         </div>
         <!-- <div class="hero parallax-window" data-parallax="scroll" data-z-index="-1"
@@ -109,7 +131,6 @@
         <div class="naslovna__title">
           <img class="logo" src="css/img/nutri.logika.png" alt="logo" />
         </div>
-        <div class="naslovna__strelica"></div>
       </div> -->
       </div>
     </section>
@@ -192,10 +213,10 @@
 
         <div class="dual-plan">
           <div class="plan-kartica-overflow">
-            <img src="css/img/puzla.png" alt="puzla" />
+            <img src="css/img/puzla500x303.png" alt="puzla" />
           </div>
           <div class="plan-kartica-img">
-            <img src="css/img/slagalica.jpg" alt="hrana" />
+            <img src="css/img/slagalica500x303.jpg" alt="hrana" />
           </div>
           <div class="dual-plan__info">
             <div class="dual-plan__title-wrapper">
@@ -270,10 +291,78 @@
     </section>
 
     <!-- =====================
+            O MENI
+    ======================= -->
+    <section id="omeni">
+      <div class="omeni-wrapper">
+        <div class="omeni-info">
+          <div class="omeni-info__title">
+            <h2>O Jovanu Cvetojeviću i Nutri Logici</h2>
+          </div>
+          <div class="grid-container">
+            <div class="omeni-img">
+              <!-- <img
+                class="omeni-logo"
+                src="css/img/nutri.logika.png"
+                alt="logo"
+              /> -->
+              <img
+                class="omeni-jovan"
+                src="css/img/jovan-pola600.png"
+                alt="jovan"
+                class="jovan"
+              />
+            </div>
+            <div class="omeni-info__content">
+              <p>
+                U fitnes prvi put ulazim 2009., sa svojih 15 godina. Tada samo
+                pratim savete ljudi iz teretane za ishranu i trening.
+                Napredujem, ali bez ideje i znanja o tome šta se i zašto dešava.
+                To me navodi da počnem da razmišljam o tome da li postoji nauka
+                iza treninga i ishrane, jasne činjenice i principi koji se mogu
+                organizovati sa planiranim ishodom, kao što je slučaj u mnogim
+                drugim poljima života.
+              </p>
+              <p>
+                2012. godine počinjem da se edukujem, čitam, testiram naspram
+                saznanja do kojih dolazim i pravim velike rezultate. 2013.
+                odlučujem da odustanem od puta ekonomiste i odlazim sa fakulteta
+                u prvom semestru, nakon čega upisujem Višu medicinsku školu za
+                nutricionistu. Tamo bivam razočaran obrazovnim sistemom, ali
+                dopunjavam sopstvenu edukaciju kroz čitanje knjiga, gledanje
+                seminara i podcasta relevantnih svetskih stručnjaka. Tokom
+                studija počinjem da radim sa ljudima i pravim planove ishrane i
+                treninga, sa dobrim uspesima. Diplomiram tri meseca pre roka, u
+                junu 2017., nakon čega dobijam želju da edukujem i pokažem da je
+                cela ova priča jednostavna.
+              </p>
+              <p>
+                Septembra iste godine, pravim Nutri Logiku, čiji je centralni
+                cilj edukacija zasnovana na naučnim činjenicama i zdravom
+                razumu. Preko nje, vremenom, dolazim u kontakt sa ljudima kojima
+                je potrebna pomoć oko ishrane i treninga, I tako počinje moj
+                online rad sa ljudima. Ova vrsta posla mi je pružila mogućnost
+                da dotaknem veliki broj ljudi i direktno utičem na njihovo
+                zdravlje, izgled, performanse i zadovoljstvo. Radio sam sa
+                klijentima sa 3 kontinenta, svih polova i uzrasta, zdravim i
+                onih koji imaju neko medicinsko stanje, profesionalcima i
+                rekreativcima, trudnicama i zauzetim direktorima. Rezultat je
+                uvek bio isti. Svako je saradnju završio zadovoljan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
               PRIJAVA
     ======================= -->
 
     <section id="prijava">
+      <div class="prijava-title">
+        <h2>Prijavi se</h2>
+      </div>
       <div class="prijava__wrapper">
         <form action="php/form.php" class="form">
           <div class="polje">
@@ -407,6 +496,16 @@
               <li class="footer__item">
                 <a href="" class="footer__link"
                   ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link"
+                  ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link"
+                  ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
                 >
               </li>
             </ul>
