@@ -8,6 +8,7 @@ crna #131200
 
 Fonts:
 ==============================================*/
+
 html,
 body {
   box-sizing: border-box;
@@ -64,7 +65,7 @@ img {
 }
 
 .navbar__wrapper {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.1);
   max-width: 100%;
   position: relative;
   padding: 0.4rem;
@@ -73,9 +74,10 @@ img {
 
 .navbar {
   position: absolute;
-  top: 100%;
+  top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
+  background: var(--zut);
   clip-path: circle(0px at top right);
   transition: clip-path ease-in-out 0.5s;
   width: 100vw;
@@ -88,7 +90,7 @@ img {
 
 .navbar__list {
   padding: 0;
-  margin: 0;
+  margin: 5rem 0 0 0;
   list-style: none;
 }
 
@@ -101,12 +103,12 @@ img {
 
 .navbar__item:hover,
 .navbar__item:focus {
-  background-color: var(--zut1);
+  background-color: var(--ljub1);
 }
 
 .navbar__item:hover .navbar__link,
 .navbar__item:focus .navbar__link {
-  color: var(--ljub);
+  color: var(--zut);
 }
 
 .navbar__item:last-child {
@@ -114,10 +116,10 @@ img {
 }
 
 .navbar__link {
-  color: var(--zut);
+  color: var(--ljub);
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 .navbar-open .navbar__item {
@@ -311,6 +313,13 @@ ali treba uraditi
   /* grid-row: 2; */
   margin-left: 1rem;
   margin-top: 6rem;
+  text-transform: uppercase;
+}
+
+.hero-title h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .hero-title h2 {
@@ -322,9 +331,9 @@ ali treba uraditi
 .hero-title h2 span:nth-child(odd) {
   color: var(--ljub1);
   font-family: "Oswald", sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 0.8;
-  letter-spacing: -1px;
+  letter-spacing: -4px;
 }
 
 .hero-title h2 span:nth-child(even) {
@@ -332,7 +341,7 @@ ali treba uraditi
   font-family: "Oswald", sans-serif;
   font-size: 2.5rem;
   line-height: 0.8;
-  letter-spacing: -1px;
+  letter-spacing: -4px;
 }
 /*===========================
 najobicniji paralax  
@@ -758,6 +767,9 @@ ali treba uraditi
 /* ===========================================
                    O MENI
 ==============================================*/
+#omeni {
+  overflow: hidden;
+}
 .omeni-wrapper {
   padding: 2rem;
 }
@@ -799,10 +811,10 @@ ali treba uraditi
 }
 
 .omeni-info__content p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   position: relative;
   z-index: 1;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 /* .omeni-logo {
@@ -1091,6 +1103,24 @@ input::-webkit-inner-spin-button {
 }
 
 /* ===========================================
+                   CALCULATOR
+==============================================*/
+#calculator {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.calculator-rezultati__polje {
+  background: var(--zut1);
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.calculator-rezultati__polje h4 {
+  margin-top: 0;
+}
+
+/* ===========================================
                     DASHBOARD
 ==============================================*/
 .dashboard-content {
@@ -1319,16 +1349,9 @@ input::-webkit-inner-spin-button {
     grid-row: 2;
     grid-column: 1 / span 2;
   }
-  /* .hero {
-    width: 100%;
-    height: 100vh;
-    background-image: none;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 
-  .hero-title {
-    grid-column: 1 / span 2;
-    padding: 0 5rem;
+  .hero-desktop-img {
+    background-position: -13rem;
   }
 
   .hero-title h2 span:nth-child(2n + 1) {
@@ -1336,24 +1359,12 @@ input::-webkit-inner-spin-button {
   }
 
   .hero-title h2 span:nth-child(2n) {
-    font-size: 4.5rem;
-  }
-  .hero-desktop-img {
-    background-image: url("img/kosulja-nobckg-tall-sredjeno-opacity06.png");
-    background-size: cover;
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    background-position: 70%;
+    font-size: 4rem;
   }
 
-  .naslovna__title {
-    grid-column: 2;
-    grid-row: 2;
+  .logo {
+    height: 200px;
   }
-
-  .naslovna__title .logo {
-    height: 250px;
-  } */
 }
 
 @media (min-width: 600px) {
@@ -1435,6 +1446,7 @@ input::-webkit-inner-spin-button {
 
   .navbar__list {
     display: flex;
+    margin: 0;
   }
 
   .navbar__item {
@@ -1604,22 +1616,23 @@ input::-webkit-inner-spin-button {
 
   .hero-title {
     grid-column: 1 / span 2;
-    padding: 0 5rem;
+    padding: 0 8rem 0 4rem;
   }
 
-  .hero-title h2 span:nth-child(2n + 1) {
+  /* .hero-title h2 span:nth-child(2n + 1) {
     font-size: 4.5rem;
   }
 
   .hero-title h2 span:nth-child(2n) {
     font-size: 4.5rem;
-  }
+  } */
+
   .hero-desktop-img {
     background-image: url("img/kosulja-nobckg-tall-sredjeno-opacity06.png");
     background-size: cover;
     grid-column: 3;
     grid-row: 1 / span 2;
-    background-position: 70%;
+    background-position: 50%;
   }
 
   .naslovna__title {
@@ -1629,6 +1642,12 @@ input::-webkit-inner-spin-button {
 
   .naslovna__title .logo {
     height: 250px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .hero-desktop-img {
+    background-position: 60%;
   }
 }
 

@@ -6,6 +6,14 @@ menu_toggle.addEventListener("click", function () {
   navbar.classList.toggle("navbar-open");
   menu_toggle.classList.toggle("open");
 });
+
+/******* NAVBAR ZATVARANJE NA CLICK ******/
+$(function () {
+  $(".navbar__link").on("click touch", function () {
+    $(".menu-toggle").click();
+  });
+});
+
 /******* OPEN CLOSE BUTTON DASHBOARD ******/
 $(document).ready(function () {
   $(".open-close-button__wrapper").click(function () {
