@@ -898,9 +898,9 @@ ali treba uraditi
   margin: 0.5rem;
 }
 
-.polje input,
-.polje textarea,
-.polje select {
+input,
+textarea,
+select {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   border: 1px solid #ddd;
@@ -950,9 +950,11 @@ input::-webkit-inner-spin-button {
 }
 
 .opcija,
-#plan__odabir {
+#odabir,
+#cilj,
+#pol,
+#aktivnost {
   letter-spacing: 1px;
-  color: var(--ljub1);
 }
 
 #prijava .dugme__prijavi-se {
@@ -1110,6 +1112,15 @@ input::-webkit-inner-spin-button {
   padding: 0 1rem;
 }
 
+.calculator-navbar {
+  position: relative;
+}
+
+.calculator__wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .calculator-rezultati__polje {
   background: var(--zut1);
   padding: 0.5rem;
@@ -1118,6 +1129,72 @@ input::-webkit-inner-spin-button {
 
 .calculator-rezultati__polje h4 {
   margin-top: 0;
+}
+
+.calculator__polje h4 {
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+.calculator-button__wrapper {
+  text-align: center;
+}
+
+.calculator__title {
+  position: relative;
+  margin: 2rem auto 0 auto;
+}
+
+.calculator__title::before {
+  content: "";
+  position: absolute;
+  background: var(--pruge);
+  top: -20px;
+  left: -50px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+.calculator__title h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--ljub);
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* ===========================================
+                    BLOG - ADMIN
+==============================================*/
+.blog-admin__header {
+  position: relative;
+}
+
+.blog-pregled__wrapper {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.blog-info-card {
+  border: 1px solid black;
+}
+
+.blog-title {
+  display: flex;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.5rem;
+  justify-content: space-evenly;
+}
+
+.blog-title h4,
+p {
+  padding: 0;
+  margin: 0;
 }
 
 /* ===========================================
@@ -1424,55 +1501,6 @@ input::-webkit-inner-spin-button {
     margin-top: 60%;
   }
 
-  /** navbar **/
-
-  .menu-toggle {
-    display: none;
-  }
-
-  .navbar {
-    background: none;
-    clip-path: none;
-    position: relative;
-    height: 100%;
-    width: auto;
-  }
-
-  .navbar__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .navbar__list {
-    display: flex;
-    margin: 0;
-  }
-
-  .navbar__item {
-    padding: 0;
-    margin: 0 1rem 0 0;
-    border-bottom: none;
-  }
-
-  .navbar__item:hover,
-  .navbar__item:focus {
-    background-color: transparent;
-  }
-
-  .navbar__link {
-    transition: color ease 0.2s;
-  }
-
-  .navbar__link:hover,
-  .navbar__link:focus {
-    color: var(--ljub1);
-  }
-
-  .navbar__link i {
-    display: none;
-  }
-
   .omeni-info__content::before {
     height: 115%;
   }
@@ -1598,6 +1626,58 @@ input::-webkit-inner-spin-button {
     bottom: 0;
   }
 }
+
+@media (min-width: 720px) {
+  /** navbar **/
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar {
+    background: none;
+    clip-path: none;
+    position: relative;
+    height: 100%;
+    width: auto;
+  }
+
+  .navbar__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar__list {
+    display: flex;
+    margin: 0;
+  }
+
+  .navbar__item {
+    padding: 0;
+    margin: 0 1rem 0 0;
+    border-bottom: none;
+  }
+
+  .navbar__item:hover,
+  .navbar__item:focus {
+    background-color: transparent;
+  }
+
+  .navbar__link {
+    transition: color ease 0.2s;
+  }
+
+  .navbar__link:hover,
+  .navbar__link:focus {
+    color: var(--ljub1);
+  }
+
+  .navbar__link i {
+    display: none;
+  }
+}
+
 @media (min-width: 1100px) {
   /** da se poveca **/
   .plan-kartica-img {

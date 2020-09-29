@@ -17,19 +17,15 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    /> -->
+
+    <!-- selectric  -->
+    <link rel="stylesheet" href="js/selectric/selectric.css" />
 
     <!-- glider  -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
     />
-
-    <!-- selectric  -->
-    <link rel="stylesheet" href="js/selectric/selectric.css" />
 
     <!-- FONT AWESOME -->
     <link
@@ -416,7 +412,7 @@
             <div class="error-message-invisible">
               <p></p>
             </div>
-            <select type="text" id="pol">
+            <select type="text" name="pol" id="pol">
               <option value="muški" class="opcija">Muški</option>
               <option value="ženski" class="opcija">Ženski</option>
             </select>
@@ -424,7 +420,7 @@
 
           <div class="polje">
             <label for="cilj">Koji cilj želiš da postigneš:</label>
-            <select type="text" id="cilj">
+            <select type="text" name="cilj" id="cilj">
               <option value="skidanje-kilaze" class="opcija">
                 Cilj mi je da skinem kilažu
               </option>
@@ -439,7 +435,7 @@
 
           <div class="polje">
             <label for="plan">Odaberi plan koji želiš:</label>
-            <select name="plan" id="plan__odabir">
+            <select type="text" name="plan" id="odabir">
               <option value="ishrana" class="opcija">Plan ishrane</option>
               <option value="trening" class="opcija">Plan treninga</option>
               <option value="ishrana-i-trening" class="opcija">
@@ -561,12 +557,11 @@
                 SELECTRIC
     =========================== -->
     <script src="js/selectric/jquery.selectric.min.js"></script>
-
-    <!-- ==========================
-            PARALLAX.JS 
-    =========================== -->
-    <!-- <script src="js/parallax.min.js"></script> -->
-
+    <script>
+      $(function () {
+        $("select").selectric();
+      });
+    </script>
     <script src="js/custome.js"></script>
     <script src="js/form.js"></script>
   </body>

@@ -17,7 +17,7 @@
     rel="stylesheet" />
 
   <!-- selectric  -->
-  <link rel="stylesheet" href="js/selectric/selectric.css" />
+  <!-- <link rel="stylesheet" href="js/selectric/selectric.css" /> -->
 
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
@@ -65,32 +65,69 @@
   <!-- =====================
             HEADER
     ======================= -->
-  <header class="dashboard-header">
-    <div class="navbar__wrapper">
-      <a href="index.html" class="navbar__logo"><img src="css/img/nutri.logika.png" alt=""
-          class="navbar__logo__img" /></a>
-      <nav class="navbar">
-        <ul class="navbar__list">
-          <li class="navbar__item">
-            <a href="index.html#naslovna" class="navbar__link"><i class="fas fa-home"></i>&nbsp; Home</a>
-          </li>
-          <li class="navbar__item">
-            <a href="index.html#ponuda" class="navbar__link"><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a>
-          </li>
-          <li class="navbar__item">
-            <a href="index.html#testimonials" class="navbar__link"><i class="far fa-grin"></i>&nbsp; Rezultati</a>
-          </li>
-          <li class="navbar__item">
-            <a href="index.html#" class="navbar__link"><i class="far fa-thumbs-up"></i>&nbsp; O meni</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="menu-toggle">
-        <span class="hamburger"></span>
-      </button>
-    </div>
-  </header>
-  <div id="php_greska" class="error-message-visible">
+    <header class="index-header">
+      <div class="navbar__wrapper">
+        <a href="#naslovna" class="navbar__logo"
+          ><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img"
+        /></a>
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="#naslovna" class="navbar__link"
+                ><i class="fas fa-home"></i>&nbsp; Home</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="#blog" class="navbar__link"
+                ><i class="fas fa-home"></i>&nbsp; Blog</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="#dashboard" class="navbar__link"
+                ><i class="fas fa-home"></i>&nbsp; Prijave</a
+              >
+            </li>
+            <!-- <li class="navbar__item">
+              <a href="#ponuda" class="navbar__link"
+                ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="#testimonials" class="navbar__link"
+                ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="#omeni" class="navbar__link"
+                ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="#prijava" class="navbar__link"
+                ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link"
+                ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
+              >
+            </li> -->
+          </ul>
+        </nav>
+        <button class="menu-toggle">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+      <!-- <div class="switchers-wrapper">
+        <button class="language-switcher-sr">
+          SR <img src="css/img/flat-icons/serbia.png" alt="ser" />
+        </button>
+        <button class="language-switcher-en">
+          <img src="css/img/flat-icons/united-kingdom.png" alt="eng" />EN
+        </button>
+      </div> -->
+    </header>
+    <div id="php_greska" class="error-message-visible">
    
    <?php 
     ////ISPISIVANJE DELETE SUCCES
@@ -169,46 +206,69 @@
   <!-- =====================
               FOOTER
     ======================= -->
-  <footer>
-    <section id="footer">
-      <div class="footer-wrapper">
-        <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt=""
-            class="navbar__logo__img" /></a>
-        <div class="kontakt-container">
-          <p><span>E-mail:</span> nutri.logika@gmail.com</p>
-          <p><span>Telefon:</span> 061/61-45-617</p>
-        </div>
 
-        <div class="footer-links__container">
-          <ul class="footer-links--list">
-            <li class="footer__item">
-              <a href="#naslovna" class="footer__link"><i class="fas fa-home"></i>&nbsp; Home</a>
-            </li>
-            <li class="footer__item">
-              <a href="#ponuda" class="footer__link"><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a>
-            </li>
-            <li class="footer__item">
-              <a href="#testimonials" class="footer__link"><i class="far fa-grin"></i>&nbsp; Rezultati</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link"><i class="far fa-thumbs-up"></i>&nbsp; O meni</a>
-            </li>
-          </ul>
+    <footer>
+      <section id="footer">
+        <div class="footer-wrapper">
+          <a href="#naslovna" class="navbar__logo"
+            ><img
+              src="css/img/nutri.logika.png"
+              alt=""
+              class="navbar__logo__img"
+          /></a>
+          <div class="kontakt-container">
+            <p><span>E-mail:</span> nutri.logika@gmail.com</p>
+            <p><span>Telefon:</span> 061/61-45-617</p>
+          </div>
+
+          <div class="footer-links__container">
+            <ul class="footer-links--list">
+              <li class="footer__item">
+                <a href="#naslovna" class="footer__link"
+                  ><i class="fas fa-home"></i>&nbsp; Home</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="#ponuda" class="footer__link"
+                  ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="#testimonials" class="footer__link"
+                  ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link"
+                  ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link"
+                  ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link"
+                  ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="social">
+            <ul class="social-icons">
+              <li class="social-icon">
+                <i class="fab fa-instagram fa-2x"></i>
+              </li>
+              <li class="social-icon">
+                <i class="fab fa-facebook-f fa-2x"></i>
+              </li>
+              <li class="social-icon"><i class="fab fa-twitter fa-2x"></i></li>
+              <li class="social-icon"><i class="fab fa-tiktok fa-2x"></i></li>
+            </ul>
+          </div>
         </div>
-        <div class="social">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <i class="fab fa-instagram fa-2x"></i>
-            </li>
-            <li class="social-icon">
-              <i class="fab fa-facebook-f fa-2x"></i>
-            </li>
-            <li class="social-icon"><i class="fab fa-twitter fa-2x"></i></li>
-            <li class="social-icon"><i class="fab fa-tiktok fa-2x"></i></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
     <!-- zastava -->
     <div class="copyrights">
       <p class="copyright__text">Copyright &copy; VuleDule 2020 Serbia</p>
@@ -232,13 +292,11 @@
   <!-- ==========================
                   SELECTRIC
       =========================== -->
-  <script src="js/selectric/jquery.selectric.min.js"></script>
-
-  <!-- ==========================
-              PARALLAX.JS 
-      =========================== -->
-  <script src="js/parallax.min.js"></script>
+  <!-- <script src="js/selectric/jquery.selectric.min.js"></script> -->
+  
   <script src="js/dashboard.js"></script>
+
+  <script src="js/custome.js"></script>
   
 </body>
 

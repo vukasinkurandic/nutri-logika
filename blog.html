@@ -9,16 +9,18 @@
 
     <!-- fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+
+    <!-- inter -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
 
     <!-- selectric  -->
-    <link rel="stylesheet" href="js/selectric/selectric.css" />
+    <!-- <link rel="stylesheet" href="js/selectric/selectric.css" /> -->
 
     <!-- FONT AWESOME -->
     <link
@@ -39,9 +41,9 @@
   </head>
   <body>
     <!-- =====================
-             HEADER
+            HEADER
     ======================= -->
-    <header class="index-header calculator-navbar">
+    <header class="index-header blog-admin__header">
       <div class="navbar__wrapper">
         <a href="#naslovna" class="navbar__logo"
           ><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img"
@@ -54,30 +56,40 @@
               >
             </li>
             <li class="navbar__item">
-              <a href="#ponuda" class="navbar__link"
-                ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+              <a href="#blog" class="navbar__link"
+                ><i class="fas fa-home"></i>&nbsp; Blog</a
               >
             </li>
             <li class="navbar__item">
-              <a href="#testimonials" class="navbar__link"
-                ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+              <a href="#dashboard" class="navbar__link"
+                ><i class="fas fa-home"></i>&nbsp; Prijave</a
               >
             </li>
-            <li class="navbar__item">
-              <a href="#omeni" class="navbar__link"
-                ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
-              >
-            </li>
-            <li class="navbar__item">
-              <a href="#prijava" class="navbar__link"
-                ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
-              >
-            </li>
-            <li class="navbar__item">
-              <a href="#" class="navbar__link"
-                ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
-              >
-            </li>
+            <!-- <li class="navbar__item">
+                <a href="#ponuda" class="navbar__link"
+                  ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a href="#testimonials" class="navbar__link"
+                  ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a href="#omeni" class="navbar__link"
+                  ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a href="#prijava" class="navbar__link"
+                  ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link"
+                  ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
+                >
+              </li> -->
           </ul>
         </nav>
         <button class="menu-toggle">
@@ -85,89 +97,35 @@
         </button>
       </div>
       <!-- <div class="switchers-wrapper">
-        <button class="language-switcher-sr">
-          SR <img src="css/img/flat-icons/serbia.png" alt="ser" />
-        </button>
-        <button class="language-switcher-en">
-          <img src="css/img/flat-icons/united-kingdom.png" alt="eng" />EN
-        </button>
-      </div> -->
+          <button class="language-switcher-sr">
+            SR <img src="css/img/flat-icons/serbia.png" alt="ser" />
+          </button>
+          <button class="language-switcher-en">
+            <img src="css/img/flat-icons/united-kingdom.png" alt="eng" />EN
+          </button>
+        </div> -->
     </header>
-
     <!-- =====================
-            CALCULATOR    
+        MAIN - BLOG__PREGLED
     ======================= -->
-    <section id="calculator">
-      <div class="calculator__wrapper">
-        <div class="calculator__title">
-          <h2>Kalkulator makronutrijenata i kalorija</h2>
-        </div>
-        <form action="#" class="form">
-          <div class="calculator__polje polje">
-            <label for="cilj"><h4>Moj cilj je:</h4></label>
-            <select name="cilj" id="odabir">
-              <option value="dobijanje" class="opcija">Dobijanje kilaže</option>
-              <option value="gubljenje" class="opcija">Gubljenje kilaže</option>
-            </select>
+    <main>
+      <div class="blog-pregled__wrapper">
+        <div class="blog-info-card">
+          <div class="blog-title">
+            <p class="blog-id">#1</p>
+            <h4>Lorem ipsum dolor sit.</h4>
           </div>
-          <div class="calculator__polje polje">
-            <label for="pol"><h4>Pol:</h4></label>
-            <select name="pol" id="odabir">
-              <option value="muski" class="opcija">Muški</option>
-              <option value="zenski" class="opcija">Ženski</option>
-            </select>
-
-            <h4>Godine starosti:</h4>
-            <!-- <label for="godine">Godine starosti:</label> -->
-            <input type="number" id="godine" placeholder="34.." />
-
-            <h4>Težina:</h4>
-            <input type="number" id="tezina" placeholder="--kg" />
-
-            <h4>Visina:</h4>
-            <input type="number" id="visina" placeholder="--cm" />
+          <div class="blog-date">
+            <p>Datum:</p>
+            <p class="blog-date__p">29.09.2020.</p>
           </div>
-
-          <div class="calculator__polje polje">
-            <h4>Aktivnost u toku dana:</h4>
-            <p>
-              Kada birate nivo aktivnosti, uzmite u obzir kako treninge tako i
-              aktivnosti u svakodnevnom životu kao što su pešačenje, tip posla
-              kojim se bavite itd.
-            </p>
-            <br />
-            <select type="text" name="aktivnost" id="aktivnost">
-              <option value="veoma-neaktivan" class="opcija">
-                Neaktivan (povremeni ili nikakav trening)
-              </option>
-              <option value="lagano-aktivan" class="opcija">
-                Lagano aktivan (lagani trening/sport 1-3 dana nedeljno)
-              </option>
-              <option value="srednje-aktivan" class="opcija">
-                Srednje aktivan (rekreativni trening/sport 3-5 dana nedeljno)
-              </option>
-              <option value="veoma-aktivan" class="opcija">
-                Veoma aktivan (ozbiljniji trening/sport 6-7 dana nedeljno)
-              </option>
-              <option value="ektremno-aktivan" class="opcija">
-                Ekstremno aktivan (veoma ozbiljan trening/sport i zahtevan
-                fizički posao)
-              </option>
-            </select>
+          <div class="blog-actions">
+            <button class="edit-button">Edit</button>
+            <button class="delete-button">Delete</button>
           </div>
-        </form>
-        <div class="calculator-button__wrapper">
-          <button class="dugme-login-admin">Pošalji!</button>
-        </div>
-        <div class="calculator-rezultati__polje">
-          <h4>Dnevni unos:</h4>
-          <p>Kalorije:</p>
-          <p>Protein:</p>
-          <p>Ugljeni hidrati:</p>
-          <p>Masti:</p>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- =====================
               FOOTER
@@ -259,20 +217,17 @@
       </div>
     </footer>
     <!-- ==========================
-                JQUERY
-    =========================== -->
+                    JQUERY
+        =========================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- ==========================
-                SELECTRIC
-    =========================== -->
+                    SELECTRIC
+        =========================== -->
     <script src="js/selectric/jquery.selectric.min.js"></script>
-    <script>
-      $(function () {
-        $("select").selectric();
-      });
-    </script>
+
+    <script src="js/dashboard.js"></script>
+
     <script src="js/custome.js"></script>
-    <script src="js/form.js"></script>
   </body>
 </html>
