@@ -90,6 +90,6 @@ new Glider(document.querySelector(".glider"), {
 });
 
 /******* SELECTRIC ******/
-$(function () {
-  $("select").selectric();
-});
+// $(function () {
+//   $("select").selectric();
+// });
