@@ -105,26 +105,35 @@
         <form action="#" class="form">
           <div class="calculator__polje polje">
             <label for="cilj"><h4>Moj cilj je:</h4></label>
-            <select name="cilj" id="odabir">
+            <select name="cilj" id="cilj">
               <option value="dobijanje" class="opcija">Dobijanje kilaže</option>
               <option value="gubljenje" class="opcija">Gubljenje kilaže</option>
             </select>
           </div>
           <div class="calculator__polje polje">
             <label for="pol"><h4>Pol:</h4></label>
-            <select name="pol" id="odabir">
+            <select name="pol" id="pol">
               <option value="muski" class="opcija">Muški</option>
               <option value="zenski" class="opcija">Ženski</option>
             </select>
 
             <h4>Godine starosti:</h4>
             <!-- <label for="godine">Godine starosti:</label> -->
+            <div id="godine_greska" class="error-message-invisible">
+              <br><p>* Unesite godine</p><br>
+            </div>
             <input type="number" id="godine" placeholder="34.." />
 
             <h4>Težina:</h4>
+            <div id="tezina_greska" class="error-message-invisible">
+              <br><p>* Unesite tezinu</p><br>
+            </div>
             <input type="number" id="tezina" placeholder="--kg" />
 
             <h4>Visina:</h4>
+            <div id="visina_greska" class="error-message-invisible">
+              <br><p>* Unesite visinu</p><br>
+            </div>
             <input type="number" id="visina" placeholder="--cm" />
           </div>
 
@@ -157,14 +166,14 @@
           </div>
         </form>
         <div class="calculator-button__wrapper">
-          <button class="dugme-login-admin">Pošalji!</button>
+          <button class="dugme-login-admin" id="submit-calculator">Izračunaj!</button>
         </div>
         <div class="calculator-rezultati__polje">
           <h4>Dnevni unos:</h4>
-          <p>Kalorije:</p>
-          <p>Protein:</p>
-          <p>Ugljeni hidrati:</p>
-          <p>Masti:</p>
+          <p id="kalorije">Kalorije:</p>
+          <p id="protein">Protein:</p>
+          <p id="hidrat">Ugljeni hidrati:</p>
+          <p id="mast">Masti:</p>
         </div>
       </div>
     </section>
@@ -215,7 +224,7 @@
                 >
               </li>
               <li class="footer__item">
-                <a href="" class="footer__link"
+                <a href="calculator.html" class="footer__link"
                   ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
                 >
               </li>
@@ -273,6 +282,9 @@
       });
     </script>
     <script src="js/custome.js"></script>
-    <script src="js/form.js"></script>
+  <!-- ==========================
+               CALCULATOR JS
+    =========================== -->
+    <script src="js/calculator.js"></script>
   </body>
 </html>
