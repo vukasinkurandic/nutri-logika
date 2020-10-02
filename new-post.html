@@ -20,7 +20,7 @@
     />
 
     <!-- selectric  -->
-    <!-- <link rel="stylesheet" href="js/selectric/selectric.css" /> -->
+    <link rel="stylesheet" href="js/selectric/selectric.css" />
 
     <!-- FONT AWESOME -->
     <link
@@ -51,45 +51,14 @@
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a href="#naslovna" class="navbar__link"
-                ><i class="fas fa-home"></i>&nbsp; Home</a
-              >
+              <a href="#naslovna" class="navbar__link"> Home</a>
             </li>
             <li class="navbar__item">
-              <a href="#blog" class="navbar__link"
-                ><i class="fas fa-home"></i>&nbsp; Blog</a
-              >
+              <a href="#blog" class="navbar__link"> Blog</a>
             </li>
             <li class="navbar__item">
-              <a href="#dashboard" class="navbar__link"
-                ><i class="fas fa-home"></i>&nbsp; Prijave</a
-              >
+              <a href="#dashboard" class="navbar__link"> Prijave</a>
             </li>
-            <!-- <li class="navbar__item">
-                  <a href="#ponuda" class="navbar__link"
-                    ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
-                  >
-                </li>
-                <li class="navbar__item">
-                  <a href="#testimonials" class="navbar__link"
-                    ><i class="far fa-grin"></i>&nbsp; Rezultati</a
-                  >
-                </li>
-                <li class="navbar__item">
-                  <a href="#omeni" class="navbar__link"
-                    ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
-                  >
-                </li>
-                <li class="navbar__item">
-                  <a href="#prijava" class="navbar__link"
-                    ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
-                  >
-                </li>
-                <li class="navbar__item">
-                  <a href="#" class="navbar__link"
-                    ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
-                  >
-                </li> -->
           </ul>
         </nav>
         <button class="menu-toggle">
@@ -106,9 +75,59 @@
           </div> -->
     </header>
     <!-- =====================
+          NEW POST MAIN
+    ======================= -->
+    <main class="new-post__main">
+      <div class="new-post__wrapper">
+        <div class="new-post__title">
+          <h2>Add New Post</h2>
+        </div>
+        <div class="new-post__form--wrapper">
+          <form action="#" class="new-post__form">
+            <div class="polje">
+              <label for="new-post__title">Naslov</label>
+              <input
+                type="text"
+                id="new-post__title"
+                placeholder="Naslov novog posta.."
+              />
+            </div>
+            <!-- *********************** -->
+            <div class="polje">
+              <label for="new-post__tekst">Naslov</label>
+              <textarea
+                name="new-post__tekst"
+                id="new-post__tekst"
+                cols="30"
+                rows="10"
+                placeholder="Tekst novog posta.."
+              ></textarea>
+            </div>
+            <!-- *********************** -->
+            <div class="polje">
+              <label for="new-post__img">Slika</label>
+              <input type="file" id="new-post__img" />
+            </div>
+            <!-- *********************** -->
+            <div class="polje">
+              <select
+                type="text"
+                name="new-post__kategorija"
+                id="new-post__kategorija"
+              >
+                <option value="ishrana" class="opcija">Ishrana</option>
+                <option value="trening" class="opcija">Trening</option>
+              </select>
+            </div>
+            <!-- *********************** -->
+          </form>
+          <button>Add New Post</button>
+        </div>
+      </div>
+    </main>
+    <!-- =====================
               FOOTER
     ======================= -->
-
     <footer>
       <section id="footer">
         <div class="footer-wrapper">
@@ -203,9 +222,12 @@
                       SELECTRIC
           =========================== -->
     <script src="js/selectric/jquery.selectric.min.js"></script>
-
-    <script src="js/dashboard.js"></script>
-
+    <script>
+      $(function () {
+        $("select").selectric();
+      });
+    </script>
+    <!-- <script src="js/dashboard.js"></script> -->
     <script src="js/custome.js"></script>
   </body>
 </html>
