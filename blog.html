@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- fonts -->
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -19,6 +20,12 @@
 
     <!-- selectric  -->
     <link rel="stylesheet" href="js/selectric/selectric.css" />
+
+    <!-- glider  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
+    />
 
     <!-- FONT AWESOME -->
     <link
@@ -37,9 +44,10 @@
 
     <title>nutri.logika</title>
   </head>
+
   <body>
     <!-- =====================
-             HEADER
+            HEADER
     ======================= -->
     <header class="index-header relative-navbar">
       <div class="navbar__wrapper">
@@ -98,133 +106,119 @@
         </button>
       </div> -->
     </header>
-
     <!-- =====================
-            CALCULATOR    
+            BLOG MAIN
     ======================= -->
-    <section id="calculator">
-      <div class="calculator__wrapper">
-        <div class="calculator__title">
-          <h2>Kalkulator makronutrijenata i kalorija</h2>
+    <main>
+      <div class="blog-index__wrapper">
+        <div class="blog-index__main-title--wrapper">
+          <div class="blog-index__main-title">
+            <h2>Najnoviji blog postovi</h2>
+          </div>
         </div>
-        <form action="#" class="form">
-          <div class="calculator__polje polje">
-            <label for="cilj"><h4>Moj cilj je:</h4></label>
-            <select name="cilj" id="odabir">
-              <option value="dobijanje" class="opcija">
-                Suficit kalorija- želite da povećate telesnu težinu i mišićnu
-                masu (ukoliko trenirate redovno), a ne povećate mnogo masne
-                naslage.
-              </option>
-              <option value="gubljenje" class="opcija">
-                Deficit kalorija - želite da smanjite telesnu težinu i masne
-                naslage sa tim, a zadržite što je više moguće mišićnu masu.
-              </option>
-              <option value="odrzavanje" class="opcija">
-                Održanje kalorija- želite da održite telesnu težinu na
-                trenutnoj.
-              </option>
-            </select>
+        <div class="blog-index__content">
+          <!-- <div class="blog-index__content--info"> -->
+          <ul class="blog-index__info--list">
+            <li><span>Author:</span> Jovan Cvetojevic</li>
+            <li><span>Date:</span> 05.10.2020.</li>
+            <li><span>Category:</span> Loremsi</li>
+          </ul>
+          <div class="blog-index__img-holder">
+            <img src="css/img/tegovi500x333.jpg" alt="" />
           </div>
-          <div class="calculator__polje polje">
-            <label for="pol"><h4>Pol:</h4></label>
-            <select name="pol" id="odabir">
-              <option value="muski" class="opcija">Muški</option>
-              <option value="zenski" class="opcija">Ženski</option>
-            </select>
-
-            <h4>Godine starosti:</h4>
-            <!-- <label for="godine">Godine starosti:</label> -->
-            <input type="number" id="godine" placeholder="34.." />
-
-            <h4>Težina:</h4>
-            <input type="number" id="tezina" placeholder="--kg" />
-
-            <h4>Visina:</h4>
-            <input type="number" id="visina" placeholder="--cm" />
+          <!-- </div> -->
+          <div class="blog-index__content--text">
+            <a href="blog-single-post.html" class="single-blog__link">
+              <div class="blog-index__title">
+                <h4>Upotreba kreatina u bodibildingu</h4>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Ratione inventore delectus dolorum tempore explicabo, ullam
+                exercitationem culpa, accusamus aliquid cumque distinctio optio
+                possimus excepturi blanditiis omnis esse sunt officiis hic
+                adipisci quos expedita laborum quaerat? Blanditiis, error, totam
+                quam excepturi consequatur temporibus consectetur nulla
+                similique eligendi veniam suscipit animi odio obcaecati. Aperiam
+                suscipit placeat saepe sunt ratione ipsam consectetur
+                architecto.
+              </p>
+            </a>
           </div>
-
-          <div class="calculator__polje polje">
-            <h4>Aktivnost u toku dana:</h4>
-            <p>
-              Kada birate nivo aktivnosti, uzmite u obzir kako treninge tako i
-              aktivnosti u svakodnevnom životu kao što su pešačenje, tip posla
-              kojim se bavite itd.
-            </p>
-            <br />
-            <select type="text" name="aktivnost" id="aktivnost">
-              <option value="veoma-neaktivan" class="opcija">
-                Neaktivan (povremeni ili nikakav trening)
-              </option>
-              <option value="lagano-aktivan" class="opcija">
-                Lagano aktivan (lagani trening/sport 1-3 dana nedeljno)
-              </option>
-              <option value="srednje-aktivan" class="opcija">
-                Srednje aktivan (rekreativni trening/sport 3-5 dana nedeljno)
-              </option>
-              <option value="veoma-aktivan" class="opcija">
-                Veoma aktivan (ozbiljniji trening/sport 6-7 dana nedeljno)
-              </option>
-              <option value="ektremno-aktivan" class="opcija">
-                Ekstremno aktivan (veoma ozbiljan trening/sport i zahtevan
-                fizički posao)
-              </option>
-            </select>
-          </div>
-
-          <div class="calculator-polje polje">
-            <h4>Brzina:</h4>
-            <p>
-              Brzina ostvarenja se iskazuje kroz procenat telesne težine koji
-              želite da izgubite ili dobijete u proseku nedeljno i ovo su neke
-              brojke i smernice:
-            </p>
-            <br />
-            <select type="text" name="aktivnost" id="aktivnost">
-              <option value="veoma-neaktivan" class="opcija">
-                Sedentarna osoba (-Radi kancelarijski (sedeći) posao i ne
-                trenira redovno)
-              </option>
-              <option value="spora-brzina" class="opcija">
-                0.2% (Smanjenje težine: Najsporiji način da se izgubi na težini,
-                ne savetujem za većinu osim za one koji žele da smanje masne
-                naslage ispod 12% masti za muškarce ili 22% za žene, a veću su
-                oko tog procenta. Dakle, samo za osobe sa već niskim procentom
-                masti I one sa gomilom strpljenja. Ne preporučujem za prosečnu
-                osobu. Povećanje težine: Konzervativan, ali efektivan pristup
-                kome će trebati vremena, ali smanjuje mogućnost dobitka masnih
-                naslaga. Ne preporučujem za većinu jer zahteva mnogo vremena.)
-              </option>
-              <option value="lagana-brzina" class="opcija">
-                0.3% (Smanjenje težine: Malo brži način i pogodan za one koji su
-                već prlično na manjem procentu masti, npr ispod 16% za muške I
-                26% za žene. Povećanje težine: Konzervativan, ali efektivan
-                pristup kome će trebati vremena, ali smanjuje mogućnost dobitka
-                masnih naslaga. Ne preporučujem za većinu jer zahteva mnogo
-                vremena )
-              </option>
-              <option value="srednja-brzina" class="opcija">0.4%</option>
-              <option value="brza-brzina" class="opcija">0.5%</option>
-              <option value="veoma-brza-brzina" class="opcija">0.6%</option>
-              <option value="veoma-brza-brzina" class="opcija">0.7%</option>
-              <option value="veoma-brza-brzina" class="opcija">0.8%</option>
-              <option value="veoma-brza-brzina" class="opcija">0.9%</option>
-              <option value="veoma-brza-brzina" class="opcija">1.0%</option>
-            </select>
-          </div>
-        </form>
-        <div class="calculator-button__wrapper">
-          <button class="dugme-login-admin">Pošalji!</button>
+          <div class="blog-index__underline"></div>
         </div>
-        <div class="calculator-rezultati__polje">
-          <h4>Dnevni unos:</h4>
-          <p>Kalorije:</p>
-          <p>Protein:</p>
-          <p>Ugljeni hidrati:</p>
-          <p>Masti:</p>
+
+        <div class="blog-index__content">
+          <!-- <div class="blog-index__content--info"> -->
+          <ul class="blog-index__info--list">
+            <li><span>Author:</span> Jovan Cvetojevic</li>
+            <li><span>Date:</span> 05.10.2020.</li>
+            <li><span>Category:</span> Loremsi</li>
+          </ul>
+          <div class="blog-index__img-holder">
+            <img src="css/img/tegovi500x333.jpg" alt="" />
+          </div>
+          <!-- </div> -->
+          <div class="blog-index__content--text">
+            <a href="blog-single-post.html" class="single-blog__link">
+              <div class="blog-index__title">
+                <h4>Mali penisi u bodibildingu</h4>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Ratione inventore delectus dolorum tempore explicabo, ullam
+                exercitationem culpa, accusamus aliquid cumque distinctio optio
+                possimus excepturi blanditiis omnis esse sunt officiis hic
+                adipisci quos expedita laborum quaerat? Blanditiis, error, totam
+                quam excepturi consequatur temporibus consectetur nulla
+                similique eligendi veniam suscipit animi odio obcaecati. Aperiam
+                suscipit placeat saepe sunt ratione ipsam consectetur
+                architecto.
+              </p>
+            </a>
+          </div>
+          <div class="blog-index__underline"></div>
         </div>
+
+        <div class="blog-index__content">
+          <!-- <div class="blog-index__content--info"> -->
+          <ul class="blog-index__info--list">
+            <li><span>Author:</span> Jovan Cvetojevic</li>
+            <li><span>Date:</span> 05.10.2020.</li>
+            <li><span>Category:</span> Loremsi</li>
+          </ul>
+          <div class="blog-index__img-holder">
+            <img src="css/img/tegovi500x333.jpg" alt="" />
+          </div>
+          <!-- </div> -->
+          <div class="blog-index__content--text">
+            <a href="blog-single-post.html" class="single-blog__link">
+              <div class="blog-index__title">
+                <h4>Upotreba steroJida u bodibildingu</h4>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Ratione inventore delectus dolorum tempore explicabo, ullam
+                exercitationem culpa, accusamus aliquid cumque distinctio optio
+                possimus excepturi blanditiis omnis esse sunt officiis hic
+                adipisci quos expedita laborum quaerat? Blanditiis, error, totam
+                quam excepturi consequatur temporibus consectetur nulla
+                similique eligendi veniam suscipit animi odio obcaecati. Aperiam
+                suscipit placeat saepe sunt ratione ipsam consectetur
+                architecto.
+              </p>
+            </a>
+          </div>
+          <div class="blog-index__underline"></div>
+        </div>
+
+        <!-- <div class="blog-index__button--wrapper">
+              <button class="dugme-login-admin">
+                <a href="blog.html">Pogledaj ceo blog</a>
+              </button>
+            </div> -->
       </div>
-    </section>
+    </main>
 
     <!-- =====================
               FOOTER
@@ -233,7 +227,7 @@
     <footer>
       <section id="footer">
         <div class="footer-wrapper">
-          <a href="#naslovna" class="navbar__logo"
+          <a href="index.html#naslovna" class="navbar__logo"
             ><img
               src="css/img/nutri.logika.png"
               alt=""
@@ -321,13 +315,18 @@
       </div>
     </footer>
     <!-- ==========================
-                JQUERY
-    =========================== -->
+                  JQUERY
+      =========================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- ==========================
-                SELECTRIC
-    =========================== -->
+                  GLIDER
+      =========================== -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+
+    <!-- ==========================
+                  SELECTRIC
+      =========================== -->
     <script src="js/selectric/jquery.selectric.min.js"></script>
     <script>
       $(function () {
