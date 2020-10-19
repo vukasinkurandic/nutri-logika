@@ -16,9 +16,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
     rel="stylesheet" />
 
-  <!-- selectric  -->
-  <!-- <link rel="stylesheet" href="js/selectric/selectric.css" /> -->
-
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
@@ -65,53 +62,28 @@
   <!-- =====================
             HEADER
     ======================= -->
-    <header class="index-header">
+    <header class="index-header relative-navbar">
       <div class="navbar__wrapper">
-        <a href="#naslovna" class="navbar__logo"
+        <a href="index.html#naslovna" class="navbar__logo"
           ><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img"
         /></a>
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a href="#naslovna" class="navbar__link"
+              <a href="index.html#naslovna" class="navbar__link"
                 ><i class="fas fa-home"></i>&nbsp; Home</a
               >
             </li>
             <li class="navbar__item">
-              <a href="#blog" class="navbar__link"
-                ><i class="fas fa-home"></i>&nbsp; Blog</a
+              <a href="blog-admin.html" class="navbar__link"
+                ><i class="fas fa-book"></i>&nbsp; Blog</a
               >
             </li>
             <li class="navbar__item">
-              <a href="#dashboard" class="navbar__link"
+              <a href="dashboard.php" class="navbar__link"
                 ><i class="fas fa-home"></i>&nbsp; Prijave</a
               >
             </li>
-            <!-- <li class="navbar__item">
-              <a href="#ponuda" class="navbar__link"
-                ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
-              >
-            </li>
-            <li class="navbar__item">
-              <a href="#testimonials" class="navbar__link"
-                ><i class="far fa-grin"></i>&nbsp; Rezultati</a
-              >
-            </li>
-            <li class="navbar__item">
-              <a href="#omeni" class="navbar__link"
-                ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
-              >
-            </li>
-            <li class="navbar__item">
-              <a href="#prijava" class="navbar__link"
-                ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
-              >
-            </li>
-            <li class="navbar__item">
-              <a href="#" class="navbar__link"
-                ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
-              >
-            </li> -->
           </ul>
         </nav>
         <button class="menu-toggle">
@@ -180,7 +152,7 @@
               <li class="info-item"><span>Ime:</span> <?php echo ($plan['name']);?></li>
               <li class="info-item"><span>Prezime:</span> <?php echo ($plan['last_name']);?></li>
               <div class="open-close-button__wrapper" name="<?php echo ('btn-'.($key + 1));?>">
-                <div class="open-close-button" ></div>
+                <div class="open-close-button"></div>
               </div>
             </ul>
             <ul class="ostalo-info" id="<?php echo ('btn-'.($key + 1));?>">
@@ -210,7 +182,7 @@
     <footer>
       <section id="footer">
         <div class="footer-wrapper">
-          <a href="#naslovna" class="navbar__logo"
+          <a href="index.html#naslovna" class="navbar__logo"
             ><img
               src="css/img/nutri.logika.png"
               alt=""
@@ -224,33 +196,38 @@
           <div class="footer-links__container">
             <ul class="footer-links--list">
               <li class="footer__item">
-                <a href="#naslovna" class="footer__link"
+                <a href="index.html#naslovna" class="footer__link"
                   ><i class="fas fa-home"></i>&nbsp; Home</a
                 >
               </li>
               <li class="footer__item">
-                <a href="#ponuda" class="footer__link"
+                <a href="index.html#ponuda" class="footer__link"
                   ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
                 >
               </li>
               <li class="footer__item">
-                <a href="#testimonials" class="footer__link"
+                <a href="index.html#testimonials" class="footer__link"
                   ><i class="far fa-grin"></i>&nbsp; Rezultati</a
                 >
               </li>
               <li class="footer__item">
-                <a href="" class="footer__link"
+                <a href="index.html#omeni" class="footer__link"
                   ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
                 >
               </li>
               <li class="footer__item">
-                <a href="" class="footer__link"
+                <a href="index.html#prijava" class="footer__link"
                   ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
                 >
               </li>
               <li class="footer__item">
-                <a href="" class="footer__link"
+                <a href="calculator.html" class="footer__link"
                   ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="blog.html" class="footer__link"
+                  ><i class="fas fa-book"></i>&nbsp; Blog</a
                 >
               </li>
             </ul>
@@ -288,15 +265,8 @@
                   JQUERY
       =========================== -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <!-- ==========================
-                  SELECTRIC
-      =========================== -->
-  <!-- <script src="js/selectric/jquery.selectric.min.js"></script> -->
-  
   <script src="js/dashboard.js"></script>
 
-  <script src="js/custome.js"></script>
   
 </body>
 

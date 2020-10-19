@@ -80,7 +80,7 @@
             HEADER
     ======================= -->
     <header>
-      <div class="navbar__wrapper">
+      <div class="navbar__wrapper relative-navbar">
         <a href="index.html" class="navbar__logo"
           ><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img"
         /></a>
