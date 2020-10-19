@@ -7,7 +7,7 @@ $(document).ready(function() {
         let telefon = $('#telefon').val();
         let pol = $('#pol').val();
         let cilj = $('#cilj').val();
-        let plan = $('#plan__odabir').val();
+        let plan = $('#odabir').val();
 
         if (!/^[A-Za-z\s]+$/.test(ime)) {
             $('#ime_greska').removeClass('error-message-invisible').addClass('error-message-visible');
