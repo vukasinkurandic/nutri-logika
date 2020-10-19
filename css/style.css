@@ -24,13 +24,11 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(
-    45deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  --pruge: repeating-linear-gradient(45deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
 }
 
 img {
@@ -163,6 +161,7 @@ navbar animacija
 .navbar-open .navbar__item:nth-child(5) {
   animation-delay: 0.4s;
 }
+
 .navbar-open .navbar__item:nth-child(6) {
   animation-delay: 0.5s;
 }
@@ -527,13 +526,11 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255, 248, 82, 0.4),
-    rgba(255, 248, 82, 0.4) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 248, 82, 0.4),
+      rgba(255, 248, 82, 0.4) 10px,
+      transparent 10px,
+      transparent 20px);
 }
 
 /* ------------------------------ */
@@ -744,6 +741,7 @@ hamburger animation
 #omeni {
   overflow: hidden;
 }
+
 .omeni-wrapper {
   padding: 2rem;
 }
@@ -823,13 +821,11 @@ hamburger animation
   position: absolute;
   top: -50px;
   left: -50px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
   width: 90%;
   height: 110%;
   z-index: 0;
@@ -989,13 +985,11 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(
-    135deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(135deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
   z-index: -1;
 }
 
@@ -1165,6 +1159,7 @@ input::-webkit-inner-spin-button {
 #blog-dash__main {
   padding: 2rem;
 }
+
 .blog-dash__title--wrapper {
   background: var(--zut1);
   margin: 0 calc(-2rem + 0%);
@@ -1174,6 +1169,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
 }
+
 .blog-dash__title {
   font-size: 2rem;
   text-transform: uppercase;
@@ -1208,7 +1204,7 @@ input::-webkit-inner-spin-button {
   border-top: 1px solid var(--ljub1);
 }
 
-.blog-pregled__wrapper > * {
+.blog-pregled__wrapper>* {
   flex-grow: 1;
   flex-basis: calc(var(--modifier) * 999);
   margin: var(--margin);
@@ -1516,6 +1512,7 @@ p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
 .single-post__img--wrapper img {
   display: block;
   width: 100%;
@@ -1751,6 +1748,7 @@ p {
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
+
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -1759,6 +1757,7 @@ p {
 }
 
 @media (min-width: 460px) {
+
   .plan-kartica-img,
   .plan-kartica-overflow {
     /* width: 100%; */
@@ -1802,6 +1801,7 @@ p {
 }
 
 @media (min-width: 600px) {
+
   /** naslovna **/
   .naslovna__title {
     justify-content: center;
@@ -2062,7 +2062,7 @@ p {
   }
 
   .blog-index__content--text {
-    padding: 0;
+    padding: 0 6rem 0 0;
   }
 
   .blog-index__info--list {
@@ -2122,6 +2122,7 @@ p {
 }
 
 @media (min-width: 1100px) {
+
   /** da se poveca **/
   .plan-kartica-img {
     height: 40%;
@@ -2130,6 +2131,7 @@ p {
   .dual-plan .plan-kartica-img {
     height: 39%;
   }
+
   .hero {
     width: 100%;
     height: 100vh;
