@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    /// prevent refresh and go on top of page
+    $('#submit-calculator').click(function(e){ 
+        e.preventDefault();
+    });
+
     $('.prijava').click(function() {
         let ime = $('#ime').val();
         let prezime = $('#prezime').val();
