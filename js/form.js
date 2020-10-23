@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    /// prevent refresh and go on top of page
+    $('#submit-calculator').click(function(e){ 
+        e.preventDefault();
+    });
+
     $('.prijava').click(function() {
         let ime = $('#ime').val();
         let prezime = $('#prezime').val();
@@ -7,7 +12,7 @@ $(document).ready(function() {
         let telefon = $('#telefon').val();
         let pol = $('#pol').val();
         let cilj = $('#cilj').val();
-        let plan = $('#plan__odabir').val();
+        let plan = $('#odabir').val();
 
         if (!/^[A-Za-z\s]+$/.test(ime)) {
             $('#ime_greska').removeClass('error-message-invisible').addClass('error-message-visible');

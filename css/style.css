@@ -963,6 +963,7 @@ input::-webkit-inner-spin-button {
 .error-message-visible {
   color: red;
   font-size: 0.8rem;
+  text-align: center;
 }
 
 .error-message-invisible {
@@ -972,6 +973,7 @@ input::-webkit-inner-spin-button {
 .succes-message-visible {
   color: green;
   font-size: 0.8rem;
+  text-align: center;
 }
 
 /* ===========================================
