@@ -163,6 +163,7 @@ navbar animacija
 .navbar-open .navbar__item:nth-child(5) {
   animation-delay: 0.4s;
 }
+
 .navbar-open .navbar__item:nth-child(6) {
   animation-delay: 0.5s;
 }
@@ -744,6 +745,7 @@ hamburger animation
 #omeni {
   overflow: hidden;
 }
+
 .omeni-wrapper {
   padding: 2rem;
 }
@@ -1160,6 +1162,14 @@ input::-webkit-inner-spin-button {
   margin: 0 auto;
 }
 
+.show {
+  visibility: visible;
+}
+
+.no-show {
+  visibility: hidden;
+}
+
 /* ===========================================
                     BLOG - ADMIN
 ==============================================*/
@@ -1167,6 +1177,7 @@ input::-webkit-inner-spin-button {
 #blog-dash__main {
   padding: 2rem;
 }
+
 .blog-dash__title--wrapper {
   background: var(--zut1);
   margin: 0 calc(-2rem + 0%);
@@ -1176,6 +1187,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
 }
+
 .blog-dash__title {
   font-size: 2rem;
   text-transform: uppercase;
@@ -1518,6 +1530,7 @@ p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
 .single-post__img--wrapper img {
   display: block;
   width: 100%;
@@ -2064,7 +2077,7 @@ p {
   }
 
   .blog-index__content--text {
-    padding: 0;
+    padding: 0 6rem 0 0;
   }
 
   .blog-index__info--list {
@@ -2132,6 +2145,7 @@ p {
   .dual-plan .plan-kartica-img {
     height: 39%;
   }
+
   .hero {
     width: 100%;
     height: 100vh;
