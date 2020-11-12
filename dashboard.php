@@ -75,7 +75,7 @@
               >
             </li>
             <li class="navbar__item">
-              <a href="blog-admin.html" class="navbar__link"
+              <a href="blog-admin.php" class="navbar__link"
                 ><i class="fas fa-book"></i>&nbsp; Blog</a
               >
             </li>
@@ -99,7 +99,7 @@
         </button>
       </div> -->
     </header>
-    <div id="php_greska" class="error-message-visible">
+    <div id="php_greska" class="succes-message-visible">
    
    <?php 
     ////ISPISIVANJE DELETE SUCCES

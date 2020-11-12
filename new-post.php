@@ -40,6 +40,16 @@
     <title>nutri.logika</title>
   </head>
   <body>
+  <?php session_start(); ?>
+  <!-- =====================================
+           Stop direct request for dashboard
+    ========================================= -->
+  <?php if(!isset($_SERVER['HTTP_REFERER'])){
+  // redirect them to your desired location
+  header('location:index.html?dashboard=false');
+  exit;
+
+} ?>
     <!-- =====================
             HEADER
     ======================= -->
@@ -54,7 +64,7 @@
               <a href="index.html#naslovna" class="navbar__link"> Home</a>
             </li>
             <li class="navbar__item">
-              <a href="blog-admin.html" class="navbar__link"> Blog</a>
+              <a href="blog-admin.php" class="navbar__link"> Blog</a>
             </li>
             <li class="navbar__item">
               <a href="dashboard.php" class="navbar__link"> Prijave</a>
@@ -82,31 +92,67 @@
         <div class="new-post__title">
           <h2>Add New Post</h2>
         </div>
+        
+        <!--ISPISIVANJE GRESKE PRAZNO POLJE-->
+        <div id="php_greska" class="error-message-visible">
+          <?php 
+          $fullUrl="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+            if (strpos($fullUrl,"create=prazno_polje")==true) {
+                $errors="MORATE POPUNITI SVA POLJA";
+                echo ('<p>'.$errors.'</p>'); }
+                elseif (strpos($fullUrl,"create=image_error")==true){
+                  $errors="SLIKA MORA BITI PNG,JPG,JPEG FORMATA I MANJA OD 1MB";
+                  echo ('<p>'.$errors.'</p>');
+                }
+                elseif (strpos($fullUrl,"create=error")==true){
+                  $errors="DOSLO JE DO PROBLEMA SA SERVEROM POKUSAJTE PONOVO";
+                  echo ('<p>'.$errors.'</p>');
+                } 
+            ?>
+  </div>
         <div class="new-post__form--wrapper">
-          <form action="#" class="new-post__form">
+          <form action="php/new-post-engine.php" class="new-post__form" method="post" enctype="multipart/form-data">
             <div class="polje">
               <label for="new-post__title">Naslov</label>
-              <input
+              
+             <!-- <input
                 type="text"
+                name="new-post__title"
                 id="new-post__title"
                 placeholder="Naslov novog posta.."
-              />
+              > -->
+              <?php       
+                    if (isset($_GET['title'])) {
+                    $title=$_GET['title'];
+                    echo '<input  name="new-post__title" id="new-post__title" value="'.$title.'">';
+                    }else {
+                    echo '<input placeholder="Naslov novog posta.." name="new-post__title" id="new-post__title">';
+                    };
+                ?>
             </div>
             <!-- *********************** -->
             <div class="polje">
-              <label for="new-post__tekst">Naslov</label>
-              <textarea
+              <label for="new-post__tekst">Tekst</label>
+             <!-- <textarea
                 name="new-post__tekst"
                 id="new-post__tekst"
                 cols="30"
                 rows="10"
                 placeholder="Tekst novog posta.."
-              ></textarea>
+              ></textarea>-->
+              <?php       
+                    if (isset($_GET['body'])) {
+                    $body=$_GET['body'];
+                    echo '<textarea cols="30"rows="10" name="new-post__tekst" id="post__tekst" >'.$body.'</textarea>';
+                    }else {
+                    echo '<textarea cols="30"rows="10"placeholder="Tekst novog posta.." name="new-post__tekst" id="post__tekst"></textarea>';
+                    };
+                ?>
             </div>
             <!-- *********************** -->
             <div class="polje">
-              <label for="new-post__img">Slika</label>
-              <input type="file" id="new-post__img" />
+              <label for="image">Slika</label>
+              <input type="file" name="userfile" id="userfile">
             </div>
             <!-- *********************** -->
             <div class="polje">
@@ -115,13 +161,15 @@
                 name="new-post__kategorija"
                 id="new-post__kategorija"
               >
-                <option value="ishrana" class="opcija">Ishrana</option>
-                <option value="trening" class="opcija">Trening</option>
+                <option value="Ishrana" name="Ishrana" class="opcija">Ishrana</option>
+                <option value="Trening" name="Trening" class="opcija">Trening</option>
+                <option value="Motivacija" name="Motivacija" class="opcija">Motivacija</option>
               </select>
             </div>
             <!-- *********************** -->
+            <button type="submit" name="add-post-btn">Add New Post</button>
           </form>
-          <button>Add New Post</button>
+          
         </div>
       </div>
     </main>

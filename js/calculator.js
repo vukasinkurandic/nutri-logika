@@ -1,6 +1,52 @@
 
 
+//// Racunanje ////
 $(document).ready(function() {
+/// Promene opcija brzine u odnosu na cilj
+    $('#odabir-cilj').change(function() {
+       
+        if ($(this).val() == 'odrzavanje') {``
+            document.getElementById("opis-brzina").innerHTML ='Pri odrzavanju ne postoji mogucnost odabira brzine jer ne postoji promena telesne težine';
+            document.getElementById("brzina").innerHTML = "";
+            console.log('radi');
+          $('#brzina').prop('disabled', true);
+        } else if ($(this).val() == 'dobijanje') {
+            document.getElementById("opis-brzina").innerHTML ="Brzina ostvarenja se iskazuje kroz procenat telesne težine koji želite da izgubite ili dobijete u proseku nedeljno i ovo su neke brojke i smernice:";
+            document.getElementById("brzina").innerHTML =
+            `<option value="0.2" class="opcija">0.2%</option>
+            <option value="0.3" class="opcija">0.3%</option>
+            <option value="0.4" class="opcija">0.4%</option>
+            <option value="0.5" class="opcija">0.5%</option>
+            <option value="0.6" class="opcija">0.6%</option>`
+           console.log('radi');
+          $('#brzina').prop('disabled', false);
+        } else if ($(this).val() == 'gubljenje') {
+            document.getElementById("opis-brzina").innerHTML ="Brzina ostvarenja se iskazuje kroz procenat telesne težine koji želite da izgubite ili dobijete u proseku nedeljno i ovo su neke brojke i smernice:";
+            document.getElementById("brzina").innerHTML =
+            `<option value="0.2" class="opcija">0.2%</option>
+            <option value="0.3" class="opcija">0.3%</option>
+            <option value="0.4" class="opcija">0.4%</option>
+            <option value="0.5" class="opcija">0.5%</option>
+            <option value="0.6" class="opcija">0.6%</option>
+            <option value="0.7" class="opcija">0.7%</option>
+            <option value="0.8" class="opcija">0.8%</option>
+            <option value="0.9" class="opcija">0.9%</option>
+            <option value="1" class="opcija">1%</option>
+            `
+            
+           console.log('radi');
+          $('#brzina').prop('disabled', false);
+        }
+
+
+
+      });
+
+
+
+
+
+
     /// prevent refresh and go on top of page
     $('#submit-calculator').click(function(e){ 
         e.preventDefault();
@@ -15,6 +61,7 @@ $(document).ready(function() {
         let visinaVal = $('#visina').val();
         let aktivnostVal = $('#aktivnost').val();
         let brzinatVal = parseFloat($('#brzina').val());
+       
 
         /// vrednost grama proteina zavisno od aktivnosti
         if (aktivnostVal==='veoma-neaktivan' || aktivnostVal==='lagano-aktivan') {
@@ -44,6 +91,10 @@ $(document).ready(function() {
         dnevnaPromenaMasti=dnevnaPromena*0.713*0.87*9;//cal
         dnevnaPromenaTkiva=dnevnaPromena*0.287*0.3*4;//cal
         let promena = (dnevnaPromenaMasti+dnevnaPromenaTkiva)/7;
+        if (ciljVal==='odrzavanje') {
+            promena= 0;
+           // console.log(brzinatVal);
+        }
             
         if (godineVal == "" || godineVal < 15 || godineVal > 80){
             ///unestite ispravne godine

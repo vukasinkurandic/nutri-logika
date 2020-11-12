@@ -45,38 +45,54 @@
   </head>
 
   <body>
+    <!--Select one post -->
+          <?php require_once ("php/connection.php"); ?>
+          <?php 
+          if(!isset($_GET['id'])){
+           header("Location:index.php");
+          }else{
+              $post_id=$_GET['id'];
+
+                $sql="SELECT * FROM posts  WHERE id=$post_id";
+                $query=$conn->prepare($sql);
+                $query->execute();           
+                $selectOne=$query->get_result()->fetch_assoc();  
+    
+          } 
+          ?>
+
     <!-- =====================
             HEADER
     ======================= -->
     <header class="index-header relative-navbar">
       <div class="navbar__wrapper">
-        <a href="index.html#naslovna" class="navbar__logo"
+        <a href="index.php#naslovna" class="navbar__logo"
           ><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img"
         /></a>
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a href="index.html#naslovna" class="navbar__link"
+              <a href="index.php#naslovna" class="navbar__link"
                 ><i class="fas fa-home"></i>&nbsp; Home</a
               >
             </li>
             <li class="navbar__item">
-              <a href="index.html#ponuda" class="navbar__link"
+              <a href="index.php#ponuda" class="navbar__link"
                 ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
               >
             </li>
             <li class="navbar__item">
-              <a href="index.html#testimonials" class="navbar__link"
+              <a href="index.php#testimonials" class="navbar__link"
                 ><i class="far fa-grin"></i>&nbsp; Rezultati</a
               >
             </li>
             <li class="navbar__item">
-              <a href="index.html#omeni" class="navbar__link"
+              <a href="index.php#omeni" class="navbar__link"
                 ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
               >
             </li>
             <li class="navbar__item">
-              <a href="index.html#prijava" class="navbar__link"
+              <a href="index.php#prijava" class="navbar__link"
                 ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
               >
             </li>
@@ -86,7 +102,7 @@
               >
             </li>
             <li class="navbar__item">
-              <a href="blog.html" class="navbar__link"
+              <a href="blog.php" class="navbar__link"
                 ><i class="fas fa-book"></i>&nbsp; Blog</a
               >
             </li>
@@ -113,36 +129,22 @@
       <div class="single-post__wrapper">
         <div class="single-post__img--wrapper">
           <img
-            src="css/img/tegovi500x333.jpg"
+            src="css/img/blog/<?php echo $selectOne['image'] ?>"
             alt=""
             class="single-post__img"
           />
           <div class="single-post__title">
-            <h2>Lorem ipsum dolor sit.</h2>
+            <h2><?php echo $selectOne['title'] ?>.</h2>
             <ul class="single-post__title--info">
               <li>• Author: Jovan Cvetojevic</li>
-              <li>• Date: 05.10.2020.</li>
-              <li>• Category: Loremsi</li>
+              <li>• Date: <?php echo " ".  date('F j, Y',strtotime($selectOne['created_at']));?></li>
+              <li>• Category: <?php echo $selectOne['topic'] ?></li>
             </ul>
           </div>
         </div>
         <div class="single-post__content">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora,
-            autem ex dignissimos voluptatibus pariatur recusandae molestiae
-            suscipit rerum, vitae hic officia eveniet cumque dicta sint harum
-            distinctio? Dolorem quod at nam sint consequatur totam, vel
-            necessitatibus non. Tenetur iste possimus qui pariatur eos nulla
-            vero.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
-            autem aliquid facere ratione ipsa itaque porro, natus nam modi
-            tempore doloribus similique cumque fuga quibusdam temporibus earum
-            est. Quae, nesciunt ipsum reprehenderit doloremque possimus pariatur
-            quaerat eum amet. Soluta minus repellendus saepe possimus aperiam
-            dolore magnam et harum, laudantium, natus, dignissimos qui eos!
-            Temporibus, corporis.
+          <?php echo $selectOne['body'] ?>
           </p>
         </div>
       </div>
@@ -155,7 +157,7 @@
     <footer>
       <section id="footer">
         <div class="footer-wrapper">
-          <a href="index.html#naslovna" class="navbar__logo"
+          <a href="index.php#naslovna" class="navbar__logo"
             ><img
               src="css/img/nutri.logika.png"
               alt=""
@@ -169,27 +171,27 @@
           <div class="footer-links__container">
             <ul class="footer-links--list">
               <li class="footer__item">
-                <a href="index.html#naslovna" class="footer__link"
+                <a href="index.php#naslovna" class="footer__link"
                   ><i class="fas fa-home"></i>&nbsp; Home</a
                 >
               </li>
               <li class="footer__item">
-                <a href="index.html#ponuda" class="footer__link"
+                <a href="index.php#ponuda" class="footer__link"
                   ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
                 >
               </li>
               <li class="footer__item">
-                <a href="index.html#testimonials" class="footer__link"
+                <a href="index.php#testimonials" class="footer__link"
                   ><i class="far fa-grin"></i>&nbsp; Rezultati</a
                 >
               </li>
               <li class="footer__item">
-                <a href="index.html#omeni" class="footer__link"
+                <a href="index.php#omeni" class="footer__link"
                   ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
                 >
               </li>
               <li class="footer__item">
-                <a href="index.html#prijava" class="footer__link"
+                <a href="index.php#prijava" class="footer__link"
                   ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
                 >
               </li>
@@ -199,7 +201,7 @@
                 >
               </li>
               <li class="footer__item">
-                <a href="blog.html" class="footer__link"
+                <a href="blog.php" class="footer__link"
                   ><i class="fas fa-book"></i>&nbsp; Blog</a
                 >
               </li>

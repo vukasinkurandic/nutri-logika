@@ -51,33 +51,33 @@
     ======================= -->
     <header class="index-header relative-navbar">
       <div class="navbar__wrapper">
-        <a href="index.html#naslovna" class="navbar__logo"
+        <a href="index.php#naslovna" class="navbar__logo"
           ><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img"
         /></a>
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a href="index.html#naslovna" class="navbar__link"
+              <a href="index.php#naslovna" class="navbar__link"
                 ><i class="fas fa-home"></i>&nbsp; Home</a
               >
             </li>
             <li class="navbar__item">
-              <a href="index.html#ponuda" class="navbar__link"
+              <a href="index.php#ponuda" class="navbar__link"
                 ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
               >
             </li>
             <li class="navbar__item">
-              <a href="index.html#testimonials" class="navbar__link"
+              <a href="index.php#testimonials" class="navbar__link"
                 ><i class="far fa-grin"></i>&nbsp; Rezultati</a
               >
             </li>
             <li class="navbar__item">
-              <a href="index.html#omeni" class="navbar__link"
+              <a href="index.php#omeni" class="navbar__link"
                 ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
               >
             </li>
             <li class="navbar__item">
-              <a href="index.html#prijava" class="navbar__link"
+              <a href="index.php#prijava" class="navbar__link"
                 ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
               >
             </li>
@@ -87,7 +87,7 @@
               >
             </li>
             <li class="navbar__item">
-              <a href="blog.html" class="navbar__link"
+              <a href="blog.php" class="navbar__link"
                 ><i class="fas fa-book"></i>&nbsp; Blog</a
               >
             </li>
@@ -110,107 +110,46 @@
             BLOG MAIN
     ======================= -->
     <main>
+    <?php 
+      //// Read ALL post from DB
+              require_once('php/connection.php');
+
+              $sql = "SELECT * FROM posts";
+              $query=$conn->prepare($sql);
+              $query->execute();
+              $posts=$query->get_result()->fetch_all(MYSQLI_ASSOC);
+      ?>
       <div class="blog-index__wrapper">
         <div class="blog-index__main-title--wrapper">
           <div class="blog-index__main-title">
             <h2>Najnoviji blog postovi</h2>
           </div>
         </div>
+        <?php foreach ($posts as $key => $post): ?>
         <div class="blog-index__content">
           <!-- <div class="blog-index__content--info"> -->
           <ul class="blog-index__info--list">
             <li><span>Author:</span> Jovan Cvetojevic</li>
-            <li><span>Date:</span> 05.10.2020.</li>
-            <li><span>Category:</span> Loremsi</li>
+            <li><span>Date:</span> <?php echo " ".  date('F j, Y',strtotime($post['created_at']));?></li>
+            <li><span>Category:</span> <?php echo $post['topic'];?></li>
           </ul>
           <div class="blog-index__img-holder">
-            <img src="css/img/tegovi500x333.jpg" alt="" />
+          <a href="blog-single-post.php?id=<?php echo $post['id']?>"><img src="css/img/blog/<?php echo ($post['image']);?>" alt="" class="post-image"></a>
           </div>
           <!-- </div> -->
           <div class="blog-index__content--text">
-            <a href="blog-single-post.html" class="single-blog__link">
+            <a href="blog-single-post.php?id=<?php echo $post['id'];?>" class="single-blog__link">
               <div class="blog-index__title">
-                <h4>Upotreba kreatina u bodibildingu</h4>
+                <h4><?php echo $post['title'];?></h4>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Ratione inventore delectus dolorum tempore explicabo, ullam
-                exercitationem culpa, accusamus aliquid cumque distinctio optio
-                possimus excepturi blanditiis omnis esse sunt officiis hic
-                adipisci quos expedita laborum quaerat? Blanditiis, error, totam
-                quam excepturi consequatur temporibus consectetur nulla
-                similique eligendi veniam suscipit animi odio obcaecati. Aperiam
-                suscipit placeat saepe sunt ratione ipsam consectetur
-                architecto.
+              <?php echo html_entity_decode(substr($post['body'], 0, 500). '...'); ?>
               </p>
             </a>
           </div>
           <div class="blog-index__underline"></div>
         </div>
-
-        <div class="blog-index__content">
-          <!-- <div class="blog-index__content--info"> -->
-          <ul class="blog-index__info--list">
-            <li><span>Author:</span> Jovan Cvetojevic</li>
-            <li><span>Date:</span> 05.10.2020.</li>
-            <li><span>Category:</span> Loremsi</li>
-          </ul>
-          <div class="blog-index__img-holder">
-            <img src="css/img/tegovi500x333.jpg" alt="" />
-          </div>
-          <!-- </div> -->
-          <div class="blog-index__content--text">
-            <a href="blog-single-post.html" class="single-blog__link">
-              <div class="blog-index__title">
-                <h4>Mali penisi u bodibildingu</h4>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Ratione inventore delectus dolorum tempore explicabo, ullam
-                exercitationem culpa, accusamus aliquid cumque distinctio optio
-                possimus excepturi blanditiis omnis esse sunt officiis hic
-                adipisci quos expedita laborum quaerat? Blanditiis, error, totam
-                quam excepturi consequatur temporibus consectetur nulla
-                similique eligendi veniam suscipit animi odio obcaecati. Aperiam
-                suscipit placeat saepe sunt ratione ipsam consectetur
-                architecto.
-              </p>
-            </a>
-          </div>
-          <div class="blog-index__underline"></div>
-        </div>
-
-        <div class="blog-index__content">
-          <!-- <div class="blog-index__content--info"> -->
-          <ul class="blog-index__info--list">
-            <li><span>Author:</span> Jovan Cvetojevic</li>
-            <li><span>Date:</span> 05.10.2020.</li>
-            <li><span>Category:</span> Loremsi</li>
-          </ul>
-          <div class="blog-index__img-holder">
-            <img src="css/img/tegovi500x333.jpg" alt="" />
-          </div>
-          <!-- </div> -->
-          <div class="blog-index__content--text">
-            <a href="blog-single-post.html" class="single-blog__link">
-              <div class="blog-index__title">
-                <h4>Upotreba steroJida u bodibildingu</h4>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Ratione inventore delectus dolorum tempore explicabo, ullam
-                exercitationem culpa, accusamus aliquid cumque distinctio optio
-                possimus excepturi blanditiis omnis esse sunt officiis hic
-                adipisci quos expedita laborum quaerat? Blanditiis, error, totam
-                quam excepturi consequatur temporibus consectetur nulla
-                similique eligendi veniam suscipit animi odio obcaecati. Aperiam
-                suscipit placeat saepe sunt ratione ipsam consectetur
-                architecto.
-              </p>
-            </a>
-          </div>
-          <div class="blog-index__underline"></div>
-        </div>
+        <?php endforeach; ?>
 
         <!-- <div class="blog-index__button--wrapper">
               <button class="dugme-login-admin">
@@ -241,27 +180,27 @@
           <div class="footer-links__container">
             <ul class="footer-links--list">
               <li class="footer__item">
-                <a href="index.html#naslovna" class="footer__link"
+                <a href="index.php#naslovna" class="footer__link"
                   ><i class="fas fa-home"></i>&nbsp; Home</a
                 >
               </li>
               <li class="footer__item">
-                <a href="index.html#ponuda" class="footer__link"
+                <a href="index.php#ponuda" class="footer__link"
                   ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
                 >
               </li>
               <li class="footer__item">
-                <a href="index.html#testimonials" class="footer__link"
+                <a href="index.php#testimonials" class="footer__link"
                   ><i class="far fa-grin"></i>&nbsp; Rezultati</a
                 >
               </li>
               <li class="footer__item">
-                <a href="index.html#omeni" class="footer__link"
+                <a href="index.php#omeni" class="footer__link"
                   ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
                 >
               </li>
               <li class="footer__item">
-                <a href="index.html#prijava" class="footer__link"
+                <a href="index.php#prijava" class="footer__link"
                   ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
                 >
               </li>
@@ -271,7 +210,7 @@
                 >
               </li>
               <li class="footer__item">
-                <a href="blog.html" class="footer__link"
+                <a href="blog.php" class="footer__link"
                   ><i class="fas fa-book"></i>&nbsp; Blog</a
                 >
               </li>

@@ -961,8 +961,9 @@ input::-webkit-inner-spin-button {
 }
 
 .error-message-visible {
-  color: red;
-  font-size: 0.8rem;
+  color: white;
+  background-color: red;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -971,8 +972,9 @@ input::-webkit-inner-spin-button {
 }
 
 .succes-message-visible {
-  color: green;
-  font-size: 0.8rem;
+  color: white;
+  background-color: green;
+  font-size: 1.1rem;
   text-align: center;
 }
 

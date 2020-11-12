@@ -87,7 +87,7 @@
               >
             </li>
             <li class="navbar__item">
-              <a href="blog.html" class="navbar__link"
+              <a href="blog.php" class="navbar__link"
                 ><i class="fas fa-book"></i>&nbsp; Blog</a
               >
             </li>
@@ -287,112 +287,53 @@
     <!-- =====================
               BLOG - INDEX
     ======================= -->
+    <?php 
+      //// Read 3 last post from DB
+              require_once('php/connection.php');
+
+              $sql = "SELECT * FROM posts ORDER BY id DESC 
+              LIMIT 3";///// NUMBER OF NEWEST BLOGS
+              $query=$conn->prepare($sql);
+              $query->execute();
+              $posts=$query->get_result()->fetch_all(MYSQLI_ASSOC);
+      ?>
     <section id="blog-index">
+    
       <div class="blog-index__wrapper">
         <div class="blog-index__main-title--wrapper">
           <div class="blog-index__main-title">
             <h2>Najnoviji blog postovi</h2>
           </div>
         </div>
+        <?php foreach ($posts as $key => $post): ?>
         <div class="blog-index__content">
           <!-- <div class="blog-index__content--info"> -->
           <ul class="blog-index__info--list">
             <li><span>Author:</span> Jovan Cvetojevic</li>
-            <li><span>Date:</span> 05.10.2020.</li>
-            <li><span>Category:</span> Loremsi</li>
+            <li><span>Date:</span> <?php echo " ".  date('F j, Y',strtotime($post['created_at']));?></li>
+            <li><span>Category:</span> <?php echo $post['topic'];?></li>
           </ul>
           <div class="blog-index__img-holder">
-            <img src="css/img/tegovi500x333.jpg" alt="" />
+          <a href="blog-single-post.php?id=<?php echo $post['id']?>"><img src="css/img/blog/<?php echo ($post['image']);?>" alt="" class="post-image"></a>
           </div>
           <!-- </div> -->
           <div class="blog-index__content--text">
-            <a href="blog-single-post.html" class="single-blog__link">
+            <a href="blog-single-post.php?id=<?php echo $post['id'];?>" class="single-blog__link">
               <div class="blog-index__title">
-                <h4>Upotreba kreatina u bodibildingu</h4>
+                <h4><?php echo $post['title'];?></h4>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Ratione inventore delectus dolorum tempore explicabo, ullam
-                exercitationem culpa, accusamus aliquid cumque distinctio optio
-                possimus excepturi blanditiis omnis esse sunt officiis hic
-                adipisci quos expedita laborum quaerat? Blanditiis, error, totam
-                quam excepturi consequatur temporibus consectetur nulla
-                similique eligendi veniam suscipit animi odio obcaecati. Aperiam
-                suscipit placeat saepe sunt ratione ipsam consectetur
-                architecto.
+              <?php echo html_entity_decode(substr($post['body'], 0, 170). '...'); ?>
               </p>
             </a>
           </div>
           <div class="blog-index__underline"></div>
         </div>
-
-        <div class="blog-index__content">
-          <!-- <div class="blog-index__content--info"> -->
-          <ul class="blog-index__info--list">
-            <li><span>Author:</span> Jovan Cvetojevic</li>
-            <li><span>Date:</span> 05.10.2020.</li>
-            <li><span>Category:</span> Loremsi</li>
-          </ul>
-          <div class="blog-index__img-holder">
-            <img src="css/img/tegovi500x333.jpg" alt="" />
-          </div>
-          <!-- </div> -->
-          <div class="blog-index__content--text">
-            <a href="blog-single-post.html" class="single-blog__link">
-              <div class="blog-index__title">
-                <h4>Mali penisi u bodibildingu</h4>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Ratione inventore delectus dolorum tempore explicabo, ullam
-                exercitationem culpa, accusamus aliquid cumque distinctio optio
-                possimus excepturi blanditiis omnis esse sunt officiis hic
-                adipisci quos expedita laborum quaerat? Blanditiis, error, totam
-                quam excepturi consequatur temporibus consectetur nulla
-                similique eligendi veniam suscipit animi odio obcaecati. Aperiam
-                suscipit placeat saepe sunt ratione ipsam consectetur
-                architecto.
-              </p>
-            </a>
-          </div>
-          <div class="blog-index__underline"></div>
-        </div>
-
-        <div class="blog-index__content">
-          <!-- <div class="blog-index__content--info"> -->
-          <ul class="blog-index__info--list">
-            <li><span>Author:</span> Jovan Cvetojevic</li>
-            <li><span>Date:</span> 05.10.2020.</li>
-            <li><span>Category:</span> Loremsi</li>
-          </ul>
-          <div class="blog-index__img-holder">
-            <img src="css/img/tegovi500x333.jpg" alt="" />
-          </div>
-          <!-- </div> -->
-          <div class="blog-index__content--text">
-            <a href="blog-single-post.html" class="single-blog__link">
-              <div class="blog-index__title">
-                <h4>Upotreba steroJida u bodibildingu</h4>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Ratione inventore delectus dolorum tempore explicabo, ullam
-                exercitationem culpa, accusamus aliquid cumque distinctio optio
-                possimus excepturi blanditiis omnis esse sunt officiis hic
-                adipisci quos expedita laborum quaerat? Blanditiis, error, totam
-                quam excepturi consequatur temporibus consectetur nulla
-                similique eligendi veniam suscipit animi odio obcaecati. Aperiam
-                suscipit placeat saepe sunt ratione ipsam consectetur
-                architecto.
-              </p>
-            </a>
-          </div>
-          <div class="blog-index__underline"></div>
-        </div>
+        <?php endforeach; ?>
 
         <div class="blog-index__button--wrapper">
           <button class="dugme-login-admin">
-            <a href="blog.html">Pogledaj ceo blog</a>
+            <a href="blog.php">Pogledaj ceo blog</a>
           </button>
         </div>
       </div>
@@ -620,7 +561,7 @@
                 >
               </li>
               <li class="footer__item">
-                <a href="blog.html" class="footer__link"
+                <a href="blog.php" class="footer__link"
                   ><i class="fas fa-book"></i>&nbsp; Blog</a
                 >
               </li>
