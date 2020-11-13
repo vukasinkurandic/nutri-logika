@@ -142,10 +142,33 @@
             </ul>
           </div>
         </div>
+        <div class="single-post__underline"></div>
         <div class="single-post__content">
           <p>
           <?php echo $selectOne['body'] ?>
           </p>
+        </div>
+        <div class="single-post__sidebar">
+          <ul>
+            <li class="sidebar-post">
+              
+                <div class="sidebar-post__title">Lorem ipsum dolor sit.</div>
+                <div class="single-post__underline"></div>
+              
+            </li>
+            <li class="sidebar-post">
+              
+                <div class="sidebar-post__title">Lorem, ipsum dolor.</div>
+                <div class="single-post__underline"></div>
+              
+            </li>
+            <li class="sidebar-post">
+              
+                <div class="sidebar-post__title">Lorem, ipsum.</div>
+                <div class="single-post__underline"></div>
+              
+            </li>
+          </ul>
         </div>
       </div>
     </main>
