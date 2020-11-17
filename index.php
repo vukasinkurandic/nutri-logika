@@ -118,7 +118,7 @@
             <h4>Naučno zasnovane i u praksi dokazane informacije o</h4>
             <h2>
               <span>ishrani,</span> <span>treningu i</span> 
-              <span>zdravom</span> <span>životu</span>
+              <span>&nbspzdravom</span> <span>životu</span>
             </h2>
           </div>
           <!-- <img class="hero-img" src="css/img/hero-no-background500x750-optimizovano.png" alt="hero"> -->
