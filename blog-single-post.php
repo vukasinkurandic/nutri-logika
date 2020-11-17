@@ -143,32 +143,33 @@
           </div>
         </div>
         <div class="single-post__underline"></div>
-        <div class="single-post__content">
-          <p>
-          <?php echo $selectOne['body'] ?>
-          </p>
-        </div>
-        <div class="single-post__sidebar">
-          <ul>
-            <li class="sidebar-post">
-              
-                <div class="sidebar-post__title">Lorem ipsum dolor sit.</div>
-                <div class="single-post__underline"></div>
-              
-            </li>
-            <li class="sidebar-post">
-              
-                <div class="sidebar-post__title">Lorem, ipsum dolor.</div>
-                <div class="single-post__underline"></div>
-              
-            </li>
-            <li class="sidebar-post">
-              
-                <div class="sidebar-post__title">Lorem, ipsum.</div>
-                <div class="single-post__underline"></div>
-              
-            </li>
-          </ul>
+        <div class="single-post__content-wrapper">
+          <div class="single-post__content">
+            <p>
+            <?php echo $selectOne['body'] ?>
+            </p>
+          </div>
+          <div class="single-post__sidebar">
+              <input class="search-bar" type="text" placeholder="Search...">
+              <h2>Recent posts:</h2>
+              <ul>
+                <li class="sidebar-post">
+                    <div class="sidebar-post__title"> <a href="#">Lorem ipsum dolor sit.</a></div>
+                    <!-- <div class="single-post__underline"></div> -->
+                </li>
+                <li class="sidebar-post">
+                    <div class="sidebar-post__title"> <a href="#">Lorem, ipsum dolor.</a></div>
+                    <!-- <div class="single-post__underline"></div> -->
+                  
+                </li>
+                <li class="sidebar-post">
+                  
+                    <div class="sidebar-post__title"> <a href="#">Lorem, ipsum.</a></div>
+                    <!-- <div class="single-post__underline"></div> -->
+                  
+                </li>
+              </ul>
+          </div>
         </div>
       </div>
     </main>

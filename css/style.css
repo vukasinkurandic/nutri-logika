@@ -64,7 +64,6 @@ img {
 }
 
 .navbar__wrapper {
-  background: rgba(0, 0, 0, 0.1);
   max-width: 100%;
   position: relative;
   padding: 0.4rem;
@@ -75,7 +74,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  /* background: rgba(0, 0, 0, 0.6); */
+
   background: var(--zut);
   clip-path: circle(0px at top right);
   transition: clip-path ease-in-out 0.5s;
@@ -107,7 +106,7 @@ img {
 
 .navbar__item:hover .navbar__link,
 .navbar__item:focus .navbar__link {
-  color: var(--zut);
+  color: var(--ljub);
 }
 
 .navbar__item:last-child {
@@ -115,19 +114,20 @@ img {
 }
 
 .navbar__link {
-  color: var(--ljub);
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 400;
 }
 
-.navbar-open .navbar__item {
+/* .navbar-open .navbar__item {
   animation: fadeIn 0.4s cubic-bezier(0.79, 0.14, 0.15, 0.86) both;
-}
+} */
 
 /***************
 navbar animacija
 ****************/
+/*
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -144,7 +144,7 @@ navbar animacija
   }
 }
 
-.navbar-open .navbar__item:nth-child(1) {
+ .navbar-open .navbar__item:nth-child(1) {
   animation-delay: 0;
 }
 
@@ -170,7 +170,7 @@ navbar animacija
 
 .navbar-open .navbar__item:nth-child(7) {
   animation-delay: 0.6s;
-}
+} */
 
 /***************
 navbar animacija
@@ -203,7 +203,7 @@ navbar animacija
 .hamburger::after {
   content: "";
   position: relative;
-  background: white;
+  background: var(--ljub);
   width: 1.5rem;
   height: 1px;
   display: block;
@@ -289,20 +289,20 @@ hamburger animation
   height: 100vh;
   background-image: url("img/jovan-hero801x760.png");
   background-attachment: scroll;
-  /* position: relative; */
+
   background-position: 10%;
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
 }
 
 .hero-title {
   grid-column: 1;
-  /* grid-row: 2; */
+
   margin-left: 1rem;
-  margin-top: 6rem;
+
   text-transform: uppercase;
+  text-align: end;
 }
 
 .hero-title h4 {
@@ -346,8 +346,9 @@ hamburger animation
   justify-content: end;
   height: 80%;
   width: 100%;
-  grid-row: 3;
-  grid-column: 1 / span 2;
+  grid-row: 1;
+  grid-column: 1;
+  visibility: hidden;
 }
 
 .logo {
@@ -391,7 +392,6 @@ hamburger animation
 ==============================================*/
 #ponuda {
   max-height: 100%;
-  /* margin: 2.5rem 0; */
 }
 
 .ponuda-wrapper {
@@ -420,10 +420,10 @@ hamburger animation
 .dual-plan {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+
   justify-content: space-between;
   position: relative;
-  /* margin-bottom: 2.5rem; */
+
   margin-top: 0;
 }
 
@@ -600,13 +600,11 @@ hamburger animation
 
 .dugme__prijavi-se img {
   transition: all ease 0.3s;
-  /* filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5)); */
 }
 
 .dugme__prijavi-se a:hover img,
 .dugme__prijavi-se a:focus img {
   transform: rotate(45deg);
-  /* filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.8)); */
 }
 
 .dugme__prijavi-se a:hover,
@@ -625,9 +623,7 @@ hamburger animation
   border: 1px solid rgba(181, 19, 183, 0.3);
   border-radius: 50px;
   padding-right: 1.2rem;
-  /* z-index: -1; */
   filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5));
-  /*****dodao*****/
   height: 35px;
   border-left: 0;
   transition: border ease 0.4s, filter ease 0.1s;
@@ -649,8 +645,6 @@ hamburger animation
 .testimonials__wrapper {
   background-image: url("img/transformacije/mozaik2-500x250.jpeg");
   width: 100%;
-  /***/
-  /* height: 700px; */
   background-size: contain;
   background-repeat: repeat;
   position: relative;
@@ -716,11 +710,11 @@ hamburger animation
 }
 
 .carousel__button--left {
-  left: -1rem;
+  left: 0;
 }
 
 .carousel__button--right {
-  right: -1rem;
+  right: 0;
 }
 
 .carousel__navigation {
@@ -790,7 +784,6 @@ hamburger animation
   font-size: 1rem;
   position: relative;
   z-index: 1;
-  /* font-weight: 500; */
 }
 
 .omeni-info-index {
@@ -799,17 +792,6 @@ hamburger animation
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
-/* .omeni-logo {
-  position: absolute;
-  z-index: -1;
-  opacity: 0.7;
-  width: 45%;
-  top: 30px;
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
-  left: 168px;
-  object-fit: cover;
-} */
 
 .omeni-jovan {
   object-fit: cover;
@@ -852,7 +834,6 @@ hamburger animation
 ==============================================*/
 #prijava {
   margin: 0;
-  padding: 1rem;
 }
 
 .prijava-title h2 {
@@ -882,6 +863,7 @@ hamburger animation
 
 .prijava__wrapper {
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .polje {
@@ -909,7 +891,6 @@ textarea:hover {
 
 input:focus,
 textarea:focus {
-  /* box-shadow: 0 0 4px var(--ljub1); */
   outline: none;
   filter: drop-shadow(0 0 4px var(--ljub1));
 }
@@ -1009,9 +990,6 @@ input::-webkit-inner-spin-button {
   width: 100%;
   height: 100%;
   background: #131200;
-  /* top: 50%;
-  transform: translateY(-50%);
-  left: 2.5%; */
   z-index: 0;
   clip-path: polygon(0 0, 100% 38%, 100% 100%, 0% 100%);
 }
@@ -1019,10 +997,13 @@ input::-webkit-inner-spin-button {
 .footer-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
   position: relative;
   z-index: 1;
+  padding: 3.5rem;
+}
+
+.footer-wrapper h3 {
+  color: var(--zut);
 }
 
 .footer-wrapper .navbar__logo .navbar__logo__img {
@@ -1030,14 +1011,16 @@ input::-webkit-inner-spin-button {
   width: 8rem;
 }
 
-.kontakt-container p {
+.kontakt-container p,
+.kontakt-container p a {
   color: var(--ljub);
   font-size: 1rem;
-  text-align: center;
-  font-weight: 600;
+  text-align: start;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
-.kontakt-container p span {
+.kontakt-container p a:hover {
   color: var(--zut);
 }
 
@@ -1045,7 +1028,7 @@ input::-webkit-inner-spin-button {
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: start;
   padding: 0;
 }
 
@@ -1234,7 +1217,6 @@ input::-webkit-inner-spin-button {
   padding: 0.5rem;
   border-radius: 10px;
   background: var(--ljub1);
-  /* color: white; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1251,7 +1233,6 @@ input::-webkit-inner-spin-button {
   height: 100%;
   top: 0;
   left: 0;
-  /* z-index: 1; */
   clip-path: polygon(77% 0, 100% 0%, 100% 100%, 90% 100%);
   background-color: var(--zut);
   border-bottom-right-radius: 10px;
@@ -1260,7 +1241,6 @@ input::-webkit-inner-spin-button {
 
 .blog-card__title {
   display: flex;
-  /* border-bottom: 1px solid black; */
   margin-bottom: 0.5rem;
   justify-content: start;
   align-items: center;
@@ -1332,7 +1312,6 @@ p {
   top: 0;
   left: 0;
   transition: height 0.3s ease-in-out;
-  /* background: red; */
 }
 
 .blog-dash__image img {
@@ -1355,12 +1334,6 @@ p {
 .blog-index__main-title--wrapper {
   grid-column: 1 / span 3;
 }
-
-/* .blog-index__content--info {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-} */
 
 .blog-index__content {
   display: grid;
@@ -1438,7 +1411,6 @@ p {
 }
 
 .blog-index__content--text {
-  /* padding: 1.6rem; */
   grid-column: 1 / span 2;
 }
 
@@ -1475,14 +1447,6 @@ p {
 /* ===========================================
               BLOG - SINGLE POST 
 ==============================================*/
-.single-post__wrapper {
-  display: grid;
-  width: 70%;
-  margin: 0 auto;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-}
-
 .single-post__title {
   width: 100%;
   /* background: var(--zut1); */
@@ -1518,23 +1482,19 @@ p {
   margin: 0;
 }
 
+.single-post__content-wrapper {
+  padding: 1rem;
+}
+
 .single-post__content {
-  padding: 1.3rem;
-  margin: 0 0 3rem 0;
   font-family: "Inter", sans-serif;
-  max-width: 100%;
-  grid-column: 1;
-  grid-row: 3;
 }
 
 .single-post__img--wrapper {
-  max-width: 100%;
+  width: 100%;
   height: 300px;
   overflow: hidden;
   position: relative;
-  /* margin: 0 auto; */
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  grid-column: 1 / span 2;
 }
 
 .single-post__img--wrapper::before {
@@ -1557,41 +1517,52 @@ p {
 .single-post__underline {
   height: 1px;
   background-color: var(--ljub);
-  grid-column: 1 / span 2;
-  grid-row: 2;
   width: 60%;
-  margin: 2rem auto;
+  margin: 2rem auto 0 auto;
 }
 
 .single-post__sidebar {
-  background: var(--zut1);
-  width: 60%;
+  width: 90%;
   border-radius: 20px;
-  height: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   max-height: 80%;
-  justify-self: end;
-  grid-column: 2;
-  grid-row: 3;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.single-post__sidebar h2 {
+  margin: 1rem auto 1rem 1rem;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .single-post__sidebar ul {
-  display: flex;
-  flex-direction: column;
   padding: 0;
   margin: 0;
-  justify-content: center;
-  height: 100%;
-  list-style: square;
 }
 
 .sidebar-post {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 1rem auto 1rem 2rem;
+}
+
+.sidebar-post__title {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sidebar-post__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sidebar-post:nth-child(last) {
+  margin-bottom: 0;
 }
 
 .sidebar-post .single-post__underline {
   margin: 0.5rem;
+}
+
+.search-bar {
 }
 
 /* ===========================================
@@ -1608,7 +1579,6 @@ p {
   text-align: center;
   font-size: 1.7rem;
   font-weight: 900;
-  /* text-transform: uppercase; */
 }
 
 .new-post__form--wrapper {
@@ -1824,7 +1794,6 @@ p {
 @media (min-width: 361px) {
   .plan-kartica-img,
   .plan-kartica-overflow {
-    /* width: 100%; */
     max-width: 80%;
   }
 }
@@ -1832,31 +1801,7 @@ p {
 @media (min-width: 460px) {
   .plan-kartica-img,
   .plan-kartica-overflow {
-    /* width: 100%; */
     max-width: 65%;
-  }
-
-  .hero {
-    width: 100%;
-    height: 100vh;
-    background-image: none;
-  }
-
-  .hero-desktop-img {
-    background-image: url("img/jovan-hero-nobckg800x759.png");
-    background-size: cover;
-    background-position: 4rem;
-    grid-column: 2;
-    grid-row: 1 / span 2;
-  }
-
-  .naslovna__title {
-    grid-row: 2;
-    grid-column: 1 / span 2;
-  }
-
-  .hero-desktop-img {
-    background-position: -13rem;
   }
 
   .hero-title h2 span:nth-child(2n + 1) {
@@ -1874,8 +1819,27 @@ p {
 
 @media (min-width: 600px) {
   /** naslovna **/
-  .naslovna__title {
-    justify-content: center;
+  .hero {
+    width: 100%;
+    height: 100vh;
+    background-image: none;
+  }
+
+  .hero-desktop-img {
+    background-image: url("img/jovan-hero-nobckg800x759.png");
+    background-size: cover;
+    background-position: -13rem;
+    background-repeat: no-repeat;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .hero-title {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    text-align: end;
   }
 
   /** ponuda **/
@@ -1997,6 +1961,11 @@ p {
   .blog-index__button--wrapper {
     grid-column: 1/ 5;
   }
+
+  /****** BLOG - SINGLE PAGE *******/
+  .single-post__wrapper {
+    width: 80%;
+  }
 }
 
 @media (min-width: 700px) {
@@ -2041,8 +2010,7 @@ p {
   .footer-wrapper {
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 4rem 0;
-    width: 100%;
+    padding: 8rem 0 4rem 0;
     align-items: center;
   }
 
@@ -2064,7 +2032,6 @@ p {
     display: grid;
     grid-template-columns: minmax(30ch, 50ch) max-content;
     justify-content: center;
-    /* grid-gap: 8rem; */
   }
 
   .omeni-img {
@@ -2141,7 +2108,7 @@ p {
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 770px) {
   /** navbar **/
 
   .menu-toggle {
@@ -2201,54 +2168,11 @@ p {
   .dual-plan .plan-kartica-img {
     height: 39%;
   }
-
-  .hero {
-    width: 100%;
-    height: 100vh;
-    background-image: none;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  .hero-title {
-    grid-column: 1 / span 2;
-    padding: 0 8rem 0 4rem;
-    grid-row: 1 / span 2;
-  }
-
-  .hero-title h2 span:nth-child(2n + 1) {
-    font-size: 6.5rem;
-  }
-
-  .hero-title h2 span:nth-child(2n) {
-    font-size: 8rem;
-  }
-
-  .hero-title h2 span:last-child {
-    line-height: 1.2;
-  }
-
-  .hero-desktop-img {
-    background-image: url("img/jovan-hero-nobckg1000x949.png");
-    background-size: cover;
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    background-position: 50%;
-  }
-
-  .naslovna__title {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .naslovna__title .logo {
-    height: 250px;
-  }
 }
 
 @media (min-width: 1250px) {
   .hero-desktop-img {
-    background-position: 60%;
+    background-position: -11rem;
   }
 }
 
