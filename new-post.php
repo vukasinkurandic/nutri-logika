@@ -194,32 +194,32 @@
             <ul class="footer-links--list">
               <li class="footer__item">
                 <a href="index.html#naslovna" class="footer__link"
-                  ><i class="fas fa-home"></i>&nbsp; Home</a
+                  >Home</a
                 >
               </li>
               <li class="footer__item">
                 <a href="index.html#ponuda" class="footer__link"
-                  ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+                  >Ponuda</a
                 >
               </li>
               <li class="footer__item">
                 <a href="index.html#testimonials" class="footer__link"
-                  ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+                  >Rezultati</a
                 >
               </li>
               <li class="footer__item">
                 <a href="omeni.html" class="footer__link"
-                  ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+                  >O meni</a
                 >
               </li>
               <li class="footer__item">
                 <a href="index.html#prijava" class="footer__link"
-                  ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
+                  >Prijavi se</a
                 >
               </li>
               <li class="footer__item">
                 <a href="calculator.html" class="footer__link"
-                  ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
+                  >Kalkulator</a
                 >
               </li>
             </ul>

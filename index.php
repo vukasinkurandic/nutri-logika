@@ -58,37 +58,37 @@
           <ul class="navbar__list">
             <li class="navbar__item">
               <a href="#naslovna" class="navbar__link"
-                ><i class="fas fa-home"></i>&nbsp; Home</a
+                > Home</a
               >
             </li>
             <li class="navbar__item">
               <a href="#ponuda" class="navbar__link"
-                ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+                > Ponuda</a
               >
             </li>
             <li class="navbar__item">
               <a href="#testimonials" class="navbar__link"
-                ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+                > Rezultati</a
               >
             </li>
             <li class="navbar__item">
               <a href="#omeni" class="navbar__link"
-                ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+                > O meni</a
               >
             </li>
             <li class="navbar__item">
               <a href="#prijava" class="navbar__link"
-                ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
+                > Prijavi se</a
               >
             </li>
             <li class="navbar__item">
               <a href="calculator.html" class="navbar__link"
-                ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
+                > Kalkulator</a
               >
             </li>
             <li class="navbar__item">
               <a href="blog.php" class="navbar__link"
-                ><i class="fas fa-book"></i>&nbsp; Blog</a
+                > Blog</a
               >
             </li>
           </ul>
@@ -117,15 +117,15 @@
           <div class="hero-title">
             <h4>Naučno zasnovane i u praksi dokazane informacije o</h4>
             <h2>
-              <span>ishrani</span>, <span>treningu</span> i
-              <span>zdravom</span> <span>životu</span>
+              <span>ishrani,</span> <span>treningu i</span> 
+              <span>&nbspzdravom</span> <span>životu</span>
             </h2>
           </div>
           <!-- <img class="hero-img" src="css/img/hero-no-background500x750-optimizovano.png" alt="hero"> -->
-          <div class="naslovna__title">
+          <!-- <div class="naslovna__title">
             <img class="logo" src="css/img/nutri.logika.png" alt="logo" />
             <a href="#ponuda"><div class="naslovna__strelica"></div></a>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -307,7 +307,7 @@
         </div>
         <?php foreach ($posts as $key => $post): ?>
         <div class="blog-index__content">
-          <!-- <div class="blog-index__content--info"> -->
+        
           <ul class="blog-index__info--list">
             <li><span>Author:</span> Jovan Cvetojevic</li>
             <li><span>Date:</span> <?php echo " ".  date('F j, Y',strtotime($post['created_at']));?></li>
@@ -316,7 +316,7 @@
           <div class="blog-index__img-holder">
           <a href="blog-single-post.php?id=<?php echo $post['id']?>"><img src="css/img/blog/<?php echo ($post['image']);?>" alt="" class="post-image"></a>
           </div>
-          <!-- </div> -->
+         
           <div class="blog-index__content--text">
             <a href="blog-single-post.php?id=<?php echo $post['id'];?>" class="single-blog__link">
               <div class="blog-index__title">
@@ -350,11 +350,7 @@
           </div>
           <div class="grid-container">
             <div class="omeni-img">
-              <!-- <img
-                class="omeni-logo"
-                src="css/img/nutri.logika.png"
-                alt="logo"
-              /> -->
+            
               <img
                 class="omeni-jovan"
                 src="css/img/jovan-pola600.png"
@@ -502,7 +498,7 @@
         </form>
       </div>
       <div id="php_greska" class="error-message-visible"></div>
-      <div class="dugme__prijavi-se prijava">
+      <div class="dugme__prijavi-se">
         <a href="#prijava">
           <div class="dual-plan__ikonica"></div>
           Prijavi se
@@ -524,45 +520,47 @@
               class="navbar__logo__img"
           /></a>
           <div class="kontakt-container">
-            <p><span>E-mail:</span> nutri.logika@gmail.com</p>
-            <p><span>Telefon:</span> 061/61-45-617</p>
+            <h3>Contact:</h3>
+            <p>E-mail: <a href="">nutri.logika@gmail.com</a></p>
+            <p>Telefon: <a href="">061/61-45-617</a></p>
           </div>
 
           <div class="footer-links__container">
+            <h3>Quick links:</h3>
             <ul class="footer-links--list">
               <li class="footer__item">
                 <a href="#naslovna" class="footer__link"
-                  ><i class="fas fa-home"></i>&nbsp; Home</a
+                  >Home</a
                 >
               </li>
               <li class="footer__item">
                 <a href="#ponuda" class="footer__link"
-                  ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+                  >Ponuda</a
                 >
               </li>
               <li class="footer__item">
                 <a href="#testimonials" class="footer__link"
-                  ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+                  >Rezultati</a
                 >
               </li>
               <li class="footer__item">
                 <a href="#omeni" class="footer__link"
-                  ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+                  >O meni</a
                 >
               </li>
               <li class="footer__item">
                 <a href="#prijava" class="footer__link"
-                  ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
+                  >Prijavi se</a
                 >
               </li>
               <li class="footer__item">
                 <a href="calculator.html" class="footer__link"
-                  ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
+                  >Kalkulator</a
                 >
               </li>
               <li class="footer__item">
                 <a href="blog.php" class="footer__link"
-                  ><i class="fas fa-book"></i>&nbsp; Blog</a
+                  >Blog</a
                 >
               </li>
             </ul>

@@ -73,37 +73,37 @@
           <ul class="navbar__list">
             <li class="navbar__item">
               <a href="index.php#naslovna" class="navbar__link"
-                ><i class="fas fa-home"></i>&nbsp; Home</a
+                >Home</a
               >
             </li>
             <li class="navbar__item">
               <a href="index.php#ponuda" class="navbar__link"
-                ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+                >Ponuda</a
               >
             </li>
             <li class="navbar__item">
               <a href="index.php#testimonials" class="navbar__link"
-                ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+                >Rezultati</a
               >
             </li>
             <li class="navbar__item">
               <a href="index.php#omeni" class="navbar__link"
-                ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+                >O meni</a
               >
             </li>
             <li class="navbar__item">
               <a href="index.php#prijava" class="navbar__link"
-                ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
+                >Prijavi se</a
               >
             </li>
             <li class="navbar__item">
               <a href="calculator.html" class="navbar__link"
-                ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
+                >Kalkulator</a
               >
             </li>
             <li class="navbar__item">
               <a href="blog.php" class="navbar__link"
-                ><i class="fas fa-book"></i>&nbsp; Blog</a
+                >Blog</a
               >
             </li>
           </ul>
@@ -142,10 +142,34 @@
             </ul>
           </div>
         </div>
-        <div class="single-post__content">
-          <p>
-          <?php echo $selectOne['body'] ?>
-          </p>
+        <div class="single-post__underline"></div>
+        <div class="single-post__content-wrapper">
+          <div class="single-post__content">
+            <p>
+            <?php echo $selectOne['body'] ?>
+            </p>
+          </div>
+          <div class="single-post__sidebar">
+              <input class="search-bar" type="text" placeholder="Search...">
+              <h2>Recent posts:</h2>
+              <ul>
+                <li class="sidebar-post">
+                    <div class="sidebar-post__title"> <a href="#">Lorem ipsum dolor sit.</a></div>
+                    <!-- <div class="single-post__underline"></div> -->
+                </li>
+                <li class="sidebar-post">
+                    <div class="sidebar-post__title"> <a href="#">Lorem, ipsum dolor.</a></div>
+                    <!-- <div class="single-post__underline"></div> -->
+                  
+                </li>
+                <li class="sidebar-post">
+                  
+                    <div class="sidebar-post__title"> <a href="#">Lorem, ipsum.</a></div>
+                    <!-- <div class="single-post__underline"></div> -->
+                  
+                </li>
+              </ul>
+          </div>
         </div>
       </div>
     </main>
@@ -172,37 +196,37 @@
             <ul class="footer-links--list">
               <li class="footer__item">
                 <a href="index.php#naslovna" class="footer__link"
-                  ><i class="fas fa-home"></i>&nbsp; Home</a
+                  > Home</a
                 >
               </li>
               <li class="footer__item">
                 <a href="index.php#ponuda" class="footer__link"
-                  ><i class="fas fa-dumbbell"></i>&nbsp; Ponuda</a
+                  >Ponuda</a
                 >
               </li>
               <li class="footer__item">
                 <a href="index.php#testimonials" class="footer__link"
-                  ><i class="far fa-grin"></i>&nbsp; Rezultati</a
+                  >Rezultati</a
                 >
               </li>
               <li class="footer__item">
                 <a href="index.php#omeni" class="footer__link"
-                  ><i class="far fa-thumbs-up"></i>&nbsp; O meni</a
+                  >O meni</a
                 >
               </li>
               <li class="footer__item">
                 <a href="index.php#prijava" class="footer__link"
-                  ><i class="fas fa-pencil-alt"></i>&nbsp; Prijavi se</a
+                  >Prijavi se</a
                 >
               </li>
               <li class="footer__item">
                 <a href="calculator.html" class="footer__link"
-                  ><i class="fas fa-calculator"></i>&nbsp; Kalkulator</a
+                  >Kalkulator</a
                 >
               </li>
               <li class="footer__item">
                 <a href="blog.php" class="footer__link"
-                  ><i class="fas fa-book"></i>&nbsp; Blog</a
+                  > Blog</a
                 >
               </li>
             </ul>
