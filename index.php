@@ -498,7 +498,7 @@
         </form>
       </div>
       <div id="php_greska" class="error-message-visible"></div>
-      <div class="dugme__prijavi-se">
+      <div class="dugme__prijavi-se prijava">
         <a href="#prijava">
           <div class="dual-plan__ikonica"></div>
           Prijavi se
@@ -522,7 +522,7 @@
           <div class="kontakt-container">
             <h3>Contact:</h3>
             <p>E-mail: <a href="">nutri.logika@gmail.com</a></p>
-            <p>Telefon: <a href="">061/61-45-617</a></p>
+            <p>Telefon: <a href="tel:+381616145617">061/61-45-617</a></p>
           </div>
 
           <div class="footer-links__container">

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="sr">
   <head>
@@ -49,7 +50,7 @@
           <?php require_once ("php/connection.php"); ?>
           <?php 
           if(!isset($_GET['id'])){
-           header("Location:index.php");
+          header("Location:index.php");
           }else{
               $post_id=$_GET['id'];
 
@@ -149,26 +150,23 @@
             <?php echo $selectOne['body'] ?>
             </p>
           </div>
+
           <div class="single-post__sidebar">
-              <input class="search-bar" type="text" placeholder="Search...">
-              <h2>Recent posts:</h2>
+              <h2>Najnoviji postovi</h2>
               <ul>
+             <?php 
+             //// Read all post from DB
+              $table='posts';
+              $allPosts=selectAll($table)
+             ?> 
+              <?php foreach ($allPosts as $key => $post): ?>
                 <li class="sidebar-post">
-                    <div class="sidebar-post__title"> <a href="#">Lorem ipsum dolor sit.</a></div>
+                    <div class="sidebar-post__title"> <a href="blog-single-post.php?id=<?php echo $post['id'];?>"><?php echo ($post['title']);?></a></div>
                     <!-- <div class="single-post__underline"></div> -->
                 </li>
-                <li class="sidebar-post">
-                    <div class="sidebar-post__title"> <a href="#">Lorem, ipsum dolor.</a></div>
-                    <!-- <div class="single-post__underline"></div> -->
-                  
-                </li>
-                <li class="sidebar-post">
-                  
-                    <div class="sidebar-post__title"> <a href="#">Lorem, ipsum.</a></div>
-                    <!-- <div class="single-post__underline"></div> -->
-                  
-                </li>
+                <?php endforeach; ?>
               </ul>
+
           </div>
         </div>
       </div>
@@ -189,7 +187,7 @@
           /></a>
           <div class="kontakt-container">
             <p><span>E-mail:</span> nutri.logika@gmail.com</p>
-            <p><span>Telefon:</span> 061/61-45-617</p>
+            <p>Telefon: <a href="tel:+381616145617">061/61-45-617</a></p>
           </div>
 
           <div class="footer-links__container">

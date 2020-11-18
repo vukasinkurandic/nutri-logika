@@ -1,3 +1,19 @@
+<!-- SEARCH -->
+<?php /// SEARCH
+
+      if (isset($_POST['search-term']) && ($_POST['search-term'])!=="") {
+
+         $search= strip_tags($_POST['search-term']);
+         $naslov = `Rezultat pretrage <span>"'."$search". '"</span>`;
+         
+                
+        
+        
+        }
+              ?>
+
+
+
 <!DOCTYPE html>
 <html lang="sr">
   <head>
@@ -174,7 +190,7 @@
           /></a>
           <div class="kontakt-container">
             <p><span>E-mail:</span> nutri.logika@gmail.com</p>
-            <p><span>Telefon:</span> 061/61-45-617</p>
+            <p>Telefon: <a href="tel:+381616145617">061/61-45-617</a></p>
           </div>
 
           <div class="footer-links__container">
