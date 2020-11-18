@@ -141,31 +141,55 @@
             <h2>Najnoviji blog postovi</h2>
           </div>
         </div>
-        <?php foreach ($posts as $key => $post): ?>
-        <div class="blog-index__content">
-          <!-- <div class="blog-index__content--info"> -->
-          <ul class="blog-index__info--list">
-            <li><span>Author:</span> Jovan Cvetojevic</li>
-            <li><span>Date:</span> <?php echo " ".  date('F j, Y',strtotime($post['created_at']));?></li>
-            <li><span>Category:</span> <?php echo $post['topic'];?></li>
-          </ul>
-          <div class="blog-index__img-holder">
-          <a href="blog-single-post.php?id=<?php echo $post['id']?>"><img src="css/img/blog/<?php echo ($post['image']);?>" alt="" class="post-image"></a>
-          </div>
-          <!-- </div> -->
-          <div class="blog-index__content--text">
-            <a href="blog-single-post.php?id=<?php echo $post['id'];?>" class="single-blog__link">
-              <div class="blog-index__title">
-                <h4><?php echo $post['title'];?></h4>
+         
+            <?php foreach ($posts as $key => $post): ?>
+            <div class="blog-index__content">
+              <!-- <div class="blog-index__content--info"> -->
+              <ul class="blog-index__info--list">
+                <li><span>Author:</span> Jovan Cvetojevic</li>
+                <li><span>Date:</span> <?php echo " ".  date('F j, Y',strtotime($post['created_at']));?></li>
+                <li><span>Category:</span> <?php echo $post['topic'];?></li>
+              </ul>
+              <div class="blog-index__img-holder">
+              <a href="blog-single-post.php?id=<?php echo $post['id']?>"><img src="css/img/blog/<?php echo ($post['image']);?>" alt="" class="post-image"></a>
               </div>
-              <p>
-              <?php echo html_entity_decode(substr($post['body'], 0, 500). '...'); ?>
-              </p>
-            </a>
-          </div>
-          <div class="blog-index__underline"></div>
-        </div>
-        <?php endforeach; ?>
+              <!-- </div> -->
+              <div class="blog-index__content--text">
+                <a href="blog-single-post.php?id=<?php echo $post['id'];?>" class="single-blog__link">
+                  <div class="blog-index__title">
+                    <h4><?php echo $post['title'];?></h4>
+                  </div>
+                  <p>
+                  <?php echo html_entity_decode(substr($post['body'], 0, 500). '...'); ?>
+                  </p>
+                </a>
+              </div>
+              <div class="blog-index__underline"></div>
+            </div>
+            <?php endforeach; ?>
+            <!-- <div class="blog-list__sidebar"> -->
+              <div class="search-bar">
+                <form action="">
+                <input type="text" placeholder="Search blogs...">
+                </form>
+                <div class="single-post__sidebar">
+                  <h2>Najnoviji postovi</h2>
+                  <ul>
+                <?php 
+                //// Read all post from DB
+                  $table='posts';
+                  $allPosts=selectAll($table)
+                ?> 
+                  <?php foreach ($allPosts as $key => $post): ?>
+                    <li class="sidebar-post">
+                        <div class="sidebar-post__title"> <a href="blog-single-post.php?id=<?php echo $post['id'];?>"><?php echo ($post['title']);?></a></div>
+                    </li>
+                    <?php endforeach; ?>
+                  </ul>
+
+                </div>
+              </div>
+            <!-- </div> -->
 
         <!-- <div class="blog-index__button--wrapper">
               <button class="dugme-login-admin">

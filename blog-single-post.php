@@ -162,7 +162,6 @@
               <?php foreach ($allPosts as $key => $post): ?>
                 <li class="sidebar-post">
                     <div class="sidebar-post__title"> <a href="blog-single-post.php?id=<?php echo $post['id'];?>"><?php echo ($post['title']);?></a></div>
-                    <!-- <div class="single-post__underline"></div> -->
                 </li>
                 <?php endforeach; ?>
               </ul>
