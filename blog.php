@@ -130,7 +130,7 @@
       //// Read ALL post from DB
               require_once('php/connection.php');
 
-              $sql = "SELECT * FROM posts";
+              $sql = "SELECT * FROM posts WHERE status = 1";
               $query=$conn->prepare($sql);
               $query->execute();
               $posts=$query->get_result()->fetch_all(MYSQLI_ASSOC);

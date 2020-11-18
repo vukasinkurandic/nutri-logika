@@ -54,7 +54,7 @@
           }else{
               $post_id=$_GET['id'];
 
-                $sql="SELECT * FROM posts  WHERE id=$post_id";
+                $sql="SELECT * FROM posts  WHERE id= $post_id AND status = 1";
                 $query=$conn->prepare($sql);
                 $query->execute();           
                 $selectOne=$query->get_result()->fetch_assoc();  

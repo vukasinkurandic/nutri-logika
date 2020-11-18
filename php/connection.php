@@ -17,13 +17,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-function selectAll($table, $conditions=[]){
+function selectAll($table){
 
   global $conn;
 
-  $sql = "SELECT * From $table";
+  $sql = "SELECT * From $table WHERE status = 1 ";
 
-  if (empty($conditions)) {
+  
 
       $query=$conn->prepare($sql);
 
@@ -33,7 +33,7 @@ function selectAll($table, $conditions=[]){
 
       return $result;
 
-  } 
+  
 
   };
 

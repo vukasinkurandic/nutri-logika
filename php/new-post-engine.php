@@ -44,11 +44,11 @@ if (isset($_POST['add-post-btn'])) {
                     if (move_uploaded_file($_FILES["userfile"]["tmp_name"], $target)){
 ///////// upisi u bazu pa prebaci u admin sekciju
                          /// INSERT NEW POST IN DB
-
+                        $status=1;
                          $sql = "INSERT INTO posts 
-                                (topic,title,image,body) VALUES (?,?,?,?)";
+                                (topic,title,image,body,status) VALUES (?,?,?,?,?)";
                          $query=$conn->prepare($sql);
-                         $query->bind_param("ssss", $topic,$title,$image,$body);
+                         $query->bind_param("ssssi", $topic,$title,$image,$body,$status);
                          $query->execute();
  
                      // Check if data inserted 

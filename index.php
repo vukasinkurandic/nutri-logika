@@ -291,7 +291,7 @@
       //// Read 3 last post from DB
               require_once('php/connection.php');
 
-              $sql = "SELECT * FROM posts ORDER BY id DESC 
+              $sql = "SELECT * FROM posts WHERE status = 1 ORDER BY id DESC 
               LIMIT 3";///// NUMBER OF NEWEST BLOGS
               $query=$conn->prepare($sql);
               $query->execute();

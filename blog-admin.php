@@ -80,7 +80,7 @@
 
     $id=$_GET['del_id'];
 
-    $sql="DELETE FROM posts WHERE id = '$id'";
+    $sql="UPDATE posts SET status = 0 WHERE id = '$id'";
 
     $query=$conn->prepare($sql);
 
