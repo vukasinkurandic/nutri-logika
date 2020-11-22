@@ -66,6 +66,11 @@ img {
   position: relative;
   padding: 0.4rem;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(0, 0, 0, 0.44019614681810226) 0%,
+      rgba(255, 255, 255, 1) 26%);
 }
 
 .navbar {
@@ -872,10 +877,11 @@ select {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   border: 1px solid #ddd;
-  padding: 4px 7px;
+  padding: 13px 16px;
   margin-top: 3px;
   background: #f8f8f8;
   transition: box-shadow ease 0.3s;
+  box-sizing: border-box;
 }
 
 input:hover,
@@ -1327,11 +1333,34 @@ p {
   grid-column: 1 / span 3;
 }
 
+.search-bar {
+  grid-column: 2;
+  justify-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+  padding: 1rem;
+}
+
+.search-bar>* {
+  flex-grow: 1;
+  flex-basis: calc(calc(30rem - 100%) * 999);
+  margin: 1rem;
+}
+
+.search-bar input {
+  box-sizing: border-box;
+  width: 100%;
+  text-transform: uppercase;
+}
+
 .blog-index__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column: 2;
   padding: 1.6rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .blog-index__info--list {
@@ -1457,7 +1486,7 @@ p {
 .single-post__title--info {
   color: white;
   font-size: 0.66rem;
-  margin: 0.1rem 1rem .5rem 1rem;
+  margin: 0.1rem 1rem 0.5rem 1rem;
   padding: 0;
   filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.5));
   text-align: center;
@@ -1500,7 +1529,7 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.single-post__img--wrapper img {
+.single-post__img {
   display: block;
   width: 100%;
   height: 100%;
@@ -1515,13 +1544,13 @@ p {
 }
 
 .single-post__sidebar {
-  width: 90%;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  max-height: 80%;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  margin: 1rem auto;
   padding: 1rem;
+  box-sizing: border-box;
+  background: #f8f8f8;
+  margin-top: 2rem;
 }
 
 .single-post__sidebar h2 {
@@ -1547,6 +1576,11 @@ p {
   text-decoration: none;
 }
 
+.sidebar-post__title a:hover,
+.sidebar-post__title a:focus {
+  color: var(--ljub1);
+}
+
 .sidebar-post:nth-child(last) {
   margin-bottom: 0;
 }
@@ -1554,8 +1588,6 @@ p {
 .sidebar-post .single-post__underline {
   margin: 0.5rem;
 }
-
-.search-bar {}
 
 /* ===========================================
                   NEW POST 
@@ -1915,6 +1947,10 @@ p {
     grid-column: 1 / 5;
   }
 
+  .search-bar {
+    grid-column: 1 / 5;
+  }
+
   .blog-index__info--list {
     grid-column: 2;
     grid-row: 1;
@@ -1955,6 +1991,10 @@ p {
 
   .blog-index__button--wrapper {
     grid-column: 1/ 5;
+  }
+
+  .search-bar {
+    padding: 2rem;
   }
 
   /****** BLOG - SINGLE PAGE *******/
@@ -2182,7 +2222,7 @@ p {
 
   /* HOME NASLOVNA */
   .hero-title h4 {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .hero-title h2 span:nth-child(odd) {
@@ -2194,7 +2234,7 @@ p {
   }
 
   .hero-desktop-img {
-    background-position: -15rem;
+    background-position: -11rem;
   }
 
   /* SINGLE BLOG POST */
@@ -2208,7 +2248,7 @@ p {
   }
 
   .single-post__img {
-    width: 50%;
+    max-width: 50%;
   }
 
   .single-post__img--wrapper::before {
@@ -2222,11 +2262,11 @@ p {
 
   .single-post__title h2 {
     font-weight: 600;
-    color: rgba(0, 0, 0, .65)
+    color: rgba(0, 0, 0, 0.65);
   }
 
   .single-post__title--info {
-    color: rgba(0, 0, 0, .65);
+    color: rgba(0, 0, 0, 0.65);
     filter: none;
   }
 
@@ -2236,14 +2276,26 @@ p {
     padding: 1rem 0;
   }
 
+
+
   .single-post__content {
     width: 55ch;
   }
 
   .single-post__sidebar {
-    width: calc(100% - 65ch);
+    /* width: calc(100% - 65ch); */
     margin: 0%;
     max-width: 350px;
+  }
+
+  .single-post__underline {
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  /* BLOG */
+  .search-bar form {
+    margin-top: 0;
   }
 }
 
@@ -2288,7 +2340,7 @@ p {
   }
 }
 
-@media(min-width: 1900px) {
+@media (min-width: 1900px) {
   .hero-title h2 span:nth-child(odd) {
     font-size: 10.5rem;
   }
@@ -2296,5 +2348,4 @@ p {
   .hero-title h2 span:nth-child(even) {
     font-size: 10rem;
   }
-
 }
