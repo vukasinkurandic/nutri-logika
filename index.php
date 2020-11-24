@@ -130,6 +130,8 @@
       </div>
     </section>
 
+    
+
     <!-- =====================
                 PONUDA
     ======================= -->
@@ -236,6 +238,18 @@
         </div>
       </div>
     </section>
+
+    <!-- =====================
+            MAILING LISTA
+    ======================= -->
+  <section id="mailing-lista">
+    <h2>Narucite pdf vodic kroz nutritivne profile namirnica!</h2>
+    <form action="" id="mail-list-form">
+      <input type="text" id="mail-list-input" name="mailing-lista" placeholder="Vas e-mail">
+      <label for="mail-list-input" class="hidden-label">Vas e-mail</label>
+      <button class="dugme-login-admin" type="submit">Posaljite mi pdf!</button>
+    </form>
+  </section>
     <!-- =====================
             TESTIMONIALS
     ======================= -->
