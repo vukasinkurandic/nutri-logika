@@ -24,13 +24,11 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(
-    45deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  --pruge: repeating-linear-gradient(45deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
 }
 
 img {
@@ -69,12 +67,10 @@ img {
   padding: 0.4rem;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 0, 0, 0.44019614681810226) 0%,
-    rgba(255, 255, 255, 1) 26%
-  );
+  background: linear-gradient(90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(0, 0, 0, 0.44019614681810226) 0%,
+      rgba(255, 255, 255, 1) 26%);
 }
 
 .navbar {
@@ -395,33 +391,6 @@ hamburger animation
 }
 
 /* ===========================================
-                    MAILING LISTA
-==============================================*/
-#mailing-lista {
-  background: var(--zut1);
-  padding: 1rem;
-}
-
-#mailing-lista h2 {
-  text-align: center;
-}
-
-#mail-list-form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-#mail-list-input {
-  width: 15rem;
-}
-
-#mail-list-form .dugme-login-admin {
-  margin: 0;
-}
-
-/* ===========================================
                     PONUDA
 ==============================================*/
 #ponuda {
@@ -562,13 +531,11 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255, 248, 82, 0.4),
-    rgba(255, 248, 82, 0.4) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 248, 82, 0.4),
+      rgba(255, 248, 82, 0.4) 10px,
+      transparent 10px,
+      transparent 20px);
 }
 
 /* ------------------------------ */
@@ -841,13 +808,11 @@ hamburger animation
   position: absolute;
   top: -50px;
   left: -50px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
   width: 90%;
   height: 110%;
   z-index: 0;
@@ -904,17 +869,6 @@ hamburger animation
   display: flex;
   flex-direction: column;
   margin: 0.5rem;
-}
-
-.hidden-label {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
 }
 
 input,
@@ -1022,13 +976,11 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(
-    135deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(135deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
   z-index: -1;
 }
 
@@ -1118,6 +1070,10 @@ input::-webkit-inner-spin-button {
   color: var(--zut);
   transition: color ease 0.3s;
   cursor: pointer;
+}
+
+.social-icon a {
+  color: inherit;
 }
 
 .social-icon:hover,
@@ -1253,7 +1209,7 @@ input::-webkit-inner-spin-button {
   border-top: 1px solid var(--ljub1);
 }
 
-.blog-pregled__wrapper > * {
+.blog-pregled__wrapper>* {
   flex-grow: 1;
   flex-basis: calc(var(--modifier) * 999);
   margin: var(--margin);
@@ -1390,7 +1346,7 @@ p {
   padding: 1rem;
 }
 
-.search-bar > * {
+.search-bar>* {
   flex-grow: 1;
   flex-basis: calc(calc(30rem - 100%) * 999);
   margin: 1rem;
@@ -1558,7 +1514,6 @@ p {
 
 .single-post__content {
   font-family: "Inter", sans-serif;
-  width: 55ch;
 }
 
 .single-post__img--wrapper {
@@ -1865,6 +1820,7 @@ p {
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
+
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 80%;
@@ -1872,6 +1828,7 @@ p {
 }
 
 @media (min-width: 460px) {
+
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 65%;
@@ -1891,6 +1848,7 @@ p {
 }
 
 @media (min-width: 600px) {
+
   /** naslovna **/
   .hero {
     width: 100%;
@@ -2256,6 +2214,7 @@ p {
 }
 
 @media (min-width: 1100px) {
+
   /** da se poveca **/
   .plan-kartica-img {
     height: 40%;
@@ -2313,7 +2272,6 @@ p {
   .single-post__title--info {
     color: rgba(0, 0, 0, 0.65);
     filter: none;
-    font-size: 0.75rem;
   }
 
   .single-post__content-wrapper {
@@ -2322,8 +2280,10 @@ p {
     padding: 1rem 0;
   }
 
+
+
   .single-post__content {
-    width: 45ch;
+    width: 55ch;
   }
 
   .single-post__sidebar {
@@ -2347,10 +2307,6 @@ p {
   .single-post__wrapper {
     width: 65%;
     padding: 1rem 0;
-  }
-
-  .single-post__content {
-    width: 50ch;
   }
 }
 
