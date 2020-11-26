@@ -46,7 +46,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
     ======================= -->
   <header class="index-header relative-navbar">
     <div class="navbar__wrapper">
-      <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
+      <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="naslovna" class="navbar__logo__img" /></a>
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__item">
@@ -114,7 +114,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
             <li><span>Category:</span> <?php echo $post['topic']; ?></li>
           </ul>
           <div class="blog-index__img-holder">
-            <a href="blog-single-post.php?id=<?php echo $post['id'] ?>"><img src="css/img/blog/<?php echo ($post['image']); ?>" alt="" class="post-image"></a>
+            <a href="blog-single-post.php?id=<?php echo $post['id'] ?>"><img src="css/img/blog/<?php echo ($post['image']); ?>" alt="<?php echo $post['title']; ?>" class="post-image"></a>
           </div>
           <!-- </div> -->
           <div class="blog-index__content--text">
@@ -192,7 +192,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
   <footer>
     <section id="footer">
       <div class="footer-wrapper">
-        <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
+        <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
         <div class="kontakt-container">
           <p><span>E-mail:</span> nutri.logika@gmail.com</p>
           <p>Telefon: <a href="tel:+381616145617">061/61-45-617</a></p>
@@ -224,18 +224,18 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
           </ul>
         </div>
         <div class="social">
-            <ul class="social-icons">
-              <li class="social-icon">
+          <ul class="social-icons">
+            <li class="social-icon">
               <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
-                
-              </li>
-              <li class="social-icon">
+
+            </li>
+            <li class="social-icon">
               <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
-                
-              </li>
-              <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
-            </ul>
-          </div>
+
+            </li>
+            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- zastava -->

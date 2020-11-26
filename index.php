@@ -40,7 +40,7 @@
     ======================= -->
   <header class="index-header">
     <div class="navbar__wrapper">
-      <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
+      <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__item">
@@ -316,7 +316,7 @@
             <li><span>Category:</span> <?php echo $post['topic']; ?></li>
           </ul>
           <div class="blog-index__img-holder">
-            <a href="blog-single-post.php?id=<?php echo $post['id'] ?>"><img src="css/img/blog/<?php echo ($post['image']); ?>" alt="" class="post-image"></a>
+            <a href="blog-single-post.php?id=<?php echo $post['id'] ?>"><img src="css/img/blog/<?php echo ($post['image']); ?>" alt="<?php echo $post['title']; ?>" class="post-image"></a>
           </div>
 
           <div class="blog-index__content--text">
@@ -505,7 +505,7 @@
   <footer>
     <section id="footer">
       <div class="footer-wrapper">
-        <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
+        <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
         <div class="kontakt-container">
           <h3>Contact:</h3>
           <p>E-mail: <a href="">nutri.logika@gmail.com</a></p>

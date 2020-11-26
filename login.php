@@ -40,7 +40,7 @@
     ======================= -->
   <header>
     <div class="navbar__wrapper relative-navbar">
-      <a href="index.php" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
+      <a href="index.php" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
     </div>
   </header>
 

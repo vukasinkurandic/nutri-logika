@@ -83,7 +83,7 @@
     ======================= -->
   <header class="index-header relative-navbar">
     <div class="navbar__wrapper">
-      <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
+      <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__item">
@@ -200,7 +200,7 @@
   <footer>
     <section id="footer">
       <div class="footer-wrapper">
-        <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
+        <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
         <div class="kontakt-container">
           <p><span>E-mail:</span> nutri.logika@gmail.com</p>
           <p><span>Telefon:</span> 061/61-45-617</p>
