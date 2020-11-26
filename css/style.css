@@ -397,33 +397,6 @@ hamburger animation
 
 /* ===========================================
                     MAILING LISTA
-==============================================*/
-#mailing-lista {
-  background: var(--zut1);
-  padding: 3rem;
-}
-
-#mailing-lista h2 {
-  text-align: center;
-}
-
-#mail-list-form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-#mail-list-input {
-  width: 15rem;
-  margin: 0 1rem 0 auto;
-}
-
-#mail-list-form .dugme-login-admin {
-  margin: 0 auto 0 0;
-}
-
-/* ===========================================
                     PONUDA
 ==============================================*/
 #ponuda {
@@ -908,17 +881,6 @@ hamburger animation
   margin: 0.5rem;
 }
 
-.hidden-label {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
 input,
 textarea,
 select {
@@ -1120,6 +1082,10 @@ input::-webkit-inner-spin-button {
   color: var(--zut);
   transition: color ease 0.3s;
   cursor: pointer;
+}
+
+.social-icon a {
+  color: inherit;
 }
 
 .social-icon:hover,
@@ -1560,7 +1526,6 @@ p {
 
 .single-post__content {
   font-family: "Inter", sans-serif;
-  width: 55ch;
 }
 
 .single-post__img--wrapper {
@@ -2344,7 +2309,6 @@ p {
   .single-post__title--info {
     color: rgba(0, 0, 0, 0.65);
     filter: none;
-    font-size: 0.75rem;
   }
 
   .single-post__content-wrapper {
@@ -2354,7 +2318,7 @@ p {
   }
 
   .single-post__content {
-    width: 45ch;
+    width: 55ch;
   }
 
   .single-post__sidebar {
@@ -2378,10 +2342,6 @@ p {
   .single-post__wrapper {
     width: 65%;
     padding: 1rem 0;
-  }
-
-  .single-post__content {
-    width: 50ch;
   }
 }
 
