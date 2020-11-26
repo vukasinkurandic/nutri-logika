@@ -20,7 +20,7 @@
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
-  <title>nutri.logika</title>
+  <title>Nutri.Logika</title>
 </head>
 
 <body>
@@ -124,7 +124,7 @@
     $allPlans = $query->get_result()->fetch_all(MYSQLI_ASSOC);
     ?>
     <div class="dashboard-title__wrapper">
-      <h1>Spisak prijavljenih za plan trninga i ishrane</h1>
+      <h1>Spisak prijavljenih za plan treninga i ishrane</h1>
     </div>
 
     <div class="table-wrapper">
@@ -202,17 +202,18 @@
           </ul>
         </div>
         <div class="social">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <i class="fab fa-instagram fa-2x"></i>
-            </li>
-            <li class="social-icon">
-              <i class="fab fa-facebook-f fa-2x"></i>
-            </li>
-            <li class="social-icon"><i class="fab fa-twitter fa-2x"></i></li>
-            <li class="social-icon"><i class="fab fa-tiktok fa-2x"></i></li>
-          </ul>
-        </div>
+            <ul class="social-icons">
+              <li class="social-icon">
+              <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
+                
+              </li>
+              <li class="social-icon">
+              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
+                
+              </li>
+              <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+            </ul>
+          </div>
       </div>
     </section>
     <!-- zastava -->

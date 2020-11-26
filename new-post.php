@@ -23,7 +23,7 @@
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
-  <title>nutri.logika</title>
+  <title>Nutri.Logika</title>
 </head>
 
 <body>
@@ -74,7 +74,7 @@
   <main class="new-post__main">
     <div class="new-post__wrapper">
       <div class="new-post__title">
-        <h2>Add New Post</h2>
+        <h1>Add New Post</h1>
       </div>
 
       <!--ISPISIVANJE GRESKE PRAZNO POLJE-->
@@ -187,17 +187,18 @@
           </ul>
         </div>
         <div class="social">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <i class="fab fa-instagram fa-2x"></i>
-            </li>
-            <li class="social-icon">
-              <i class="fab fa-facebook-f fa-2x"></i>
-            </li>
-            <li class="social-icon"><i class="fab fa-twitter fa-2x"></i></li>
-            <li class="social-icon"><i class="fab fa-tiktok fa-2x"></i></li>
-          </ul>
-        </div>
+            <ul class="social-icons">
+              <li class="social-icon">
+              <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
+                
+              </li>
+              <li class="social-icon">
+              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
+                
+              </li>
+              <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+            </ul>
+          </div>
       </div>
     </section>
     <!-- zastava -->

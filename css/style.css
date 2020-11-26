@@ -24,11 +24,13 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(45deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  --pruge: repeating-linear-gradient(
+    45deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 img {
@@ -67,10 +69,12 @@ img {
   padding: 0.4rem;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   background: rgb(2, 0, 36);
-  background: linear-gradient(90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(0, 0, 0, 0.44019614681810226) 0%,
-      rgba(255, 255, 255, 1) 26%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 0.44019614681810226) 0%,
+    rgba(255, 255, 255, 1) 26%
+  );
 }
 
 .navbar {
@@ -301,28 +305,29 @@ hamburger animation
 
 .hero-title {
   grid-column: 1;
-
   margin-left: 1rem;
-
   text-transform: uppercase;
   text-align: end;
+  position: relative;
 }
 
 .hero-title h4 {
   margin: 0;
-  padding: 0;
   line-height: 1;
   font-size: 0.7rem;
+  background: var(--zut);
+  padding: 1rem 1rem 0.2rem 1rem;
+  display: inline-block;
 }
 
-.hero-title h2 {
+.hero-title h1 {
   margin: 0;
   padding: 0;
   line-height: 1;
   color: var(--ljub1);
 }
 
-.hero-title h2 span:nth-child(odd) {
+.hero-title h1 span:nth-child(odd) {
   color: var(--ljub1);
   font-family: "Oswald", sans-serif;
   font-size: 4rem;
@@ -330,7 +335,7 @@ hamburger animation
   letter-spacing: -4px;
 }
 
-.hero-title h2 span:nth-child(even) {
+.hero-title h1 span:nth-child(even) {
   color: var(--ljub);
   font-family: "Oswald", sans-serif;
   font-size: 3.5rem;
@@ -338,7 +343,7 @@ hamburger animation
   letter-spacing: -4px;
 }
 
-.hero-title h2 span:last-child {
+.hero-title h1 span:last-child {
   line-height: 1.2;
 }
 
@@ -388,6 +393,31 @@ hamburger animation
   transform: rotate(25deg) translateX(4px);
   left: -50%;
   border-radius: 50px;
+}
+
+/* ===========================================
+                    MAILING LISTA
+==============================================*/
+#mailing-lista {
+  background: var(--ljub1);
+  padding: 2rem 0 3rem 0;
+}
+
+#mailing-lista h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#mail-list-form {
+  text-align: center;
+}
+
+#mail-list-input {
+  margin: 0 1rem 0 auto;
+}
+
+#mail-list-form .dugme-login-admin {
+  margin: 0 auto 0 0;
 }
 
 /* ===========================================
@@ -531,11 +561,13 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 248, 82, 0.4),
-      rgba(255, 248, 82, 0.4) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 /* ------------------------------ */
@@ -762,7 +794,7 @@ hamburger animation
   border-radius: 50px;
 }
 
-.omeni-info__title h2 {
+.omeni-info__title h1 {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 900;
@@ -808,11 +840,13 @@ hamburger animation
   position: absolute;
   top: -50px;
   left: -50px;
-  background: repeating-linear-gradient(45deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   width: 90%;
   height: 110%;
   z-index: 0;
@@ -976,11 +1010,13 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(135deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   z-index: -1;
 }
 
@@ -1072,6 +1108,10 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
+.social-icon a {
+  color: inherit;
+}
+
 .social-icon:hover,
 .social-icon:focus {
   color: var(--ljub1);
@@ -1134,7 +1174,7 @@ input::-webkit-inner-spin-button {
   border-radius: 50px;
 }
 
-.calculator__title h2 {
+.calculator__title h1 {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 900;
@@ -1205,7 +1245,7 @@ input::-webkit-inner-spin-button {
   border-top: 1px solid var(--ljub1);
 }
 
-.blog-pregled__wrapper>* {
+.blog-pregled__wrapper > * {
   flex-grow: 1;
   flex-basis: calc(var(--modifier) * 999);
   margin: var(--margin);
@@ -1342,7 +1382,7 @@ p {
   padding: 1rem;
 }
 
-.search-bar>* {
+.search-bar > * {
   flex-grow: 1;
   flex-basis: calc(calc(30rem - 100%) * 999);
   margin: 1rem;
@@ -1382,7 +1422,7 @@ p {
   align-items: center;
 }
 
-.blog-index__main-title h2 {
+.blog-index__main-title h1 {
   font-family: "Oswald", sans-serif;
   margin: 0;
   text-transform: uppercase;
@@ -1496,7 +1536,7 @@ p {
   display: inline;
 }
 
-.single-post__title h2 {
+.single-post__title h1 {
   /* color: var(--ljub); */
   color: white;
   text-transform: uppercase;
@@ -1816,7 +1856,6 @@ p {
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 80%;
@@ -1824,17 +1863,16 @@ p {
 }
 
 @media (min-width: 460px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 65%;
   }
 
-  .hero-title h2 span:nth-child(2n + 1) {
+  .hero-title h1 span:nth-child(2n + 1) {
     font-size: 4.5rem;
   }
 
-  .hero-title h2 span:nth-child(2n) {
+  .hero-title h1 span:nth-child(2n) {
     font-size: 4rem;
   }
 
@@ -1844,7 +1882,6 @@ p {
 }
 
 @media (min-width: 600px) {
-
   /** naslovna **/
   .hero {
     width: 100%;
@@ -1855,7 +1892,7 @@ p {
   .hero-desktop-img {
     background-image: url("img/jovan-hero-nobckg800x759.png");
     background-size: cover;
-    background-position: -13rem;
+    background-position: -11rem;
     background-repeat: no-repeat;
     grid-column: 2;
     grid-row: 1 / span 2;
@@ -1867,6 +1904,17 @@ p {
     margin-left: 1rem;
     text-transform: uppercase;
     text-align: end;
+  }
+
+  .hero-title::before {
+    content: "";
+    position: absolute;
+    top: 12%;
+    left: 0%;
+    width: 88%;
+    height: 75%;
+    background: var(--pruge);
+    z-index: -1;
   }
 
   /** ponuda **/
@@ -1926,7 +1974,7 @@ p {
 
   /**** BLOG INDEX ****/
 
-  .blog-index__main-title h2 {
+  .blog-index__main-title h1 {
     font-size: 2rem;
   }
 
@@ -2034,16 +2082,29 @@ p {
   }
 
   /***** NASLOVNA *****/
-  .hero-title h2 span:nth-child(odd) {
+  .hero-title h1 span:nth-child(odd) {
     font-size: 7rem;
   }
 
-  .hero-title h2 span:nth-child(even) {
+  .hero-title h1 span:nth-child(even) {
     font-size: 6.5rem;
   }
 }
 
 @media (min-width: 850px) {
+  /* NASLOVNA */
+  .hero-title::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 55%;
+    height: 75%;
+    background: var(--pruge);
+    z-index: -1;
+  }
+
+  /******/
   .plan-kartica-img {
     height: 35%;
   }
@@ -2210,7 +2271,6 @@ p {
 }
 
 @media (min-width: 1100px) {
-
   /** da se poveca **/
   .plan-kartica-img {
     height: 40%;
@@ -2225,11 +2285,16 @@ p {
     font-size: 0.9rem;
   }
 
-  .hero-title h2 span:nth-child(odd) {
+  .hero-title::before {
+    left: 15%;
+    top: 20%;
+  }
+
+  .hero-title h1 span:nth-child(odd) {
     font-size: 7.5rem;
   }
 
-  .hero-title h2 span:nth-child(even) {
+  .hero-title h1 span:nth-child(even) {
     font-size: 7rem;
   }
 
@@ -2260,7 +2325,7 @@ p {
     filter: none;
   }
 
-  .single-post__title h2 {
+  .single-post__title h1 {
     font-weight: 600;
     color: rgba(0, 0, 0, 0.65);
   }
@@ -2275,8 +2340,6 @@ p {
     justify-content: space-between;
     padding: 1rem 0;
   }
-
-
 
   .single-post__content {
     width: 55ch;
@@ -2322,16 +2385,16 @@ p {
     margin-top: 50%;
   }
 
-  .hero-title h2 span:nth-child(odd) {
+  .hero-title h1 span:nth-child(odd) {
     font-size: 8.5rem;
   }
 
-  .hero-title h2 span:nth-child(even) {
+  .hero-title h1 span:nth-child(even) {
     font-size: 8rem;
   }
 
   .hero-desktop-img {
-    background-position: -16rem;
+    background-position: -12rem;
   }
 
   .single-post__wrapper {
@@ -2341,11 +2404,11 @@ p {
 }
 
 @media (min-width: 1900px) {
-  .hero-title h2 span:nth-child(odd) {
+  .hero-title h1 span:nth-child(odd) {
     font-size: 10.5rem;
   }
 
-  .hero-title h2 span:nth-child(even) {
+  .hero-title h1 span:nth-child(even) {
     font-size: 10rem;
   }
 }

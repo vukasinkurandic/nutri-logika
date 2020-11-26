@@ -37,7 +37,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
-  <title>nutri.logika</title>
+  <title>Nutri.Logika</title>
 </head>
 
 <body>
@@ -101,7 +101,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
     <div class="blog-index__wrapper">
       <div class="blog-index__main-title--wrapper">
         <div class="blog-index__main-title">
-          <h2>Najnoviji blog postovi</h2>
+          <h1>Najnoviji blog postovi</h1>
         </div>
       </div>
 
@@ -224,17 +224,18 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
           </ul>
         </div>
         <div class="social">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <i class="fab fa-instagram fa-2x"></i>
-            </li>
-            <li class="social-icon">
-              <i class="fab fa-facebook-f fa-2x"></i>
-            </li>
-            <li class="social-icon"><i class="fab fa-twitter fa-2x"></i></li>
-            <li class="social-icon"><i class="fab fa-tiktok fa-2x"></i></li>
-          </ul>
-        </div>
+            <ul class="social-icons">
+              <li class="social-icon">
+              <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
+                
+              </li>
+              <li class="social-icon">
+              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
+                
+              </li>
+              <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+            </ul>
+          </div>
       </div>
     </section>
     <!-- zastava -->
