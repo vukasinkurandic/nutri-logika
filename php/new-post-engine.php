@@ -53,7 +53,7 @@ if (isset($_POST['add-post-btn'])) {
  
                      // Check if data inserted 
                      if($conn->affected_rows){
-                        header("Location:../blog-admin.php?success"); 
+                        header("Location:../blog-admin.php?success=post"); 
                          exit();
                      }
                      // else data not inserted
@@ -75,43 +75,3 @@ if (isset($_POST['add-post-btn'])) {
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>

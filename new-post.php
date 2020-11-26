@@ -23,6 +23,12 @@
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
+  <!-- CLEAN URL AFTER REFRESHING  -->
+  <script>
+    if (typeof window.history.pushState == 'function') {
+      window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF']; ?>');
+    }
+  </script>
   <title>Nutri.Logika</title>
 </head>
 
@@ -187,18 +193,18 @@
           </ul>
         </div>
         <div class="social">
-            <ul class="social-icons">
-              <li class="social-icon">
+          <ul class="social-icons">
+            <li class="social-icon">
               <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
-                
-              </li>
-              <li class="social-icon">
+
+            </li>
+            <li class="social-icon">
               <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
-                
-              </li>
-              <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
-            </ul>
-          </div>
+
+            </li>
+            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- zastava -->

@@ -24,7 +24,12 @@
   <!-- FAVICON  -->
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
-
+  <!-- CLEAN URL AFTER REFRESHING  -->
+  <script>
+    if (typeof window.history.pushState == 'function') {
+      window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF']; ?>');
+    }
+  </script>
   <title>Nutri.Logika</title>
   <meta name="google-site-verification" content="JICoP0ScAb6uhJL70Yx4q_4s9dK1VZ9T-7bgYBPHPqg" />
 </head>
@@ -78,19 +83,19 @@
   <!-- =====================
             NASLOVNA
     ======================= -->
-    <section id="naslovna">
-      <div class="naslovna__wrapper">
-        <div class="hero">
-          <div class="hero-desktop-img"></div>
-          <div class="hero-title">
-            <h4>Naučno zasnovane i u praksi dokazane informacije</h4>
-            <h1>
-              <span>o ishrani,</span> <span>treningu i</span> 
-              <span>&nbspzdravom</span> <span>životu</span>
-            </h1>
-          </div>
-          <!-- <img class="hero-img" src="css/img/hero-no-background500x750-optimizovano.png" alt="hero"> -->
-          <!-- <div class="naslovna__title">
+  <section id="naslovna">
+    <div class="naslovna__wrapper">
+      <div class="hero">
+        <div class="hero-desktop-img"></div>
+        <div class="hero-title">
+          <h4>Naučno zasnovane i u praksi dokazane informacije</h4>
+          <h1>
+            <span>o ishrani,</span> <span>treningu i</span>
+            <span>&nbspzdravom</span> <span>životu</span>
+          </h1>
+        </div>
+        <!-- <img class="hero-img" src="css/img/hero-no-background500x750-optimizovano.png" alt="hero"> -->
+        <!-- <div class="naslovna__title">
             <img class="logo" src="css/img/nutri.logika.png" alt="logo" />
             <a href="#ponuda"><div class="naslovna__strelica"></div></a>
           </div> -->
@@ -104,7 +109,7 @@
   <section id="mailing-lista">
     <h2>Naručite pdf vodič kroz nutritivne profile namirnica!</h2>
     <!--ISPISIVANJE GRESKE ZA EMAIL PRIJAVU PRAZNO POLJE ZA PDF-->
-    <div id="email_greska" class="error-message-visible">
+    <div id="em_greska" class="error-message-visible">
       <?php
       $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
       if (strpos($fullUrl, "em=0") == true) {
@@ -117,7 +122,7 @@
       ?>
     </div>
     <!--ISPISIVANJE PORUKE AKO JE USPESNO POSLAT EMAIL ZA PDF -->
-    <div id="email_greska" class="succes-message-visible">
+    <div id="em_greska" class="succes-message-visible">
       <?php
       $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
       if (strpos($fullUrl, "em=1") == true) {
@@ -160,7 +165,7 @@
           </div>
 
           <div class="dugme__prijavi-se">
-            <a href="#">
+            <a href="#prijava">
               <div class="plan-ishrane__ikonica">
                 <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
               </div>
@@ -191,7 +196,7 @@
             </p>
           </div>
           <div class="dugme__prijavi-se">
-            <a href="#">
+            <a href="#prijava">
               <div class="plan-treninga__ikonica">
                 <img src="css/img/bucke320x333.png" alt="dumbbell" class="icon" />
               </div>
@@ -223,7 +228,7 @@
           </div>
         </div>
         <div class="dugme__prijavi-se">
-          <a href="#">
+          <a href="#prijava">
             <div class="dual-plan__ikonica"></div>
             Prijavi se
           </a>

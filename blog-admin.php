@@ -22,7 +22,12 @@
   <!-- FAVICON  -->
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
-
+  <!-- CLEAN URL AFTER REFRESHING  -->
+  <script>
+    if (typeof window.history.pushState == 'function') {
+      window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF']; ?>');
+    }
+  </script>
   <title>Nutri.Logika</title>
 </head>
 
@@ -120,16 +125,35 @@
         <h1>Blog Posts</h1>
       </div>
     </div>
+    <br>
+
+    <div id="php_greska_post" class="succes-message-visible">
+      <?php ///// Success message add new post
+      $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+      if (strpos($fullUrl, "success=post") == true) {
+        $errors = "USPESNO DODAT POST";
+        echo ('<p>' . $errors . '</p>');
+      } ///  Delete post message
+      elseif (strpos($fullUrl, "delete=true") == true) {
+        $errors = "USPESNO OBRISAN POST";
+        echo ('<p>' . $errors . '</p>');
+      }
+      ?>
+    </div>
+
+
+
     <?php ///// Success message add new post
-    if (isset($_GET['success'])) {
-      echo ' <div id="php_greska" class="succes-message-visible">USPESNO DODAT POST</div> ';
-    }
+    //if (isset($_GET['success'])) {
+    //  echo ' <p id="php_greska_post" class="succes-message-visible p">USPESNO DODAT POST</p> ';
+    //}
 
     ///// Delete post message
-    if (isset($_GET['delete'])) {
-      echo ' <div id="php_greska" class="succes-message-visible">USPESNO OBRISAN POST</div> ';
-    }
+    //if (isset($_GET['delete'])) {
+    //  echo ' <p id="php_greska_post" class="succes-message-visible p">USPESNO OBRISAN POST</p> ';
+    //}
     ?>
+
     <?php
     //// Read all post from DB
     $table = 'posts';

@@ -19,7 +19,12 @@
   <!-- FAVICON  -->
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
-
+  <!-- CLEAN URL AFTER REFRESHING  -->
+  <script>
+    if (typeof window.history.pushState == 'function') {
+      window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF']; ?>');
+    }
+  </script>
   <title>Nutri.Logika</title>
 </head>
 
