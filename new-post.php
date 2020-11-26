@@ -23,7 +23,7 @@
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
-  <title>nutri.logika</title>
+  <title>Nutri.Logika</title>
 </head>
 
 <body>
@@ -74,7 +74,7 @@
   <main class="new-post__main">
     <div class="new-post__wrapper">
       <div class="new-post__title">
-        <h2>Add New Post</h2>
+        <h1>Add New Post</h1>
       </div>
 
       <!--ISPISIVANJE GRESKE PRAZNO POLJE-->

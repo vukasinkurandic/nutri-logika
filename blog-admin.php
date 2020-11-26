@@ -23,7 +23,7 @@
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
-  <title>nutri.logika</title>
+  <title>Nutri.Logika</title>
 </head>
 
 <body>
@@ -114,7 +114,7 @@
     </div>
     <div class="blog-dash__title--wrapper">
       <div class="blog-dash__title">
-        <h2>Blog Posts</h2>
+        <h1>Blog Posts</h1>
       </div>
     </div>
     <?php ///// Success message add new post

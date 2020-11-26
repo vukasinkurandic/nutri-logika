@@ -42,7 +42,7 @@
     />
     <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
-    <title>nutri.logika</title>
+    <title>Nutri.Logika</title>
   </head>
 
   <body>
@@ -116,10 +116,10 @@
           <div class="hero-desktop-img"></div>
           <div class="hero-title">
             <h4>Naučno zasnovane i u praksi dokazane informacije o</h4>
-            <h2>
+            <h1>
               <span>ishrani,</span> <span>treningu i</span> 
               <span>&nbspzdravom</span> <span>životu</span>
-            </h2>
+            </h1>
           </div>
           <!-- <img class="hero-img" src="css/img/hero-no-background500x750-optimizovano.png" alt="hero"> -->
           <!-- <div class="naslovna__title">
@@ -130,8 +130,18 @@
       </div>
     </section>
 
+<!-- =====================
+            MAILING LISTA
+    ======================= -->
+    <section id="mailing-lista">
+    <h2>Narucite pdf vodic kroz nutritivne profile namirnica!</h2>
+    <form action="" id="mail-list-form">
+      <input type="text" id="mail-list-input" name="mailing-lista" placeholder="Vas e-mail">
+      <label for="mail-list-input" class="hidden-label">Vas e-mail</label>
+      <button class="dugme-login-admin" type="submit">Posaljite mi pdf!</button>
+    </form>
+  </section>
     
-
     <!-- =====================
                 PONUDA
     ======================= -->
@@ -239,17 +249,7 @@
       </div>
     </section>
 
-    <!-- =====================
-            MAILING LISTA
-    ======================= -->
-  <section id="mailing-lista">
-    <h2>Narucite pdf vodic kroz nutritivne profile namirnica!</h2>
-    <form action="" id="mail-list-form">
-      <input type="text" id="mail-list-input" name="mailing-lista" placeholder="Vas e-mail">
-      <label for="mail-list-input" class="hidden-label">Vas e-mail</label>
-      <button class="dugme-login-admin" type="submit">Posaljite mi pdf!</button>
-    </form>
-  </section>
+    
     <!-- =====================
             TESTIMONIALS
     ======================= -->

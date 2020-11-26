@@ -20,7 +20,7 @@
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
-  <title>nutri.logika</title>
+  <title>Nutri.Logika</title>
 </head>
 
 <body>
@@ -124,7 +124,7 @@
     $allPlans = $query->get_result()->fetch_all(MYSQLI_ASSOC);
     ?>
     <div class="dashboard-title__wrapper">
-      <h1>Spisak prijavljenih za plan trninga i ishrane</h1>
+      <h1>Spisak prijavljenih za plan treninga i ishrane</h1>
     </div>
 
     <div class="table-wrapper">

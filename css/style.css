@@ -305,28 +305,29 @@ hamburger animation
 
 .hero-title {
   grid-column: 1;
-
   margin-left: 1rem;
-
   text-transform: uppercase;
   text-align: end;
+  position: relative;
 }
 
 .hero-title h4 {
   margin: 0;
-  padding: 0;
   line-height: 1;
   font-size: 0.7rem;
+  background: var(--zut);
+  padding: 1rem 1rem 0.2rem 1rem;
+  display: inline-block;
 }
 
-.hero-title h2 {
+.hero-title h1 {
   margin: 0;
   padding: 0;
   line-height: 1;
   color: var(--ljub1);
 }
 
-.hero-title h2 span:nth-child(odd) {
+.hero-title h1 span:nth-child(odd) {
   color: var(--ljub1);
   font-family: "Oswald", sans-serif;
   font-size: 4rem;
@@ -334,7 +335,7 @@ hamburger animation
   letter-spacing: -4px;
 }
 
-.hero-title h2 span:nth-child(even) {
+.hero-title h1 span:nth-child(even) {
   color: var(--ljub);
   font-family: "Oswald", sans-serif;
   font-size: 3.5rem;
@@ -342,7 +343,7 @@ hamburger animation
   letter-spacing: -4px;
 }
 
-.hero-title h2 span:last-child {
+.hero-title h1 span:last-child {
   line-height: 1.2;
 }
 
@@ -399,7 +400,7 @@ hamburger animation
 ==============================================*/
 #mailing-lista {
   background: var(--zut1);
-  padding: 1rem;
+  padding: 3rem;
 }
 
 #mailing-lista h2 {
@@ -415,10 +416,11 @@ hamburger animation
 
 #mail-list-input {
   width: 15rem;
+  margin: 0 1rem 0 auto;
 }
 
 #mail-list-form .dugme-login-admin {
-  margin: 0;
+  margin: 0 auto 0 0;
 }
 
 /* ===========================================
@@ -795,7 +797,7 @@ hamburger animation
   border-radius: 50px;
 }
 
-.omeni-info__title h2 {
+.omeni-info__title h1 {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 900;
@@ -1182,7 +1184,7 @@ input::-webkit-inner-spin-button {
   border-radius: 50px;
 }
 
-.calculator__title h2 {
+.calculator__title h1 {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 900;
@@ -1430,7 +1432,7 @@ p {
   align-items: center;
 }
 
-.blog-index__main-title h2 {
+.blog-index__main-title h1 {
   font-family: "Oswald", sans-serif;
   margin: 0;
   text-transform: uppercase;
@@ -1544,7 +1546,7 @@ p {
   display: inline;
 }
 
-.single-post__title h2 {
+.single-post__title h1 {
   /* color: var(--ljub); */
   color: white;
   text-transform: uppercase;
@@ -1877,11 +1879,11 @@ p {
     max-width: 65%;
   }
 
-  .hero-title h2 span:nth-child(2n + 1) {
+  .hero-title h1 span:nth-child(2n + 1) {
     font-size: 4.5rem;
   }
 
-  .hero-title h2 span:nth-child(2n) {
+  .hero-title h1 span:nth-child(2n) {
     font-size: 4rem;
   }
 
@@ -1901,7 +1903,7 @@ p {
   .hero-desktop-img {
     background-image: url("img/jovan-hero-nobckg800x759.png");
     background-size: cover;
-    background-position: -13rem;
+    background-position: -11rem;
     background-repeat: no-repeat;
     grid-column: 2;
     grid-row: 1 / span 2;
@@ -1913,6 +1915,17 @@ p {
     margin-left: 1rem;
     text-transform: uppercase;
     text-align: end;
+  }
+
+  .hero-title::before {
+    content: "";
+    position: absolute;
+    top: 12%;
+    left: 0%;
+    width: 88%;
+    height: 75%;
+    background: var(--pruge);
+    z-index: -1;
   }
 
   /** ponuda **/
@@ -1972,7 +1985,7 @@ p {
 
   /**** BLOG INDEX ****/
 
-  .blog-index__main-title h2 {
+  .blog-index__main-title h1 {
     font-size: 2rem;
   }
 
@@ -2080,16 +2093,29 @@ p {
   }
 
   /***** NASLOVNA *****/
-  .hero-title h2 span:nth-child(odd) {
+  .hero-title h1 span:nth-child(odd) {
     font-size: 7rem;
   }
 
-  .hero-title h2 span:nth-child(even) {
+  .hero-title h1 span:nth-child(even) {
     font-size: 6.5rem;
   }
 }
 
 @media (min-width: 850px) {
+  /* NASLOVNA */
+  .hero-title::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 55%;
+    height: 75%;
+    background: var(--pruge);
+    z-index: -1;
+  }
+
+  /******/
   .plan-kartica-img {
     height: 35%;
   }
@@ -2270,11 +2296,16 @@ p {
     font-size: 0.9rem;
   }
 
-  .hero-title h2 span:nth-child(odd) {
+  .hero-title::before {
+    left: 15%;
+    top: 20%;
+  }
+
+  .hero-title h1 span:nth-child(odd) {
     font-size: 7.5rem;
   }
 
-  .hero-title h2 span:nth-child(even) {
+  .hero-title h1 span:nth-child(even) {
     font-size: 7rem;
   }
 
@@ -2305,7 +2336,7 @@ p {
     filter: none;
   }
 
-  .single-post__title h2 {
+  .single-post__title h1 {
     font-weight: 600;
     color: rgba(0, 0, 0, 0.65);
   }
@@ -2370,16 +2401,16 @@ p {
     margin-top: 50%;
   }
 
-  .hero-title h2 span:nth-child(odd) {
+  .hero-title h1 span:nth-child(odd) {
     font-size: 8.5rem;
   }
 
-  .hero-title h2 span:nth-child(even) {
+  .hero-title h1 span:nth-child(even) {
     font-size: 8rem;
   }
 
   .hero-desktop-img {
-    background-position: -16rem;
+    background-position: -12rem;
   }
 
   .single-post__wrapper {
@@ -2389,11 +2420,11 @@ p {
 }
 
 @media (min-width: 1900px) {
-  .hero-title h2 span:nth-child(odd) {
+  .hero-title h1 span:nth-child(odd) {
     font-size: 10.5rem;
   }
 
-  .hero-title h2 span:nth-child(even) {
+  .hero-title h1 span:nth-child(even) {
     font-size: 10rem;
   }
 }

@@ -37,7 +37,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
-  <title>nutri.logika</title>
+  <title>Nutri.Logika</title>
 </head>
 
 <body>
@@ -101,7 +101,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
     <div class="blog-index__wrapper">
       <div class="blog-index__main-title--wrapper">
         <div class="blog-index__main-title">
-          <h2>Najnoviji blog postovi</h2>
+          <h1>Najnoviji blog postovi</h1>
         </div>
       </div>
 

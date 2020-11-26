@@ -42,7 +42,7 @@
     />
     <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
 
-    <title>nutri.logika</title>
+    <title>Nutri.Logika</title>
   </head>
 
   <body>
@@ -135,7 +135,7 @@
             class="single-post__img"
           />
           <div class="single-post__title">
-            <h2><?php echo $selectOne['title'] ?>.</h2>
+            <h1><?php echo $selectOne['title'] ?>.</h1>
             <ul class="single-post__title--info">
               <li>• Author: Jovan Cvetojevic</li>
               <li>• Date: <?php echo " ".  date('F j, Y',strtotime($selectOne['created_at']));?></li>
