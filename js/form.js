@@ -57,7 +57,7 @@ $(document).ready(function() {
                                 function(data, textStatus, jqXHR) {
                                     // success callback
                                     if (data === "succes") {
-                                        $('#php_greska').removeClass('error-message-visible').addClass('succes-message-visible');
+                                        
                                         $("#php_greska").html("<p>Uspesna prijava, hvala Vam</p>");
                                     } else {
                                         $("#php_greska").html(data);

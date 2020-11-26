@@ -90,6 +90,9 @@
           <li class="navbar__item">
             <a href="dashboard.php" class="navbar__link">Prijave</a>
           </li>
+          <li class="navbar__item">
+            <a href="emailList.php" class="navbar__link">Email</a>
+          </li>
         </ul>
       </nav>
       <button class="menu-toggle">
@@ -205,18 +208,18 @@
           </ul>
         </div>
         <div class="social">
-            <ul class="social-icons">
-              <li class="social-icon">
+          <ul class="social-icons">
+            <li class="social-icon">
               <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
-                
-              </li>
-              <li class="social-icon">
+
+            </li>
+            <li class="social-icon">
               <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
-                
-              </li>
-              <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
-            </ul>
-          </div>
+
+            </li>
+            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- zastava -->
