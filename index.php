@@ -115,9 +115,9 @@
         <div class="hero">
           <div class="hero-desktop-img"></div>
           <div class="hero-title">
-            <h4>Naučno zasnovane i u praksi dokazane informacije o</h4>
+            <h4>Naučno zasnovane i u praksi dokazane informacije</h4>
             <h1>
-              <span>ishrani,</span> <span>treningu i</span> 
+              <span>o ishrani,</span> <span>treningu i</span> 
               <span>&nbspzdravom</span> <span>životu</span>
             </h1>
           </div>
