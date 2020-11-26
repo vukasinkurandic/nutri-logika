@@ -102,7 +102,7 @@
             MAILING LISTA
     ======================= -->
   <section id="mailing-lista">
-    <h2>Narucite pdf vodic kroz nutritivne profile namirnica!</h2>
+    <h2>Naručite pdf vodič kroz nutritivne profile namirnica!</h2>
     <!--ISPISIVANJE GRESKE ZA EMAIL PRIJAVU PRAZNO POLJE ZA PDF-->
     <div id="email_greska" class="error-message-visible">
       <?php
