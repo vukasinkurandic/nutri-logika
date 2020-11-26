@@ -397,6 +397,30 @@ hamburger animation
 
 /* ===========================================
                     MAILING LISTA
+==============================================*/
+#mailing-lista {
+  background: var(--ljub1);
+  padding: 2rem 0 3rem 0;
+}
+
+#mailing-lista h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#mail-list-form {
+  text-align: center;
+}
+
+#mail-list-input {
+  margin: 0 1rem 0 auto;
+}
+
+#mail-list-form .dugme-login-admin {
+  margin: 0 auto 0 0;
+}
+
+/* ===========================================
                     PONUDA
 ==============================================*/
 #ponuda {
