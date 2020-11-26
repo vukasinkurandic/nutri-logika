@@ -78,19 +78,19 @@
   <!-- =====================
             NASLOVNA
     ======================= -->
-  <section id="naslovna">
-    <div class="naslovna__wrapper">
-      <div class="hero">
-        <div class="hero-desktop-img"></div>
-        <div class="hero-title">
-          <h4>Naučno zasnovane i u praksi dokazane informacije o</h4>
-          <h1>
-            <span>ishrani,</span> <span>treningu i</span>
-            <span>&nbspzdravom</span> <span>životu</span>
-          </h1>
-        </div>
-        <!-- <img class="hero-img" src="css/img/hero-no-background500x750-optimizovano.png" alt="hero"> -->
-        <!-- <div class="naslovna__title">
+    <section id="naslovna">
+      <div class="naslovna__wrapper">
+        <div class="hero">
+          <div class="hero-desktop-img"></div>
+          <div class="hero-title">
+            <h4>Naučno zasnovane i u praksi dokazane informacije</h4>
+            <h1>
+              <span>o ishrani,</span> <span>treningu i</span> 
+              <span>&nbspzdravom</span> <span>životu</span>
+            </h1>
+          </div>
+          <!-- <img class="hero-img" src="css/img/hero-no-background500x750-optimizovano.png" alt="hero"> -->
+          <!-- <div class="naslovna__title">
             <img class="logo" src="css/img/nutri.logika.png" alt="logo" />
             <a href="#ponuda"><div class="naslovna__strelica"></div></a>
           </div> -->
@@ -102,7 +102,7 @@
             MAILING LISTA
     ======================= -->
   <section id="mailing-lista">
-    <h2>Narucite pdf vodic kroz nutritivne profile namirnica!</h2>
+    <h2>Naručite pdf vodič kroz nutritivne profile namirnica!</h2>
     <!--ISPISIVANJE GRESKE ZA EMAIL PRIJAVU PRAZNO POLJE ZA PDF-->
     <div id="email_greska" class="error-message-visible">
       <?php
