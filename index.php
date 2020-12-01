@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="description" content="Nutri-logika, Nutri logika, trening, individualni trening, plan ishtane i treninga, plan treninga, plan ishrane, Beograd,Trening u kucnim uslovima, Trening u teretani, Vođenje kroz transformaciju, Deficit viška kilograma, Fitnes konsultacije, nutricionista, vodič do idealne forme">
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" />
 
@@ -165,7 +165,7 @@
           </div>
 
           <div class="dugme__prijavi-se">
-            <a href="#prijava">
+            <a href="pages/ishrana.html">
               <div class="plan-ishrane__ikonica">
                 <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
               </div>
@@ -196,7 +196,7 @@
             </p>
           </div>
           <div class="dugme__prijavi-se">
-            <a href="#prijava">
+            <a href="pages/trening.html">
               <div class="plan-treninga__ikonica">
                 <img src="css/img/bucke320x333.png" alt="dumbbell" class="icon" />
               </div>
@@ -228,7 +228,7 @@
           </div>
         </div>
         <div class="dugme__prijavi-se">
-          <a href="#prijava">
+          <a href="pages/trening-ishrana.html">
             <div class="dual-plan__ikonica"></div>
             Prijavi se
           </a>

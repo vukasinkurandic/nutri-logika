@@ -8,20 +8,20 @@ $(document).ready(function() {
         if ($(this).val() == 'odrzavanje') {``
             document.getElementById("opis-brzina").innerHTML ='Pri odrzavanju ne postoji mogucnost odabira brzine jer ne postoji promena telesne težine';
             document.getElementById("brzina").innerHTML = "";
-            console.log('radi');
+            
           $('#brzina').prop('disabled', true);
         } else if ($(this).val() == 'dobijanje') {
-            document.getElementById("opis-brzina").innerHTML ="Brzina ostvarenja se iskazuje kroz procenat telesne težine koji želite da izgubite ili dobijete u proseku nedeljno i ovo su neke brojke i smernice:";
+            document.getElementById("opis-brzina").innerHTML ="Brzina ostvarenja se iskazuje kroz procenat telesne težine koji želite da dobijete u proseku nedeljno i moze biti od 0.2% do 0.6%";
             document.getElementById("brzina").innerHTML =
             `<option value="0.2" class="opcija">0.2%</option>
             <option value="0.3" class="opcija">0.3%</option>
             <option value="0.4" class="opcija">0.4%</option>
             <option value="0.5" class="opcija">0.5%</option>
             <option value="0.6" class="opcija">0.6%</option>`
-           console.log('radi');
+           
           $('#brzina').prop('disabled', false);
         } else if ($(this).val() == 'gubljenje') {
-            document.getElementById("opis-brzina").innerHTML ="Brzina ostvarenja se iskazuje kroz procenat telesne težine koji želite da izgubite ili dobijete u proseku nedeljno i ovo su neke brojke i smernice:";
+            document.getElementById("opis-brzina").innerHTML ="Brzina ostvarenja se iskazuje kroz procenat telesne težine koji želite da izgubite u proseku nedeljno i moze biti od 0.2% do 1%";
             document.getElementById("brzina").innerHTML =
             `<option value="0.2" class="opcija">0.2%</option>
             <option value="0.3" class="opcija">0.3%</option>
@@ -34,7 +34,7 @@ $(document).ready(function() {
             <option value="1" class="opcija">1%</option>
             `
             
-           console.log('radi');
+          
           $('#brzina').prop('disabled', false);
         }
 
@@ -61,7 +61,12 @@ $(document).ready(function() {
         let visinaVal = $('#visina').val();
         let aktivnostVal = $('#aktivnost').val();
         let brzinatVal = parseFloat($('#brzina').val());
-       
+        console.log(brzinatVal+'prvo ocitavanje');
+        if (isNaN(brzinatVal)) {
+            brzinatVal=0.6;
+            
+        }
+       console.log(brzinatVal+'posle nedefinisanog ocitavanje');
 
         /// vrednost grama proteina zavisno od aktivnosti
         if (aktivnostVal==='veoma-neaktivan' || aktivnostVal==='lagano-aktivan') {
