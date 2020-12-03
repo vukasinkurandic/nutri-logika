@@ -1169,6 +1169,8 @@ input::-webkit-inner-spin-button {
 #calculator {
   margin: 0;
   padding: 0 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .relative-navbar {
@@ -1895,6 +1897,37 @@ p {
   text-align: center;
 }
 
+/* ===========================================
+                    PAGES
+==============================================*/
+.images {
+  position: relative;
+}
+.pages__background-img {
+  width: 100%;
+  height: 100%;
+}
+
+.pages__background-img::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 55px;
+  background: white;
+  width: 100%;
+}
+.pages__front-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.page__plan-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
 /* ===========================================
                     RESPONSIVE
 ==============================================*/

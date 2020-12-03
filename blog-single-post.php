@@ -53,19 +53,10 @@
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__item">
-            <a href="index.php#naslovna" class="navbar__link">Home</a>
+            <a href="index.php" class="navbar__link">Home</a>
           </li>
           <li class="navbar__item">
-            <a href="index.php#ponuda" class="navbar__link">Ponuda</a>
-          </li>
-          <li class="navbar__item">
-            <a href="index.php#testimonials" class="navbar__link">Rezultati</a>
-          </li>
-          <li class="navbar__item">
-            <a href="index.php#omeni" class="navbar__link">O meni</a>
-          </li>
-          <li class="navbar__item">
-            <a href="index.php#prijava" class="navbar__link">Prijavi se</a>
+            <a href="omeni.html" class="navbar__link">O meni</a>
           </li>
           <li class="navbar__item">
             <a href="calculator.html" class="navbar__link">Kalkulator</a>
@@ -149,19 +140,11 @@
         <div class="footer-links__container">
           <ul class="footer-links--list">
             <li class="footer__item">
-              <a href="index.php#naslovna" class="footer__link"> Home</a>
+              <a href="index.php" class="footer__link"> Home</a>
             </li>
+            
             <li class="footer__item">
-              <a href="index.php#ponuda" class="footer__link">Ponuda</a>
-            </li>
-            <li class="footer__item">
-              <a href="index.php#testimonials" class="footer__link">Rezultati</a>
-            </li>
-            <li class="footer__item">
-              <a href="index.php#omeni" class="footer__link">O meni</a>
-            </li>
-            <li class="footer__item">
-              <a href="index.php#prijava" class="footer__link">Prijavi se</a>
+              <a href="omeni.html" class="footer__link">O meni</a>
             </li>
             <li class="footer__item">
               <a href="calculator.html" class="footer__link">Kalkulator</a>
