@@ -24,13 +24,11 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(
-    45deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  --pruge: repeating-linear-gradient(45deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
 }
 
 img {
@@ -69,12 +67,10 @@ img {
   padding: 0.4rem;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 0, 0, 0.44019614681810226) 0%,
-    rgba(255, 255, 255, 1) 26%
-  );
+  background: linear-gradient(90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(0, 0, 0, 0.44019614681810226) 0%,
+      rgba(255, 255, 255, 1) 26%);
 }
 
 .navbar {
@@ -469,8 +465,12 @@ hamburger animation
   width: 5rem;
   height: 5rem;
   object-fit: cover;
-  max-width: none;
+  /* max-width: none; */
   filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.bucka {
+  max-width: none;
 }
 
 /************************************/
@@ -556,12 +556,17 @@ hamburger animation
   width: 70%;
 }
 
+
 .plan-ishrane__info p,
 .plan-treninga__info p,
 .dual-plan__info p {
   font-size: 1.04rem;
   font-weight: 400;
   color: #131200;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .plan-ishrane__title-wrapper,
@@ -588,13 +593,11 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255, 248, 82, 0.4),
-    rgba(255, 248, 82, 0.4) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 248, 82, 0.4),
+      rgba(255, 248, 82, 0.4) 10px,
+      transparent 10px,
+      transparent 20px);
 }
 
 /* ------------------------------ */
@@ -693,6 +696,12 @@ hamburger animation
   width: 55%;
   justify-content: space-between;
   max-width: 170px;
+}
+
+.procitaj-jos:hover,
+.procitaj-jos:focus {
+  border-radius: 5px;
+  background: var(--ljub1);
 }
 
 /* ===========================================
@@ -821,6 +830,8 @@ hamburger animation
   border-radius: 50px;
 }
 
+
+
 .omeni-info__title h2,
 .omeni-info__title h1 {
   font-size: 2rem;
@@ -847,9 +858,9 @@ hamburger animation
   z-index: 1;
 }
 
-.omeni-info-index {
+.omeni-info-index p {
   display: -webkit-box;
-  -webkit-line-clamp: 12;
+  -webkit-line-clamp: 13;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -868,13 +879,11 @@ hamburger animation
   position: absolute;
   top: -50px;
   left: -50px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
   width: 90%;
   height: 110%;
   z-index: 0;
@@ -1052,13 +1061,11 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(
-    135deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(135deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
   z-index: -1;
 }
 
@@ -1169,6 +1176,8 @@ input::-webkit-inner-spin-button {
 #calculator {
   margin: 0;
   padding: 0 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .relative-navbar {
@@ -1287,7 +1296,7 @@ input::-webkit-inner-spin-button {
   border-top: 1px solid var(--ljub1);
 }
 
-.blog-pregled__wrapper > * {
+.blog-pregled__wrapper>* {
   flex-grow: 1;
   flex-basis: calc(var(--modifier) * 999);
   margin: var(--margin);
@@ -1424,7 +1433,7 @@ p {
   padding: 1rem;
 }
 
-.search-bar > * {
+.search-bar>* {
   flex-grow: 1;
   flex-basis: calc(calc(30rem - 100%) * 999);
   margin: 1rem;
@@ -1896,9 +1905,87 @@ p {
 }
 
 /* ===========================================
+                    PAGES
+==============================================*/
+.pages__page-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.images {
+  position: relative;
+}
+
+.pages__background-img {
+  width: 100%;
+  height: 100%;
+}
+
+.pages__background-img::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 55px;
+  background: white;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.pages__background-img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -150px;
+  left: -100px;
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 248, 82, 0.4),
+      rgba(255, 248, 82, 0.4) 10px,
+      transparent 10px,
+      transparent 20px);
+  border-radius: 20px;
+}
+
+.puzla-after::after {
+  bottom: -135px;
+}
+
+.pages__front-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.page__plan-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  position: relative;
+}
+
+.page__plan-title h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  color: var(--ljub);
+  text-align: center;
+  margin: 0 0 .5rem 0;
+  /* font-size: 2rem; */
+}
+
+.page__plan-text p {
+  font-size: 1.04rem;
+  font-weight: 400;
+  color: #131200;
+}
+
+/* ===========================================
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
+
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 80%;
@@ -1906,6 +1993,7 @@ p {
 }
 
 @media (min-width: 460px) {
+
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 65%;
@@ -1925,6 +2013,7 @@ p {
 }
 
 @media (min-width: 600px) {
+
   /** naslovna **/
   .hero {
     width: 100%;
@@ -2135,6 +2224,7 @@ p {
 }
 
 @media (min-width: 850px) {
+
   /* NASLOVNA */
   .hero-title::before {
     content: "";
@@ -2314,6 +2404,7 @@ p {
 }
 
 @media (min-width: 1100px) {
+
   /** da se poveca **/
   .plan-kartica-img {
     height: 40%;
