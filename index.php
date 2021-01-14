@@ -156,7 +156,7 @@
               naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
               tako što se svake nedelje vrši ocena prethodne nedelje i po
               potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć.
+              pomoć. <a class="procitaj-jos"href="pages/ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
 
@@ -188,13 +188,13 @@
               naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
               tako što se svake nedelje vrši ocena prethodne nedelje i po
               potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć.
+              pomoć. <a class="procitaj-jos"href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
           <div class="dugme__prijavi-se">
             <a href="#prijava">
               <div class="plan-treninga__ikonica">
-                <img src="css/img/bucke320x333.png" alt="dumbbell" class="icon" />
+                <img src="css/img/bucke320x333.png" alt="dumbbell" class="icon bucka" />
               </div>
               Prijavi se
             </a>
@@ -219,7 +219,7 @@
               naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
               tako što se svake nedelje vrši ocena prethodne nedelje i po
               potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć.
+              pomoć. <a class="procitaj-jos"href="pages/trening-ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
         </div>
@@ -394,7 +394,8 @@
               iza treninga i ishrane, jasne činjenice i principi koji se mogu
               organizovati sa planiranim ishodom, kao što je slučaj u mnogim
               drugim poljima života.
-              <br />
+              <br>
+              <br>
               2012. godine počinjem da se edukujem, čitam, testiram naspram
               saznanja do kojih dolazim i pravim velike rezultate. 2013.
               odlučujem da odustanem od puta ekonomiste i odlazim sa fakulteta
@@ -406,7 +407,7 @@
               treninga, sa dobrim uspesima. Diplomiram tri meseca pre roka, u
               junu 2017., nakon čega dobijam želju da edukujem i pokažem da je
               cela ova priča jednostavna.
-              <br />
+              <br><br>
               Septembra iste godine, pravim Nutri Logiku, čiji je centralni
               cilj edukacija zasnovana na naučnim činjenicama i zdravom
               razumu. Preko nje, vremenom, dolazim u kontakt sa ljudima kojima

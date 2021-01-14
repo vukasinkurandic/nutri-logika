@@ -456,8 +456,12 @@ hamburger animation
   width: 5rem;
   height: 5rem;
   object-fit: cover;
-  max-width: none;
+  /* max-width: none; */
   filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.bucka {
+  max-width: none;
 }
 
 /************************************/
@@ -547,6 +551,10 @@ hamburger animation
   font-size: 1.04rem;
   font-weight: 400;
   color: #131200;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .plan-ishrane__title-wrapper,
@@ -678,6 +686,12 @@ hamburger animation
   width: 55%;
   justify-content: space-between;
   max-width: 170px;
+}
+
+.procitaj-jos:hover,
+.procitaj-jos:focus {
+  border-radius: 5px;
+  background: var(--ljub1);
 }
 
 /* ===========================================
@@ -875,9 +889,9 @@ hamburger animation
   z-index: 1;
 }
 
-.omeni-info-index {
+.omeni-info-index p {
   display: -webkit-box;
-  -webkit-line-clamp: 12;
+  -webkit-line-clamp: 13;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1921,6 +1935,85 @@ p {
 
 .form-login {
   text-align: center;
+}
+
+/* ===========================================
+                    PAGES
+==============================================*/
+.pages__page-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.images {
+  position: relative;
+}
+
+.pages__background-img {
+  width: 100%;
+  height: 100%;
+}
+
+.pages__background-img::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 55px;
+  background: white;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.pages__background-img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -150px;
+  left: -100px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  border-radius: 20px;
+}
+
+.puzla-after::after {
+  bottom: -135px;
+}
+
+.pages__front-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.page__plan-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  position: relative;
+}
+
+.page__plan-title h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  color: var(--ljub);
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  /* font-size: 2rem; */
+}
+
+.page__plan-text p {
+  font-size: 1.04rem;
+  font-weight: 400;
+  color: #131200;
 }
 
 /* ===========================================
