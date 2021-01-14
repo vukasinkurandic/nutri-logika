@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-      content="Nutri-logika, Nutri logika, trening, individualni trening, plan ishtane i treninga, plan treninga, plan ishrane, Beograd,Trening u kucnim uslovima, Trening u teretani, Vođenje kroz transformaciju, Deficit viška kilograma, Fitnes konsultacije, nutricionista, vodič do idealne forme">
-      
+
     <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
 
@@ -47,16 +45,26 @@
     <header class="index-header relative-navbar">
       <div class="navbar__wrapper">
         <a href="index.php#naslovna" class="navbar__logo"
-          ><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img"
+          ><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img"
         /></a>
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a href="index.php" class="navbar__link">Home</a>
+              <a href="index.php#naslovna" class="navbar__link">Home</a>
             </li>
-            
             <li class="navbar__item">
-              <a href="omeni.html" class="navbar__link">O meni</a>
+              <a href="index.php#ponuda" class="navbar__link">Ponuda</a>
+            </li>
+            <li class="navbar__item">
+              <a href="index.php#testimonials" class="navbar__link"
+                >Rezultati</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="index.php#omeni" class="navbar__link">O meni</a>
+            </li>
+            <li class="navbar__item">
+              <a href="index.php#prijava" class="navbar__link">Prijavi se</a>
             </li>
             <li class="navbar__item">
               <a href="calculator.html" class="navbar__link">Kalkulator</a>
@@ -92,14 +100,14 @@
           <div class="calculator__polje polje">
             <label for="cilj"><h4>Moj cilj je:</h4></label>
             <select name="cilj" id="odabir-cilj">
-              <option value="gubljenje" class="opcija">
-                Deficit kalorija - želite da smanjite telesnu težinu i masne
-                naslage sa tim, a zadržite što je više moguće mišićnu masu.
-              </option>
               <option value="dobijanje" class="opcija">
                 Suficit kalorija- želite da povećate telesnu težinu i mišićnu
                 masu (ukoliko trenirate redovno), a ne povećate mnogo masne
                 naslage.
+              </option>
+              <option value="gubljenje" class="opcija">
+                Deficit kalorija - želite da smanjite telesnu težinu i masne
+                naslage sa tim, a zadržite što je više moguće mišićnu masu.
               </option>
               <option value="odrzavanje" class="opcija">
                 Održanje kalorija- želite da održite telesnu težinu na
@@ -173,20 +181,33 @@
           <div class="calculator-polje polje">
             <h4>Brzina:</h4>
             <p id="opis-brzina">
-              Brzina ostvarenja se iskazuje kroz procenat telesne težine koji želite da izgubite u proseku nedeljno i moze biti od
-              0.2% do 1%
+              Brzina ostvarenja se iskazuje kroz procenat telesne težine koji
+              želite da izgubite ili dobijete u proseku nedeljno i ovo su neke
+              brojke i smernice:
             </p>
             <br />
             <select type="text" name="brzina" id="brzina">
-              <option value="0.2" class="opcija">0.2%</option>
-              <option value="0.3" class="opcija">0.3%</option>
-              <option value="0.4" class="opcija">0.4%</option>
+              <option value="0.2" class="opcija">
+                0.2% (Smanjenje težine: Najsporiji način da se izgubi na težini,
+                ne savetujem za većinu osim za one koji žele da smanje masne
+                naslage ispod 12% masti za muškarce ili 22% za žene, a veću su
+                oko tog procenta. Dakle, samo za osobe sa već niskim procentom
+                masti I one sa gomilom strpljenja. Ne preporučujem za prosečnu
+                osobu. Povećanje težine: Konzervativan, ali efektivan pristup
+                kome će trebati vremena, ali smanjuje mogućnost dobitka masnih
+                naslaga. Ne preporučujem za većinu jer zahteva mnogo vremena.)
+              </option>
+              <option value="0.3" class="opcija">
+                0.3% (Smanjenje težine: Malo brži način i pogodan za one koji su
+                već prlično na manjem procentu masti, npr ispod 16% za muške I
+                26% za žene. Povećanje težine: Konzervativan, ali efektivan
+                pristup kome će trebati vremena, ali smanjuje mogućnost dobitka
+                masnih naslaga. Ne preporučujem za većinu jer zahteva mnogo
+                vremena )
+              </option>
+              <option value="0.4" class="opcija" selected>0.4%</option>
               <option value="0.5" class="opcija">0.5%</option>
               <option value="0.6" class="opcija">0.6%</option>
-              <option value="0.7" class="opcija">0.7%</option>
-              <option value="0.8" class="opcija">0.8%</option>
-              <option value="0.9" class="opcija">0.9%</option>
-              <option value="1" class="opcija">1%</option>
             </select>
           </div>
         </form>
@@ -195,7 +216,6 @@
             Izračunaj!
           </button>
         </div>
-        <section id="test">
         <div class="calculator-rezultati__polje">
           <h4>Dnevni unos:</h4>
           <p id="kalorije">Kalorije:</p>
@@ -203,7 +223,6 @@
           <p id="hidrat">Ugljeni hidrati:</p>
           <p id="mast">Masti:</p>
         </div>
-      </section>
       </div>
     </section>
 
@@ -217,7 +236,7 @@
           <a href="#naslovna" class="navbar__logo"
             ><img
               src="css/img/nutri.logika.png"
-              alt="logo"
+              alt=""
               class="navbar__logo__img"
           /></a>
           <div class="kontakt-container">
@@ -228,12 +247,22 @@
           <div class="footer-links__container">
             <ul class="footer-links--list">
               <li class="footer__item">
-                <a href="index.php" class="footer__link">Home</a>
+                <a href="index.php#naslovna" class="footer__link">Home</a>
               </li>
               <li class="footer__item">
-                <a href="omeni.html" class="footer__link">O meni</a>
+                <a href="index.php#ponuda" class="footer__link">Ponuda</a>
               </li>
-              
+              <li class="footer__item">
+                <a href="index.php#testimonials" class="footer__link"
+                  >Rezultati</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="index.php#omeni" class="footer__link">O meni</a>
+              </li>
+              <li class="footer__item">
+                <a href="index.php#prijava" class="footer__link">Prijavi se</a>
+              </li>
               <li class="footer__item">
                 <a href="calculator.html" class="footer__link">Kalkulator</a>
               </li>
@@ -277,6 +306,19 @@
               >www.flaticon.com</a
             >
           </p>
+        <div class="social">
+          <ul class="social-icons">
+            <li class="social-icon">
+            <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
+              
+            </li>
+            <li class="social-icon">
+            <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
+              
+            </li>
+            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+          </ul>
+        </div>
       </div>
     </footer>
     <!-- ==========================
@@ -293,11 +335,10 @@
         $("select").selectric();
       });
     </script>
-    
+    <script src="js/custome.js"></script>
     <!-- ==========================
                CALCULATOR JS
     =========================== -->
-    <script src="js/custome.js"></script>
     <script src="js/calculator.js"></script>
   </body>
 </html>

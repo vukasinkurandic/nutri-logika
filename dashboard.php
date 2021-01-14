@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nutri-logika, Nutri logika, trening, individualni trening, plan ishtane i treninga, plan treninga, plan ishrane, Beograd,Trening u kucnim uslovima, Trening u teretani, Vođenje kroz transformaciju, Deficit viška kilograma, Fitnes konsultacije, nutricionista, vodič do idealne forme">
+
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" />
 
@@ -64,7 +64,7 @@
     ======================= -->
   <header class="index-header relative-navbar">
     <div class="navbar__wrapper">
-      <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
+      <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__item">
@@ -178,7 +178,7 @@
   <footer>
     <section id="footer">
       <div class="footer-wrapper">
-        <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
+        <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
         <div class="kontakt-container">
           <p><span>E-mail:</span> nutri.logika@gmail.com</p>
           <p><span>Telefon:</span> 061/61-45-617</p>

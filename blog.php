@@ -16,7 +16,6 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nutri-logika, Nutri logika, trening, individualni trening, plan ishtane i treninga, plan treninga, plan ishrane, Beograd,Trening u kucnim uslovima, Trening u teretani, Vođenje kroz transformaciju, Deficit viška kilograma, Fitnes konsultacije, nutricionista, vodič do idealne forme">
 
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" />
@@ -47,17 +46,24 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
     ======================= -->
   <header class="index-header relative-navbar">
     <div class="navbar__wrapper">
-      <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="naslovna" class="navbar__logo__img" /></a>
+      <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__item">
-            <a href="index.php" class="navbar__link">Home</a>
+            <a href="index.php#naslovna" class="navbar__link">Home</a>
           </li>
-          
           <li class="navbar__item">
-            <a href="omeni.html" class="navbar__link">O meni</a>
+            <a href="index.php#ponuda" class="navbar__link">Ponuda</a>
           </li>
-          
+          <li class="navbar__item">
+            <a href="index.php#testimonials" class="navbar__link">Rezultati</a>
+          </li>
+          <li class="navbar__item">
+            <a href="index.php#omeni" class="navbar__link">O meni</a>
+          </li>
+          <li class="navbar__item">
+            <a href="index.php#prijava" class="navbar__link">Prijavi se</a>
+          </li>
           <li class="navbar__item">
             <a href="calculator.html" class="navbar__link">Kalkulator</a>
           </li>
@@ -108,7 +114,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
             <li><span>Category:</span> <?php echo $post['topic']; ?></li>
           </ul>
           <div class="blog-index__img-holder">
-            <a href="blog-single-post.php?id=<?php echo $post['id'] ?>"><img src="css/img/blog/<?php echo ($post['image']); ?>" alt="<?php echo $post['title']; ?>" class="post-image"></a>
+            <a href="blog-single-post.php?id=<?php echo $post['id'] ?>"><img src="css/img/blog/<?php echo ($post['image']); ?>" alt="" class="post-image"></a>
           </div>
           <!-- </div> -->
           <div class="blog-index__content--text">
@@ -186,7 +192,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
   <footer>
     <section id="footer">
       <div class="footer-wrapper">
-        <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
+        <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
         <div class="kontakt-container">
           <p><span>E-mail:</span> nutri.logika@gmail.com</p>
           <p>Telefon: <a href="tel:+381616145617">061/61-45-617</a></p>
@@ -195,10 +201,19 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
         <div class="footer-links__container">
           <ul class="footer-links--list">
             <li class="footer__item">
-              <a href="index.php" class="footer__link">Home</a>
+              <a href="index.php#naslovna" class="footer__link">Home</a>
             </li>
             <li class="footer__item">
-              <a href="omeni.html" class="footer__link">O meni</a>
+              <a href="index.php#ponuda" class="footer__link">Ponuda</a>
+            </li>
+            <li class="footer__item">
+              <a href="index.php#testimonials" class="footer__link">Rezultati</a>
+            </li>
+            <li class="footer__item">
+              <a href="index.php#omeni" class="footer__link">O meni</a>
+            </li>
+            <li class="footer__item">
+              <a href="index.php#prijava" class="footer__link">Prijavi se</a>
             </li>
             <li class="footer__item">
               <a href="calculator.html" class="footer__link">Kalkulator</a>
@@ -209,18 +224,18 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
           </ul>
         </div>
         <div class="social">
-          <ul class="social-icons">
-            <li class="social-icon">
+            <ul class="social-icons">
+              <li class="social-icon">
               <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
-
-            </li>
-            <li class="social-icon">
+                
+              </li>
+              <li class="social-icon">
               <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
-
-            </li>
-            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
-          </ul>
-        </div>
+                
+              </li>
+              <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+            </ul>
+          </div>
       </div>
     </section>
     <!-- zastava -->

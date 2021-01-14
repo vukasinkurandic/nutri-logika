@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nutri-logika, Nutri logika, trening, individualni trening, plan ishtane i treninga, plan treninga, plan ishrane, Beograd,Trening u kucnim uslovima, Trening u teretani, Vođenje kroz transformaciju, Deficit viška kilograma, Fitnes konsultacije, nutricionista, vodič do idealne forme">
+
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" />
 
@@ -12,7 +12,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
   <!-- selectric  -->
   <link rel="stylesheet" href="js/selectric/selectric.css" />
 
@@ -40,7 +41,7 @@
     ======================= -->
   <header class="index-header">
     <div class="navbar__wrapper">
-      <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
+      <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__item">
@@ -90,15 +91,10 @@
         <div class="hero-title">
           <h4>Naučno zasnovane i u praksi dokazane informacije</h4>
           <h1>
-            <span>o ishrani,</span> <span>treningu i</span>
-            <span>&nbspzdravom</span> <span>životu</span>
+            <span>O ishrani,</span> <span>treningu i</span>
+            <span> zdravom </span> <br> <span>životu</span>
           </h1>
         </div>
-        <!-- <img class="hero-img" src="css/img/hero-no-background500x750-optimizovano.png" alt="hero"> -->
-        <!-- <div class="naslovna__title">
-            <img class="logo" src="css/img/nutri.logika.png" alt="logo" />
-            <a href="#ponuda"><div class="naslovna__strelica"></div></a>
-          </div> -->
       </div>
     </div>
   </section>
@@ -165,7 +161,7 @@
           </div>
 
           <div class="dugme__prijavi-se">
-            <a href="pages/ishrana.html">
+            <a href="#prijava">
               <div class="plan-ishrane__ikonica">
                 <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
               </div>
@@ -196,7 +192,7 @@
             </p>
           </div>
           <div class="dugme__prijavi-se">
-            <a href="pages/trening.html">
+            <a href="#prijava">
               <div class="plan-treninga__ikonica">
                 <img src="css/img/bucke320x333.png" alt="dumbbell" class="icon" />
               </div>
@@ -228,7 +224,7 @@
           </div>
         </div>
         <div class="dugme__prijavi-se">
-          <a href="pages/trening-ishrana.html">
+          <a href="#prijava">
             <div class="dual-plan__ikonica"></div>
             Prijavi se
           </a>
@@ -243,7 +239,41 @@
     ======================= -->
 
   <section id="testimonials">
-    <div class="testimonials__wrapper">
+    
+  <div class="testimonials__wrapper">
+  <h2>Testimonials & Transformations</h2>
+    <div class="transformations-wrapper">
+      <div class="transformations glider-transformations">
+        <div class="slide-item"><img src="css/img/transformacije/1.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/2.jpg" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/4.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/5.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/6.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/7.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/8.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/9.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/10.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/11.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/12.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/13.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/14.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/15.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/16.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/17.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/18.png" alt="transformation"></div>
+      </div>
+      <div class="trans-slider-navigation">
+        <div class="carousel__navigation-trans"></div>
+          <button class="carousel__button-trans carousel__button--left-trans">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel__button-trans carousel__button--right-trans">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+      </div>
+    </div>
+ 
+    
       <div class="carousel">
         <ul class="carousel__slider glider">
           <li class="carousel__slide slide-item">
@@ -316,7 +346,7 @@
             <li><span>Category:</span> <?php echo $post['topic']; ?></li>
           </ul>
           <div class="blog-index__img-holder">
-            <a href="blog-single-post.php?id=<?php echo $post['id'] ?>"><img src="css/img/blog/<?php echo ($post['image']); ?>" alt="<?php echo $post['title']; ?>" class="post-image"></a>
+            <a href="blog-single-post.php?id=<?php echo $post['id'] ?>"><img src="css/img/blog/<?php echo ($post['image']); ?>" alt="" class="post-image"></a>
           </div>
 
           <div class="blog-index__content--text">
@@ -505,7 +535,7 @@
   <footer>
     <section id="footer">
       <div class="footer-wrapper">
-        <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="logo" class="navbar__logo__img" /></a>
+        <a href="#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
         <div class="kontakt-container">
           <h3>Contact:</h3>
           <p>E-mail: <a href="">nutri.logika@gmail.com</a></p>
