@@ -456,12 +456,8 @@ hamburger animation
   width: 5rem;
   height: 5rem;
   object-fit: cover;
-  /* max-width: none; */
-  filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.3));
-}
-
-.bucka {
   max-width: none;
+  filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.3));
 }
 
 /************************************/
@@ -551,10 +547,6 @@ hamburger animation
   font-size: 1.04rem;
   font-weight: 400;
   color: #131200;
-  display: -webkit-box;
-  -webkit-line-clamp: 10;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .plan-ishrane__title-wrapper,
@@ -688,12 +680,6 @@ hamburger animation
   max-width: 170px;
 }
 
-.procitaj-jos:hover,
-.procitaj-jos:focus {
-  border-radius: 5px;
-  background: var(--ljub1);
-}
-
 /* ===========================================
                     TESTIMONIALS
 ==============================================*/
@@ -704,11 +690,10 @@ hamburger animation
 .testimonials__wrapper {
   background-image: url("img/transformacije/mozaik2-500x250.jpeg");
   width: 100%;
-  /* background-size: contain; */
+  background-size: contain;
   background-repeat: repeat;
   position: relative;
   z-index: 0;
-  padding: 2rem 0;
 }
 
 .testimonials__wrapper::after {
@@ -716,18 +701,10 @@ hamburger animation
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 50%, transparent);
   width: 100%;
   height: 100%;
   z-index: -1;
-}
-
-.testimonials__wrapper h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #eee;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
 }
 
 .carousel {
@@ -767,8 +744,7 @@ hamburger animation
   left: 0;
 }
 
-.carousel__button,
-.carousel__button-trans {
+.carousel__button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -778,18 +754,11 @@ hamburger animation
   cursor: pointer;
 }
 
-/* .carousel__button-trans {
-  color: red;
-  position: absolute;
-} */
-
-.carousel__button--left,
-.carousel__button--left-trans {
+.carousel__button--left {
   left: 0;
 }
 
-.carousel__button--right,
-.carousel__button--right-trans {
+.carousel__button--right {
   right: 0;
 }
 
@@ -801,38 +770,12 @@ hamburger animation
   cursor: pointer;
 }
 
-.carousel__navigation-trans {
-  position: relative;
-  cursor: pointer;
-  bottom: 20%;
-}
-
 .glider-dot {
   background: rgba(250, 250, 250, 0.5);
 }
 
 .glider-dot .active {
   background: rgba(250, 250, 250, 0.9);
-}
-
-.transformations-wrapper {
-  position: relative;
-}
-
-.transformations {
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-.trans-slider-navigation {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  /* width: 100%;
-  height: 100%; */
-  width: 300px;
-  z-index: 1;
 }
 
 /* ===========================================
@@ -889,9 +832,9 @@ hamburger animation
   z-index: 1;
 }
 
-.omeni-info-index p {
+.omeni-info-index {
   display: -webkit-box;
-  -webkit-line-clamp: 13;
+  -webkit-line-clamp: 12;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1935,85 +1878,6 @@ p {
 
 .form-login {
   text-align: center;
-}
-
-/* ===========================================
-                    PAGES
-==============================================*/
-.pages__page-wrapper {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.images {
-  position: relative;
-}
-
-.pages__background-img {
-  width: 100%;
-  height: 100%;
-}
-
-.pages__background-img::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 55px;
-  background: white;
-  width: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.pages__background-img::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: -150px;
-  left: -100px;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255, 248, 82, 0.4),
-    rgba(255, 248, 82, 0.4) 10px,
-    transparent 10px,
-    transparent 20px
-  );
-  border-radius: 20px;
-}
-
-.puzla-after::after {
-  bottom: -135px;
-}
-
-.pages__front-img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.page__plan-content {
-  padding: 0 1.5rem 1.5rem 1.5rem;
-  position: relative;
-}
-
-.page__plan-title h2 {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
-  color: var(--ljub);
-  text-align: center;
-  margin: 0 0 0.5rem 0;
-  /* font-size: 2rem; */
-}
-
-.page__plan-text p {
-  font-size: 1.04rem;
-  font-weight: 400;
-  color: #131200;
 }
 
 /* ===========================================
