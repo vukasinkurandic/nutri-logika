@@ -14,6 +14,18 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
 <html lang="sr">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N2WRBFNYH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8N2WRBFNYH');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -93,7 +105,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
     //// Read ALL post from DB
     require_once('php/connection.php');
 
-    $sql = "SELECT * FROM posts WHERE status = 1";
+    $sql = "SELECT * FROM posts WHERE status = 1 ORDER BY id DESC";
     $query = $conn->prepare($sql);
     $query->execute();
     $posts = $query->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -224,18 +236,18 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
           </ul>
         </div>
         <div class="social">
-            <ul class="social-icons">
-              <li class="social-icon">
+          <ul class="social-icons">
+            <li class="social-icon">
               <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
-                
-              </li>
-              <li class="social-icon">
+
+            </li>
+            <li class="social-icon">
               <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
-                
-              </li>
-              <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
-            </ul>
-          </div>
+
+            </li>
+            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- zastava -->

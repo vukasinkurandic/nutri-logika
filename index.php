@@ -2,6 +2,18 @@
 <html lang="sr">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N2WRBFNYH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8N2WRBFNYH');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -156,7 +168,7 @@
               naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
               tako što se svake nedelje vrši ocena prethodne nedelje i po
               potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć. <a class="procitaj-jos"href="pages/ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              pomoć. <a class="procitaj-jos" href="pages/ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
 
@@ -188,7 +200,7 @@
               naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
               tako što se svake nedelje vrši ocena prethodne nedelje i po
               potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć. <a class="procitaj-jos"href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              pomoć. <a class="procitaj-jos" href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
           <div class="dugme__prijavi-se">
@@ -219,7 +231,7 @@
               naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
               tako što se svake nedelje vrši ocena prethodne nedelje i po
               potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć. <a class="procitaj-jos"href="pages/trening-ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              pomoć. <a class="procitaj-jos" href="pages/trening-ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
         </div>
@@ -239,41 +251,41 @@
     ======================= -->
 
   <section id="testimonials">
-    
-  <div class="testimonials__wrapper">
-  <h2>Testimonials & Transformations</h2>
-    <div class="transformations-wrapper">
-      <div class="transformations glider-transformations">
-        <div class="slide-item"><img src="css/img/transformacije/1.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/2.jpg" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/4.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/5.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/6.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/7.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/8.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/9.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/10.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/11.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/12.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/13.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/14.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/15.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/16.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/17.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/18.png" alt="transformation"></div>
-      </div>
-      <div class="trans-slider-navigation">
-        <div class="carousel__navigation-trans"></div>
+
+    <div class="testimonials__wrapper">
+      <h2>Testimonials & Transformations</h2>
+      <div class="transformations-wrapper">
+        <div class="transformations glider-transformations">
+          <div class="slide-item"><img src="css/img/transformacije/1.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/2.jpg" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/4.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/5.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/6.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/7.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/8.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/9.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/10.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/11.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/12.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/13.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/14.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/15.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/16.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/17.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/18.png" alt="transformation"></div>
+        </div>
+        <div class="trans-slider-navigation">
+          <div class="carousel__navigation-trans"></div>
           <button class="carousel__button-trans carousel__button--left-trans">
             <i class="fas fa-chevron-left"></i>
           </button>
           <button class="carousel__button-trans carousel__button--right-trans">
             <i class="fas fa-chevron-right"></i>
           </button>
+        </div>
       </div>
-    </div>
- 
-    
+
+
       <div class="carousel">
         <ul class="carousel__slider glider">
           <li class="carousel__slide slide-item">
