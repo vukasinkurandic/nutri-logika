@@ -37,12 +37,12 @@
   <!-- FAVICON  -->
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
-  <!-- CLEAN URL AFTER REFRESHING  -->
+  <!-- CLEAN URL AFTER REFRESHING  
   <script>
     if (typeof window.history.pushState == 'function') {
       window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF']; ?>');
     }
-  </script>
+  </script> -->
   <title>Nutri.Logika</title>
   <meta name="google-site-verification" content="JICoP0ScAb6uhJL70Yx4q_4s9dK1VZ9T-7bgYBPHPqg" />
 </head>
