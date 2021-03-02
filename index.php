@@ -196,11 +196,10 @@
           </div>
           <div class="plan-treninga__tekst">
             <p>
-              Sastavlja se na osnovu informacija o klijentu, a na osnovu
-              naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
-              tako što se svake nedelje vrši ocena prethodne nedelje i po
-              potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć. <a class="procitaj-jos" href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              Plan treninga predstavlja vaš jedinstven naučno zasnovan plan treniranja, koji se prilagođava spram vas i vašeg cilja, a
+              na kraju svake nedelje je redovno kontrolisan i podleže redovnim manjim izmenama (nedeljno, dok su veće izmene na
+              mesečnom nivou) kako bi konstatno gurao vaše telo ka boljem izgledu, performansima i osećaju.
+              <a class="procitaj-jos" href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
           <div class="dugme__prijavi-se">
