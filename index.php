@@ -253,7 +253,7 @@
       <div class="transformations-wrapper">
         <div class="transformations glider-transformations">
           <div class="slide-item"><img src="css/img/transformacije/1.png" alt="transformation"></div>
-          <div class="slide-item"><img src="css/img/transformacije/2.jpg" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/2.png" alt="transformation"></div>
           <div class="slide-item"><img src="css/img/transformacije/4.png" alt="transformation"></div>
           <div class="slide-item"><img src="css/img/transformacije/5.png" alt="transformation"></div>
           <div class="slide-item"><img src="css/img/transformacije/6.png" alt="transformation"></div>
@@ -269,6 +269,10 @@
           <div class="slide-item"><img src="css/img/transformacije/16.png" alt="transformation"></div>
           <div class="slide-item"><img src="css/img/transformacije/17.png" alt="transformation"></div>
           <div class="slide-item"><img src="css/img/transformacije/18.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/19.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/20.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/21.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/22.png" alt="transformation"></div>
         </div>
         <div class="trans-slider-navigation">
           <div class="carousel__navigation-trans"></div>
@@ -447,7 +451,7 @@
     <div class="prijava-title">
       <h2>Prijavi se</h2>
     </div>
-    <div id="php_greska" class="succes-message-visible"></div>
+
     <div class="prijava__wrapper">
       <form action="php/form.php" class="form">
         <div class="polje">
@@ -528,6 +532,8 @@
         </div>
       </form>
     </div>
+    <!--GRESKA -->
+    <div id="php_greska" class="succes-message-visible"></div>
 
     <div class="dugme__prijavi-se prijava">
       <a href="#prijava">
