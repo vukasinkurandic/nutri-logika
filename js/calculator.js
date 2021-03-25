@@ -268,7 +268,7 @@ $(document).ready(function() {
 
                     //// Ispisivanje rezultata
 
-                    document.getElementById("kalorije").innerHTML = "Kalorije: "+BMPFinal+" cal";
+                    document.getElementById("kalorije").innerHTML = "Kalorije: "+BMPFinal+" kcal";
 
                     document.getElementById("protein").innerHTML = "Protein: "+ProteiniProcent+" g";
 

@@ -164,11 +164,9 @@
           </div>
           <div class="plan-ishrane__tekst">
             <p>
-              Sastavlja se na osnovu informacija o klijentu, a na osnovu
-              naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
-              tako što se svake nedelje vrši ocena prethodne nedelje i po
-              potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć. <a class="procitaj-jos" href="pages/ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              Dinamičan plan ishrane predstavlja vaš jedinstven naučno zasnovan plan, sastavljen spram vašeg tela, cilja i stila
+              života, a opet je njegov efekat redovno praćen kontrolama i spram njih podešen kako bi se efikasno išlo ka cilju
+              (dinamičan je). <a class="procitaj-jos" href="pages/ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
 
@@ -227,11 +225,9 @@
           </div>
           <div class="dual-plan__tekst">
             <p>
-              Sastavlja se na osnovu informacija o klijentu, a na osnovu
-              naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
-              tako što se svake nedelje vrši ocena prethodne nedelje i po
-              potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć. <a class="procitaj-jos" href="pages/trening-ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              Obuhvata plan ishrane i plan treninga koji su pažljivo uklopljeni jedan sa drugim kako bi stvorili harmoniju između
+              pravilne ishrane i treninga, a tako i sinergistički efekat (gde je 1+1=3) koji donosi ultimativnu transformaciju tela,
+              zdravlja, uma i života. <a class="procitaj-jos" href="pages/trening-ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
         </div>
