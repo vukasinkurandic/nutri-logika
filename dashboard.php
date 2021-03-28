@@ -168,6 +168,7 @@
                 <li class="info-item"><span>Godine:</span> <?php echo ($plan['age']); ?></li>
                 <li class="info-item"><span>Telefon:</span> <?php echo ($plan['phone']); ?></li>
                 <li class="info-item"><span>Pol:</span> <?php echo ($plan['sex']); ?></li>
+                <li class="info-item"><span>Datum:</span> <?php echo (date('j F, Y h:i:s', strtotime($plan['created_at']))); ?></li>
                 <li class="info-item">
                   <span>Cilj:</span> <?php echo ($plan['goal']); ?>
                 </li>

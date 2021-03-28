@@ -164,6 +164,8 @@
                             </ul>
                             <ul class="ostalo-info" id="<?php echo ('btn-' . ($key + 1)); ?>">
                                 <li class="info-item"><span>E-mail:</span> <?php echo ($email['email']); ?></li>
+                                <li class="info-item"><span>Datum:</span> <?php echo (date('j F, Y h:i:s', strtotime($email['created_at']))); ?></li>
+
 
                                 <li><button class="delete-button"><a href="emailList.php?delEmail_id=<?php echo $email['id']; ?>">Obrisi email - <i class="fas fa-trash"></i></a></button></li>
                             </ul>

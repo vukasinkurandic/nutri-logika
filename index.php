@@ -66,7 +66,7 @@
             <a href="#testimonials" class="navbar__link"> Rezultati</a>
           </li>
           <li class="navbar__item">
-            <a href="#omeni" class="navbar__link"> O meni</a>
+            <a href="omeni.html" class="navbar__link"> O meni</a>
           </li>
           <li class="navbar__item">
             <a href="#prijava" class="navbar__link"> Prijavi se</a>
@@ -115,7 +115,7 @@
             MAILING LISTA
     ======================= -->
   <section id="mailing-lista">
-    <h2>Naručite pdf vodič kroz nutritivne profile namirnica!</h2>
+    <h2>Preuzmite besplatnu tabelu za praćenje napredka</h2>
     <!--ISPISIVANJE GRESKE ZA EMAIL PRIJAVU PRAZNO POLJE ZA PDF-->
     <div id="em_greska" class="error-message-visible">
       <?php
@@ -142,7 +142,7 @@
     <form action="php/emailForm.php" id="mail-list-form" method="POST">
       <input type="text" id="mail-list-input" name="mailing-lista" placeholder="Vas e-mail">
       <label for="mail-list-input" class="hidden-label">Vas e-mail</label>
-      <button class="dugme-login-admin" id="mail-list-form-btn" type="submit">Posaljite mi pdf!</button>
+      <button class="dugme-login-admin" id="mail-list-form-btn" type="submit">Pošaljite mi tabelu!</button>
     </form>
   </section>
 
@@ -284,37 +284,53 @@
           </button>
         </div>
       </div>
-
+      <br>
 
       <div class="carousel">
         <ul class="carousel__slider glider">
           <li class="carousel__slide slide-item">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              error fuga accusamus fugiat eaque dolores.
+              “Za manje od dva meseca smo totalno rešili problem sa IR i na poslednjem pregledu je nisam
+              imala. Kilaža je blago pala, ali je promena navika najviše pomogla. Sviđa mi se ovakva ishrana
+              jer gotovo nikada nisam gladna niti imam želj za slatkim”
             </p>
-            <h4>Milojko Pantic</h4>
+            <h4>Marija I.</h4>
           </li>
           <li class="carousel__slide slide-item">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              error fuga accusamus fugiat eaque dolores.
+              “Obroci su jednostavni i lako ih nosi na posao, a i cela ishrana je laka za praćenje i ne zahteva
+              specijalne namirnice, ovo sve sam i do sada jeo. Iako radimo samo jedan mesec, za sada,
+              zadovoljan sam saradnjom. Najbitnije mi je da se ne izgladnjujem.”
             </p>
-            <h4>Dalibor Vukanovic</h4>
+            <h4>Danijel V.</h4>
           </li>
           <li class="carousel__slide slide-item">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              error fuga accusamus fugiat eaque dolores.
+              “Ostvarili smo cilj, skinuli 10 kg za 3 meseca saradnje i mogu reći da sam prezadovoljna, kako
+              ishranom, tako i komunikacijom, iako sam nekada sačekala odgovor, uvek si mi dao detaljno
+              objašnjenje zašto to radimo i kakav će efekat imati. Definitivno nastavljam da se hranim na
+              sličan način (kao što si mi savetovao) kako bih održala ove rezultate.”
             </p>
-            <h4>Rasa Pikic</h4>
+            <h4>Snežana R.</h4>
           </li>
           <li class="carousel__slide slide-item">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              error fuga accusamus fugiat eaque dolores.
+              “Prezadovoljan sam saradnjom sa tobom. Promena načina ishrane sa fokusom na više ugljenih
+              hidrata, a manje masti, mi je donela više energije, veću punoću i značajno bolje treninge, koji su
+              jako dobro uklopljeni i organizovani. Ovi prvih 3 meseca saradnje mi je značajno promenilo
+              način gledanja na ishranu i trening. Mnogo mi se dopada nedeljni online pregled svake nedelje
+              Hvala ti puno.”
             </p>
-            <h4>Dragan Dzajic</h4>
+            <h4>Milan M.</h4>
+          </li>
+          <li class="carousel__slide slide-item">
+            <p>
+              “Nisam gladna većinu dana, što je ogroman pomak u odnosu na svaku dijetu koju sam radila do
+              sada i to me čini presrećnom. Više od 10 cm u obimu struka i minus 8 kg na mojih 170 cm visine
+              se i više nego vide. Zadovoljna sam celom saradnjom, kao i savetima kako da nastavim sada,
+              kada smo završili saradnju”
+            </p>
+            <h4>Harisa J.</h4>
           </li>
         </ul>
         <div class="carousel__navigation"></div>
