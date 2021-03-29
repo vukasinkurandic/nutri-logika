@@ -2,6 +2,18 @@
 <html lang="sr">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N2WRBFNYH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8N2WRBFNYH');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -152,6 +164,8 @@
                             </ul>
                             <ul class="ostalo-info" id="<?php echo ('btn-' . ($key + 1)); ?>">
                                 <li class="info-item"><span>E-mail:</span> <?php echo ($email['email']); ?></li>
+                                <li class="info-item"><span>Datum:</span> <?php echo (date('j F, Y h:i:s', strtotime($email['created_at']))); ?></li>
+
 
                                 <li><button class="delete-button"><a href="emailList.php?delEmail_id=<?php echo $email['id']; ?>">Obrisi email - <i class="fas fa-trash"></i></a></button></li>
                             </ul>

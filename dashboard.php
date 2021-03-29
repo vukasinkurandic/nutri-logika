@@ -2,6 +2,18 @@
 <html lang="sr">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N2WRBFNYH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8N2WRBFNYH');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -156,6 +168,7 @@
                 <li class="info-item"><span>Godine:</span> <?php echo ($plan['age']); ?></li>
                 <li class="info-item"><span>Telefon:</span> <?php echo ($plan['phone']); ?></li>
                 <li class="info-item"><span>Pol:</span> <?php echo ($plan['sex']); ?></li>
+                <li class="info-item"><span>Datum:</span> <?php echo (date('j F, Y h:i:s', strtotime($plan['created_at']))); ?></li>
                 <li class="info-item">
                   <span>Cilj:</span> <?php echo ($plan['goal']); ?>
                 </li>

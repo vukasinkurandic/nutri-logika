@@ -2,6 +2,18 @@
 <html lang="sr">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N2WRBFNYH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8N2WRBFNYH');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -25,12 +37,12 @@
   <!-- FAVICON  -->
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
-  <!-- CLEAN URL AFTER REFRESHING  -->
+  <!-- CLEAN URL AFTER REFRESHING  
   <script>
     if (typeof window.history.pushState == 'function') {
       window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF']; ?>');
     }
-  </script>
+  </script> -->
   <title>Nutri.Logika</title>
   <meta name="google-site-verification" content="JICoP0ScAb6uhJL70Yx4q_4s9dK1VZ9T-7bgYBPHPqg" />
 </head>
@@ -54,7 +66,7 @@
             <a href="#testimonials" class="navbar__link"> Rezultati</a>
           </li>
           <li class="navbar__item">
-            <a href="#omeni" class="navbar__link"> O meni</a>
+            <a href="omeni.html" class="navbar__link"> O meni</a>
           </li>
           <li class="navbar__item">
             <a href="#prijava" class="navbar__link"> Prijavi se</a>
@@ -103,7 +115,7 @@
             MAILING LISTA
     ======================= -->
   <section id="mailing-lista">
-    <h2>Naručite pdf vodič kroz nutritivne profile namirnica!</h2>
+    <h2>Preuzmite besplatnu tabelu za praćenje napredka</h2>
     <!--ISPISIVANJE GRESKE ZA EMAIL PRIJAVU PRAZNO POLJE ZA PDF-->
     <div id="em_greska" class="error-message-visible">
       <?php
@@ -130,7 +142,7 @@
     <form action="php/emailForm.php" id="mail-list-form" method="POST">
       <input type="text" id="mail-list-input" name="mailing-lista" placeholder="Vas e-mail">
       <label for="mail-list-input" class="hidden-label">Vas e-mail</label>
-      <button class="dugme-login-admin" id="mail-list-form-btn" type="submit">Posaljite mi pdf!</button>
+      <button class="dugme-login-admin" id="mail-list-form-btn" type="submit">Pošaljite mi tabelu!</button>
     </form>
   </section>
 
@@ -152,11 +164,9 @@
           </div>
           <div class="plan-ishrane__tekst">
             <p>
-              Sastavlja se na osnovu informacija o klijentu, a na osnovu
-              naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
-              tako što se svake nedelje vrši ocena prethodne nedelje i po
-              potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć. <a class="procitaj-jos"href="pages/ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              Dinamičan plan ishrane predstavlja vaš jedinstven naučno zasnovan plan, sastavljen spram vašeg tela, cilja i stila
+              života, a opet je njegov efekat redovno praćen kontrolama i spram njih podešen kako bi se efikasno išlo ka cilju
+              (dinamičan je). <a class="procitaj-jos" href="pages/ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
 
@@ -184,11 +194,11 @@
           </div>
           <div class="plan-treninga__tekst">
             <p>
-              Sastavlja se na osnovu informacija o klijentu, a na osnovu
-              naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
-              tako što se svake nedelje vrši ocena prethodne nedelje i po
-              potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć. <a class="procitaj-jos"href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              Plan treninga predstavlja vaš jedinstven naučno zasnovan
+              plan treniranja, koji se prilagođava spram vas i vašeg cilja, a
+              na kraju svake nedelje je redovno kontrolisan i podleže
+              redovnim izmenama ...
+              <a class="procitaj-jos" href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
           <div class="dugme__prijavi-se">
@@ -215,11 +225,9 @@
           </div>
           <div class="dual-plan__tekst">
             <p>
-              Sastavlja se na osnovu informacija o klijentu, a na osnovu
-              naučno dokazanih činjenica i mog iskustva u radu. Funkcioniše
-              tako što se svake nedelje vrši ocena prethodne nedelje i po
-              potrebi menja nešto u planu, a ja sam uvek dostupan za pitanja i
-              pomoć. <a class="procitaj-jos"href="pages/trening-ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              Obuhvata plan ishrane i plan treninga koji su pažljivo uklopljeni jedan sa drugim kako bi stvorili harmoniju između
+              pravilne ishrane i treninga, a tako i sinergistički efekat (gde je 1+1=3) koji donosi ultimativnu transformaciju tela,
+              zdravlja, uma i života. <a class="procitaj-jos" href="pages/trening-ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
           </div>
         </div>
@@ -239,70 +247,90 @@
     ======================= -->
 
   <section id="testimonials">
-    
-  <div class="testimonials__wrapper">
-  <h2>Testimonials & Transformations</h2>
-    <div class="transformations-wrapper">
-      <div class="transformations glider-transformations">
-        <div class="slide-item"><img src="css/img/transformacije/1.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/2.jpg" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/5.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/4.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/6.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/7.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/8.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/9.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/10.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/11.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/12.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/13.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/14.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/15.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/16.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/17.png" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/18.png" alt="transformation"></div>
-      </div>
-      <div class="trans-slider-navigation">
-        <div class="carousel__navigation-trans"></div>
+
+    <div class="testimonials__wrapper">
+      <h2>Testimonials & Transformations</h2>
+      <div class="transformations-wrapper">
+        <div class="transformations glider-transformations">
+          <div class="slide-item"><img src="css/img/transformacije/1.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/2.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/4.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/5.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/6.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/7.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/8.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/9.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/10.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/11.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/12.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/13.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/14.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/15.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/16.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/17.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/18.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/19.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/20.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/21.png" alt="transformation"></div>
+          <div class="slide-item"><img src="css/img/transformacije/22.png" alt="transformation"></div>
+        </div>
+        <div class="trans-slider-navigation">
+          <div class="carousel__navigation-trans"></div>
           <button class="carousel__button-trans carousel__button--left-trans">
             <i class="fas fa-chevron-left"></i>
           </button>
           <button class="carousel__button-trans carousel__button--right-trans">
             <i class="fas fa-chevron-right"></i>
           </button>
+        </div>
       </div>
-    </div>
- 
-    
+      <br>
+
       <div class="carousel">
         <ul class="carousel__slider glider">
           <li class="carousel__slide slide-item">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              error fuga accusamus fugiat eaque dolores.
+              “Za manje od dva meseca smo totalno rešili problem sa IR i na poslednjem pregledu je nisam
+              imala. Kilaža je blago pala, ali je promena navika najviše pomogla. Sviđa mi se ovakva ishrana
+              jer gotovo nikada nisam gladna niti imam želj za slatkim”
             </p>
-            <h4>Milojko Pantic</h4>
+            <h4>Marija I.</h4>
           </li>
           <li class="carousel__slide slide-item">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              error fuga accusamus fugiat eaque dolores.
+              “Obroci su jednostavni i lako ih nosi na posao, a i cela ishrana je laka za praćenje i ne zahteva
+              specijalne namirnice, ovo sve sam i do sada jeo. Iako radimo samo jedan mesec, za sada,
+              zadovoljan sam saradnjom. Najbitnije mi je da se ne izgladnjujem.”
             </p>
-            <h4>Dalibor Vukanovic</h4>
+            <h4>Danijel V.</h4>
           </li>
           <li class="carousel__slide slide-item">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              error fuga accusamus fugiat eaque dolores.
+              “Ostvarili smo cilj, skinuli 10 kg za 3 meseca saradnje i mogu reći da sam prezadovoljna, kako
+              ishranom, tako i komunikacijom, iako sam nekada sačekala odgovor, uvek si mi dao detaljno
+              objašnjenje zašto to radimo i kakav će efekat imati. Definitivno nastavljam da se hranim na
+              sličan način (kao što si mi savetovao) kako bih održala ove rezultate.”
             </p>
-            <h4>Rasa Pikic</h4>
+            <h4>Snežana R.</h4>
           </li>
           <li class="carousel__slide slide-item">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              error fuga accusamus fugiat eaque dolores.
+              “Prezadovoljan sam saradnjom sa tobom. Promena načina ishrane sa fokusom na više ugljenih
+              hidrata, a manje masti, mi je donela više energije, veću punoću i značajno bolje treninge, koji su
+              jako dobro uklopljeni i organizovani. Ovi prvih 3 meseca saradnje mi je značajno promenilo
+              način gledanja na ishranu i trening. Mnogo mi se dopada nedeljni online pregled svake nedelje
+              Hvala ti puno.”
             </p>
-            <h4>Dragan Dzajic</h4>
+            <h4>Milan M.</h4>
+          </li>
+          <li class="carousel__slide slide-item">
+            <p>
+              “Nisam gladna većinu dana, što je ogroman pomak u odnosu na svaku dijetu koju sam radila do
+              sada i to me čini presrećnom. Više od 10 cm u obimu struka i minus 8 kg na mojih 170 cm visine
+              se i više nego vide. Zadovoljna sam celom saradnjom, kao i savetima kako da nastavim sada,
+              kada smo završili saradnju”
+            </p>
+            <h4>Harisa J.</h4>
           </li>
         </ul>
         <div class="carousel__navigation"></div>
@@ -439,7 +467,7 @@
     <div class="prijava-title">
       <h2>Prijavi se</h2>
     </div>
-    <div id="php_greska" class="succes-message-visible"></div>
+
     <div class="prijava__wrapper">
       <form action="php/form.php" class="form">
         <div class="polje">
@@ -520,6 +548,8 @@
         </div>
       </form>
     </div>
+    <!--GRESKA -->
+    <div id="php_greska" class="succes-message-visible"></div>
 
     <div class="dugme__prijavi-se prijava">
       <a href="#prijava">
