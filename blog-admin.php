@@ -26,8 +26,6 @@
   <!-- inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
 
-  <!-- selectric  -->
-  <!-- <link rel="stylesheet" href="js/selectric/selectric.css" /> -->
 
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
@@ -261,16 +259,7 @@
     <!-- zastava -->
     <div class="copyrights">
       <p class="copyright__text">Copyright &copy; VuleDule 2020 Serbia</p>
-      <div class="mentions">
-        <p>
-          Icons made by
-          <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
-          &
-          <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a>
-          from
-          <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-        </p>
-      </div>
+     
     </div>
   </footer>
   <!-- ==========================

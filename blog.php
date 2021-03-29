@@ -37,12 +37,6 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- selectric  -->
-  <link rel="stylesheet" href="js/selectric/selectric.css" />
-
-  <!-- glider  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
-
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
   <!-- FAVICON  -->
@@ -119,7 +113,6 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
 
       <?php foreach ($posts as $key => $post) : ?>
         <div class="blog-index__content">
-          <!-- <div class="blog-index__content--info"> -->
           <ul class="blog-index__info--list">
             <li><span>Author:</span> Jovan Cvetojevic</li>
             <li><span>Date:</span> <?php echo " " .  date('F j, Y', strtotime($post['created_at'])); ?></li>
@@ -128,15 +121,12 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
           <div class="blog-index__img-holder">
             <a href="blog-single-post.php?id=<?php echo $post['id'] ?>"><img src="css/img/blog/<?php echo ($post['image']); ?>" alt="" class="post-image"></a>
           </div>
-          <!-- </div> -->
           <div class="blog-index__content--text">
             <a href="blog-single-post.php?id=<?php echo $post['id']; ?>" class="single-blog__link">
               <div class="blog-index__title">
                 <h4><?php echo $post['title']; ?></h4>
               </div>
-              <p>
-                <?php echo html_entity_decode(substr($post['body'], 0, 500) . '...'); ?>
-              </p>
+             
             </a>
           </div>
           <div class="blog-index__underline"></div>
@@ -163,12 +153,6 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
       ///// END SEARCH
 
       ?>
-
-
-
-
-
-
 
       <div class="search-bar" id="search">
         <form action="blog.php#search" method="POST">
@@ -253,16 +237,6 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
     <!-- zastava -->
     <div class="copyrights">
       <p class="copyright__text">Copyright &copy; VuleDule 2020 Serbia</p>
-      <div class="mentions">
-        <p>
-          Icons made by
-          <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
-          &
-          <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a>
-          from
-          <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-        </p>
-      </div>
     </div>
   </footer>
   <!-- ==========================
@@ -270,20 +244,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
       =========================== -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!-- ==========================
-                  GLIDER
-      =========================== -->
-  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 
-  <!-- ==========================
-                  SELECTRIC
-      =========================== -->
-  <script src="js/selectric/jquery.selectric.min.js"></script>
-  <script>
-    $(function() {
-      $("select").selectric();
-    });
-  </script>
   <script src="js/custome.js"></script>
   <script src="js/form.js"></script>
 </body>

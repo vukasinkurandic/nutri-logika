@@ -26,13 +26,11 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(
-    45deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  --pruge: repeating-linear-gradient(45deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
 }
 
 img {
@@ -71,12 +69,10 @@ img {
   padding: 0.4rem;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 0, 0, 0.44019614681810226) 0%,
-    rgba(255, 255, 255, 1) 26%
-  );
+  background: linear-gradient(90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(0, 0, 0, 0.44019614681810226) 0%,
+      rgba(255, 255, 255, 1) 26%);
 }
 
 .navbar {
@@ -554,7 +550,7 @@ hamburger animation
   display: -webkit-box;
   -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .plan-ishrane__title-wrapper,
@@ -581,13 +577,11 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255, 248, 82, 0.4),
-    rgba(255, 248, 82, 0.4) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 248, 82, 0.4),
+      rgba(255, 248, 82, 0.4) 10px,
+      transparent 10px,
+      transparent 20px);
 }
 
 /* ------------------------------ */
@@ -688,10 +682,25 @@ hamburger animation
   max-width: 170px;
 }
 
-.procitaj-jos:hover,
-.procitaj-jos:focus {
-  border-radius: 5px;
-  background: var(--ljub1);
+.procitaj-jos:hover::before,
+.procitaj-jos:focus::before {
+  width: 100%;
+}
+
+.procitaj-jos {
+  text-decoration: none;
+  color: var(--ljub);
+  position: relative;
+}
+
+.procitaj-jos::before {
+  content: "";
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: var(--ljub);
+  position: absolute;
+  transition: width .4s ease;
 }
 
 /* ===========================================
@@ -783,19 +792,25 @@ hamburger animation
   position: absolute;
 } */
 
-.carousel__button--left,
 .carousel__button--left-trans {
-  left: 0;
+  left: -15px;
 }
 
-.carousel__button--right,
 .carousel__button--right-trans {
-  right: 0;
+  right: -15px;
+}
+
+.carousel__button--right {
+  right: -20px;
+}
+
+.carousel__button--left {
+  left: -20px;
 }
 
 .carousel__navigation {
   position: absolute;
-  bottom: 15%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
@@ -910,13 +925,11 @@ hamburger animation
   position: absolute;
   top: -50px;
   left: -50px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
   width: 90%;
   height: 110%;
   z-index: 0;
@@ -1094,13 +1107,11 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(
-    135deg,
-    var(--zut1),
-    var(--zut1) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(135deg,
+      var(--zut1),
+      var(--zut1) 10px,
+      transparent 10px,
+      transparent 20px);
   z-index: -1;
 }
 
@@ -1329,7 +1340,7 @@ input::-webkit-inner-spin-button {
   border-top: 1px solid var(--ljub1);
 }
 
-.blog-pregled__wrapper > * {
+.blog-pregled__wrapper>* {
   flex-grow: 1;
   flex-basis: calc(var(--modifier) * 999);
   margin: var(--margin);
@@ -1466,7 +1477,11 @@ p {
   padding: 1rem;
 }
 
-.search-bar > * {
+.search-bar input {
+  box-shadow: none;
+}
+
+.search-bar>* {
   flex-grow: 1;
   flex-basis: calc(calc(30rem - 100%) * 999);
   margin: 1rem;
@@ -1669,13 +1684,13 @@ p {
 }
 
 .single-post__sidebar {
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  /* border-radius: 20px; */
+  border-top: 1px solid #ddd;
+  /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); */
   padding: 1rem;
   box-sizing: border-box;
   background: #f8f8f8;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .single-post__sidebar h2 {
@@ -1973,13 +1988,11 @@ p {
   height: 100%;
   bottom: -150px;
   left: -100px;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255, 248, 82, 0.4),
-    rgba(255, 248, 82, 0.4) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 248, 82, 0.4),
+      rgba(255, 248, 82, 0.4) 10px,
+      transparent 10px,
+      transparent 20px);
   border-radius: 20px;
 }
 
@@ -2020,6 +2033,7 @@ p {
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
+
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 80%;
@@ -2027,6 +2041,7 @@ p {
 }
 
 @media (min-width: 460px) {
+
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 65%;
@@ -2054,6 +2069,7 @@ p {
 }
 
 @media (min-width: 600px) {
+
   /** naslovna **/
   .naslovna__wrapper {
     background-image: url("img/daska_noz-background.jpg");
@@ -2181,6 +2197,7 @@ p {
 
   .search-bar {
     grid-column: 1 / 5;
+    padding: 2rem;
   }
 
   .blog-index__info--list {
@@ -2225,9 +2242,7 @@ p {
     grid-column: 1/ 5;
   }
 
-  .search-bar {
-    padding: 2rem;
-  }
+
 
   /****** BLOG - SINGLE PAGE *******/
   .single-post__wrapper {
@@ -2276,6 +2291,7 @@ p {
 }
 
 @media (min-width: 850px) {
+
   /* NASLOVNA */
   .hero-title::before {
     content: "";
@@ -2455,6 +2471,7 @@ p {
 }
 
 @media (min-width: 1100px) {
+
   /** da se poveca **/
   .plan-kartica-img {
     height: 40%;
@@ -2534,7 +2551,7 @@ p {
   .single-post__sidebar {
     /* width: calc(100% - 65ch); */
     margin: 0%;
-    max-width: 350px;
+    /* max-width: 350px; */
   }
 
   .single-post__underline {
