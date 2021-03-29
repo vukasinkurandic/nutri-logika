@@ -246,8 +246,8 @@
       <div class="transformations glider-transformations">
         <div class="slide-item"><img src="css/img/transformacije/1.png" alt="transformation"></div>
         <div class="slide-item"><img src="css/img/transformacije/2.jpg" alt="transformation"></div>
-        <div class="slide-item"><img src="css/img/transformacije/4.png" alt="transformation"></div>
         <div class="slide-item"><img src="css/img/transformacije/5.png" alt="transformation"></div>
+        <div class="slide-item"><img src="css/img/transformacije/4.png" alt="transformation"></div>
         <div class="slide-item"><img src="css/img/transformacije/6.png" alt="transformation"></div>
         <div class="slide-item"><img src="css/img/transformacije/7.png" alt="transformation"></div>
         <div class="slide-item"><img src="css/img/transformacije/8.png" alt="transformation"></div>
