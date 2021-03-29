@@ -126,7 +126,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
               <div class="blog-index__title">
                 <h4><?php echo $post['title']; ?></h4>
               </div>
-             
+              <?php echo substr($post['body'], 0, 500) . '...'; ?>
             </a>
           </div>
           <div class="blog-index__underline"></div>
