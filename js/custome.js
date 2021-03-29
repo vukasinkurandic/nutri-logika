@@ -1,33 +1,18 @@
-/******* PARALLAX ******/
-function parallax(element, distance, speed){
-  const item = document.querySelector(element);
-  item.style.transform = 'translateY(' + distance * speed + 'px)';
-}
 
-window.addEventListener("scroll", function(){
-  parallax(".naslovna__wrapper", window.scrollY, .2);
-  parallax(".hero-title", window.scrollY, .5);
-});
+$(function(){
+  if($('body').is('.home-body')){
+    /******* PARALLAX ******/
+    function parallax(element, distance, speed){
+      const item = document.querySelector(element);
+      item.style.transform = 'translateY(' + distance * speed + 'px)';
+    }
+    
+    window.addEventListener("scroll", function(){
+      parallax(".naslovna__wrapper", window.scrollY, .2);
+      parallax(".hero-title", window.scrollY, .5);
+    });
 
-
-
-/******* NAVBAR ******/
-let menu_toggle = document.querySelector(".menu-toggle");
-let navbar = document.querySelector(".navbar");
-
-menu_toggle.addEventListener("click", function () {
-  navbar.classList.toggle("navbar-open");
-  menu_toggle.classList.toggle("open");
-});
-
-/******* NAVBAR ZATVARANJE NA CLICK ******/
-$(function () {
-  $(".navbar__link").on("click touch", function () {
-    $(".menu-toggle").click();
-  });
-});
-
-/******* GLIDER ******/
+    /******* GLIDER ******/
 new Glider(document.querySelector(".glider"), {
   // `auto` allows automatic responsive
   // width calculations
@@ -92,7 +77,6 @@ new Glider(document.querySelector(".glider"), {
   //   },
   // ],
 });
-
 
 /******* GLIDER - TRANSFORMATIONS ******/
 
@@ -160,6 +144,29 @@ new Glider(document.querySelector(".glider-transformations"), {
   //   },
   // ],
 });
+
+  }
+});
+
+/******* NAVBAR ******/
+let menu_toggle = document.querySelector(".menu-toggle");
+let navbar = document.querySelector(".navbar");
+
+menu_toggle.addEventListener("click", function () {
+  navbar.classList.toggle("navbar-open");
+  menu_toggle.classList.toggle("open");
+});
+
+/******* NAVBAR ZATVARANJE NA CLICK ******/
+$(function () {
+  $(".navbar__link").on("click touch", function () {
+    $(".menu-toggle").click();
+  });
+});
+
+
+
+
 
 /******* SELECTRIC ******/
 // $(function () {
