@@ -240,7 +240,9 @@
       </div>
     </div>
   </section>
-
+ <!-- =====================
+            ponuda paketa test
+    ======================= -->
 
   <!-- =====================
             TESTIMONIALS
@@ -343,7 +345,128 @@
       </div>
     </div>
   </section>
-
+ <!-- =====================
+            ponuda paketa test
+    ======================= -->
+    <div class="paketi-wrapper">
+        <div class="plan-single">
+          <div class="images">
+            <div class="paketi__background-img">
+              <img
+                src="css/img/plan-ishrane3500x333.jpg"
+                alt="plan-ishrane"
+              />
+            </div>
+            <div class="paketi__front-img">
+              <img
+                src="css/img/plan-ishrane-tanjir500x333.png"
+                alt="plan-ishrane-tanjir"
+              />
+            </div>
+          </div>
+          <div class="paketi__plan-content">
+            <div class="paketi__plan-title"><h2>Lorem, ipsum.</h2></div>
+            <div class="paketi__plan-text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur eius incidunt fugit provident ipsa aperiam
+                consequatur distinctio quae, vel sunt ratione optio vero
+                praesentium architecto quibusdam dolorum quos vitae? Quas modi
+                debitis illo labore saepe vitae, dolorum voluptatum nesciunt
+                esse!
+              </p>
+            </div>
+            <div class="dugme__prijavi-se">
+              <a href="index.php#prijava">
+                <div class="plan-ishrane__ikonica">
+                  <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
+                </div>
+                Prijavi se
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- ======================================================= -->
+        
+        <div class="plan-single">
+          <div class="images">
+            <div class="paketi__background-img">
+              <img
+                src="css/img/plan-ishrane3500x333.jpg"
+                alt="plan-ishrane"
+              />
+            </div>
+            <div class="paketi__front-img">
+              <img
+                src="css/img/plan-ishrane-tanjir500x333.png"
+                alt="plan-ishrane-tanjir"
+              />
+            </div>
+          </div>
+          <div class="paketi__plan-content">
+            <div class="paketi__plan-title"><h2>Lorem, ipsum.</h2></div>
+            <div class="paketi__plan-text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur eius incidunt fugit provident ipsa aperiam
+                consequatur distinctio quae, vel sunt ratione optio vero
+                praesentium architecto quibusdam dolorum quos vitae? Quas modi
+                debitis illo labore saepe vitae, dolorum voluptatum nesciunt
+                esse!
+              </p>
+            </div>
+            <div class="dugme__prijavi-se">
+              <a href="index.php#prijava">
+                <div class="plan-ishrane__ikonica">
+                  <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
+                </div>
+                Prijavi se
+              </a>
+            </div>
+          </div>
+        </div>
+      
+      <!-- ======================================================= -->
+      
+        <div class="plan-single">
+          <div class="images">
+            <div class="paketi__background-img">
+              <img
+                src="css/img/plan-ishrane3500x333.jpg"
+                alt="plan-ishrane"
+              />
+            </div>
+            <div class="paketi__front-img">
+              <img
+                src="css/img/plan-ishrane-tanjir500x333.png"
+                alt="plan-ishrane-tanjir"
+              />
+            </div>
+          </div>
+          <div class="paketi__plan-content">
+            <div class="paketi__plan-title"><h2>Lorem, ipsum.</h2></div>
+            <div class="paketi__plan-text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur eius incidunt fugit provident ipsa aperiam
+                consequatur distinctio quae, vel sunt ratione optio vero
+                praesentium architecto quibusdam dolorum quos vitae? Quas modi
+                debitis illo labore saepe vitae, dolorum voluptatum nesciunt
+                esse!
+              </p>
+            </div>
+            <div class="dugme__prijavi-se">
+              <a href="index.php#prijava">
+                <div class="plan-ishrane__ikonica">
+                  <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
+                </div>
+                Prijavi se
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
   <!-- =====================
               BLOG - INDEX
     ======================= -->

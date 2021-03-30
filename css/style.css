@@ -26,11 +26,13 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(45deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  --pruge: repeating-linear-gradient(
+    45deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 img {
@@ -69,10 +71,12 @@ img {
   padding: 0.4rem;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   background: rgb(2, 0, 36);
-  background: linear-gradient(90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(0, 0, 0, 0.44019614681810226) 0%,
-      rgba(255, 255, 255, 1) 26%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 0.44019614681810226) 0%,
+    rgba(255, 255, 255, 1) 26%
+  );
 }
 
 .navbar {
@@ -84,7 +88,7 @@ img {
   clip-path: circle(0px at top right);
   transition: clip-path ease-in-out 0.5s;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .navbar-open {
@@ -547,9 +551,9 @@ hamburger animation
   font-size: 1.04rem;
   font-weight: 400;
   color: #131200;
-  display: -webkit-box;
+  /* display: -webkit-box;
   -webkit-line-clamp: 10;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical; */
   /* overflow: hidden; */
 }
 
@@ -577,11 +581,13 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 248, 82, 0.4),
-      rgba(255, 248, 82, 0.4) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 /* ------------------------------ */
@@ -601,6 +607,10 @@ hamburger animation
   object-fit: cover;
 }
 
+.plan-ishrane .plan-kartica-img img {
+  object-position: 0px -41px;
+}
+
 .plan-kartica-overflow {
   position: absolute;
   top: 0;
@@ -611,6 +621,10 @@ hamburger animation
 
 .plan-kartica-overflow img {
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.45));
+}
+
+.plan-ishrane .plan-kartica-overflow img {
+  object-position: 0px -41px;
 }
 
 .dual-plan .plan-kartica-img {
@@ -700,7 +714,7 @@ hamburger animation
   height: 2px;
   background-color: var(--ljub);
   position: absolute;
-  transition: width .4s ease;
+  transition: width 0.4s ease;
 }
 
 /* ===========================================
@@ -925,11 +939,13 @@ hamburger animation
   position: absolute;
   top: -50px;
   left: -50px;
-  background: repeating-linear-gradient(45deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   width: 90%;
   height: 110%;
   z-index: 0;
@@ -1107,11 +1123,13 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(135deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   z-index: -1;
 }
 
@@ -1340,7 +1358,7 @@ input::-webkit-inner-spin-button {
   border-top: 1px solid var(--ljub1);
 }
 
-.blog-pregled__wrapper>* {
+.blog-pregled__wrapper > * {
   flex-grow: 1;
   flex-basis: calc(var(--modifier) * 999);
   margin: var(--margin);
@@ -1481,7 +1499,7 @@ p {
   box-shadow: none;
 }
 
-.search-bar>* {
+.search-bar > * {
   flex-grow: 1;
   flex-basis: calc(calc(30rem - 100%) * 999);
   margin: 1rem;
@@ -1988,11 +2006,13 @@ p {
   height: 100%;
   bottom: -150px;
   left: -100px;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 248, 82, 0.4),
-      rgba(255, 248, 82, 0.4) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   border-radius: 20px;
 }
 
@@ -2033,7 +2053,6 @@ p {
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 80%;
@@ -2041,7 +2060,6 @@ p {
 }
 
 @media (min-width: 460px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 65%;
@@ -2069,7 +2087,6 @@ p {
 }
 
 @media (min-width: 600px) {
-
   /** naslovna **/
   .naslovna__wrapper {
     background-image: url("img/daska_noz-background.jpg");
@@ -2242,8 +2259,6 @@ p {
     grid-column: 1/ 5;
   }
 
-
-
   /****** BLOG - SINGLE PAGE *******/
   .single-post__wrapper {
     width: 80%;
@@ -2291,7 +2306,6 @@ p {
 }
 
 @media (min-width: 850px) {
-
   /* NASLOVNA */
   .hero-title::before {
     content: "";
@@ -2447,7 +2461,7 @@ p {
 
   .navbar__item {
     padding: 0;
-    margin: 0 1rem 0 0;
+    margin: 0 2rem 0 0;
     border-bottom: none;
   }
 
@@ -2471,7 +2485,6 @@ p {
 }
 
 @media (min-width: 1100px) {
-
   /** da se poveca **/
   .plan-kartica-img {
     height: 40%;
@@ -2614,4 +2627,96 @@ p {
   .hero-title h1 span:nth-child(even) {
     font-size: 10rem;
   } */
+}
+
+/* PAKETI PROBA*/
+.paketi-wrapper {
+  margin: 0 auto;
+  display: flex;
+}
+
+.plan-single {
+  margin-right: 1rem;
+}
+.plan-single:last-child {
+  margin-right: 0;
+}
+
+.paketi__background-img {
+  width: 100%;
+  height: 100%;
+}
+
+.paketi__background-img::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 55px;
+  background: white;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.paketi__background-img::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  bottom: -55%;
+  left: -10px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  border-radius: 20px;
+}
+
+.puzla-after::after {
+  bottom: -135px;
+}
+
+.paketi__front-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.paketi__plan-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  position: relative;
+}
+
+.paketi__plan-title h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  color: var(--ljub);
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  /* font-size: 2rem; */
+}
+
+.paketi__plan-text p {
+  font-size: 1.04rem;
+  font-weight: 400;
+  color: #131200;
+}
+
+@media (max-width: 768px) {
+  .paketi-wrapper {
+    flex-direction: column;
+  }
+
+  .plan-single {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
