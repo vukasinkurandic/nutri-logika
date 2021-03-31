@@ -209,7 +209,7 @@
               Plan treninga predstavlja vaš jedinstven naučno zasnovan
               plan treniranja, koji se prilagođava spram vas i vašeg cilja, a
               na kraju svake nedelje je redovno kontrolisan i podleže
-              redovnim izmenama kako bi konstatno gurao vaše telo ka boljem izgledu.
+              redovnim izmenama kako bi konstatno gurao...
               <a class="procitaj-jos" href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
             </div>
@@ -568,10 +568,15 @@
           </select>
         </div>
       </form>
+      <div class="data-privacy-info">
+        <p>
+        Vaši lični podaci biće korišćeni isključivo kako bismo primili i obradili vaš zahtev.
+        </p>
     </div>
+    </div>
+    
     <!--GRESKA -->
     <div id="php_greska" class="succes-message-visible"></div>
-
     <div class="dugme__prijavi-se prijava">
       <a href="#prijava">
         <div class="dual-plan__ikonica"></div>
