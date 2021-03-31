@@ -41,10 +41,8 @@ img {
 
 .copyrights {
   background-color: #222107;
-  display: flex;
   padding: 0 1rem;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
 }
 
 .copyright__text {
@@ -55,6 +53,7 @@ img {
 .mentions {
   font-size: 0.5rem;
 }
+
 
 /* ===========================================
                     NAVBAR
@@ -302,7 +301,7 @@ hamburger animation
   position: absolute;
   top: 0;
   left: 0;
-  height: 60px;
+  height: 50px;
   width: 60%;
   background: var(--zut1);
   z-index: -1;
@@ -382,7 +381,7 @@ hamburger animation
 ==============================================*/
 #mailing-lista {
   background: var(--ljub2);
-  padding: 2rem 0 3rem 0;
+  padding: 2rem 0 4rem 0;
   width: 75%;
   margin: -3rem auto 0 auto;
   z-index: 1;
@@ -396,27 +395,33 @@ hamburger animation
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-size: 1rem;
+  color: #121212;
 }
 
 #mail-list-form {
-  text-align: center;
+  margin: 0 auto;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
 }
 
-#mail-list-form .dugme-login-admin {
-  margin: 1rem auto 0 0;
+#mail-list-form input {
+  /* margin: 1rem auto 0 0; */
+  margin: 0;
 }
 
 #mail-list-form-btn {
-  color: var(--zut);
+  color: var(--ljub);
+  background: var(--zut);
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 #mail-list-form-btn:hover,
 #mail-list-form-btn:focus {
-  color: var(--ljub);
-  background: var(--zut);
+  color: var(--zut);
+  background: var(--ljub);
 }
 
 .hidden-label {
@@ -2637,6 +2642,7 @@ p {
 
 .plan-single {
   margin-right: 1rem;
+  box-shadow: 0px -5px 10px rgb(0 0 0 / 30%);
 }
 .plan-single:last-child {
   margin-right: 0;
@@ -2663,8 +2669,8 @@ p {
   content: "";
   position: absolute;
   width: 80%;
-  height: 100%;
-  bottom: -55%;
+  height: 50%;
+  bottom: -15%;
   left: -10px;
   background: repeating-linear-gradient(
     45deg,
@@ -2691,6 +2697,7 @@ p {
 .paketi__plan-content {
   padding: 0 1.5rem 1.5rem 1.5rem;
   position: relative;
+  max-width: 500px;
 }
 
 .paketi__plan-title h2 {
@@ -2718,5 +2725,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 0;
   }
 }

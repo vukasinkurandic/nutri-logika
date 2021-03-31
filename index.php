@@ -115,7 +115,7 @@
             MAILING LISTA
     ======================= -->
   <section id="mailing-lista">
-    <h2>Preuzmite besplatnu tabelu za praćenje napredka</h2>
+    <h2>Preuzmite besplatnu tabelu za praćenje napretka</h2>
     <!--ISPISIVANJE GRESKE ZA EMAIL PRIJAVU PRAZNO POLJE ZA PDF-->
     <div id="em_greska" class="error-message-visible">
       <?php
@@ -141,7 +141,7 @@
     </div>
     <form action="php/emailForm.php" id="mail-list-form" method="POST">
       <input type="text" id="mail-list-input" name="mailing-lista" placeholder="Vas e-mail">
-      <label for="mail-list-input" class="hidden-label">Vas e-mail</label>
+      <label for="mail-list-input" class="hidden-label">Vaš e-mail</label>
       <button class="dugme-login-admin" id="mail-list-form-btn" type="submit">Pošaljite mi tabelu!</button>
     </form>
   </section>
@@ -150,100 +150,120 @@
                 PONUDA
     ======================= -->
   <section id="ponuda">
-    <div class="ponuda-wrapper">
-      <div class="plan-ishrane">
-        <div class="plan-kartica-overflow">
-          <img src="css/img/plan-ishrane-tanjir500x333.png" alt="tanjir" />
-        </div>
-        <div class="plan-kartica-img">
-          <img src="css/img/plan-ishrane3500x333.jpg" alt="hrana" />
-        </div>
-        <div class="plan-ishrane__info">
-          <div class="plan-ishrane__title-wrapper">
-            <h2>Plan Ishrane</h2>
+  <div class="paketi-wrapper">
+        <div class="plan-single">
+          <div class="images">
+            <div class="paketi__background-img">
+              <img
+                src="css/img/plan-ishrane3500x333.jpg"
+                alt="plan-ishrane"
+              />
+            </div>
+            <div class="paketi__front-img">
+              <img
+                src="css/img/plan-ishrane-tanjir500x333.png"
+                alt="plan-ishrane-tanjir"
+              />
+            </div>
           </div>
-          <div class="plan-ishrane__tekst">
+          <div class="paketi__plan-content">
+            <div class="paketi__plan-title"><h2>Plan ishrane</h2></div>
+            <div class="paketi__plan-text">
             <p>
               Dinamičan plan ishrane predstavlja vaš jedinstven naučno zasnovan plan, sastavljen spram vašeg tela, cilja i stila
               života, a opet je njegov efekat redovno praćen kontrolama i spram njih podešen kako bi se efikasno išlo ka cilju
               (dinamičan je). <a class="procitaj-jos" href="pages/ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
-          </div>
-
-          <div class="dugme__prijavi-se">
-            <a href="#prijava">
-              <div class="plan-ishrane__ikonica">
-                <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
-              </div>
-              Prijavi se
-            </a>
+            </div>
+            <div class="dugme__prijavi-se">
+              <a href="index.php#prijava">
+                <div class="plan-ishrane__ikonica">
+                  <img src="css/img/meso150.png" alt="nutrition" class="icon" />
+                </div>
+                Prijavi se
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="plan-treninga">
-        <div class="plan-kartica-overflow">
-          <img src="css/img/teg500x333.png" alt="teg" />
-        </div>
-        <div class="plan-kartica-img">
-          <img src="css/img/tegovi500x333.jpg" alt="trening" />
-        </div>
-        <div class="plan-treninga__info">
-          <div class="plan-treninga__title-wrapper">
-            <h2>Plan Treninga</h2>
+        <!-- ======================================================= -->
+        
+        <div class="plan-single">
+          <div class="images">
+            <div class="paketi__background-img">
+              <img
+                src="css/img/tegovi500x333.jpg"
+                alt="plan-ishrane"
+              />
+            </div>
+            <div class="paketi__front-img">
+              <img
+                src="css/img/teg500x333.png"
+                alt="plan-ishrane-tanjir"
+              />
+            </div>
           </div>
-          <div class="plan-treninga__tekst">
+          <div class="paketi__plan-content">
+            <div class="paketi__plan-title"><h2>Plan treninga</h2></div>
+            <div class="paketi__plan-text">
             <p>
               Plan treninga predstavlja vaš jedinstven naučno zasnovan
               plan treniranja, koji se prilagođava spram vas i vašeg cilja, a
               na kraju svake nedelje je redovno kontrolisan i podleže
-              redovnim izmenama ...
+              redovnim izmenama kako bi konstatno gurao vaše telo ka boljem izgledu.
               <a class="procitaj-jos" href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
             </p>
-          </div>
-          <div class="dugme__prijavi-se">
-            <a href="#prijava">
-              <div class="plan-treninga__ikonica">
-                <img src="css/img/bucke320x333.png" alt="dumbbell" class="icon bucka" />
-              </div>
-              Prijavi se
-            </a>
+            </div>
+            <div class="dugme__prijavi-se">
+              <a href="../index.php#prijava">
+                <div class="plan-treninga__ikonica">
+                  <img
+                    src="css/img/bucke150.png"
+                    alt="dumbbell"
+                    class="icon bucka"
+                  />
+                </div>
+                Prijavi se
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="dual-plan">
-        <div class="plan-kartica-overflow">
-          <img src="css/img/puzla500x303.png" alt="puzla" />
-        </div>
-        <div class="plan-kartica-img">
-          <img src="css/img/slagalica500x303.jpg" alt="hrana" />
-        </div>
-        <div class="dual-plan__info">
-          <div class="dual-plan__title-wrapper">
-            <h2>Plan Ishrane i Treninga</h2>
+      
+      <!-- ======================================================= -->
+      
+        <div class="plan-single">
+          <div class="images">
+            <div class="paketi__background-img">
+              <img
+                src="css/img/rubikova-kocka500x333.jpg"
+                alt="plan-ishrane"
+              />
+            </div>
+            <div class="paketi__front-img">
+              <img
+                src="css/img/samo-kocka500x333.png"
+                alt="plan-ishrane-tanjir"
+              />
+            </div>
           </div>
-          <div class="dual-plan__tekst">
-            <p>
+          <div class="paketi__plan-content">
+            <div class="paketi__plan-title"><h2>Plan ishrane i treninga</h2></div>
+            <div class="paketi__plan-text">
+              <p>
               Obuhvata plan ishrane i plan treninga koji su pažljivo uklopljeni jedan sa drugim kako bi stvorili harmoniju između
               pravilne ishrane i treninga, a tako i sinergistički efekat (gde je 1+1=3) koji donosi ultimativnu transformaciju tela,
               zdravlja, uma i života. <a class="procitaj-jos" href="pages/trening-ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
-            </p>
+              </p>
+            </div>
+            <div class="dugme__prijavi-se">
+              <a href="../index.php#prijava">
+                <div class="dual-plan__ikonica"></div>
+                Prijavi se
+              </a>
+            </div>
           </div>
         </div>
-        <div class="dugme__prijavi-se">
-          <a href="#prijava">
-            <div class="dual-plan__ikonica"></div>
-            Prijavi se
-          </a>
-        </div>
       </div>
-    </div>
   </section>
- <!-- =====================
-            ponuda paketa test
-    ======================= -->
-
   <!-- =====================
             TESTIMONIALS
     ======================= -->
@@ -344,129 +364,7 @@
         </button>
       </div>
     </div>
-  </section>
- <!-- =====================
-            ponuda paketa test
-    ======================= -->
-    <div class="paketi-wrapper">
-        <div class="plan-single">
-          <div class="images">
-            <div class="paketi__background-img">
-              <img
-                src="css/img/plan-ishrane3500x333.jpg"
-                alt="plan-ishrane"
-              />
-            </div>
-            <div class="paketi__front-img">
-              <img
-                src="css/img/plan-ishrane-tanjir500x333.png"
-                alt="plan-ishrane-tanjir"
-              />
-            </div>
-          </div>
-          <div class="paketi__plan-content">
-            <div class="paketi__plan-title"><h2>Lorem, ipsum.</h2></div>
-            <div class="paketi__plan-text">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur eius incidunt fugit provident ipsa aperiam
-                consequatur distinctio quae, vel sunt ratione optio vero
-                praesentium architecto quibusdam dolorum quos vitae? Quas modi
-                debitis illo labore saepe vitae, dolorum voluptatum nesciunt
-                esse!
-              </p>
-            </div>
-            <div class="dugme__prijavi-se">
-              <a href="index.php#prijava">
-                <div class="plan-ishrane__ikonica">
-                  <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
-                </div>
-                Prijavi se
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- ======================================================= -->
-        
-        <div class="plan-single">
-          <div class="images">
-            <div class="paketi__background-img">
-              <img
-                src="css/img/plan-ishrane3500x333.jpg"
-                alt="plan-ishrane"
-              />
-            </div>
-            <div class="paketi__front-img">
-              <img
-                src="css/img/plan-ishrane-tanjir500x333.png"
-                alt="plan-ishrane-tanjir"
-              />
-            </div>
-          </div>
-          <div class="paketi__plan-content">
-            <div class="paketi__plan-title"><h2>Lorem, ipsum.</h2></div>
-            <div class="paketi__plan-text">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur eius incidunt fugit provident ipsa aperiam
-                consequatur distinctio quae, vel sunt ratione optio vero
-                praesentium architecto quibusdam dolorum quos vitae? Quas modi
-                debitis illo labore saepe vitae, dolorum voluptatum nesciunt
-                esse!
-              </p>
-            </div>
-            <div class="dugme__prijavi-se">
-              <a href="index.php#prijava">
-                <div class="plan-ishrane__ikonica">
-                  <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
-                </div>
-                Prijavi se
-              </a>
-            </div>
-          </div>
-        </div>
-      
-      <!-- ======================================================= -->
-      
-        <div class="plan-single">
-          <div class="images">
-            <div class="paketi__background-img">
-              <img
-                src="css/img/plan-ishrane3500x333.jpg"
-                alt="plan-ishrane"
-              />
-            </div>
-            <div class="paketi__front-img">
-              <img
-                src="css/img/plan-ishrane-tanjir500x333.png"
-                alt="plan-ishrane-tanjir"
-              />
-            </div>
-          </div>
-          <div class="paketi__plan-content">
-            <div class="paketi__plan-title"><h2>Lorem, ipsum.</h2></div>
-            <div class="paketi__plan-text">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur eius incidunt fugit provident ipsa aperiam
-                consequatur distinctio quae, vel sunt ratione optio vero
-                praesentium architecto quibusdam dolorum quos vitae? Quas modi
-                debitis illo labore saepe vitae, dolorum voluptatum nesciunt
-                esse!
-              </p>
-            </div>
-            <div class="dugme__prijavi-se">
-              <a href="index.php#prijava">
-                <div class="plan-ishrane__ikonica">
-                  <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
-                </div>
-                Prijavi se
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-  
+  </section>  
   <!-- =====================
               BLOG - INDEX
     ======================= -->
