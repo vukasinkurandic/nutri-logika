@@ -26,11 +26,13 @@ body {
   --zut: #fff852;
   --zut1: rgba(255, 248, 82, 0.5);
 
-  --pruge: repeating-linear-gradient(45deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  --pruge: repeating-linear-gradient(
+    45deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 img {
@@ -52,7 +54,6 @@ img {
   font-size: 0.5rem;
 }
 
-
 /* ===========================================
                     NAVBAR
 ==============================================*/
@@ -68,10 +69,12 @@ img {
   padding: 0.4rem;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   background: rgb(2, 0, 36);
-  background: linear-gradient(90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(0, 0, 0, 0.44019614681810226) 0%,
-      rgba(255, 255, 255, 1) 26%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 0.44019614681810226) 0%,
+    rgba(255, 255, 255, 1) 26%
+  );
 }
 
 .navbar {
@@ -493,6 +496,7 @@ hamburger animation
 
 .dual-plan__ikonica {
   filter: none;
+  margin-right: 3rem;
 }
 
 .plan-treninga__ikonica {
@@ -582,11 +586,13 @@ hamburger animation
   position: absolute;
   width: 100%;
   z-index: -1;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 248, 82, 0.4),
-      rgba(255, 248, 82, 0.4) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
 }
 
 /* ------------------------------ */
@@ -646,12 +652,15 @@ hamburger animation
 }
 
 .dugme__prijavi-se {
-  width: 85%;
-  display: flex;
+  display: inline-block;
+  padding-left: 0rem;
   justify-content: end;
   margin: 2rem 0 2rem 0;
   cursor: pointer;
   transition: scale ease 0.2s;
+}
+#prijava .dugme__prijavi-se {
+  display: flex;
 }
 
 .dugme__prijavi-se:active {
@@ -939,11 +948,13 @@ hamburger animation
   position: absolute;
   top: -50px;
   left: -50px;
-  background: repeating-linear-gradient(45deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   width: 90%;
   height: 110%;
   z-index: 0;
@@ -1067,7 +1078,7 @@ input::-webkit-inner-spin-button {
 }
 
 #prijava .dugme__prijavi-se a {
-  width: 55%;
+  /* width: 55%; */
   justify-content: space-between;
   max-width: 170px;
 }
@@ -1127,11 +1138,13 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(135deg,
-      var(--zut1),
-      var(--zut1) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--zut1),
+    var(--zut1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   z-index: -1;
 }
 
@@ -1360,7 +1373,7 @@ input::-webkit-inner-spin-button {
   border-top: 1px solid var(--ljub1);
 }
 
-.blog-pregled__wrapper>* {
+.blog-pregled__wrapper > * {
   flex-grow: 1;
   flex-basis: calc(var(--modifier) * 999);
   margin: var(--margin);
@@ -1501,7 +1514,7 @@ p {
   box-shadow: none;
 }
 
-.search-bar>* {
+.search-bar > * {
   flex-grow: 1;
   flex-basis: calc(calc(30rem - 100%) * 999);
   margin: 1rem;
@@ -1704,13 +1717,9 @@ p {
 }
 
 .single-post__sidebar {
-  /* border-radius: 20px; */
-  border-top: 1px solid #ddd;
-  /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); */
-  padding: 1rem;
-  box-sizing: border-box;
-  background: #f8f8f8;
-  /* margin-top: 2rem; */
+  margin: 2rem 0;
+  border-left: none;
+  border-top: 1px solid rgb(181 19 183 / 40%);
 }
 
 .single-post__sidebar h2 {
@@ -2008,11 +2017,13 @@ p {
   height: 100%;
   bottom: -150px;
   left: -100px;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 248, 82, 0.4),
-      rgba(255, 248, 82, 0.4) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   border-radius: 20px;
 }
 
@@ -2053,15 +2064,17 @@ p {
                     RESPONSIVE
 ==============================================*/
 @media (min-width: 361px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 80%;
   }
+
+  #prijava .dugme__prijavi-se a {
+    width: 55%;
+  }
 }
 
 @media (min-width: 460px) {
-
   .plan-kartica-img,
   .plan-kartica-overflow {
     max-width: 65%;
@@ -2089,7 +2102,6 @@ p {
 }
 
 @media (min-width: 600px) {
-
   /** naslovna **/
   .naslovna__wrapper {
     background-image: url("img/daska_noz-background.jpg");
@@ -2313,7 +2325,6 @@ p {
 }
 
 @media (min-width: 850px) {
-
   /* NASLOVNA */
   .hero-title::before {
     content: "";
@@ -2493,7 +2504,6 @@ p {
 }
 
 @media (min-width: 1100px) {
-
   /** da se poveca **/
   .plan-kartica-img {
     height: 40%;
@@ -2570,15 +2580,16 @@ p {
     width: 55ch;
   }
 
-  .single-post__sidebar {
-    /* width: calc(100% - 65ch); */
-    margin: 0%;
-    /* max-width: 350px; */
-  }
-
   .single-post__underline {
     margin: 2rem 0;
     width: 100%;
+  }
+
+  .single-post__sidebar {
+    padding: 0 1rem;
+    box-sizing: border-box;
+    border-left: 1px solid rgb(181 19 183 / 40%);
+    border-top: none;
   }
 
   /* BLOG */
@@ -2615,7 +2626,6 @@ p {
     padding: 1rem 0;
   }
 }
-
 
 /* ============== PAKETI =============*/
 .paketi-wrapper {
@@ -2657,11 +2667,13 @@ p {
   height: 50%;
   bottom: -15%;
   left: -10px;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 248, 82, 0.4),
-      rgba(255, 248, 82, 0.4) 10px,
-      transparent 10px,
-      transparent 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 82, 0.4),
+    rgba(255, 248, 82, 0.4) 10px,
+    transparent 10px,
+    transparent 20px
+  );
   border-radius: 20px;
 }
 
