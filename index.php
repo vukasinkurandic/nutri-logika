@@ -167,7 +167,7 @@
             </div>
           </div>
           <div class="paketi__plan-content">
-            <div class="paketi__plan-title"><h2>Plan ishrane</h2></div>
+            <div class="paketi__plan-title"><h2><span>Plan</span> ishrane</h2></div>
             <div class="paketi__plan-text">
             <p>
               Dinamičan plan ishrane predstavlja vaš jedinstven naučno zasnovan plan, sastavljen spram vašeg tela, cilja i stila
@@ -203,7 +203,7 @@
             </div>
           </div>
           <div class="paketi__plan-content">
-            <div class="paketi__plan-title"><h2>Plan treninga</h2></div>
+            <div class="paketi__plan-title"><h2><span>Plan</span> treninga</h2></div>
             <div class="paketi__plan-text">
             <p>
               Plan treninga predstavlja vaš jedinstven naučno zasnovan
@@ -246,7 +246,7 @@
             </div>
           </div>
           <div class="paketi__plan-content">
-            <div class="paketi__plan-title"><h2>Plan ishrane i treninga</h2></div>
+            <div class="paketi__plan-title"><h2><span>Plan</span> ishrane i treninga</h2></div>
             <div class="paketi__plan-text">
               <p>
               Obuhvata plan ishrane i plan treninga koji su pažljivo uklopljeni jedan sa drugim kako bi stvorili harmoniju između
@@ -383,7 +383,7 @@
     <div class="blog-index__wrapper">
       <div class="blog-index__main-title--wrapper">
         <div class="blog-index__main-title">
-          <h2>Najnoviji blog postovi</h2>
+          <h2>Najnoviji <span>blog</span> postovi</h2>
         </div>
       </div>
       <?php foreach ($posts as $key => $post) : ?>

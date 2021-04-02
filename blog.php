@@ -107,7 +107,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
     <div class="blog-index__wrapper">
       <div class="blog-index__main-title--wrapper">
         <div class="blog-index__main-title">
-          <h1>Najnoviji blog postovi</h1>
+          <h1>Najnoviji <span>blog</span> postovi</h1>
         </div>
       </div>
 
