@@ -218,13 +218,13 @@ $(document).ready(function() {
 
                     if (aktivnostVal==="veoma-neaktivan"){BMP=BMP*1.2;}
 
-                    if (aktivnostVal==="lagano-aktivan"){BMP=BMP*1.375;}
+                    if (aktivnostVal==="lagano-aktivan"){BMP=BMP*1.3;}
 
-                    if (aktivnostVal==="srednje-aktivan"){BMP=BMP*1.55;}
+                    if (aktivnostVal==="srednje-aktivan"){BMP=BMP*1.45;}
 
-                    if (aktivnostVal==="veoma-aktivan"){BMP=BMP*1.725; }
+                    if (aktivnostVal==="veoma-aktivan"){BMP=BMP*1.6; }
 
-                    if (aktivnostVal==="ektremno-aktivan"){BMP=BMP*1.9;}
+                    if (aktivnostVal==="ektremno-aktivan"){BMP=BMP*1.75;}
 
                     let BMPactiv= BMP;
 
