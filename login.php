@@ -26,8 +26,49 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" /> -->
+  <style>
+    @font-face {
+    font-family: 'Oswald';
+    src: url('css/fonts/Oswald-SemiBold.woff2') format('woff2'),
+        url('css/fonts/Oswald-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('css/fonts/Oswald-Bold.woff2') format('woff2'),
+        url('css/fonts/Oswald-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-Black.woff2') format('woff2'),
+        url('css/fonts/Poppins-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-Regular.woff2') format('woff2'),
+        url('css/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-SemiBold.woff2') format('woff2'),
+        url('css/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+  </style>
   <!-- roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
 

@@ -22,10 +22,54 @@
 
   <!-- fonts -->
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" /> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet"> -->
+
+  <!-- SELF HOSTED FONTS -->
+<style>
+    @font-face {
+    font-family: 'Oswald';
+    src: url('css/fonts/Oswald-SemiBold.woff2') format('woff2'),
+        url('css/fonts/Oswald-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('css/fonts/Oswald-Bold.woff2') format('woff2'),
+        url('css/fonts/Oswald-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-Black.woff2') format('woff2'),
+        url('css/fonts/Poppins-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-Regular.woff2') format('woff2'),
+        url('css/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-SemiBold.woff2') format('woff2'),
+        url('css/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+  </style>
   <!-- selectric  -->
   <link rel="stylesheet" href="js/selectric/selectric.css" />
 
@@ -642,7 +686,7 @@
     </section>
     <!-- zastava -->
     <div class="copyrights">
-      <p class="copyright__text">Copyright &copy; VuleDule 2020 Serbia</p>
+      <p class="copyright__text">Copyright &copy; Vule&Dule 2021 Serbia</p>
     </div>
   </footer>
   <!-- ==========================

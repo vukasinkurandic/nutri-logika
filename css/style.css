@@ -14,9 +14,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  /* background: url("img/pattern.png"); */
 }
 
 :root {
@@ -83,13 +82,21 @@ img {
   right: 0;
 
   background: var(--zut);
+
+  -webkit-clip-path: circle(0px at top right);
   clip-path: circle(0px at top right);
-  transition: clip-path ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
   width: 100vw;
-  /* height: 100vh; */
+  height: 100vh;
+}
+@media (orientation: landscape) {
+  .navbar {
+    height: auto;
+  }
 }
 
 .navbar-open {
+  -webkit-clip-path: circle(0px at top right);
   clip-path: circle(250% at top right);
 }
 
@@ -316,7 +323,6 @@ hamburger animation
 .hero-title h1 span:nth-child(1),
 .hero-title h1 span:nth-child(3) {
   color: var(--ljub2);
-  /* font-family: "Oswald", sans-serif; */
   font-family: "Poppins", sans-serif;
   font-size: 4rem;
   line-height: 0.8;
@@ -327,7 +333,6 @@ hamburger animation
 .hero-title h1 span:nth-child(2),
 .hero-title h1 span:nth-child(5) {
   color: var(--ljub);
-  /* font-family: "Oswald", sans-serif; */
   font-family: "Poppins", sans-serif;
   font-size: 3.5rem;
   line-height: 0.8;
@@ -917,7 +922,7 @@ hamburger animation
 .omeni-info__title h1 {
   font-size: 2rem;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--ljub);
   text-align: center;
   font-family: "Oswald", sans-serif;
@@ -994,7 +999,7 @@ hamburger animation
   color: var(--ljub);
   text-align: center;
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -1190,12 +1195,17 @@ input::-webkit-inner-spin-button {
   color: var(--ljub);
   font-size: 1rem;
   text-align: start;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 
-.kontakt-container p a:hover {
+.kontakt-container p a {
   color: var(--zut);
+  transition: color 0.4s ease;
+}
+
+.kontakt-container p a:hover {
+  color: var(--ljub);
 }
 
 .footer-links--list {
@@ -1267,6 +1277,7 @@ input::-webkit-inner-spin-button {
 #calculator {
   margin: 0;
   padding: 0 1rem;
+  overflow: hidden;
 }
 
 .relative-navbar {
@@ -1317,7 +1328,7 @@ input::-webkit-inner-spin-button {
 .calculator__title h1 {
   font-size: 2rem;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--ljub);
   text-align: center;
   font-family: "Oswald", sans-serif;
@@ -1354,7 +1365,7 @@ input::-webkit-inner-spin-button {
 .blog-dash__title {
   font-size: 2rem;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--ljub);
   text-align: center;
   font-family: "Oswald", sans-serif;
@@ -1507,6 +1518,7 @@ p {
 .blog-index__wrapper {
   display: grid;
   grid-template-columns: 1fr minmax(300px, 600px) 1fr;
+  overflow: hidden;
 }
 
 .blog-index__main-title--wrapper {
@@ -1588,7 +1600,7 @@ p {
 
 .blog-index__info--list li span {
   opacity: 0.4;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.9rem;
 }
 
@@ -1651,7 +1663,7 @@ p {
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ===========================================
@@ -1698,7 +1710,7 @@ p {
 }
 
 .single-post__content {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .single-post__img--wrapper {
@@ -1787,7 +1799,7 @@ p {
   color: var(--ljub);
   text-align: center;
   font-size: 1.7rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .new-post__form--wrapper {
@@ -2467,14 +2479,14 @@ p {
     margin: 0 auto;
   }
 }
-
-@media (min-width: 770px) {
-  /** navbar **/
-
+/** navbar **/
+@media (min-width: 830px) {
   .menu-toggle {
     display: none;
   }
+}
 
+@media (min-width: 770px) {
   .navbar {
     background: none;
     clip-path: none;
@@ -2713,7 +2725,7 @@ p {
 }
 
 .paketi__plan-title h2 {
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   color: var(--ljub);
@@ -2723,7 +2735,8 @@ p {
 }
 
 .paketi__plan-title span {
-  font-weight: 100;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 
 .paketi__plan-text p {
