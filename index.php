@@ -20,13 +20,6 @@
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- fonts -->
-
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" /> -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet"> -->
-
   <!-- SELF HOSTED FONTS -->
 <style>
     @font-face {
@@ -76,8 +69,6 @@
   <!-- glider  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
   <!-- FAVICON  -->
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
@@ -216,7 +207,7 @@
             <p>
               Dinamičan plan ishrane predstavlja vaš jedinstven naučno zasnovan plan, sastavljen spram vašeg tela, cilja i stila
               života, a opet je njegov efekat redovno praćen kontrolama i spram njih podešen kako bi se efikasno išlo ka cilju
-              (dinamičan je). <a class="procitaj-jos" href="pages/ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              (dinamičan je). <a class="procitaj-jos" href="pages/ishrana.html">Pročitaj više </a>
             </p>
             </div>
             <div class="dugme__prijavi-se">
@@ -254,7 +245,7 @@
               plan treniranja, koji se prilagođava spram vas i vašeg cilja, a
               na kraju svake nedelje je redovno kontrolisan i podleže
               redovnim izmenama kako bi konstatno gurao...
-              <a class="procitaj-jos" href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              <a class="procitaj-jos" href="pages/trening.html">Pročitaj više </a>
             </p>
             </div>
             <div class="dugme__prijavi-se">
@@ -295,7 +286,7 @@
               <p>
               Obuhvata plan ishrane i plan treninga koji su pažljivo uklopljeni jedan sa drugim kako bi stvorili harmoniju između
               pravilne ishrane i treninga, a tako i sinergistički efekat (gde je 1+1=3) koji donosi ultimativnu transformaciju tela,
-              zdravlja, uma i života. <a class="procitaj-jos" href="pages/trening-ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              zdravlja, uma i života. <a class="procitaj-jos" href="pages/trening-ishrana.html">Pročitaj više </a>
               </p>
             </div>
             <div class="dugme__prijavi-se">
@@ -343,10 +334,10 @@
         <div class="trans-slider-navigation">
           <div class="carousel__navigation-trans"></div>
           <button class="carousel__button-trans carousel__button--left-trans">
-            <i class="fas fa-chevron-left"></i>
+          
           </button>
           <button class="carousel__button-trans carousel__button--right-trans">
-            <i class="fas fa-chevron-right"></i>
+         
           </button>
         </div>
       </div>
@@ -401,10 +392,10 @@
         </ul>
         <div class="carousel__navigation"></div>
         <button class="carousel__button carousel__button--left">
-          <i class="fas fa-chevron-left"></i>
+    
         </button>
         <button class="carousel__button carousel__button--right">
-          <i class="fas fa-chevron-right"></i>
+         
         </button>
       </div>
     </div>
@@ -672,14 +663,14 @@
         <div class="social">
           <ul class="social-icons">
             <li class="social-icon">
-              <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://www.instagram.com/nutri.logika/"><img class="social-icon-img" src="css/img/flat-icons/instagram.svg" alt="instagram icon"></a>
 
             </li>
             <li class="social-icon">
-              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
+              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><img class="social-icon-img" src="css/img/flat-icons/facebook.svg" alt="facebook icon"></a>
 
             </li>
-            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><img class="social-icon-img" src="css/img/flat-icons/twitter.svg" alt="twiter icon"></a></li>
           </ul>
         </div>
       </div>

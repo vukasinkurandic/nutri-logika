@@ -742,6 +742,12 @@ hamburger animation
   transition: width 0.4s ease;
 }
 
+.procitaj-jos::after {
+  content: "\21e2";
+  font-size: 120%;
+  margin-left: 3px;
+}
+
 /* ===========================================
                     TESTIMONIALS
 ==============================================*/
@@ -783,7 +789,7 @@ hamburger animation
   position: relative;
   height: 250px;
   max-width: 450px;
-  margin: 50px auto;
+  margin: 80px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -833,13 +839,34 @@ hamburger animation
 } */
 
 .carousel__button--left-trans {
-  left: -15px;
+  left: -20px;
 }
 
 .carousel__button--right-trans {
-  right: -15px;
+  right: -20px;
 }
 
+.carousel__button--right-trans::before,
+.carousel__button--left-trans::before {
+  content: "\276F";
+  font-size: 130%;
+  top: -1px;
+  position: relative;
+}
+.carousel__button--left-trans::before {
+  content: "\276E";
+}
+
+.carousel__button--right::before,
+.carousel__button--left::before {
+  content: "\276F";
+  font-size: 130%;
+  top: -1px;
+  position: relative;
+}
+.carousel__button--left::before {
+  content: "\276E";
+}
 .carousel__button--right {
   right: -20px;
 }
@@ -850,7 +877,7 @@ hamburger animation
 
 .carousel__navigation {
   position: absolute;
-  bottom: 5%;
+  bottom: -15%;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
@@ -1095,9 +1122,8 @@ input::-webkit-inner-spin-button {
 }
 
 #prijava .dugme__prijavi-se a {
-  /* width: 55%; */
   justify-content: space-between;
-  max-width: 170px;
+  max-width: 180px;
 }
 
 .error-message-visible {
@@ -1192,7 +1218,7 @@ input::-webkit-inner-spin-button {
 
 .kontakt-container p,
 .kontakt-container p a {
-  color: var(--ljub);
+  color: var(--zut);
   font-size: 1rem;
   text-align: start;
   font-weight: 400;
@@ -1226,18 +1252,14 @@ input::-webkit-inner-spin-button {
 
 .footer__link {
   text-decoration: none;
-  color: var(--ljub);
+  color: var(--zut);
   transition: color ease 0.2s;
   font-size: 1rem;
 }
 
 .footer__link:focus,
 .footer__link:hover {
-  color: var(--zut);
-}
-
-.footer__link i {
-  color: var(--zut);
+  color: var(--ljub);
 }
 
 .social-icons {
@@ -1249,24 +1271,16 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-between;
 }
-
 .social-icon {
   margin-left: 1.5rem;
   position: relative;
-  color: var(--zut);
-  transition: color ease 0.3s;
+  transition: all ease 0.3s;
   cursor: pointer;
 }
-
-.social-icon a {
-  color: inherit;
-}
-
 .social-icon:hover,
 .social-icon:focus {
-  color: var(--ljub1);
+  transform: scale(1.15);
 }
-
 .social-icon:active {
   transform: scale(1.05);
 }
@@ -1381,6 +1395,13 @@ input::-webkit-inner-spin-button {
   font-family: "Oswald", sans-serif;
 }
 
+.new-post__btn::after {
+  content: "\21e2";
+  margin-left: 5px;
+  position: relative;
+  bottom: 3px;
+}
+
 .new-post__btn:hover,
 .new-post__btn:focus {
   color: var(--ljub);
@@ -1472,13 +1493,32 @@ p {
   padding: 0.2rem 0.5rem;
 }
 
-.delete a {
+.blog__action-button a {
+  text-decoration: none;
+}
+.blog__action-button a::after {
+  content: "\267B";
+  color: red;
+  font-size: 130%;
+}
+
+.blog__button-image a {
+  text-decoration: none;
+}
+
+.blog__button-image a::after {
+  content: "\274F";
+  color: green;
+  font-size: 130%;
+}
+
+/* .delete a {
   color: red;
 }
 
 .edit a {
   color: green;
-}
+} */
 
 .blog__button-image:hover .blog-dash__image,
 .blog__button-image:focus .blog-dash__image {
@@ -1962,6 +2002,12 @@ p {
 .delete-button a {
   color: red;
   text-decoration: none;
+}
+.delete-button a::after {
+  content: "\267B";
+  font-size: 150%;
+  bottom: -3px;
+  position: relative;
 }
 
 .delete-button:hover .fas,

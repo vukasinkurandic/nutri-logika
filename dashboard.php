@@ -19,13 +19,7 @@
 
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" /> -->
-
-  <!-- inter -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" /> -->
-  <style>
+ <style>
     @font-face {
     font-family: 'Oswald';
     src: url('css/fonts/Oswald-SemiBold.woff2') format('woff2'),
@@ -67,9 +61,7 @@
     font-display: swap;
 }
   </style>
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
-  <!-- FAVICON  -->
+   <!-- FAVICON  -->
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <!-- CLEAN URL AFTER REFRESHING  -->
@@ -216,7 +208,7 @@
                 <li class="info-item">
                   <span>Odabir plana:</span> <?php echo ($plan['plan']); ?>
                 </li>
-                <li><button class="delete-button"><a href="dashboard.php?del_id=<?php echo $plan['id']; ?>">Obrisi prijavu - <i class="fas fa-trash"></i></a></button></li>
+                <li><button class="delete-button"><a href="dashboard.php?del_id=<?php echo $plan['id']; ?>">Obrisi prijavu - </a></button></li>
               </ul>
             </div>
           </li>
@@ -234,11 +226,13 @@
       <div class="footer-wrapper">
         <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
         <div class="kontakt-container">
+        <h3>Contact:</h3>
           <p><span>E-mail:</span> nutri.logika@gmail.com</p>
           <p><span>Telefon:</span> 061/61-45-617</p>
         </div>
 
         <div class="footer-links__container">
+        <h3>Quick links:</h3>
           <ul class="footer-links--list">
             <li class="footer__item">
               <a href="index.php#naslovna" class="footer__link">Home</a>
@@ -266,14 +260,14 @@
         <div class="social">
           <ul class="social-icons">
             <li class="social-icon">
-              <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://www.instagram.com/nutri.logika/"><img class="social-icon-img" src="css/img/flat-icons/instagram.svg" alt="instagram icon"></a>
 
             </li>
             <li class="social-icon">
-              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
+              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><img class="social-icon-img" src="css/img/flat-icons/facebook.svg" alt="facebook icon"></a>
 
             </li>
-            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><img class="social-icon-img" src="css/img/flat-icons/twitter.svg" alt="twiter icon"></a></li>
           </ul>
         </div>
       </div>

@@ -24,10 +24,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" /> -->
-  <style>
+<style>
     @font-face {
     font-family: 'Oswald';
     src: url('css/fonts/Oswald-SemiBold.woff2') format('woff2'),
@@ -69,11 +66,7 @@
     font-display: swap;
 }
   </style>
-  <!-- roboto -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
   <!-- CLEAN URL AFTER REFRESHING  -->
 
   <script>
