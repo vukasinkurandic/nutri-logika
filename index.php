@@ -20,20 +20,55 @@
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- fonts -->
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+  <!-- SELF HOSTED FONTS -->
+<style>
+    @font-face {
+    font-family: 'Oswald';
+    src: url('css/fonts/Oswald-SemiBold.woff2') format('woff2'),
+        url('css/fonts/Oswald-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('css/fonts/Oswald-Bold.woff2') format('woff2'),
+        url('css/fonts/Oswald-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-Black.woff2') format('woff2'),
+        url('css/fonts/Poppins-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-Regular.woff2') format('woff2'),
+        url('css/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-SemiBold.woff2') format('woff2'),
+        url('css/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+  </style>
   <!-- selectric  -->
   <link rel="stylesheet" href="js/selectric/selectric.css" />
 
   <!-- glider  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
   <!-- FAVICON  -->
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
@@ -115,7 +150,7 @@
             MAILING LISTA
     ======================= -->
   <section id="mailing-lista">
-    <h2>Preuzmite besplatnu tabelu za praćenje napredka</h2>
+    <h2>Preuzmite besplatnu tabelu za praćenje napretka</h2>
     <!--ISPISIVANJE GRESKE ZA EMAIL PRIJAVU PRAZNO POLJE ZA PDF-->
     <div id="em_greska" class="error-message-visible">
       <?php
@@ -141,7 +176,7 @@
     </div>
     <form action="php/emailForm.php" id="mail-list-form" method="POST">
       <input type="text" id="mail-list-input" name="mailing-lista" placeholder="Vas e-mail">
-      <label for="mail-list-input" class="hidden-label">Vas e-mail</label>
+      <label for="mail-list-input" class="hidden-label">Vaš e-mail</label>
       <button class="dugme-login-admin" id="mail-list-form-btn" type="submit">Pošaljite mi tabelu!</button>
     </form>
   </section>
@@ -150,98 +185,120 @@
                 PONUDA
     ======================= -->
   <section id="ponuda">
-    <div class="ponuda-wrapper">
-      <div class="plan-ishrane">
-        <div class="plan-kartica-overflow">
-          <img src="css/img/plan-ishrane-tanjir500x333.png" alt="tanjir" />
-        </div>
-        <div class="plan-kartica-img">
-          <img src="css/img/plan-ishrane3500x333.jpg" alt="hrana" />
-        </div>
-        <div class="plan-ishrane__info">
-          <div class="plan-ishrane__title-wrapper">
-            <h2>Plan Ishrane</h2>
+  <div class="paketi-wrapper">
+        <div class="plan-single">
+          <div class="images">
+            <div class="paketi__background-img">
+              <img
+                src="css/img/plan-ishrane3500x333.jpg"
+                alt="plan-ishrane"
+              />
+            </div>
+            <div class="paketi__front-img">
+              <img
+                src="css/img/plan-ishrane-tanjir500x333.png"
+                alt="plan-ishrane-tanjir"
+              />
+            </div>
           </div>
-          <div class="plan-ishrane__tekst">
+          <div class="paketi__plan-content">
+            <div class="paketi__plan-title"><h2><span>Plan</span> ishrane</h2></div>
+            <div class="paketi__plan-text">
             <p>
               Dinamičan plan ishrane predstavlja vaš jedinstven naučno zasnovan plan, sastavljen spram vašeg tela, cilja i stila
               života, a opet je njegov efekat redovno praćen kontrolama i spram njih podešen kako bi se efikasno išlo ka cilju
-              (dinamičan je). <a class="procitaj-jos" href="pages/ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              (dinamičan je). <a class="procitaj-jos" href="pages/ishrana.html">Pročitaj više </a>
             </p>
-          </div>
-
-          <div class="dugme__prijavi-se">
-            <a href="#prijava">
-              <div class="plan-ishrane__ikonica">
-                <img src="css/img/meso320x427.png" alt="nutrition" class="icon" />
-              </div>
-              Prijavi se
-            </a>
+            </div>
+            <div class="dugme__prijavi-se">
+              <a href="index.php#prijava">
+                <div class="plan-ishrane__ikonica">
+                  <img src="css/img/meso150.png" alt="nutrition" class="icon" />
+                </div>
+                Prijavi se
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="plan-treninga">
-        <div class="plan-kartica-overflow">
-          <img src="css/img/teg500x333.png" alt="teg" />
-        </div>
-        <div class="plan-kartica-img">
-          <img src="css/img/tegovi500x333.jpg" alt="trening" />
-        </div>
-        <div class="plan-treninga__info">
-          <div class="plan-treninga__title-wrapper">
-            <h2>Plan Treninga</h2>
+        <!-- ======================================================= -->
+        
+        <div class="plan-single">
+          <div class="images">
+            <div class="paketi__background-img">
+              <img
+                src="css/img/tegovi500x333.jpg"
+                alt="plan-ishrane"
+              />
+            </div>
+            <div class="paketi__front-img">
+              <img
+                src="css/img/teg500x333.png"
+                alt="plan-ishrane-tanjir"
+              />
+            </div>
           </div>
-          <div class="plan-treninga__tekst">
+          <div class="paketi__plan-content">
+            <div class="paketi__plan-title"><h2><span>Plan</span> treninga</h2></div>
+            <div class="paketi__plan-text">
             <p>
               Plan treninga predstavlja vaš jedinstven naučno zasnovan
               plan treniranja, koji se prilagođava spram vas i vašeg cilja, a
               na kraju svake nedelje je redovno kontrolisan i podleže
-              redovnim izmenama ...
-              <a class="procitaj-jos" href="pages/trening.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
+              redovnim izmenama kako bi konstatno gurao...
+              <a class="procitaj-jos" href="pages/trening.html">Pročitaj više </a>
             </p>
-          </div>
-          <div class="dugme__prijavi-se">
-            <a href="#prijava">
-              <div class="plan-treninga__ikonica">
-                <img src="css/img/bucke320x333.png" alt="dumbbell" class="icon bucka" />
-              </div>
-              Prijavi se
-            </a>
+            </div>
+            <div class="dugme__prijavi-se">
+              <a href="../index.php#prijava">
+                <div class="plan-treninga__ikonica">
+                  <img
+                    src="css/img/bucke150.png"
+                    alt="dumbbell"
+                    class="icon bucka"
+                  />
+                </div>
+                Prijavi se
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="dual-plan">
-        <div class="plan-kartica-overflow">
-          <img src="css/img/puzla500x303.png" alt="puzla" />
-        </div>
-        <div class="plan-kartica-img">
-          <img src="css/img/slagalica500x303.jpg" alt="hrana" />
-        </div>
-        <div class="dual-plan__info">
-          <div class="dual-plan__title-wrapper">
-            <h2>Plan Ishrane i Treninga</h2>
+      
+      <!-- ======================================================= -->
+      
+        <div class="plan-single">
+          <div class="images">
+            <div class="paketi__background-img">
+              <img
+                src="css/img/rubikova-kocka500x333.jpg"
+                alt="plan-ishrane"
+              />
+            </div>
+            <div class="paketi__front-img">
+              <img
+                src="css/img/samo-kocka500x333.png"
+                alt="plan-ishrane-tanjir"
+              />
+            </div>
           </div>
-          <div class="dual-plan__tekst">
-            <p>
+          <div class="paketi__plan-content">
+            <div class="paketi__plan-title"><h2><span>Plan</span> ishrane i treninga</h2></div>
+            <div class="paketi__plan-text">
+              <p>
               Obuhvata plan ishrane i plan treninga koji su pažljivo uklopljeni jedan sa drugim kako bi stvorili harmoniju između
               pravilne ishrane i treninga, a tako i sinergistički efekat (gde je 1+1=3) koji donosi ultimativnu transformaciju tela,
-              zdravlja, uma i života. <a class="procitaj-jos" href="pages/trening-ishrana.html">Pročitaj više <i class="fas fa-angle-double-right"></i></a>
-            </p>
+              zdravlja, uma i života. <a class="procitaj-jos" href="pages/trening-ishrana.html">Pročitaj više </a>
+              </p>
+            </div>
+            <div class="dugme__prijavi-se">
+              <a href="../index.php#prijava">
+                <div class="dual-plan__ikonica"></div>
+                Prijavi se
+              </a>
+            </div>
           </div>
         </div>
-        <div class="dugme__prijavi-se">
-          <a href="#prijava">
-            <div class="dual-plan__ikonica"></div>
-            Prijavi se
-          </a>
-        </div>
       </div>
-    </div>
   </section>
-
-
   <!-- =====================
             TESTIMONIALS
     ======================= -->
@@ -277,10 +334,10 @@
         <div class="trans-slider-navigation">
           <div class="carousel__navigation-trans"></div>
           <button class="carousel__button-trans carousel__button--left-trans">
-            <i class="fas fa-chevron-left"></i>
+          
           </button>
           <button class="carousel__button-trans carousel__button--right-trans">
-            <i class="fas fa-chevron-right"></i>
+         
           </button>
         </div>
       </div>
@@ -335,15 +392,14 @@
         </ul>
         <div class="carousel__navigation"></div>
         <button class="carousel__button carousel__button--left">
-          <i class="fas fa-chevron-left"></i>
+    
         </button>
         <button class="carousel__button carousel__button--right">
-          <i class="fas fa-chevron-right"></i>
+         
         </button>
       </div>
     </div>
-  </section>
-
+  </section>  
   <!-- =====================
               BLOG - INDEX
     ======================= -->
@@ -362,7 +418,7 @@
     <div class="blog-index__wrapper">
       <div class="blog-index__main-title--wrapper">
         <div class="blog-index__main-title">
-          <h2>Najnoviji blog postovi</h2>
+          <h2>Najnoviji <span>blog</span> postovi</h2>
         </div>
       </div>
       <?php foreach ($posts as $key => $post) : ?>
@@ -547,10 +603,15 @@
           </select>
         </div>
       </form>
+      <div class="data-privacy-info">
+        <p>
+        Vaši lični podaci biće korišćeni isključivo kako bismo primili i obradili vaš zahtev.
+        </p>
     </div>
+    </div>
+    
     <!--GRESKA -->
     <div id="php_greska" class="succes-message-visible"></div>
-
     <div class="dugme__prijavi-se prijava">
       <a href="#prijava">
         <div class="dual-plan__ikonica"></div>
@@ -602,21 +663,21 @@
         <div class="social">
           <ul class="social-icons">
             <li class="social-icon">
-              <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://www.instagram.com/nutri.logika/"><img class="social-icon-img" src="css/img/flat-icons/instagram.svg" alt="instagram icon"></a>
 
             </li>
             <li class="social-icon">
-              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
+              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><img class="social-icon-img" src="css/img/flat-icons/facebook.svg" alt="facebook icon"></a>
 
             </li>
-            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><img class="social-icon-img" src="css/img/flat-icons/twitter.svg" alt="twiter icon"></a></li>
           </ul>
         </div>
       </div>
     </section>
     <!-- zastava -->
     <div class="copyrights">
-      <p class="copyright__text">Copyright &copy; VuleDule 2020 Serbia</p>
+      <p class="copyright__text">Copyright &copy; Vule&Dule 2021 Serbia</p>
     </div>
   </footer>
   <!-- ==========================

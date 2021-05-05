@@ -31,14 +31,48 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
 
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- fonts -->
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+<style>
+    @font-face {
+    font-family: 'Oswald';
+    src: url('css/fonts/Oswald-SemiBold.woff2') format('woff2'),
+        url('css/fonts/Oswald-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('css/fonts/Oswald-Bold.woff2') format('woff2'),
+        url('css/fonts/Oswald-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-Black.woff2') format('woff2'),
+        url('css/fonts/Poppins-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-Regular.woff2') format('woff2'),
+        url('css/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('css/fonts/Poppins-SemiBold.woff2') format('woff2'),
+        url('css/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+  </style>
   <!-- FAVICON  -->
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
@@ -107,7 +141,7 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
     <div class="blog-index__wrapper">
       <div class="blog-index__main-title--wrapper">
         <div class="blog-index__main-title">
-          <h1>Najnoviji blog postovi</h1>
+          <h1>Najnoviji <span>blog</span> postovi</h1>
         </div>
       </div>
 
@@ -190,11 +224,13 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
       <div class="footer-wrapper">
         <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
         <div class="kontakt-container">
+        <h3>Contact:</h3>
           <p><span>E-mail:</span> nutri.logika@gmail.com</p>
           <p>Telefon: <a href="tel:+381616145617">061/61-45-617</a></p>
         </div>
 
         <div class="footer-links__container">
+        <h3>Quick links:</h3>
           <ul class="footer-links--list">
             <li class="footer__item">
               <a href="index.php#naslovna" class="footer__link">Home</a>
@@ -222,14 +258,14 @@ if (isset($_POST['search-term']) && ($_POST['search-term']) !== "") {
         <div class="social">
           <ul class="social-icons">
             <li class="social-icon">
-              <a href="https://www.instagram.com/nutri.logika/"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://www.instagram.com/nutri.logika/"><img class="social-icon-img" src="css/img/flat-icons/instagram.svg" alt="instagram icon"></a>
 
             </li>
             <li class="social-icon">
-              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><i class="fab fa-facebook-f fa-2x"></i></a>
+              <a href="https://www.facebook.com/pages/category/Health-Beauty/Nutri-Logika-152013968719417/"><img class="social-icon-img" src="css/img/flat-icons/facebook.svg" alt="facebook icon"></a>
 
             </li>
-            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><i class="fab fa-twitter fa-2x"></i></a></li>
+            <li class="social-icon"><a href="https://twitter.com/JCvetojevic"><img class="social-icon-img" src="css/img/flat-icons/twitter.svg" alt="twiter icon"></a></li>
           </ul>
         </div>
       </div>
