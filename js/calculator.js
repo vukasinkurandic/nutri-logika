@@ -216,15 +216,15 @@ $(document).ready(function() {
 
 
 
-                    if (aktivnostVal==="veoma-neaktivan"){BMP=BMP*1.2;}
+                    if (aktivnostVal==="veoma-neaktivan"){BMP=BMP*1.15;}
 
-                    if (aktivnostVal==="lagano-aktivan"){BMP=BMP*1.3;}
+                    if (aktivnostVal==="lagano-aktivan"){BMP=BMP*1.275;}
 
-                    if (aktivnostVal==="srednje-aktivan"){BMP=BMP*1.45;}
+                    if (aktivnostVal==="srednje-aktivan"){BMP=BMP*1.4;}
 
-                    if (aktivnostVal==="veoma-aktivan"){BMP=BMP*1.6; }
+                    if (aktivnostVal==="veoma-aktivan"){BMP=BMP*1.525; }
 
-                    if (aktivnostVal==="ektremno-aktivan"){BMP=BMP*1.75;}
+                    if (aktivnostVal==="ektremno-aktivan"){BMP=BMP*1.65;}
 
                     let BMPactiv= BMP;
 
