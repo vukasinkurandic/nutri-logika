@@ -19,47 +19,53 @@
 
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" />
-<style>
+  <!-- selectric  -->
+  <link rel="stylesheet" href="js/selectric/selectric.css" />
+  <style>
     @font-face {
-    font-family: 'Oswald';
-    src: url('css/fonts/Oswald-SemiBold.woff2') format('woff2'),
+      font-family: 'Oswald';
+      src: url('css/fonts/Oswald-SemiBold.woff2') format('woff2'),
         url('css/fonts/Oswald-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Oswald';
-    src: url('css/fonts/Oswald-Bold.woff2') format('woff2'),
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Oswald';
+      src: url('css/fonts/Oswald-Bold.woff2') format('woff2'),
         url('css/fonts/Oswald-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url('css/fonts/Poppins-Black.woff2') format('woff2'),
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('css/fonts/Poppins-Black.woff2') format('woff2'),
         url('css/fonts/Poppins-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url('css/fonts/Poppins-Regular.woff2') format('woff2'),
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('css/fonts/Poppins-Regular.woff2') format('woff2'),
         url('css/fonts/Poppins-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url('css/fonts/Poppins-SemiBold.woff2') format('woff2'),
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('css/fonts/Poppins-SemiBold.woff2') format('woff2'),
         url('css/fonts/Poppins-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
   </style>
   <!-- FAVICON  -->
   <link rel="shortcut icon" href="css/img/favicon/favicon.ico" type="image/x-icon" />
@@ -208,13 +214,13 @@
       <div class="footer-wrapper">
         <a href="index.php#naslovna" class="navbar__logo"><img src="css/img/nutri.logika.png" alt="" class="navbar__logo__img" /></a>
         <div class="kontakt-container">
-        <h3>Contact:</h3>
+          <h3>Contact:</h3>
           <p><span>E-mail:</span> nutri.logika@gmail.com</p>
           <p><span>Telefon:</span> 061/61-45-617</p>
         </div>
 
         <div class="footer-links__container">
-        <h3>Quick links:</h3>
+          <h3>Quick links:</h3>
           <ul class="footer-links--list">
             <li class="footer__item">
               <a href="index.php#naslovna" class="footer__link">Home</a>
