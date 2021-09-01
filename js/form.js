@@ -14,7 +14,7 @@ $(document).ready(function() {
         let cilj = $('#cilj').val();
         let plan = $('#odabir').val();
 
-        if (!/^[A-Za-z\s]+$/.test(ime)) {
+        if (!/^[A-ZŠĐČĆŽa-zšđčćž]+$/.test(ime)) {
             $('#ime_greska').removeClass('error-message-invisible').addClass('error-message-visible');
             $('#ime').focus();
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
             $('#ime_greska').removeClass('error-message-visible').addClass('error-message-invisible');
 
 
-            if (!/^[A-Za-z\s]+$/.test(prezime)) {
+            if (!/^[A-ZŠĐČĆŽa-zšđčćž]+$/.test(prezime)) {
                 $('#prezime_greska').removeClass('error-message-invisible').addClass('error-message-visible');
                 $('#prezime').focus();
             } else {
