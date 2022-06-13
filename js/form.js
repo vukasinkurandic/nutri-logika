@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
     /// prevent refresh and go on top of page
-    $('#submit-calculator').click(function(e){ 
+    $('#submit-calculator').click(function (e) {
         e.preventDefault();
     });
 
-    $('.prijava').click(function() {
+    $('.prijava').click(function () {
         let ime = $('#ime').val();
         let prezime = $('#prezime').val();
         let email = $('#email').val();
@@ -37,7 +37,7 @@ $(document).ready(function() {
                         $('#godine').focus();
                     } else {
                         $('#godine_greska').removeClass('error-message-visible').addClass('error-message-invisible');
-                        if (telefon == "" || !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(telefon)) {
+                        if (telefon == "") {
                             $('#telefon_greska').removeClass('error-message-invisible').addClass('error-message-visible');
                             $('#telefon').focus();
                         } else {
@@ -54,10 +54,10 @@ $(document).ready(function() {
                                     cilj: cilj,
                                     plan: plan
                                 }, // data to be submit
-                                function(data, textStatus, jqXHR) {
+                                function (data, textStatus, jqXHR) {
                                     // success callback
                                     if (data === "succes") {
-                                        
+
                                         $("#php_greska").html("<p>Uspesna prijava, hvala Vam</p>");
                                     } else {
                                         $("#php_greska").html(data);

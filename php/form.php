@@ -1,5 +1,5 @@
 <?php
-require_once('connection.php');
+require_once 'connection.php';
 $ime = $_POST['ime'];
 $prezime = $_POST['prezime'];
 $email = $_POST['email'];
@@ -21,7 +21,7 @@ if ($ime === "" || !preg_match("/^[a-zšđčćžA-ZŠĐČĆŽ ]*$/", $ime)) {
             if ($godine == "" || !is_numeric($godine)) {
                 echo ("<p>Vase godine su obavezne</p>");
             } else {
-                if ($telefon === "" || !preg_match("/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/", $telefon)) {
+                if ($telefon === "") {
                     echo ("<p>Broj telefona je obavezan</p>");
                 } else {
                     if ($pol == "" || $cilj == "" || $plan == "") {
